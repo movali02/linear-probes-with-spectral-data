@@ -1,0 +1,24 @@
+label,n_pos_qm9s_train,n_pos_sers_analytes,n_neg_sers_analytes,pos_analytes,testable,low_support,reason
+fg_carboxylic_acid,0,21,5,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-proline; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine; indole-3-acetic acid,False,False,0 QM9S training positives (< 30)
+fg_primary_amine,397,19,7,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine,True,False,
+fg_secondary_amine,2176,1,25,L-proline,True,True,
+fg_amide,1431,4,22,L-asparagine; L-glutamine; isatin; oxindole,True,False,
+fg_guanidine,40,1,25,L-arginine,True,True,
+fg_hydroxyl_aliphatic,6018,3,23,L-serine; L-threonine; tryptophol,True,False,
+fg_phenol,616,2,24,8-hydroxyquinoline; L-tyrosine,True,False,
+fg_thiol,0,1,25,L-cysteine,False,False,0 QM9S training positives (< 30)
+fg_thioether,0,1,25,L-methionine,False,False,0 QM9S training positives (< 30)
+fg_ketone,2431,1,25,isatin,True,True,
+fg_aldehyde,2193,0,26,,False,False,SERS side has only one class
+fg_ester,763,0,26,,False,False,SERS side has only one class
+fg_ether,8241,0,26,,False,False,SERS side has only one class
+fg_nitrile,2567,0,26,,False,False,SERS side has only one class
+fg_alkyne,2806,0,26,,False,False,SERS side has only one class
+fg_alkene,2651,0,26,,False,False,SERS side has only one class
+fg_fluoro,314,0,26,,False,False,SERS side has only one class
+fg_aromatic_ring,3533,10,16,8-hydroxyquinoline; L-histidine; L-phenylalanine; L-tryptophan; L-tyrosine; indole+indole-d6; indole-3-acetic acid; isatin; oxindole; tryptophol,True,False,
+fg_benzene_ring,43,9,17,8-hydroxyquinoline; L-phenylalanine; L-tryptophan; L-tyrosine; indole+indole-d6; indole-3-acetic acid; isatin; oxindole; tryptophol,True,False,
+fg_pyrrole_ring,393,4,22,L-tryptophan; indole+indole-d6; indole-3-acetic acid; tryptophol,True,False,
+fg_imidazole_ring,238,1,25,L-histidine,True,True,
+fg_indole,0,4,22,L-tryptophan; indole+indole-d6; indole-3-acetic acid; tryptophol,False,False,0 QM9S training positives (< 30)
+fg_lactam,923,2,24,isatin; oxindole,True,False,

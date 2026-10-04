@@ -1,0 +1,741 @@
+nohup: ignoring input
+260 CB-only files: {'shifted': 62, 'ok': 198}
+
+group              n  verdicts                 top band (cm-1)   h829/top   r_good
+CB_536_ala         5  {'shifted': 5}                824         0.98     0.95
+CB_536_arg         2  {'shifted': 2}                824         1.00     0.97
+CB_536_asn         4  {'shifted': 4}                824         0.98     0.97
+CB_536_ctrl        5  {'shifted': 5}                824         0.98     0.96
+CB_536_gln         5  {'shifted': 5}                824         0.98     0.96
+CB_536_glu         4  {'shifted': 4}                824         0.99     0.97
+CB_536_gly         2  {'shifted': 2}                824         0.99     0.93
+CB_536_ser         1  {'shifted': 1}                824         1.00     0.94
+CB_536_thr         5  {'shifted': 5}                824         0.99     0.98
+CB_536_tyr         2  {'shifted': 2}                824         1.00     0.99
+CB_536_val         4  {'shifted': 4}                824         0.97     0.95
+CB_BW_ala         10  {'shifted': 10}               824         0.98     0.96
+CB_BW_ctrl         5  {'shifted': 5}                822         0.93     0.93
+CB_BW_gly          3  {'shifted': 3}                824         0.99     0.98
+CB_BW_ile          5  {'shifted': 5}                823         0.95     0.94
+
+shifted -> raise substrate.reference_norm.ref_tol; weak -> the CB signal is low in that well;
+absent  -> the file has no CB[5] signature: open it, it may not be a CB-only spectrum.
+-> reports/baselines2b/cb_inspect.csv, reports/baselines2b/cb_inspect.png
+
+acetaldehyde (qm9s_10)
+  QM9S peaks : 753(0.36)  854(0.32)  1092(0.17)  1335(0.26)  1383(0.35)  1414(1.00)
+  experiment : 509  1114  1352  1395  1436  1743
+     1114 <-   1092   experiment / QM9S = 1.0201
+     1352 <-   1335   experiment / QM9S = 1.0127
+     1395 <-   1383   experiment / QM9S = 1.0087
+     1436 <-   1414   experiment / QM9S = 1.0156
+
+pyrrole (qm9s_47)
+  QM9S peaks : 853(0.08)  1032(0.06)  1055(0.06)  1131(1.00)  1367(0.91)  1395(0.11)  1447(0.36)
+  experiment : 1144  1384  1470
+     1144 <-   1131   experiment / QM9S = 1.0115
+     1384 <-   1395   experiment / QM9S = 0.9921
+     1470 <-   1447   experiment / QM9S = 1.0159
+
+methyl acetate (qm9s_72)
+  QM9S peaks : 587(0.08)  623(0.31)  823(0.43)  951(0.06)  1032(0.22)  1134(0.22)  1169(0.19)  1355(0.08)  1428(1.00)  1736(0.21)
+  experiment : 640  844  1048  1438  1740
+      640 <-    623   experiment / QM9S = 1.0273
+      844 <-    823   experiment / QM9S = 1.0255
+     1048 <-   1032   experiment / QM9S = 1.0155
+     1438 <-   1428   experiment / QM9S = 1.0070
+     1740 <-   1736   experiment / QM9S = 1.0023
+
+benzene (qm9s_205)
+  QM9S peaks : 604(0.14)  979(1.00)  1161(0.16)  1578(0.31)
+  experiment : 606  992  1178  1585  1606
+      606 <-    604   experiment / QM9S = 1.0033
+      992 <-    979   experiment / QM9S = 1.0133
+     1178 <-   1161   experiment / QM9S = 1.0146
+     1585 <-   1578   experiment / QM9S = 1.0044
+     1606 <-   1578   experiment / QM9S = 1.0177
+
+pyridine (qm9s_206)
+  QM9S peaks : 597(0.15)  649(0.19)  977(0.98)  1013(1.00)  1135(0.06)  1202(0.28)  1234(0.10)  1464(0.07)  1565(0.54)
+  experiment : 605  652  991  1030  1218  1483  1581
+      605 <-    597   experiment / QM9S = 1.0134
+      652 <-    649   experiment / QM9S = 1.0046
+      991 <-    977   experiment / QM9S = 1.0143
+     1030 <-   1013   experiment / QM9S = 1.0168
+     1218 <-   1202   experiment / QM9S = 1.0133
+     1483 <-   1464   experiment / QM9S = 1.0130
+     1581 <-   1565   experiment / QM9S = 1.0102
+
+toluene (qm9s_891)
+  QM9S peaks : 513(0.21)  618(0.18)  772(0.51)  986(1.00)  1016(0.43)  1146(0.12)  1166(0.16)  1188(0.37)  1371(0.53)  1423(0.19)  1441(0.41)  1568(0.28)  1589(0.67)
+  experiment : 521  786  1004  1030  1210  1605
+      521 <-    513   experiment / QM9S = 1.0156
+      786 <-    772   experiment / QM9S = 1.0181
+     1004 <-   1016   experiment / QM9S = 0.9882
+     1030 <-   1016   experiment / QM9S = 1.0138
+     1210 <-   1188   experiment / QM9S = 1.0185
+     1605 <-   1589   experiment / QM9S = 1.0101
+
+median experiment / QM9S = 1.0134 over 30 bands (already scaled (~1.00))
+not found in the records: ['acetone']
+[variant] native: schema v1.2 -> data/processed
+[sers] 899 processed spectra -> data/processed/sers_spectra.npz
+[sers] files by folder: AAs/standard=20, Cell/cell=610, Cell/substrate_only=260, indoles/standard=9
+[sers] 899 records (30 without SMILES), substrate modes {'reference_norm': 837, 'max_in_window(ref_missing)': 62}, catalogue [756.0, 826.0, 879.0] -> data/processed/sers_records.jsonl
+[sers]   cell            generic CB                70
+[sers]   cell            own CB (condition mean)   540
+[sers]   standard        generic CB                29
+[sers]   substrate_only  none                      62
+[sers]   substrate_only  own CB (condition mean)   198
+[sers] generic CB: file:generic_cb.txt, 198 CB files, expected heights = p90
+[sers] WARNING: 70 CELL spectra have no CB file of their own and used the generic CB
+[sers] WARNING: no analyte matched for ['CB_536_ctrl_0', 'CB_536_ctrl_1', 'CB_536_ctrl_2', 'CB_536_ctrl_3', 'CB_536_ctrl_4', 'CB_BW_ctrl_0', 'CB_BW_ctrl_1', 'CB_BW_ctrl_2', 'CB_BW_ctrl_3', 'CB_BW_ctrl_4']
+[variant] matched: schema v1.2-matched -> data/processed_matched
+[sers] 899 processed spectra -> data/processed_matched/sers_spectra.npz
+[sers] files by folder: AAs/standard=20, Cell/cell=610, Cell/substrate_only=260, indoles/standard=9
+[sers] 899 records (30 without SMILES), substrate modes {'reference_norm+rescaled': 837, 'max_in_window(ref_missing)': 62}, catalogue [756.0, 826.0, 879.0] -> data/processed_matched/sers_records.jsonl
+[sers]   cell            generic CB                70
+[sers]   cell            own CB (condition mean)   540
+[sers]   standard        generic CB                29
+[sers]   substrate_only  none                      62
+[sers]   substrate_only  own CB (condition mean)   198
+[sers] generic CB: file:generic_cb.txt, 198 CB files, expected heights = p90
+[sers] WARNING: 70 CELL spectra have no CB file of their own and used the generic CB
+[sers] WARNING: no analyte matched for ['CB_536_ctrl_0', 'CB_536_ctrl_1', 'CB_536_ctrl_2', 'CB_536_ctrl_3', 'CB_536_ctrl_4', 'CB_BW_ctrl_0', 'CB_BW_ctrl_1', 'CB_BW_ctrl_2', 'CB_BW_ctrl_3', 'CB_BW_ctrl_4']
+[variant] wide: schema v1.2-wide -> data/processed_wide
+[qm9s] 25987 processed spectra (frac 0.2) -> data/processed_wide/qm9s_spectra.npz
+[qm9s] {'rows': 129817, 'no_smiles': 0, 'empty': 0} -> 129817 records -> data/processed_wide/qm9s_records.jsonl
+
+=== T1 (native) -> reports/baselines2b/native
+[data] data/processed/sers_records.jsonl: 899 SERS records, schema ['v1.2']
+[T1] 590 cell spectra, 40 cultures, 20 analytes, strains {'536': 200, 'BW': 390}; 20 standards; 250 CB-only
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1] 238 fits (3 label/scheme combinations) on 32 job(s)
+[T1] fits + bootstrap done in 65 s
+[T1] permutation tests: 6 combination(s), up to 1000 shuffles each
+[T1] permutations done in 58 s
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1 metadata-only] 18 fits (2 label/scheme combinations) on 32 job(s)
+[T1 metadata-only] fits + bootstrap done in 2 s
+[T1 metadata-only] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 metadata-only] permutations done in 1 s
+[T1 substrate-only] 12 fits (2 label/scheme combinations) on 32 job(s)
+[T1 substrate-only] fits + bootstrap done in 1 s
+[T1 substrate-only] permutation tests: 4 combination(s), up to 1000 shuffles each
+[T1 substrate-only] permutations done in 8 s
+[T1 old split] 450 train / 140 test cell spectra (250 CB rows in the manifest ignored)
+[T1 old split] 6 fits (1 label/scheme combinations) on 32 job(s)
+[T1 old split] fits + bootstrap done in 1 s
+[T1 old split] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 old split] permutations done in 131 s
+[T1 old predictions] rows of the predictions file by manifest split: {'train': 141, 'test': 29, 'not in manifest': 4}
+[T1 old predictions] 475 train / 115 test cell spectra
+[T1 old predictions] 12 fits (1 label/scheme combinations) on 32 job(s)
+[T1 old predictions] fits + bootstrap done in 1 s
+[T1 old predictions] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 old predictions] permutations done in 1 s
+[T1] 20 no-analyte control spectra: ['Cell_536_ctrl', 'Cell_BW_ctrl']
+# T1 baselines (native)
+
+Primary metric: balanced accuracy. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| loso | all | analyte | 0.120 [0.05, 0.19], p=0.032 | 0.120 [0.05, 0.19], p=0.032 (F1/lr) | 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda) | 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda) |
+| loso | all@culture | analyte | 0.125 [0.04, 0.21] | 0.150 [0.06, 0.22] (F1.bg/lr) | 0.225 [0.12, 0.32] (F3.snv/plsda) | 0.225 [0.12, 0.32] (F3.snv/plsda) |
+| loso | test=536 | analyte | 0.120 [0.00, 0.20] | 0.150 [0.03, 0.25] (F1.bg/plsda) | 0.235 [0.08, 0.36] (F3.snv/plsda) | 0.235 [0.08, 0.36] (F3.snv/plsda) |
+| loso | test=BW | analyte | 0.122 [0.03, 0.20] | 0.122 [0.03, 0.20] (F1/lr) | 0.225 [0.08, 0.36] (F3/knn) | 0.225 [0.08, 0.36] (F3/knn) |
+| step1_split | all | analyte | 0.023 [0.00, 0.04], p=0.535 | 0.073 [0.00, 0.14] (F1/plsda) | 0.181 [0.00, 0.34], p=0.007 (F3.snv/plsda) | 0.181 [0.00, 0.34], p=0.007 (F3.snv/plsda) |
+| cells_to_standards | all | analyte | 0.200 [0.08, 0.33], p=0.01 | 0.300 [0.15, 0.46] (F1.bg/lr) | 0.350 [0.18, 0.50], p=0.001 (F3/lr) | 0.350 [0.18, 0.50], p=0.001 (F3/lr) |
+
+## Gate (roadmap 2.6)
+
+- F3 as in the first run (no preprocessing), leave-one-strain-out: 0.200 [0.12, 0.26] (F3/knn), chance 0.050 -> CI above chance.
+- F3.bg with nearest centroid (pre-specified for 2b), leave-one-strain-out: 0.192 [0.11, 0.26] (F3.bg/ncm), chance 0.050 -> CI above chance.
+- F3.ctrl with nearest centroid (pre-specified for 2b; control culture subtracted), leave-one-strain-out: 0.082 [0.02, 0.15] (F3.ctrl/ncm), chance 0.050 -> **CI includes chance.**
+- best F3 family, leave-one-strain-out: 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda), chance 0.050 -> CI above chance.
+- LR on F1 (string, pre-specified), leave-one-strain-out: 0.120 [0.05, 0.19], p=0.032 (F1/lr), chance 0.050 -> CI above chance.
+- LR on F1.bg (pre-specified for 2b), leave-one-strain-out: 0.103 [0.04, 0.16] (F1.bg/lr), chance 0.050 -> **CI includes chance.**
+- best F1 family, leave-one-strain-out: 0.120 [0.05, 0.19], p=0.032 (F1/lr), chance 0.050 -> CI above chance.
+- per culture (majority vote over a culture's scans, n = 40): 0.225 [0.12, 0.32] (F3.snv/plsda)
+- best F3 family - best F1 family = +0.097: how much the string format loses.
+
+## Detectability (no classifier involved)
+
+An analyte's signature = its culture mean minus the strain mean. r_cross = correlation of the signature between the two strains; rank = where the matching analyte ranks in the other strain (1 = best match); r_std = correlation with the pure standard; snr = signature size / scan noise.
+
+| analyte | r_cross | rank_536_in_BW | rank_BW_in_536 | r_std_536 | r_std_BW | snr_536 | snr_BW | r_cross_ctrl | loso_recall_best | top_bands_cm |
+|---|---|---|---|---|---|---|---|---|---|---|
+| L-lysine | 0.875 | 1 | 1 | -0.22 | -0.368 | 7.43 | 8.68 | -0.358 | 0.53 | 723 1369 960 |
+| L-cysteine | 0.862 | 1 | 1 | 0.555 | 0.429 | 3.96 | 4.37 | 0.742 | 1.0 | 907 1384 979 |
+| L-tryptophan | 0.837 | 1 | 1 | 0.629 | 0.246 | 10.18 | 12.42 | 0.85 | 0.35 | 758 1481 1342 |
+| L-histidine | 0.824 | 6 | 1 | 0.302 | 0.28 | 6.17 | 8.4 | -0.43 | 1.0 | 1291 712 886 |
+| L-phenylalanine | 0.629 | 6 | 10 | -0.025 | -0.072 | 5.85 | 12.47 | -0.304 | 0.0 | 735 1308 1324 |
+| L-proline | 0.626 | 6 | 8 | 0.091 | -0.05 | 5.75 | 9.27 | 0.094 | 0.0 | 723 1372 886 |
+| L-threonine | 0.6 | 9 | 7 | 0.22 | 0.074 | 5.22 | 6.59 | 0.157 | 0.0 | 723 1180 1216 |
+| L-glutamine | 0.583 | 7 | 9 | -0.039 | 0.094 | 5.16 | 7.81 | 0.005 | 0.0 | 886 719 1375 |
+| L-methionine | 0.471 | 2 | 12 | 0.522 | 0.172 | 3.22 | 4.43 | 0.124 | 0.7 | 734 1029 1071 |
+| L-glutamic acid | 0.383 | 6 | 2 | 0.131 | 0.039 | 15.29 | 3.29 | 0.413 | 0.0 | 576 660 1447 |
+| L-tyrosine | 0.318 | 6 | 4 | 0.111 | -0.109 | 3.98 | 3.81 | 0.57 | 0.53 | 1477 605 1407 |
+| L-aspartic acid | -0.019 | 13 | 15 | 0.227 | 0.307 | 7.59 | 7.89 | -0.021 | 0.0 | 576 661 619 |
+| L-serine | -0.025 | 9 | 6 | 0.452 | -0.234 | 9.61 | 4.63 | 0.491 | 0.0 | 755 1473 605 |
+| L-isoleucine | -0.23 | 16 | 8 | 0.56 | 0.186 | 4.05 | 3.63 | 0.333 | 0.0 | 576 658 1447 |
+| L-asparagine | -0.239 | 14 | 10 | 0.208 | 0.186 | 4.28 | 2.15 | 0.318 | 0.0 | 725 958 1695 |
+| L-valine | -0.352 | 18 | 15 | 0.368 | -0.161 | 5.14 | 7.29 | 0.009 | 0.0 | 1241 721 753 |
+| L-alanine | -0.39 | 15 | 13 | 0.395 | 0.039 | 3.37 | 2.48 | 0.21 | 0.0 | 657 574 1430 |
+| L-arginine | -0.585 | 16 | 20 | -0.194 | 0.108 | 5.35 | 1.84 | 0.327 | 0.0 | 1481 606 545 |
+| L-glycine | -0.629 | 12 | 18 | 0.044 | 0.141 | 5.4 | 2.1 | 0.739 | 0.22 | 735 1444 1472 |
+| L-leucine | -0.764 | 20 | 20 | 0.297 | -0.24 | 5.21 | 7.53 | -0.09 | 0.0 | 1477 605 756 |
+
+## Confound checks and the old result
+
+| check | scheme | test set | feature | model | metric | value | chance | n |
+|---|---|---|---|---|---|---|---|---|
+| metadata_only | loso | all | META_design | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | lr | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | hgb | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | lr | bal_acc | 0.069 [0.02, 0.14], p=0.248 | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | lr | bal_acc | 0.069 [0.02, 0.14] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | step1_split | all | META_design | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | lr | bal_acc | 0.083 [0.00, 0.15], p=0.253 | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | hgb | bal_acc | 0.010 [0.00, 0.02] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| substrate_only | loso:cells->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | lr | bal_acc | 0.030 [0.00, 0.07], p=0.901 | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | plsda | bal_acc | 0.053 [0.01, 0.10] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | lr | bal_acc | 0.040 [0.00, 0.09] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | plsda | bal_acc | 0.078 [0.01, 0.15], p=0.0629 | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | lr | bal_acc | 0.035 [0.01, 0.07], p=0.761 | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | plsda | bal_acc | 0.045 [0.02, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | lr | bal_acc | 0.032 [0.01, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | plsda | bal_acc | 0.082 [0.03, 0.17], p=0.114 | 0.05 | 250 |
+| old_split | old_split(no CB) | all | F1 | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | bal_acc | 0.331 [0.18, 0.49], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | accuracy | 0.336 [0.16, 0.52] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | plsda | bal_acc | 0.162 [0.01, 0.29] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | plsda | accuracy | 0.150 [0.01, 0.34] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | lr | bal_acc | 0.527 [0.34, 0.71], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | lr | accuracy | 0.543 [0.31, 0.76] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | plsda | bal_acc | 0.231 [0.00, 0.38] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | plsda | accuracy | 0.214 [0.00, 0.43] | 0.1429 | 140 |
+| old_predictions | old_prediction_rows | all | F1 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | lr | bal_acc | 0.636 [0.53, 0.76], p=0.873 | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | lr | accuracy | 0.678 [0.56, 0.79] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | knn | bal_acc | 0.760 [0.65, 0.87] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | knn | accuracy | 0.765 [0.63, 0.89] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | plsda | bal_acc | 0.408 [0.30, 0.53] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | plsda | accuracy | 0.417 [0.27, 0.57] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | lr | bal_acc | 0.967 [0.91, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | lr | accuracy | 0.965 [0.90, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | knn | bal_acc | 0.975 [0.97, 1.00], p=0.998 | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | knn | accuracy | 0.991 [0.97, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | plsda | bal_acc | 0.571 [0.47, 0.70] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | plsda | accuracy | 0.600 [0.42, 0.76] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | lr | bal_acc | 0.954 [0.90, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | lr | accuracy | 0.948 [0.88, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | knn | bal_acc | 0.975 [0.97, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | knn | accuracy | 0.991 [0.97, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | plsda | bal_acc | 0.518 [0.40, 0.63] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | plsda | accuracy | 0.556 [0.38, 0.73] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all rows | old string | old_llm | accuracy | 0.333 |  | 174 | 58/174 correct in test_predictions_sanitized.csv (Result column)
+| old_predictions | old_prediction_rows | non-CB rows | old string | old_llm | accuracy | 0.370 |  | 119 | 44/119 correct in test_predictions_sanitized.csv (Result column)
+| old_predictions | old_prediction_rows | non-CB rows matched to a cell spectrum | old string | old_llm | accuracy | 0.383 |  | 115 | 44/115 correct in test_predictions_sanitized.csv (Result column)
+
+Metadata-only and substrate-only rows must sit at chance: a CI entirely above chance means analyte is confounded with how the spectrum was taken.
+
+Arguments: `--task T1 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120 --old_manifest data/split_manifest.csv --old_predictions data/test_predictions_sanitized.csv`
+
+[T1] done in 271 s -> reports/baselines2b/native/T1.csv
+
+=== T2 (native) -> reports/baselines2b/native
+[data] data/processed/sers_records.jsonl: 899 SERS records, schema ['v1.2']
+[T2] 619 spectra, 26 analytes. Testable: all: ['carboxylic_acid', 'primary_amine', 'amide', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'indole']; cells: ['amide', 'hydroxyl_aliphatic', 'aromatic_ring', 'benzene_ring']; standards: ['carboxylic_acid', 'primary_amine', 'amide', 'hydroxyl_aliphatic', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'indole']
+[T2] 1038 leave-pair-out evaluations on 32 job(s)
+[T2] leave-pair-out done in 1110 s
+[T2] all/fg_primary_amine F1.bg/hgb: 17.6 s per shuffle -> 319 shuffles
+[T2] all/fg_hydroxyl_aliphatic F3.d1/lr: 26.0 s per shuffle -> 216 shuffles
+[T2] all/fg_phenol F3.bg/plsda: 15.9 s per shuffle -> 354 shuffles
+[T2] all/fg_aromatic_ring F3.bg/hgb: 168.3 s per shuffle -> 100 shuffles
+[T2] all/fg_benzene_ring F1/hgb: 23.0 s per shuffle -> 244 shuffles
+[T2] cells/fg_amide F2/hgb: 30.6 s per shuffle -> 183 shuffles
+[T2] cells/fg_aromatic_ring F3.bg/hgb: 57.4 s per shuffle -> 100 shuffles
+[T2] permutations done in 12523 s
+[T2 standards->cells] 147 fits (3 label/scheme combinations) on 32 job(s)
+[T2 standards->cells] fits + bootstrap done in 4 s
+[T2 standards->cells] permutation tests: 6 combination(s), up to 1000 shuffles each
+[T2 standards->cells] permutations done in 2 s
+# T2 baselines (native)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+lpo:* rows are leave-pair-out AUROC at analyte level: one positive and one negative analyte are held out together and only their two scores, from the same model, are compared. This replaces the pooled leave-one-analyte-out AUROC of the first run, which was biased downward.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall | matrix-only |
+|---|---|---|---|---|---|---|---|
+| lpo:all | all | carboxylic_acid | 0.914 [0.78, 1.00], p=0.007 | 0.971 [0.89, 1.00], p=0.001 (F1.bg/hgb) | 0.943 [0.84, 1.00] (F3/hgb) | 0.971 [0.89, 1.00], p=0.001 (F1.bg/hgb) | 0.976 [0.93, 1.00] |
+| lpo:all | all | primary_amine | 0.519 [0.23, 0.85], p=0.351 | 0.947 [0.85, 1.00], p=0.0031 (F1.bg/hgb) | 0.850 [0.66, 0.99] (F3.d1/plsda) | 0.947 [0.85, 1.00], p=0.0031 (F1.bg/hgb) | 0.921 [0.75, 1.00] |
+| lpo:all | all | amide | 0.273 [0.02, 0.56], p=0.861 | 0.659 [0.36, 0.93] (F1.bg/lr) | 0.852 [0.66, 0.99], p=0.212 (F3/knn) | 0.852 [0.66, 0.99], p=0.212 (F3/knn) | 0.591 [0.30, 0.89] |
+| lpo:all | all | hydroxyl_aliphatic | 0.551 [0.22, 0.96], p=0.334 | 0.667 [0.33, 0.93] (F1.bg/plsda) | 0.710 [0.43, 1.00], p=0.12 (F3.d1/lr) | 0.710 [0.43, 1.00], p=0.12 (F3.d1/lr) | 0.391 [0.13, 0.70] |
+| lpo:all | all | phenol | 0.146 [0.04, 0.27], p=0.931 | 0.750 [0.58, 0.88] (F1.bg/plsda) | 0.917 [0.79, 1.00], p=0.0479 (F3.bg/plsda) | 0.917 [0.79, 1.00], p=0.0479 (F3.bg/plsda) | 0.229 [0.04, 0.44] |
+| lpo:all | all | aromatic_ring | 0.406 [0.15, 0.67], p=0.859 | 0.803 [0.62, 0.95] (F1/knn) | 0.900 [0.78, 0.98], p=0.0198 (F3.bg/hgb) | 0.900 [0.78, 0.98], p=0.0198 (F3.bg/hgb) | 0.834 [0.67, 0.96] |
+| lpo:all | all | benzene_ring | 0.392 [0.13, 0.67], p=0.936 | 0.856 [0.63, 1.00], p=0.0082 (F1/hgb) | 0.830 [0.61, 1.00] (F3/hgb) | 0.856 [0.63, 1.00], p=0.0082 (F1/hgb) | 0.876 [0.72, 1.00] |
+| lpo:all | all | pyrrole_ring | 0.761 [0.55, 0.93], p=0.0839 | 0.909 [0.77, 1.00], p=0.013 (F1/hgb) | 0.898 [0.74, 0.99] (F3/pca_lr) | 0.909 [0.77, 1.00], p=0.013 (F1/hgb) | 0.903 [0.78, 0.99] |
+| lpo:all | all | indole | 0.761 [0.55, 0.93], p=0.0849 | 0.909 [0.77, 1.00], p=0.02 (F1/hgb) | 0.898 [0.74, 0.99] (F3/pca_lr) | 0.909 [0.77, 1.00], p=0.02 (F1/hgb) | 0.903 [0.78, 0.99] |
+| lpo:cells | all | amide | 0.472 [0.22, 0.72], p=0.552 | 0.583 [0.28, 0.83] (F1.bg/ncm) | 0.694 [0.44, 0.89] (F3.bg/ncm) | 0.722 [0.39, 1.00], p=0.315 (F2/hgb) |  |
+| lpo:cells | all | hydroxyl_aliphatic | 0.361 [0.17, 0.56], p=0.652 | 0.833 [0.50, 1.00] (F1/plsda) | 0.639 [0.28, 0.94] (F3.d1/pca_lr) | 0.917 [0.78, 1.00], p=0.0869 (F1pos/plsda) |  |
+| lpo:cells | all | aromatic_ring | 0.234 [0.00, 0.52], p=0.881 | 0.570 [0.34, 0.78] (F1.bg/knn) | 0.859 [0.66, 1.00], p=0.0297 (F3.bg/hgb) | 0.859 [0.66, 1.00], p=0.0297 (F3.bg/hgb) |  |
+| lpo:cells | all | benzene_ring | 0.059 [0.00, 0.18], p=0.993 | 0.765 [0.41, 1.00], p=0.177 (F1.bg/ncm) | 0.706 [0.29, 1.00] (F3.d1/ncm) | 0.765 [0.41, 1.00], p=0.177 (F1.bg/ncm) |  |
+| lpo:standards | all | carboxylic_acid | 0.981 [0.91, 1.00], p=0.003 | 0.981 [0.91, 1.00], p=0.003 (F1/lr) | 0.943 [0.83, 1.00] (F3/ncm) | 0.981 [0.91, 1.00], p=0.003 (F1/lr) |  |
+| lpo:standards | all | primary_amine | 0.880 [0.66, 1.00], p=0.009 | 0.940 [0.82, 1.00], p=0.001 (F1/ncm) | 0.887 [0.64, 1.00] (F3.d1/pca_lr) | 0.940 [0.82, 1.00], p=0.001 (F1/ncm) |  |
+| lpo:standards | all | amide | 0.523 [0.32, 0.73], p=0.36 | 0.790 [0.61, 0.93] (F1/hgb) | 0.966 [0.88, 1.00], p=0.011 (F3.bg/knn) | 0.966 [0.88, 1.00], p=0.011 (F3.bg/knn) |  |
+| lpo:standards | all | hydroxyl_aliphatic | 0.391 [0.22, 0.57], p=0.767 | 0.797 [0.57, 1.00] (F1/hgb) | 0.927 [0.83, 1.00], p=0.032 (F3/lr) | 0.927 [0.83, 1.00], p=0.032 (F3/lr) |  |
+| lpo:standards | all | aromatic_ring | 0.731 [0.49, 0.94], p=0.108 | 0.944 [0.84, 1.00], p=0.001 (F1/ncm) | 0.925 [0.81, 0.99] (F3/ncm) | 0.944 [0.84, 1.00], p=0.001 (F1/ncm) |  |
+| lpo:standards | all | benzene_ring | 0.784 [0.55, 0.97], p=0.0619 | 0.941 [0.82, 1.00] (F1/ncm) | 0.941 [0.83, 1.00] (F3/ncm) | 0.948 [0.84, 1.00], p=0.001 (F2/ncm) |  |
+| lpo:standards | all | pyrrole_ring | 0.830 [0.68, 0.95], p=0.0539 | 0.886 [0.77, 0.98] (F1/plsda) | 0.886 [0.75, 1.00] (F3.d1/ncm) | 0.898 [0.74, 1.00], p=0.013 (F2/lr) |  |
+| lpo:standards | all | indole | 0.830 [0.68, 0.95], p=0.039 | 0.886 [0.77, 0.98] (F1/plsda) | 0.886 [0.75, 1.00] (F3.d1/ncm) | 0.898 [0.74, 1.00], p=0.015 (F2/lr) |  |
+| std_to_cells | all | amide | 0.434 [0.34, 0.53], p=0.861 | 0.500 [0.50, 0.50] (F1/hgb) | 0.660 [0.40, 0.89] (F3.bg/ncm) | 0.689 [0.43, 0.91], p=0.0749 (F2/ncm) |  |
+| std_to_cells | all@analyte | amide | 0.417 [0.16, 0.68] | 0.639 [0.40, 0.84] (F1/knn) | 0.750 [0.44, 1.00] (F3.bg/ncm) | 0.778 [0.56, 0.96] (F2/pca_lr) |  |
+| std_to_cells | all | pyrrole_ring | 0.795 [0.76, 0.83], p=0.466 | 0.990 [0.96, 1.00] (F1/ncm) | 0.993 [0.98, 1.00], p=0.52 (F3.d1/ncm) | 0.993 [0.98, 1.00], p=0.52 (F3.d1/ncm) |  |
+| std_to_cells | all@analyte | pyrrole_ring | 1.000 [1.00, 1.00] | 1.000 [1.00, 1.00] (F1/lr) | 1.000 [1.00, 1.00] (F3/pca_lr) | 1.000 [1.00, 1.00] (F1/lr) |  |
+| std_to_cells | all | indole | 0.795 [0.76, 0.83], p=0.438 | 0.990 [0.96, 1.00] (F1/ncm) | 0.993 [0.98, 1.00], p=0.482 (F3.d1/ncm) | 0.993 [0.98, 1.00], p=0.482 (F3.d1/ncm) |  |
+| std_to_cells | all@analyte | indole | 1.000 [1.00, 1.00] | 1.000 [1.00, 1.00] (F1/lr) | 1.000 [1.00, 1.00] (F3/pca_lr) | 1.000 [1.00, 1.00] (F1/lr) |  |
+
+matrix-only = the same leave-pair-out AUROC from the sample type alone (BW cell / 536 cell / standard). When it is far from 0.5 in lpo:all, the label is confounded with sample type: read the lpo:cells and lpo:standards rows instead.
+
+## Labels not tested
+
+- all: fg_secondary_amine: 1 analyte(s) / 31 spectra with the label
+- all: fg_guanidine: 1 analyte(s) / 31 spectra with the label
+- all: fg_thiol: 1 analyte(s) / 31 spectra with the label
+- all: fg_thioether: 1 analyte(s) / 31 spectra with the label
+- all: fg_ketone: 1 analyte(s) / 1 spectra with the label
+- all: fg_aldehyde: 0 analyte(s) / 0 spectra with the label
+- all: fg_ester: 0 analyte(s) / 0 spectra with the label
+- all: fg_ether: 0 analyte(s) / 0 spectra with the label
+- all: fg_nitrile: 0 analyte(s) / 0 spectra with the label
+- all: fg_alkyne: 0 analyte(s) / 0 spectra with the label
+- all: fg_alkene: 0 analyte(s) / 0 spectra with the label
+- all: fg_fluoro: 0 analyte(s) / 0 spectra with the label
+- all: fg_imidazole_ring: 1 analyte(s) / 31 spectra with the label
+- all: fg_lactam: 2 analyte(s) / 2 spectra with the label
+- cells: fg_carboxylic_acid: 0 analyte(s) / 0 spectra without it
+- cells: fg_primary_amine: 1 analyte(s) / 30 spectra without it
+- cells: fg_secondary_amine: 1 analyte(s) / 30 spectra with the label
+- cells: fg_guanidine: 1 analyte(s) / 30 spectra with the label
+- cells: fg_phenol: 1 analyte(s) / 30 spectra with the label
+- cells: fg_thiol: 1 analyte(s) / 30 spectra with the label
+- cells: fg_thioether: 1 analyte(s) / 30 spectra with the label
+- cells: fg_ketone: 0 analyte(s) / 0 spectra with the label
+- cells: fg_aldehyde: 0 analyte(s) / 0 spectra with the label
+- cells: fg_ester: 0 analyte(s) / 0 spectra with the label
+- cells: fg_ether: 0 analyte(s) / 0 spectra with the label
+- cells: fg_nitrile: 0 analyte(s) / 0 spectra with the label
+- cells: fg_alkyne: 0 analyte(s) / 0 spectra with the label
+- cells: fg_alkene: 0 analyte(s) / 0 spectra with the label
+- cells: fg_fluoro: 0 analyte(s) / 0 spectra with the label
+- cells: fg_pyrrole_ring: 1 analyte(s) / 20 spectra with the label
+- cells: fg_imidazole_ring: 1 analyte(s) / 30 spectra with the label
+- cells: fg_indole: 1 analyte(s) / 20 spectra with the label
+- cells: fg_lactam: 0 analyte(s) / 0 spectra with the label
+- standards: fg_secondary_amine: 1 analyte(s) / 1 spectra with the label
+- standards: fg_guanidine: 1 analyte(s) / 1 spectra with the label
+- standards: fg_phenol: 2 analyte(s) / 2 spectra with the label
+- standards: fg_thiol: 1 analyte(s) / 1 spectra with the label
+- standards: fg_thioether: 1 analyte(s) / 1 spectra with the label
+- standards: fg_ketone: 1 analyte(s) / 1 spectra with the label
+- standards: fg_aldehyde: 0 analyte(s) / 0 spectra with the label
+- standards: fg_ester: 0 analyte(s) / 0 spectra with the label
+- standards: fg_ether: 0 analyte(s) / 0 spectra with the label
+- standards: fg_nitrile: 0 analyte(s) / 0 spectra with the label
+- standards: fg_alkyne: 0 analyte(s) / 0 spectra with the label
+- standards: fg_alkene: 0 analyte(s) / 0 spectra with the label
+- standards: fg_fluoro: 0 analyte(s) / 0 spectra with the label
+- standards: fg_imidazole_ring: 1 analyte(s) / 1 spectra with the label
+- standards: fg_lactam: 2 analyte(s) / 2 spectra with the label
+
+Arguments: `--task T2 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T2] done in 13642 s -> reports/baselines2b/native/T2.csv
+
+=== T3 (native) -> reports/baselines2b/native
+[data] data/processed/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[T3] random: 20846 train / 5141 test molecules, 5141 test groups
+[T3] scaffold: 20789 train / 5198 test molecules, 4222 test groups
+[T3] 952 fits (34 label/scheme combinations) on 32 job(s)
+Matplotlib created a temporary cache directory at /tmp/matplotlib-69dfjuzl because the default path (/home/mv487/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[T3] fits + bootstrap done in 1900 s
+[T3] permutation tests: 68 combination(s), up to 100 shuffles each
+[T3] permutations done in 2059 s
+# T3 baselines (native)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| random | all | primary_amine | 0.811 [0.78, 0.84], p=0.0099 | 0.970 [0.95, 0.99] (F1/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3.lt1700/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3.lt1700/hgb) |
+| random | all | secondary_amine | 0.725 [0.70, 0.75], p=0.0099 | 0.735 [0.71, 0.76] (F1/hgb) | 0.799 [0.78, 0.82], p=0.0099 (F3/hgb) | 0.799 [0.78, 0.82], p=0.0099 (F3/hgb) |
+| random | all | amide | 0.737 [0.71, 0.76], p=0.0099 | 0.792 [0.76, 0.82] (F1/hgb) | 0.917 [0.90, 0.93], p=0.0099 (F3/hgb) | 0.917 [0.90, 0.93], p=0.0099 (F3/hgb) |
+| random | all | hydroxyl_aliphatic | 0.691 [0.68, 0.71], p=0.0099 | 0.745 [0.73, 0.76] (F1/hgb) | 0.797 [0.78, 0.81], p=0.0099 (F3/hgb) | 0.797 [0.78, 0.81], p=0.0099 (F3/hgb) |
+| random | all | phenol | 0.915 [0.90, 0.93], p=0.0099 | 0.924 [0.91, 0.94] (F1.sqrt/lr) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) |
+| random | all | ketone | 0.801 [0.78, 0.82], p=0.0099 | 0.833 [0.82, 0.85] (F1/hgb) | 0.940 [0.93, 0.95], p=0.0099 (F3/hgb) | 0.940 [0.93, 0.95], p=0.0099 (F3/hgb) |
+| random | all | aldehyde | 0.902 [0.89, 0.92], p=0.0099 | 0.919 [0.91, 0.93] (F1/hgb) | 0.972 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.972 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | ester | 0.708 [0.67, 0.75], p=0.0099 | 0.739 [0.70, 0.77] (F1/hgb) | 0.912 [0.90, 0.93], p=0.0099 (F3/hgb) | 0.912 [0.90, 0.93], p=0.0099 (F3/hgb) |
+| random | all | ether | 0.700 [0.69, 0.71], p=0.0099 | 0.750 [0.74, 0.76] (F1/hgb) | 0.804 [0.79, 0.82], p=0.0099 (F3/hgb) | 0.804 [0.79, 0.82], p=0.0099 (F3/hgb) |
+| random | all | nitrile | 0.710 [0.69, 0.73], p=0.0099 | 0.754 [0.73, 0.77] (F1/hgb) | 0.865 [0.85, 0.88], p=0.0099 (F3/hgb) | 0.865 [0.85, 0.88], p=0.0099 (F3/hgb) |
+| random | all | alkyne | 0.890 [0.88, 0.90], p=0.0099 | 0.912 [0.90, 0.92] (F1/hgb) | 0.975 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.975 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | alkene | 0.921 [0.91, 0.93], p=0.0099 | 0.952 [0.94, 0.96] (F1/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fluoro | 0.875 [0.84, 0.91], p=0.0099 | 0.918 [0.89, 0.94] (F1.sqrt/lr) | 0.966 [0.95, 0.98], p=0.0099 (F3/hgb) | 0.966 [0.95, 0.98], p=0.0099 (F3/hgb) |
+| random | all | aromatic_ring | 0.972 [0.97, 0.98], p=0.0099 | 0.980 [0.98, 0.98] (F1/hgb) | 0.992 [0.99, 0.99], p=0.0099 (F3/hgb) | 0.992 [0.99, 0.99], p=0.0099 (F3/hgb) |
+| random | all | pyrrole_ring | 0.952 [0.93, 0.97], p=0.0099 | 0.964 [0.95, 0.97] (F1/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) |
+| random | all | imidazole_ring | 0.955 [0.94, 0.97], p=0.0099 | 0.958 [0.95, 0.97] (F1/hgb) | 0.971 [0.96, 0.98], p=0.0099 (F3.lt1700/hgb) | 0.971 [0.96, 0.98], p=0.0099 (F3.lt1700/hgb) |
+| random | all | lactam | 0.763 [0.73, 0.79], p=0.0099 | 0.771 [0.74, 0.79] (F1.sqrt/lr) | 0.923 [0.91, 0.93], p=0.0099 (F3/hgb) | 0.923 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | primary_amine | 0.779 [0.68, 0.86], p=0.0099 | 0.966 [0.93, 0.99] (F1/hgb) | 0.976 [0.95, 0.99], p=0.0099 (F3.lt1700/hgb) | 0.976 [0.95, 0.99], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | secondary_amine | 0.662 [0.64, 0.69], p=0.0099 | 0.662 [0.64, 0.69], p=0.0099 (F1/lr) | 0.713 [0.69, 0.73], p=0.0099 (F3.lt1700/hgb) | 0.713 [0.69, 0.73], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | amide | 0.684 [0.65, 0.72], p=0.0099 | 0.733 [0.70, 0.76] (F1/hgb) | 0.851 [0.83, 0.87], p=0.0099 (F3/hgb) | 0.851 [0.83, 0.87], p=0.0099 (F3/hgb) |
+| scaffold | all | hydroxyl_aliphatic | 0.649 [0.62, 0.67], p=0.0099 | 0.694 [0.67, 0.72] (F1/hgb) | 0.748 [0.73, 0.77], p=0.0099 (F3.lt1700/hgb) | 0.748 [0.73, 0.77], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | phenol | 0.903 [0.88, 0.93], p=0.0099 | 0.919 [0.90, 0.94] (F1.sqrt/lr) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) |
+| scaffold | all | ketone | 0.734 [0.72, 0.75], p=0.0099 | 0.740 [0.72, 0.76] (F1/hgb) | 0.906 [0.90, 0.92], p=0.0099 (F3/hgb) | 0.906 [0.90, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | aldehyde | 0.886 [0.84, 0.93], p=0.0099 | 0.897 [0.85, 0.94] (F1/hgb) | 0.939 [0.91, 0.96], p=0.0099 (F3.lt1700/hgb) | 0.939 [0.91, 0.96], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | ester | 0.665 [0.63, 0.69], p=0.0099 | 0.665 [0.63, 0.69], p=0.0099 (F1/lr) | 0.869 [0.85, 0.88], p=0.0099 (F3/hgb) | 0.869 [0.85, 0.88], p=0.0099 (F3/hgb) |
+| scaffold | all | ether | 0.669 [0.65, 0.68], p=0.0099 | 0.712 [0.70, 0.73] (F1/hgb) | 0.749 [0.73, 0.76], p=0.0099 (F3/hgb) | 0.749 [0.73, 0.76], p=0.0099 (F3/hgb) |
+| scaffold | all | nitrile | 0.784 [0.72, 0.84], p=0.0099 | 0.784 [0.72, 0.84], p=0.0099 (F1/lr) | 0.893 [0.85, 0.93], p=0.0099 (F3/hgb) | 0.893 [0.85, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | alkyne | 0.867 [0.82, 0.91], p=0.0099 | 0.867 [0.82, 0.91], p=0.0099 (F1/lr) | 0.883 [0.84, 0.92], p=0.0099 (F3/hgb) | 0.883 [0.84, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | alkene | 0.914 [0.90, 0.92], p=0.0099 | 0.935 [0.93, 0.94] (F1/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | fluoro | 0.748 [0.65, 0.84], p=0.0099 | 0.919 [0.87, 0.96] (F1/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3.lt1700/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | aromatic_ring | 0.949 [0.94, 0.96], p=0.0099 | 0.960 [0.95, 0.97] (F1.sqrt/lr) | 0.981 [0.98, 0.99], p=0.0099 (F3/hgb) | 0.981 [0.98, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | pyrrole_ring | 0.942 [0.92, 0.96], p=0.0099 | 0.942 [0.92, 0.96] (F1.sqrt/lr) | 0.969 [0.96, 0.98], p=0.0099 (F3.lt1700/hgb) | 0.969 [0.96, 0.98], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | imidazole_ring | 0.949 [0.94, 0.96], p=0.0099 | 0.949 [0.94, 0.96], p=0.0099 (F1/lr) | 0.958 [0.93, 0.98] (F3/hgb) | 0.961 [0.95, 0.97], p=0.0099 (F2.lt1700/hgb) |
+| scaffold | all | lactam | 0.723 [0.70, 0.75], p=0.0099 | 0.733 [0.71, 0.76] (F1.sqrt/lr) | 0.868 [0.85, 0.88], p=0.0099 (F3/hgb) | 0.868 [0.85, 0.88], p=0.0099 (F3/hgb) |
+
+
+## Labels not tested
+
+- random: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- random: fg_guanidine: needs >= 50 train / 10 test positives
+- random: fg_thiol: needs >= 50 train / 10 test positives
+- random: fg_thioether: needs >= 50 train / 10 test positives
+- random: fg_benzene_ring: needs >= 50 train / 10 test positives
+- random: fg_indole: needs >= 50 train / 10 test positives
+- scaffold: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- scaffold: fg_guanidine: needs >= 50 train / 10 test positives
+- scaffold: fg_thiol: needs >= 50 train / 10 test positives
+- scaffold: fg_thioether: needs >= 50 train / 10 test positives
+- scaffold: fg_benzene_ring: needs >= 50 train / 10 test positives
+- scaffold: fg_indole: needs >= 50 train / 10 test positives
+
+Arguments: `--task T3 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T3] done in 3976 s -> reports/baselines2b/native/T3.csv
+
+=== T3 (wide) -> reports/baselines2b/wide
+[data] data/processed_wide/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[T3] random: 20846 train / 5141 test molecules, 5141 test groups
+[T3] scaffold: 20789 train / 5198 test molecules, 4222 test groups
+[T3] 952 fits (34 label/scheme combinations) on 32 job(s)
+Matplotlib created a temporary cache directory at /tmp/matplotlib-_kcoog90 because the default path (/home/mv487/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[T3] fits + bootstrap done in 1285 s
+[T3] permutation tests: 68 combination(s), up to 100 shuffles each
+[T3] permutations done in 2112 s
+# T3 baselines (wide)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| random | all | primary_amine | 0.804 [0.77, 0.84], p=0.0099 | 0.972 [0.95, 0.99] (F1/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3/hgb) |
+| random | all | secondary_amine | 0.726 [0.70, 0.75], p=0.0099 | 0.740 [0.72, 0.76] (F1/hgb) | 0.796 [0.78, 0.81], p=0.0099 (F3/hgb) | 0.796 [0.78, 0.81], p=0.0099 (F3/hgb) |
+| random | all | amide | 0.782 [0.76, 0.80], p=0.0099 | 0.867 [0.85, 0.88] (F1/hgb) | 0.924 [0.91, 0.93], p=0.0099 (F3/hgb) | 0.924 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| random | all | hydroxyl_aliphatic | 0.694 [0.68, 0.71], p=0.0099 | 0.747 [0.73, 0.76] (F1/hgb) | 0.800 [0.79, 0.81], p=0.0099 (F3/hgb) | 0.800 [0.79, 0.81], p=0.0099 (F3/hgb) |
+| random | all | phenol | 0.914 [0.90, 0.93], p=0.0099 | 0.923 [0.91, 0.94] (F1.sqrt/lr) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) |
+| random | all | ketone | 0.838 [0.82, 0.85], p=0.0099 | 0.872 [0.86, 0.89] (F1/hgb) | 0.944 [0.94, 0.95], p=0.0099 (F3/hgb) | 0.944 [0.94, 0.95], p=0.0099 (F3/hgb) |
+| random | all | aldehyde | 0.935 [0.93, 0.94], p=0.0099 | 0.955 [0.95, 0.96] (F1/hgb) | 0.973 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.973 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | ester | 0.755 [0.72, 0.79], p=0.0099 | 0.802 [0.77, 0.84] (F1/hgb) | 0.941 [0.93, 0.95], p=0.0099 (F3/hgb) | 0.941 [0.93, 0.95], p=0.0099 (F3/hgb) |
+| random | all | ether | 0.704 [0.69, 0.72], p=0.0099 | 0.756 [0.74, 0.77] (F1/hgb) | 0.803 [0.79, 0.81], p=0.0099 (F3/hgb) | 0.803 [0.79, 0.81], p=0.0099 (F3/hgb) |
+| random | all | nitrile | 0.718 [0.70, 0.74], p=0.0099 | 0.756 [0.74, 0.77] (F1/hgb) | 0.895 [0.88, 0.91], p=0.0099 (F3/hgb) | 0.895 [0.88, 0.91], p=0.0099 (F3/hgb) |
+| random | all | alkyne | 0.897 [0.89, 0.91], p=0.0099 | 0.914 [0.90, 0.92] (F1/hgb) | 0.984 [0.98, 0.99], p=0.0099 (F3/hgb) | 0.984 [0.98, 0.99], p=0.0099 (F3/hgb) |
+| random | all | alkene | 0.923 [0.91, 0.93], p=0.0099 | 0.952 [0.94, 0.96] (F1/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fluoro | 0.872 [0.83, 0.91], p=0.0099 | 0.916 [0.89, 0.94] (F1.sqrt/lr) | 0.962 [0.94, 0.98], p=0.0099 (F3.lt1700/hgb) | 0.962 [0.94, 0.98], p=0.0099 (F3.lt1700/hgb) |
+| random | all | aromatic_ring | 0.973 [0.97, 0.98], p=0.0099 | 0.980 [0.98, 0.98] (F1/hgb) | 0.993 [0.99, 0.99], p=0.0099 (F3/hgb) | 0.993 [0.99, 0.99], p=0.0099 (F3/hgb) |
+| random | all | pyrrole_ring | 0.952 [0.93, 0.97], p=0.0099 | 0.963 [0.95, 0.97] (F1/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) |
+| random | all | imidazole_ring | 0.956 [0.94, 0.97], p=0.0099 | 0.957 [0.94, 0.97] (F1/hgb) | 0.974 [0.96, 0.98], p=0.0099 (F3/hgb) | 0.974 [0.96, 0.98], p=0.0099 (F3/hgb) |
+| random | all | lactam | 0.831 [0.81, 0.85], p=0.0099 | 0.869 [0.85, 0.89] (F1/hgb) | 0.930 [0.92, 0.94], p=0.0099 (F3/hgb) | 0.930 [0.92, 0.94], p=0.0099 (F3/hgb) |
+| scaffold | all | primary_amine | 0.774 [0.67, 0.86], p=0.0099 | 0.963 [0.93, 0.99] (F1/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | secondary_amine | 0.659 [0.64, 0.68], p=0.0099 | 0.659 [0.64, 0.68], p=0.0099 (F1/lr) | 0.724 [0.70, 0.75], p=0.0099 (F3.lt1700/hgb) | 0.724 [0.70, 0.75], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | amide | 0.745 [0.71, 0.77], p=0.0099 | 0.813 [0.79, 0.83] (F1/hgb) | 0.848 [0.83, 0.86], p=0.0099 (F3/hgb) | 0.848 [0.83, 0.86], p=0.0099 (F3/hgb) |
+| scaffold | all | hydroxyl_aliphatic | 0.650 [0.63, 0.67], p=0.0099 | 0.697 [0.67, 0.72] (F1/hgb) | 0.746 [0.72, 0.77], p=0.0099 (F3/hgb) | 0.746 [0.72, 0.77], p=0.0099 (F3/hgb) |
+| scaffold | all | phenol | 0.905 [0.88, 0.93], p=0.0099 | 0.920 [0.90, 0.94] (F1.sqrt/lr) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) |
+| scaffold | all | ketone | 0.807 [0.79, 0.82], p=0.0099 | 0.823 [0.81, 0.84] (F1/hgb) | 0.914 [0.91, 0.92], p=0.0099 (F3/hgb) | 0.914 [0.91, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | aldehyde | 0.906 [0.87, 0.94], p=0.0099 | 0.922 [0.89, 0.95] (F1/hgb) | 0.943 [0.92, 0.97], p=0.0099 (F3.lt1700/hgb) | 0.943 [0.92, 0.97], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | ester | 0.729 [0.70, 0.76], p=0.0099 | 0.734 [0.70, 0.76] (F1.sqrt/lr) | 0.919 [0.91, 0.93], p=0.0099 (F3/hgb) | 0.919 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | ether | 0.683 [0.67, 0.70], p=0.0099 | 0.726 [0.71, 0.74] (F1.sqrt/hgb) | 0.751 [0.74, 0.77], p=0.0099 (F3/hgb) | 0.751 [0.74, 0.77], p=0.0099 (F3/hgb) |
+| scaffold | all | nitrile | 0.795 [0.73, 0.85], p=0.0099 | 0.795 [0.73, 0.85], p=0.0099 (F1/lr) | 0.930 [0.89, 0.96], p=0.0099 (F3/hgb) | 0.930 [0.89, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | alkyne | 0.886 [0.84, 0.92], p=0.0099 | 0.886 [0.84, 0.92], p=0.0099 (F1/lr) | 0.949 [0.92, 0.97], p=0.0099 (F3/hgb) | 0.949 [0.92, 0.97], p=0.0099 (F3/hgb) |
+| scaffold | all | alkene | 0.919 [0.91, 0.93], p=0.0099 | 0.936 [0.93, 0.95] (F1/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | fluoro | 0.753 [0.66, 0.84], p=0.0099 | 0.924 [0.89, 0.96] (F1/hgb) | 0.976 [0.96, 0.99], p=0.0099 (F3.lt1700/hgb) | 0.976 [0.96, 0.99], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | aromatic_ring | 0.951 [0.94, 0.96], p=0.0099 | 0.961 [0.95, 0.97] (F1.sqrt/lr) | 0.981 [0.98, 0.98], p=0.0099 (F3/hgb) | 0.981 [0.98, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | pyrrole_ring | 0.942 [0.92, 0.96], p=0.0099 | 0.947 [0.93, 0.96] (F1/hgb) | 0.966 [0.96, 0.98], p=0.0099 (F3/hgb) | 0.966 [0.96, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | imidazole_ring | 0.949 [0.94, 0.96], p=0.0099 | 0.949 [0.94, 0.96], p=0.0099 (F1/lr) | 0.965 [0.95, 0.98], p=0.0099 (F3/hgb) | 0.965 [0.95, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | lactam | 0.772 [0.75, 0.79], p=0.0099 | 0.794 [0.77, 0.82] (F1/hgb) | 0.863 [0.85, 0.88], p=0.0099 (F3/hgb) | 0.863 [0.85, 0.88], p=0.0099 (F3/hgb) |
+
+
+## Labels not tested
+
+- random: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- random: fg_guanidine: needs >= 50 train / 10 test positives
+- random: fg_thiol: needs >= 50 train / 10 test positives
+- random: fg_thioether: needs >= 50 train / 10 test positives
+- random: fg_benzene_ring: needs >= 50 train / 10 test positives
+- random: fg_indole: needs >= 50 train / 10 test positives
+- scaffold: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- scaffold: fg_guanidine: needs >= 50 train / 10 test positives
+- scaffold: fg_thiol: needs >= 50 train / 10 test positives
+- scaffold: fg_thioether: needs >= 50 train / 10 test positives
+- scaffold: fg_benzene_ring: needs >= 50 train / 10 test positives
+- scaffold: fg_indole: needs >= 50 train / 10 test positives
+
+Arguments: `--task T3 --variant wide --out_dir reports/baselines2b/wide --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T3] done in 3415 s -> reports/baselines2b/wide/T3.csv
+label                      F2     F3    gap | gap <1700 | wide F2 wide F3 wide gap
+ester                   0.772  0.912 +0.139 |    +0.098 |   0.831   0.941   +0.110
+lactam                  0.797  0.923 +0.126 |    +0.103 |   0.892   0.930   +0.039
+amide                   0.835  0.917 +0.082 |    +0.072 |   0.897   0.924   +0.028
+ketone                  0.863  0.940 +0.077 |    +0.068 |   0.901   0.944   +0.044
+nitrile                 0.796  0.865 +0.069 |    +0.049 |   0.811   0.895   +0.084
+aldehyde                0.939  0.972 +0.033 |    +0.036 |   0.969   0.973   +0.005
+secondary_amine         0.766  0.799 +0.033 |    +0.028 |   0.768   0.796   +0.027
+ether                   0.773  0.804 +0.032 |    +0.031 |   0.776   0.803   +0.027
+hydroxyl_aliphatic      0.768  0.797 +0.029 |    +0.028 |   0.772   0.800   +0.028
+alkyne                  0.953  0.975 +0.022 |    +0.013 |   0.957   0.984   +0.028
+phenol                  0.934  0.953 +0.018 |    +0.013 |   0.939   0.953   +0.014
+fluoro                  0.949  0.966 +0.017 |    +0.009 |   0.951   0.961   +0.011
+pyrrole_ring            0.971  0.979 +0.009 |    +0.007 |   0.971   0.979   +0.008
+alkene                  0.971  0.977 +0.006 |    +0.005 |   0.972   0.977   +0.005
+aromatic_ring           0.987  0.992 +0.005 |    +0.005 |   0.987   0.993   +0.006
+primary_amine           0.987  0.990 +0.002 |    +0.006 |   0.988   0.991   +0.003
+imidazole_ring          0.969  0.971 +0.001 |    +0.002 |   0.971   0.974   +0.003
+
+=== T4 (native) -> reports/baselines2b/native
+[data] data/processed/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[data] data/processed/sers_records.jsonl: 899 SERS records, schema ['v1.2']
+[T4] train 20846 QM9S, test 5141 QM9S + 619 SERS; shared labels ['fg_primary_amine', 'fg_secondary_amine', 'fg_amide', 'fg_guanidine', 'fg_hydroxyl_aliphatic', 'fg_phenol', 'fg_ketone', 'fg_aromatic_ring', 'fg_benzene_ring', 'fg_pyrrole_ring', 'fg_imidazole_ring', 'fg_lactam']
+[T4] 336 fits (12 label/scheme combinations) on 32 job(s)
+Matplotlib created a temporary cache directory at /tmp/matplotlib-erdvm55h because the default path (/home/mv487/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[T4] fits + bootstrap done in 400 s
+[T4] permutation tests: 24 combination(s), up to 100 shuffles each
+[T4] permutations done in 608 s
+# T4 baselines (native)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| qm9s_to_sers | qm9s_test | primary_amine | 0.811 [0.78, 0.84] | 0.970 [0.95, 0.99] (F1/hgb) | 0.990 [0.98, 1.00] (F3/hgb) | 0.990 [0.98, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_all | primary_amine | 0.550 [0.00, 0.70], p=0.366 | 0.653 [0.08, 0.76] (F1.bg/hgb) | 0.700 [0.60, 1.00] (F3/hgb) | 0.734 [0.49, 0.81], p=0.0099 (F2/knn) |
+| qm9s_to_sers | sers_all@analyte | primary_amine | 0.135 [0.00, 0.40] | 0.699 [0.35, 0.98] (F1.sqrt/knn) | 0.925 [0.77, 1.00] (F3/hgb) | 0.925 [0.77, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_cells | primary_amine | 0.695 [0.58, 0.80] | 0.755 [0.67, 0.84] (F1.bg/hgb) | 0.703 [0.62, 0.79] (F3.bg/hgb) | 0.755 [0.67, 0.84] (F1.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | primary_amine | 0.789 [0.59, 0.95] | 0.947 [0.82, 1.00] (F1.bg/hgb) | 0.974 [0.92, 1.00] (F3.bg/knn) | 0.974 [0.92, 1.00] (F3.bg/knn) |
+| qm9s_to_sers | sers_standards | primary_amine | 0.074 [0.00, 0.30] | 0.516 [0.39, 0.65] (F1/knn) | 0.968 [0.87, 1.00] (F3/hgb) | 0.968 [0.87, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_standards@analyte | primary_amine | 0.098 [0.00, 0.34] | 0.549 [0.37, 0.68] (F1.sqrt/knn) | 0.955 [0.85, 1.00] (F3/hgb) | 0.955 [0.85, 1.00] (F3/hgb) |
+| qm9s_to_sers | qm9s_test | amide | 0.737 [0.71, 0.76] | 0.792 [0.76, 0.82] (F1.bg/hgb) | 0.917 [0.90, 0.93] (F3/hgb) | 0.917 [0.90, 0.93] (F3/hgb) |
+| qm9s_to_sers | sers_all | amide | 0.460 [0.24, 0.74], p=0.762 | 0.498 [0.26, 0.55] (F1.bg/knn) | 0.480 [0.07, 0.79] (F3.bg/hgb) | 0.596 [0.50, 0.98], p=0.0891 (F2/knn) |
+| qm9s_to_sers | sers_all@analyte | amide | 0.477 [0.19, 0.75] | 0.580 [0.27, 0.88] (F1/hgb) | 0.545 [0.13, 0.96] (F3.bg/knn) | 0.830 [0.39, 1.00] (F1pos/hgb) |
+| qm9s_to_sers | sers_cells | amide | 0.448 [0.20, 0.70] | 0.502 [0.43, 0.57] (F1.bg/knn) | 0.493 [0.16, 0.82] (F3.bg/hgb) | 0.597 [0.51, 0.68] (F2/knn) |
+| qm9s_to_sers | sers_cells@analyte | amide | 0.361 [0.06, 0.66] | 0.500 [0.24, 0.78] (F1.bg/knn) | 0.528 [0.26, 0.75] (F3/hgb) | 0.778 [0.50, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_standards | amide | 0.720 [0.48, 0.93] | 0.720 [0.48, 0.93] (F1/lr) | 0.720 [0.48, 0.93] (F3/lr) | 0.730 [0.50, 0.95] (F2/lr) |
+| qm9s_to_sers | sers_standards@analyte | amide | 0.784 [0.58, 0.96] | 0.784 [0.58, 0.96] (F1/lr) | 0.773 [0.57, 0.95] (F3/lr) | 0.784 [0.58, 0.96] (F1/lr) |
+| qm9s_to_sers | qm9s_test | hydroxyl_aliphatic | 0.691 [0.68, 0.71] | 0.745 [0.73, 0.76] (F1/hgb) | 0.797 [0.78, 0.81] (F3/hgb) | 0.797 [0.78, 0.81] (F3/hgb) |
+| qm9s_to_sers | sers_all | hydroxyl_aliphatic | 0.620 [0.49, 0.95], p=0.119 | 0.620 [0.49, 0.95], p=0.119 (F1/lr) | 0.648 [0.01, 0.72], p=0.0198 (F3/hgb) | 0.648 [0.01, 0.72], p=0.0198 (F3/hgb) |
+| qm9s_to_sers | sers_all@analyte | hydroxyl_aliphatic | 0.754 [0.52, 0.95] | 0.826 [0.54, 1.00] (F1.sqrt/lr) | 0.710 [0.45, 0.96] (F3.bg/hgb) | 0.826 [0.54, 1.00] (F1.sqrt/lr) |
+| qm9s_to_sers | sers_cells | hydroxyl_aliphatic | 0.632 [0.49, 0.81] | 0.632 [0.47, 0.75] (F1/knn) | 0.652 [0.55, 0.72] (F3/hgb) | 0.652 [0.55, 0.72] (F3/hgb) |
+| qm9s_to_sers | sers_cells@analyte | hydroxyl_aliphatic | 0.750 [0.47, 1.00] | 0.778 [0.53, 1.00] (F1.bg/lr) | 0.778 [0.53, 0.95] (F3/hgb) | 0.778 [0.53, 0.95] (F3/hgb) |
+| qm9s_to_sers | sers_standards | hydroxyl_aliphatic | 0.526 [0.04, 0.89] | 0.590 [0.04, 0.94] (F1.bg/hgb) | 0.808 [0.58, 0.96] (F3/knn) | 0.808 [0.58, 0.96] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | hydroxyl_aliphatic | 0.522 [0.00, 0.92] | 0.609 [0.04, 0.96] (F1.bg/hgb) | 0.826 [0.58, 1.00] (F3/knn) | 0.826 [0.58, 1.00] (F3/knn) |
+| qm9s_to_sers | qm9s_test | phenol | 0.915 [0.90, 0.93] | 0.924 [0.91, 0.94] (F1.sqrt/lr) | 0.953 [0.94, 0.96] (F3/hgb) | 0.953 [0.94, 0.96] (F3/hgb) |
+| qm9s_to_sers | sers_all | phenol | 0.745 [0.38, 0.85], p=0.148 | 0.811 [0.77, 0.99], p=0.0099 (F1/knn) | 0.733 [0.01, 0.84] (F3.bg/lr) | 0.811 [0.77, 0.99], p=0.0099 (F1/knn) |
+| qm9s_to_sers | sers_all@analyte | phenol | 0.688 [0.38, 0.96] | 0.938 [0.81, 1.00] (F1/knn) | 0.792 [0.61, 0.96] (F3.bg/knn) | 0.938 [0.81, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_cells | phenol | 0.766 [0.63, 0.89] | 0.820 [0.72, 0.90] (F1.bg/hgb) | 0.760 [0.64, 0.88] (F3/lr) | 0.820 [0.72, 0.90] (F1.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | phenol | 0.842 [0.67, 1.00] | 1.000 [1.00, 1.00] (F1/knn) | 0.842 [0.63, 1.00] (F3.bg/knn) | 1.000 [1.00, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_standards | phenol | 0.444 [0.17, 0.72] | 0.889 [0.75, 1.00] (F1/knn) | 0.907 [0.73, 1.00] (F3/knn) | 0.907 [0.73, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | phenol | 0.438 [0.12, 0.72] | 0.938 [0.81, 1.00] (F1/knn) | 0.896 [0.72, 1.00] (F3/knn) | 0.938 [0.81, 1.00] (F1/knn) |
+| qm9s_to_sers | qm9s_test | aromatic_ring | 0.972 [0.97, 0.98] | 0.980 [0.98, 0.98] (F1.bg/hgb) | 0.992 [0.99, 0.99] (F3/hgb) | 0.992 [0.99, 0.99] (F3/hgb) |
+| qm9s_to_sers | sers_all | aromatic_ring | 0.545 [0.23, 0.88], p=0.277 | 0.561 [0.32, 0.87] (F1/knn) | 0.652 [0.43, 0.82], p=0.0099 (F3.bg/hgb) | 0.652 [0.43, 0.82], p=0.0099 (F3.bg/hgb) |
+| qm9s_to_sers | sers_all@analyte | aromatic_ring | 0.512 [0.20, 0.78] | 0.669 [0.40, 0.91] (F1.sqrt/knn) | 0.644 [0.39, 0.88] (F3.bg/hgb) | 0.881 [0.64, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_cells | aromatic_ring | 0.555 [0.17, 1.00] | 0.559 [0.17, 1.00] (F1.bg/lr) | 0.645 [0.38, 0.83] (F3.bg/hgb) | 0.645 [0.38, 0.83] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | aromatic_ring | 0.562 [0.00, 1.00] | 0.594 [0.09, 1.00] (F1.bg/knn) | 0.719 [0.37, 0.99] (F3.bg/hgb) | 0.734 [0.00, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_standards | aromatic_ring | 0.404 [0.19, 0.67] | 0.798 [0.57, 0.96] (F1.bg/hgb) | 0.745 [0.44, 0.94] (F3.bg/hgb) | 0.798 [0.57, 0.96] (F1.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | aromatic_ring | 0.425 [0.15, 0.67] | 0.781 [0.53, 0.97] (F1.bg/hgb) | 0.738 [0.47, 0.96] (F3/lr) | 0.781 [0.53, 0.97] (F1.bg/hgb) |
+| qm9s_to_sers | qm9s_test | benzene_ring | 0.977 [0.94, 1.00] | 0.986 [0.97, 1.00] (F1/hgb) | 0.999 [1.00, 1.00] (F3.bg/hgb) | 0.999 [1.00, 1.00] (F3.bg/hgb) |
+| qm9s_to_sers | sers_all | benzene_ring | 0.272 [0.11, 0.52], p=1 | 0.652 [0.35, 0.97] (F1.bg/hgb) | 0.740 [0.57, 0.97], p=0.0099 (F3.bg/hgb) | 0.740 [0.57, 0.97], p=0.0099 (F3.bg/hgb) |
+| qm9s_to_sers | sers_all@analyte | benzene_ring | 0.516 [0.22, 0.83] | 0.784 [0.59, 0.98] (F1.bg/knn) | 0.804 [0.60, 1.00] (F3.bg/knn) | 0.804 [0.60, 1.00] (F3.bg/knn) |
+| qm9s_to_sers | sers_cells | benzene_ring | 0.229 [0.03, 0.42] | 0.629 [0.24, 0.99] (F1.bg/hgb) | 0.725 [0.51, 0.98] (F3.bg/hgb) | 0.725 [0.51, 0.98] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | benzene_ring | 0.196 [0.00, 0.63] | 0.745 [0.39, 1.00] (F1.bg/knn) | 0.784 [0.53, 1.00] (F3/hgb) | 0.784 [0.39, 1.00] (F1pos/knn) |
+| qm9s_to_sers | sers_standards | benzene_ring | 0.529 [0.29, 0.86] | 0.926 [0.80, 0.99] (F1/hgb) | 0.971 [0.88, 1.00] (F3/hgb) | 0.971 [0.88, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_standards@analyte | benzene_ring | 0.608 [0.33, 0.87] | 0.902 [0.76, 0.99] (F1/hgb) | 0.961 [0.87, 1.00] (F3/hgb) | 0.961 [0.87, 1.00] (F3/hgb) |
+| qm9s_to_sers | qm9s_test | pyrrole_ring | 0.952 [0.93, 0.97] | 0.964 [0.95, 0.97] (F1/hgb) | 0.979 [0.97, 0.99] (F3/hgb) | 0.979 [0.97, 0.99] (F3/hgb) |
+| qm9s_to_sers | sers_all | pyrrole_ring | 0.236 [0.01, 0.42], p=0.594 | 0.788 [0.45, 0.83] (F1/knn) | 0.600 [0.01, 0.71] (F3.bg/hgb) | 0.811 [0.39, 0.87], p=0.0594 (F1pos/hgb) |
+| qm9s_to_sers | sers_all@analyte | pyrrole_ring | 0.273 [0.00, 0.63] | 0.693 [0.28, 1.00] (F1.sqrt/lr) | 0.625 [0.50, 1.00] (F3/knn) | 0.716 [0.46, 0.96] (F1pos/lr) |
+| qm9s_to_sers | sers_cells | pyrrole_ring | 0.255 [0.17, 0.36] | 0.858 [0.82, 0.90] (F1.sqrt/lr) | 0.592 [0.51, 0.68] (F3.bg/hgb) | 0.866 [0.82, 0.90] (F1pos/lr) |
+| qm9s_to_sers | sers_cells@analyte | pyrrole_ring | 0.158 [0.00, 0.33] | 1.000 [1.00, 1.00] (F1/knn) | 0.632 [0.42, 0.84] (F3.bg/hgb) | 1.000 [1.00, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_standards | pyrrole_ring | 0.091 [0.01, 0.28] | 0.610 [0.40, 0.72] (F1/knn) | 0.714 [0.00, 0.96] (F3.bg/hgb) | 0.714 [0.00, 0.96] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | pyrrole_ring | 0.125 [0.00, 0.29] | 0.705 [0.48, 0.91] (F1.bg/hgb) | 0.693 [0.00, 1.00] (F3.bg/hgb) | 0.795 [0.47, 1.00] (F1pos/knn) |
+| qm9s_to_sers | qm9s_test | lactam | 0.763 [0.73, 0.79] | 0.771 [0.74, 0.79] (F1.sqrt/lr) | 0.923 [0.91, 0.93] (F3/hgb) | 0.923 [0.91, 0.93] (F3/hgb) |
+| qm9s_to_sers | sers_all | lactam | 0.312 [0.00, 0.72], p=0.673 | 0.443 [0.00, 0.94] (F1.bg/lr) | 0.819 [0.68, 0.93], p=0.129 (F3/knn) | 0.819 [0.68, 0.93], p=0.129 (F3/knn) |
+| qm9s_to_sers | sers_all@analyte | lactam | 0.312 [0.00, 0.75] | 0.417 [0.00, 0.92] (F1.bg/lr) | 0.750 [0.57, 0.91] (F3/knn) | 0.750 [0.57, 0.91] (F3/knn) |
+| qm9s_to_sers | sers_cells | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_cells@analyte | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_standards | lactam | 0.481 [0.00, 0.96] | 0.518 [0.04, 1.00] (F1.sqrt/lr) | 0.852 [0.65, 1.00] (F3/knn) | 0.852 [0.65, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | lactam | 0.500 [0.04, 1.00] | 0.500 [0.04, 1.00] (F1/lr) | 0.875 [0.71, 1.00] (F3/knn) | 0.875 [0.71, 1.00] (F3/knn) |
+
+
+## Labels with a single SERS analyte on one side
+
+AUROC here only ranks one molecule, so these are reported as that analyte's rank among all analytes (`T4_per_analyte.csv`, columns rank / n_analytes), not in the table above:
+
+- fg_secondary_amine
+- fg_guanidine
+- fg_ketone
+- fg_imidazole_ring
+
+## Labels not tested
+
+- fg_carboxylic_acid: 0 QM9S training positives (< 30)
+- fg_thiol: 0 QM9S training positives (< 30)
+- fg_thioether: 0 QM9S training positives (< 30)
+- fg_aldehyde: SERS side has only one class
+- fg_ester: SERS side has only one class
+- fg_ether: SERS side has only one class
+- fg_nitrile: SERS side has only one class
+- fg_alkyne: SERS side has only one class
+- fg_alkene: SERS side has only one class
+- fg_fluoro: SERS side has only one class
+- fg_indole: 0 QM9S training positives (< 30)
+
+Arguments: `--task T4 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T4] done in 1025 s -> reports/baselines2b/native/T4.csv
+
+=== T4 (matched) -> reports/baselines2b/matched
+[data] data/processed_matched/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[data] data/processed_matched/sers_records.jsonl: 899 SERS records, schema ['v1.2-matched']
+[T4] train 20846 QM9S, test 5141 QM9S + 619 SERS; shared labels ['fg_primary_amine', 'fg_secondary_amine', 'fg_amide', 'fg_guanidine', 'fg_hydroxyl_aliphatic', 'fg_phenol', 'fg_ketone', 'fg_aromatic_ring', 'fg_benzene_ring', 'fg_pyrrole_ring', 'fg_imidazole_ring', 'fg_lactam']
+[T4] 336 fits (12 label/scheme combinations) on 32 job(s)
+[T4] fits + bootstrap done in 340 s
+[T4] permutation tests: 24 combination(s), up to 100 shuffles each
+[T4] permutations done in 378 s
+# T4 baselines (matched)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| qm9s_to_sers | qm9s_test | primary_amine | 0.781 [0.74, 0.82] | 0.962 [0.93, 0.98] (F1/hgb) | 0.993 [0.99, 1.00] (F3.bg/hgb) | 0.993 [0.99, 1.00] (F3.bg/hgb) |
+| qm9s_to_sers | sers_all | primary_amine | 0.436 [0.04, 0.51], p=0.713 | 0.696 [0.35, 0.77], p=0.099 (F1/hgb) | 0.689 [0.17, 0.79] (F3.bg/hgb) | 0.696 [0.35, 0.77], p=0.099 (F1/hgb) |
+| qm9s_to_sers | sers_all@analyte | primary_amine | 0.128 [0.00, 0.34] | 0.744 [0.44, 0.98] (F1.bg/knn) | 0.782 [0.52, 0.95] (F3.bg/knn) | 0.801 [0.50, 1.00] (F1pos/knn) |
+| qm9s_to_sers | sers_cells | primary_amine | 0.486 [0.41, 0.56] | 0.725 [0.66, 0.78] (F1/hgb) | 0.780 [0.69, 0.87] (F3.bg/hgb) | 0.780 [0.69, 0.87] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | primary_amine | 0.579 [0.36, 0.79] | 0.947 [0.83, 1.00] (F1/hgb) | 0.895 [0.79, 0.97] (F3.bg/knn) | 0.947 [0.83, 1.00] (F1/hgb) |
+| qm9s_to_sers | sers_standards | primary_amine | 0.242 [0.04, 0.43] | 0.500 [0.37, 0.68] (F1.bg/knn) | 0.479 [0.32, 0.57] (F3.bg/knn) | 0.726 [0.44, 0.90] (F2/knn) |
+| qm9s_to_sers | sers_standards@analyte | primary_amine | 0.226 [0.04, 0.47] | 0.549 [0.39, 0.68] (F1.bg/knn) | 0.459 [0.29, 0.57] (F3.bg/knn) | 0.654 [0.39, 0.86] (F2/knn) |
+| qm9s_to_sers | qm9s_test | amide | 0.729 [0.70, 0.75] | 0.786 [0.76, 0.81] (F1.sqrt/hgb) | 0.921 [0.91, 0.93] (F3/hgb) | 0.921 [0.91, 0.93] (F3/hgb) |
+| qm9s_to_sers | sers_all | amide | 0.603 [0.09, 0.77], p=0.0693 | 0.615 [0.40, 0.79] (F1.bg/lr) | 0.546 [0.48, 0.96] (F3/knn) | 0.689 [0.12, 0.78], p=0.0099 (F2/lr) |
+| qm9s_to_sers | sers_all@analyte | amide | 0.432 [0.00, 0.84] | 0.545 [0.04, 1.00] (F1/hgb) | 0.761 [0.45, 1.00] (F3/knn) | 0.784 [0.57, 0.96] (F2/hgb) |
+| qm9s_to_sers | sers_cells | amide | 0.613 [0.40, 0.79] | 0.613 [0.40, 0.80] (F1.bg/lr) | 0.538 [0.47, 0.60] (F3/knn) | 0.707 [0.60, 0.81] (F2/lr) |
+| qm9s_to_sers | sers_cells@analyte | amide | 0.639 [0.28, 0.94] | 0.639 [0.28, 0.94] (F1/lr) | 0.639 [0.37, 0.89] (F3/knn) | 0.917 [0.78, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_standards | amide | 0.610 [0.36, 0.82] | 0.680 [0.36, 0.94] (F1.sqrt/lr) | 0.740 [0.50, 0.95] (F3/lr) | 0.740 [0.50, 0.95] (F3/lr) |
+| qm9s_to_sers | sers_standards@analyte | amide | 0.602 [0.30, 0.84] | 0.727 [0.45, 0.97] (F1.sqrt/lr) | 0.807 [0.61, 0.96] (F3/lr) | 0.807 [0.61, 0.96] (F3/lr) |
+| qm9s_to_sers | qm9s_test | hydroxyl_aliphatic | 0.681 [0.67, 0.70] | 0.724 [0.71, 0.74] (F1/hgb) | 0.802 [0.79, 0.81] (F3/hgb) | 0.802 [0.79, 0.81] (F3/hgb) |
+| qm9s_to_sers | sers_all | hydroxyl_aliphatic | 0.572 [0.45, 0.70], p=0.188 | 0.605 [0.27, 0.98] (F1.bg/hgb) | 0.589 [0.40, 0.83] (F3.bg/knn) | 0.616 [0.43, 1.00], p=0.109 (F1pos/hgb) |
+| qm9s_to_sers | sers_all@analyte | hydroxyl_aliphatic | 0.623 [0.35, 0.84] | 0.725 [0.20, 1.00] (F1/hgb) | 0.623 [0.17, 0.96] (F3.bg/lr) | 0.797 [0.40, 1.00] (F1pos/hgb) |
+| qm9s_to_sers | sers_cells | hydroxyl_aliphatic | 0.585 [0.47, 0.68] | 0.617 [0.28, 0.85] (F1.bg/hgb) | 0.600 [0.39, 0.86] (F3.bg/knn) | 0.623 [0.44, 0.74] (F1pos/hgb) |
+| qm9s_to_sers | sers_cells@analyte | hydroxyl_aliphatic | 0.639 [0.33, 0.89] | 0.639 [0.33, 0.89] (F1/lr) | 0.667 [0.39, 0.89] (F3.bg/knn) | 0.806 [0.61, 0.95] (F2/lr) |
+| qm9s_to_sers | sers_standards | hydroxyl_aliphatic | 0.385 [0.00, 0.85] | 0.487 [0.04, 1.00] (F1.sqrt/knn) | 0.769 [0.60, 0.93] (F3.bg/hgb) | 0.769 [0.60, 0.93] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | hydroxyl_aliphatic | 0.362 [0.00, 0.84] | 0.478 [0.04, 1.00] (F1.sqrt/knn) | 0.812 [0.62, 0.96] (F3.bg/hgb) | 0.812 [0.62, 0.96] (F3.bg/hgb) |
+| qm9s_to_sers | qm9s_test | phenol | 0.912 [0.90, 0.93] | 0.922 [0.91, 0.94] (F1.sqrt/lr) | 0.955 [0.95, 0.96] (F3/hgb) | 0.955 [0.95, 0.96] (F3/hgb) |
+| qm9s_to_sers | sers_all | phenol | 0.758 [0.30, 0.87], p=0.129 | 0.783 [0.21, 0.89] (F1.sqrt/lr) | 0.799 [0.00, 0.89], p=0.0297 (F3/hgb) | 0.799 [0.00, 0.89], p=0.0297 (F3/hgb) |
+| qm9s_to_sers | sers_all@analyte | phenol | 0.688 [0.38, 0.96] | 0.896 [0.72, 1.00] (F1/knn) | 0.896 [0.73, 1.00] (F3/knn) | 0.938 [0.83, 1.00] (F1pos/hgb) |
+| qm9s_to_sers | sers_cells | phenol | 0.779 [0.65, 0.92] | 0.814 [0.70, 0.92] (F1.sqrt/lr) | 0.846 [0.76, 0.94] (F3/hgb) | 0.846 [0.76, 0.94] (F3/hgb) |
+| qm9s_to_sers | sers_cells@analyte | phenol | 0.895 [0.74, 1.00] | 1.000 [1.00, 1.00] (F1/hgb) | 0.947 [0.83, 1.00] (F3/hgb) | 1.000 [1.00, 1.00] (F1/hgb) |
+| qm9s_to_sers | sers_standards | phenol | 0.278 [0.04, 0.56] | 0.870 [0.71, 1.00] (F1/knn) | 0.796 [0.52, 1.00] (F3/knn) | 0.870 [0.71, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_standards@analyte | phenol | 0.292 [0.04, 0.58] | 0.917 [0.76, 1.00] (F1/knn) | 0.812 [0.54, 1.00] (F3/knn) | 0.917 [0.76, 1.00] (F1/knn) |
+| qm9s_to_sers | qm9s_test | aromatic_ring | 0.970 [0.96, 0.97] | 0.976 [0.97, 0.98] (F1.sqrt/lr) | 0.992 [0.99, 0.99] (F3/hgb) | 0.992 [0.99, 0.99] (F3/hgb) |
+| qm9s_to_sers | sers_all | aromatic_ring | 0.509 [0.19, 0.87], p=0.475 | 0.631 [0.42, 0.88], p=0.0198 (F1/knn) | 0.624 [0.40, 0.84] (F3/lr) | 0.631 [0.42, 0.88], p=0.0198 (F1/knn) |
+| qm9s_to_sers | sers_all@analyte | aromatic_ring | 0.594 [0.32, 0.86] | 0.706 [0.44, 0.95] (F1.sqrt/knn) | 0.631 [0.37, 0.86] (F3/lr) | 0.781 [0.52, 0.97] (F2/knn) |
+| qm9s_to_sers | sers_cells | aromatic_ring | 0.506 [0.11, 0.94] | 0.620 [0.38, 0.91] (F1/knn) | 0.636 [0.46, 0.80] (F3.bg/hgb) | 0.636 [0.46, 0.80] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | aromatic_ring | 0.531 [0.00, 1.00] | 0.609 [0.11, 1.00] (F1.sqrt/knn) | 0.734 [0.37, 1.00] (F3/lr) | 0.734 [0.37, 1.00] (F3/lr) |
+| qm9s_to_sers | sers_standards | aromatic_ring | 0.476 [0.25, 0.70] | 0.774 [0.52, 0.94] (F1.sqrt/knn) | 0.767 [0.52, 0.95] (F3/knn) | 0.774 [0.52, 0.94] (F1.sqrt/knn) |
+| qm9s_to_sers | sers_standards@analyte | aromatic_ring | 0.450 [0.21, 0.66] | 0.769 [0.54, 0.96] (F1.sqrt/knn) | 0.747 [0.52, 0.94] (F3/knn) | 0.769 [0.54, 0.96] (F1.sqrt/knn) |
+| qm9s_to_sers | qm9s_test | benzene_ring | 0.966 [0.91, 1.00] | 0.974 [0.93, 1.00] (F1.sqrt/lr) | 0.998 [1.00, 1.00] (F3.bg/hgb) | 0.998 [1.00, 1.00] (F3.bg/hgb) |
+| qm9s_to_sers | sers_all | benzene_ring | 0.450 [0.36, 0.75], p=0.802 | 0.549 [0.51, 0.74] (F1/knn) | 0.663 [0.53, 0.83] (F3.bg/hgb) | 0.754 [0.62, 0.88], p=0.0198 (F2/lr) |
+| qm9s_to_sers | sers_all@analyte | benzene_ring | 0.673 [0.42, 0.92] | 0.791 [0.58, 0.98] (F1/knn) | 0.797 [0.56, 1.00] (F3/knn) | 0.797 [0.56, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_cells | benzene_ring | 0.411 [0.30, 0.50] | 0.513 [0.49, 0.55] (F1/knn) | 0.649 [0.49, 0.84] (F3.bg/hgb) | 0.771 [0.65, 0.91] (F2/lr) |
+| qm9s_to_sers | sers_cells@analyte | benzene_ring | 0.372 [0.00, 0.89] | 0.627 [0.43, 0.95] (F1.sqrt/knn) | 0.667 [0.26, 1.00] (F3.bg/hgb) | 0.745 [0.50, 0.94] (F2/lr) |
+| qm9s_to_sers | sers_standards | benzene_ring | 0.627 [0.41, 0.88] | 0.792 [0.65, 0.93] (F1/knn) | 0.819 [0.54, 0.99] (F3.bg/hgb) | 0.819 [0.54, 0.99] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | benzene_ring | 0.706 [0.48, 0.90] | 0.833 [0.67, 1.00] (F1/knn) | 0.863 [0.70, 1.00] (F3/knn) | 0.863 [0.70, 1.00] (F3/knn) |
+| qm9s_to_sers | qm9s_test | pyrrole_ring | 0.952 [0.94, 0.96] | 0.959 [0.95, 0.97] (F1/hgb) | 0.977 [0.97, 0.98] (F3/hgb) | 0.977 [0.97, 0.98] (F3/hgb) |
+| qm9s_to_sers | sers_all | pyrrole_ring | 0.861 [0.53, 0.94], p=0.0396 | 0.868 [0.58, 0.94] (F1.sqrt/lr) | 0.727 [0.64, 0.93] (F3.bg/hgb) | 0.874 [0.21, 0.98], p=0.0396 (F2/hgb) |
+| qm9s_to_sers | sers_all@analyte | pyrrole_ring | 0.693 [0.29, 1.00] | 0.943 [0.83, 1.00] (F1/hgb) | 0.830 [0.62, 1.00] (F3.bg/hgb) | 0.943 [0.83, 1.00] (F1/hgb) |
+| qm9s_to_sers | sers_cells | pyrrole_ring | 0.940 [0.90, 0.97] | 0.940 [0.90, 0.97] (F1/lr) | 0.724 [0.63, 0.81] (F3.bg/hgb) | 0.978 [0.95, 1.00] (F2/hgb) |
+| qm9s_to_sers | sers_cells@analyte | pyrrole_ring | 1.000 [1.00, 1.00] | 1.000 [1.00, 1.00] (F1/lr) | 0.737 [0.53, 0.94] (F3.bg/hgb) | 1.000 [1.00, 1.00] (F1/lr) |
+| qm9s_to_sers | sers_standards | pyrrole_ring | 0.364 [0.17, 0.79] | 0.610 [0.41, 0.72] (F1/knn) | 0.649 [0.45, 0.88] (F3.bg/hgb) | 0.649 [0.45, 0.88] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | pyrrole_ring | 0.466 [0.19, 0.78] | 0.705 [0.40, 0.95] (F1/hgb) | 0.727 [0.48, 0.93] (F3.bg/hgb) | 0.727 [0.48, 0.93] (F3.bg/hgb) |
+| qm9s_to_sers | qm9s_test | lactam | 0.757 [0.72, 0.78] | 0.760 [0.73, 0.79] (F1.sqrt/lr) | 0.927 [0.91, 0.94] (F3/hgb) | 0.927 [0.91, 0.94] (F3/hgb) |
+| qm9s_to_sers | sers_all | lactam | 0.067 [0.00, 0.20], p=0.931 | 0.391 [0.00, 0.85] (F1.bg/lr) | 0.913 [0.84, 0.97], p=0.0297 (F3/knn) | 0.913 [0.84, 0.97], p=0.0297 (F3/knn) |
+| qm9s_to_sers | sers_all@analyte | lactam | 0.042 [0.00, 0.17] | 0.396 [0.00, 0.91] (F1.bg/lr) | 1.000 [1.00, 1.00] (F3/knn) | 1.000 [1.00, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_cells | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_cells@analyte | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_standards | lactam | 0.259 [0.00, 0.61] | 0.389 [0.30, 0.46] (F1.sqrt/knn) | 1.000 [1.00, 1.00] (F3.bg/hgb) | 1.000 [1.00, 1.00] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | lactam | 0.250 [0.00, 0.60] | 0.375 [0.28, 0.46] (F1.sqrt/knn) | 1.000 [1.00, 1.00] (F3.bg/hgb) | 1.000 [1.00, 1.00] (F3.bg/hgb) |
+
+
+## Labels with a single SERS analyte on one side
+
+AUROC here only ranks one molecule, so these are reported as that analyte's rank among all analytes (`T4_per_analyte.csv`, columns rank / n_analytes), not in the table above:
+
+- fg_secondary_amine
+- fg_guanidine
+- fg_ketone
+- fg_imidazole_ring
+
+## Labels not tested
+
+- fg_carboxylic_acid: 0 QM9S training positives (< 30)
+- fg_thiol: 0 QM9S training positives (< 30)
+- fg_thioether: 0 QM9S training positives (< 30)
+- fg_aldehyde: SERS side has only one class
+- fg_ester: SERS side has only one class
+- fg_ether: SERS side has only one class
+- fg_nitrile: SERS side has only one class
+- fg_alkyne: SERS side has only one class
+- fg_alkene: SERS side has only one class
+- fg_fluoro: SERS side has only one class
+- fg_indole: 0 QM9S training positives (< 30)
+
+Arguments: `--task T4 --variant matched --out_dir reports/baselines2b/matched --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T4] done in 732 s -> reports/baselines2b/matched/T4.csv
+done: reports/baselines2b/native/*.md, reports/baselines2b/matched/T4.md, reports/baselines2b/T3_string_loss.txt, reports/baselines2b/cb_inspect.txt

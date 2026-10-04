@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probe2circuit"
+version = "0.1.0"
+description = "Harmonised spectrum-to-string pipeline, structural labels, coverage and leakage checks for SERS / QM9S probing"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "pandas", "pyyaml", "scikit-learn>=1.2", "rdkit", "openpyxl", "matplotlib", "joblib", "threadpoolctl"]
+
+[project.optional-dependencies]
+gpu = ["torch", "transformers", "unsloth", "trl", "peft", "datasets"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]

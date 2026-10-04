@@ -1,0 +1,193 @@
+# Harmonised spectrum -> string schema, v1.
+# Every source (SERS .txt, QM9S broadened CSV, ORCA DFT sticks) goes through
+# exactly these steps with exactly these numbers. Change a value here and the
+# schema version should change too, because strings are no longer comparable.
+# v1.1: SERS switched from paired subtraction to reference_norm (829 = 1.0).
+# v1.2: generic CB reference for spectra without their own CB file (standards);
+#       split unit = culture (D1).
+schema: v1.2
+
+# Shared spectral window and grid. 500-1750 cm-1 is the SERS range you trust at
+# 785 nm (your `range` field and XLIM). QM9S is cropped to the same window and
+# RE-NORMALISED INSIDE IT, otherwise the C-H stretches near 3000 cm-1 set the max
+# and most fingerprint peaks fall under the intensity cut.
+window: [500.0, 1750.0]
+grid_step: 1.0
+
+# Baseline removal: experimental spectra only (simulated spectra have none).
+baseline:
+  method: als          # asymmetric least squares
+  lam: 100000.0
+  p: 0.01
+  niter: 10
+
+# Smoothing: applied to every source so peak picking sees the same noise floor.
+smooth:
+  window_cm: 9         # Savitzky-Golay window in cm-1 (converted to points)
+  polyorder: 3
+
+# Extra Gaussian broadening for simulated spectra, to match SERS linewidths.
+# 0 = off. QM9S is a ~10 cm-1 Lorentzian and SERS ~19 cm-1 FWHM, so ~13 here
+# matches them, once QM9S is built from raman_boraden.csv (not from peak lists).
+sim_extra_fwhm: 0.0
+
+# QM9S supplied as make_views.py peak lists (qm9s_raman.jsonl) instead of the
+# broadened CSV. Those peaks were found on the full 400-4000 cm-1 spectrum with
+# scipy widths at rel_height 0.7, max-normalised globally and cut at 0.1.
+# Widths are converted to FWHM assuming a Lorentzian line shape: isolated peaks
+# in the file sit at 15.3 cm-1 (rel 0.7), i.e. ~10.0 cm-1 FWHM, which is the
+# QM9S broadening width.
+qm9s_peaklist:
+  source_rel_height: 0.7
+  source_floor: 0.1
+
+# DFT stick spectra (ORCA): scaling + Lorentzian broadening, as in dft_to_views.py
+dft:
+  scale: 0.98
+  fwhm: 10.0
+
+# Substrate handling (SERS only). Modes:
+#   reference_norm : (default) scale each spectrum so the CB[5] ~829 band = 1.0,
+#            detect peaks, then discard the peaks the substrate explains (see
+#            `reference_norm` below). Nothing is subtracted, so no negative
+#            intensities; analyte peaks taller than the 829 band are > 1.0.
+#   paired : subtract the paired CB-only spectrum (shift-aligned, then scaled by
+#            non-negative least squares on `fit_regions`). Falls back to
+#            `mask` if no pair exists. It does NOT fall back to a reference from
+#            another session: the standards sit ~2-3 cm-1 off the cell axis and
+#            have different CB band ratios, so cross-session subtraction leaves
+#            derivative-shaped residuals that become fake peaks.
+#   mean_ref : subtract the mean of all CB-only spectra supplied (explicit only)
+#   mask   : detect peaks, then drop any within `tol_cm` of a catalogue substrate peak
+#   none   : leave substrate peaks in
+substrate:
+  mode: reference_norm
+  pair_by: condition_mean  # mean of all CB repeats for the same strain+medium; or same_index
+  fit_regions: [[600, 635], [665, 690], [745, 765], [812, 845], [870, 895]]  # paired mode only
+  tol_cm: 3.5              # mask mode only; wider tolerances eat Trp 759 and 877
+  max_shift_cm: 3.0       # paired mode: search range for aligning the reference axis
+  catalogue_min_prominence: 0.10   # CB bands must have at least this prominence (829 = 1.0 scale)
+  mask_after_subtract: false
+  reference_norm:
+    ref_cm: 829.0          # CB[5] reference band; sits at 826-827 (cells) / 828-830 (standards)
+    ref_tol: 4.0           # reference height = tallest local max within ref_cm +/- ref_tol
+    # The reference must be a real peak: prominence >= this x the spectrum max.
+    # Spectra that fail are max-normalised instead and flagged
+    # mode_used = "max_in_window(ref_missing)".
+    ref_min_rel_prominence: 0.02
+    # CB[5]-only band regions. A peak here is discarded only if it matches a band
+    # in the paired CB-only spectrum AND is not clearly taller than that band, so
+    # Trp/indole 758 (on top of CB ~755) and Trp 877 (on top of CB ~880) survive
+    # when the analyte is actually contributing.
+    cb_regions: [[745, 765], [812, 845], [870, 895]]
+    match_tol_cm: 5.0      # a peak within this of a CB band is a candidate for discarding
+    keep_min_excess: 0.10  # ...kept anyway if intensity - CB band height >= this (829 units)
+    keep_min_ratio: 1.5    # ...AND intensity >= this x CB band height
+    # true: after discarding, rescale so the strongest analyte peak = 1.0 (same
+    # intensity scale as QM9S/DFT strings). false: keep intensities relative to 829.
+    rescale_to_max_after_discard: false
+  # Generic CB reference, for spectra with no CB file of their own (the
+  # amino-acid and indole standards). Built once from all cell-assay CB files by
+  # scripts/make_generic_cb.py, on the same 829 = 1.0 scale. Band positions come
+  # from its mean; the expected height of each band comes from `height`:
+  #   p90  = 90th percentile across CB files (conservative: a standard's peak at
+  #          a CB position is kept only if it clearly beats a high-substrate CB)
+  #   mean = average CB file
+  # If `path` is missing, the CB files in the same run are averaged instead.
+  generic_cb:
+    path: data/generic_cb.txt
+    height: p90
+    min_corr: 0.90         # CB files whose shape correlates < this with the median are left out
+
+# Peak detection: run on the smoothed, normalised spectrum (max = 1 for QM9S/DFT,
+# CB[5] 829 band = 1 for SERS under reference_norm).
+peaks:
+  min_prominence: 0.03     # floor; the actual threshold is max(floor, noise_k * noise)
+  noise_k: 4.0             # noise = robust std of the unsmoothed normalised spectrum
+  min_height: 0.05
+  min_width_cm: 5.0        # narrower than this is noise / cosmic residue at 1 cm-1 sampling
+  min_distance_cm: 4.0
+  width_rel_height: 0.5    # FWHM for every source (QM9S code used 0.7; now shared)
+  max_peaks: 40            # keep the strongest N, then sort by position
+
+# Serialisation. The model sees ONLY this peak list, nothing else.
+# Grammar: "<pos> <int> <fwhm>" per peak, peaks joined by " | ", ascending position.
+serialise:
+  pos_decimals: 0
+  int_decimals: 2
+  width_decimals: 0
+  field_sep: " "
+  peak_sep: " | "
+
+# Fixed prompt. Scanned by the leakage checks for label terms.
+prompt_template: >-
+  Raman peak list (position cm-1, relative intensity, FWHM cm-1):
+  {text}
+  Which molecule produced this spectrum?
+
+# Split / grouping. `id` = no grouping (every spectrum is its own group).
+# `strip_replicate` = drop a trailing _<n> so replicate scans stay together.
+# D1 (27 Sep): Cell_536_trp_1..10 are 10 scans of one culture -> strip_replicate.
+split:
+  group_by: strip_replicate
+  test_fraction: 0.2
+  seed: 42
+
+# Dataset variants (roadmap 1.4), selected with build_strings.py --variant.
+# native  : as above; for SERS-only work (T1, T2, fine-tune R1).
+# matched : removes the two "domain tells" that let a model tell QM9S from SERS
+#           without any chemistry: linewidth (10 cm-1 Lorentzian (x) 13 cm-1
+#           Gaussian ~ 19 cm-1 Voigt, the SERS width) and intensity scale (SERS
+#           rescaled to strongest analyte peak = 1.0, like QM9S). For anything
+#           that compares QM9S with SERS (T4, fine-tune R3, step 5).
+# Keys are dotted paths into this file. The schema gets a "-<variant>" suffix.
+variants:
+  native: {}
+  matched:
+    sim_extra_fwhm: 13.0
+    substrate.reference_norm.rescale_to_max_after_discard: true
+  # Diagnostic only (step 2b): QM9S with the window extended to 1800 cm-1, to test
+  # whether the carbonyl information the string loses sits at the 1750 edge.
+  # Build QM9S only; your SERS spectra are not trusted beyond 1750.
+  wide:
+    window: [500.0, 1800.0]
+  # ---- kit 2c (4 Oct). Three changes shared by all of these:
+  #   window 510-1800 : your SERS axis runs to 1900, and the amide / lactam C=O
+  #                     band needs the room (step 2b, T3). The lower edge moves to
+  #                     510 so that frequency-corrected QM9S (axis starts at 500,
+  #                     x 1.0134 = 506.7) still covers the whole window.
+  #   ref_tol 8       : 62 good CB files had their band at 822-824 and were
+  #                     rejected by the +/- 4 window (step 2b, cb_inspect).
+  #   align_axis      : each SERS spectrum is shifted so its own CB[5] band sits
+  #                     at ref_cm; removes the ~5 cm-1 session-to-session axis offset.
+  #   generic CB      : rebuilt in-run from the CB files (the old file was made
+  #                     with the old tolerance and window).
+  # v2   : the above with native linewidths; SERS-only work (T1 control retest).
+  # v2m  : v2 + matched (linewidth, intensity scale); the ladder.
+  # v2mf : v2m + simulated frequencies x 1.0134 (QM9S sits 1.3 % below
+  #        experiment: 30 bands, 6 molecules, step 2b). Applies to QM9S and, on
+  #        top of dft.scale, to your DFT.
+  v2:
+    window: [510.0, 1800.0]
+    substrate.reference_norm.ref_tol: 8.0
+    substrate.reference_norm.align_axis: true
+    substrate.generic_cb.path: null
+  v2m:
+    window: [510.0, 1800.0]
+    substrate.reference_norm.ref_tol: 8.0
+    substrate.reference_norm.align_axis: true
+    substrate.generic_cb.path: null
+    sim_extra_fwhm: 13.0
+    substrate.reference_norm.rescale_to_max_after_discard: true
+  v2mf:
+    window: [510.0, 1800.0]
+    substrate.reference_norm.ref_tol: 8.0
+    substrate.reference_norm.align_axis: true
+    substrate.generic_cb.path: null
+    sim_extra_fwhm: 13.0
+    substrate.reference_norm.rescale_to_max_after_discard: true
+    sim_freq_scale: 1.0134
+
+# Context budget for the fine-tuning run (must match max_seq_length there)
+max_seq_length: 2048
+answer_token_reserve: 32

@@ -1,0 +1,72 @@
+[
+ {
+  "check": "grammar_whitelist",
+  "status": "PASS",
+  "detail": "all 869 inputs are pure peak lists and round-trip"
+ },
+ {
+  "check": "forbidden_terms",
+  "status": "PASS",
+  "detail": "no analyte names, codes, SMILES, formulas or ids in inputs"
+ },
+ {
+  "check": "prompt_template",
+  "status": "PASS",
+  "detail": "fixed instruction, no label terms"
+ },
+ {
+  "check": "split_disjoint",
+  "status": "PASS",
+  "detail": "109 groups, none spans train and test"
+ },
+ {
+  "check": "duplicates",
+  "status": "WARN",
+  "detail": "exact cross-split duplicates: 0 same-label, 0 different-label; near-duplicate pairs (cos>=0.98): 0 same-label, 7 different-label",
+  "examples": [
+   [
+    "Cell_BW_asn_18",
+    "Cell_BW_arg_12",
+    0.984
+   ],
+   [
+    "Cell_BW_asn_7",
+    "Cell_BW_ala_7",
+    0.981
+   ],
+   [
+    "Cell_BW_asn_8",
+    "Cell_536_tyr_5",
+    0.98
+   ],
+   [
+    "Cell_BW_gly_6",
+    "Cell_BW_tyr_13",
+    0.981
+   ],
+   [
+    "Cell_BW_ile_12",
+    "Cell_BW_glu_16",
+    0.983
+   ]
+  ]
+ },
+ {
+  "check": "token_budget",
+  "status": "PASS",
+  "detail": "prompt tokens estimated (1 token per digit): median 256, max 394, limit 2016",
+  "max_tokens": 394
+ },
+ {
+  "check": "shuffled_label_control",
+  "status": "SKIP",
+  "detail": "need >=2 samples in every class and >=2 classes"
+ },
+ {
+  "check": "substrate_only_control",
+  "status": "PASS",
+  "detail": "accuracy on substrate-only spectra 0.068 vs chance 0.060",
+  "accuracy": 0.068,
+  "chance": 0.06
+ }
+]

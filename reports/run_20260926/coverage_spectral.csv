@@ -1,0 +1,5 @@
+source,kind,n_spectra,peaks_median,peaks_range,fwhm_median,fwhm_iqr,tokens_median_est,tokens_max_est
+qm9s,sim,125996,19.0,1-32,10.0,8-10,269,440
+sers,cell,1,16.0,16-16,19.0,16-23,230,230
+sers,standard,5,10.0,9-16,18.5,14-29,143,231
+sers,substrate_only,1,10.0,10-10,25.5,18-33,144,144

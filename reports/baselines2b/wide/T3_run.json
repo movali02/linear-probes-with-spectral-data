@@ -1,0 +1,70 @@
+{
+ "task": "T3",
+ "variant": "wide",
+ "schema": "v1.2-wide",
+ "args": {
+  "task": [
+   "T3"
+  ],
+  "variant": "wide",
+  "config": "configs/string_v1.yaml",
+  "data_dir": null,
+  "out_dir": "reports/baselines2b/wide",
+  "features": "F1,F1pos,F2,F3",
+  "models": null,
+  "no_preps": false,
+  "control_regex": null,
+  "labels": null,
+  "n_boot": 1000,
+  "n_perm": null,
+  "perm_budget_min": 120.0,
+  "perm_for": "primary,best",
+  "n_jobs": 32,
+  "seed": 42,
+  "qm9s_frac": 0.2,
+  "min_pos": null,
+  "lr_C": null,
+  "knn_k": null,
+  "old_manifest": null,
+  "old_predictions": null,
+  "meta_csv": null,
+  "quick": false,
+  "no_figures": false
+ },
+ "n_perm": 100,
+ "n_boot": 1000,
+ "qm9s_frac": 0.2,
+ "default_hp": {
+  "lr": {
+   "C": 0.1
+  },
+  "pca_lr": {
+   "C": 0.1
+  },
+  "plsda": {
+   "n": 10
+  },
+  "knn": {
+   "k": 5
+  },
+  "hgb": {},
+  "majority": {},
+  "ncm": {}
+ },
+ "inputs": {
+  "data/processed_wide/qm9s_records.jsonl": {
+   "sha256": "eb9dfa2c87931a4770188e035859451842540835f3d673b4a200fb81258e2ba5",
+   "bytes": 134241819
+  },
+  "data/processed_wide/qm9s_spectra.npz": {
+   "sha256": "0d83f757fc6101a75cd79e10eb9350cbc02eb72046e9dfe1f39414a3310742bf",
+   "bytes": 124035517
+  }
+ },
+ "n_rows": 2856,
+ "n_predictions": 351526,
+ "seconds": 3414.8,
+ "python": "3.10.14",
+ "sklearn": "1.5.2",
+ "numpy": "2.2.6"
+}

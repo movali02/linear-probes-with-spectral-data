@@ -1,0 +1,23 @@
+frequency scale (your DFT -> QM9S): 0.967  median |error| 2.0 cm-1 over 58 matched strong bands
+intensity convention activity : Spearman rho with QM9S = 0.956 over 88 bands
+intensity convention int785   : Spearman rho with QM9S = 0.760 over 90 bands
+
+Per molecule at the chosen scale (DFT activity peaks vs QM9S peaks):
+  benzene            DFT [976, 1577]
+                     QM9S [979, 1578]
+  toluene            DFT [771, 982, 1015, 1186, 1366, 1441, 1568, 1587]
+                     QM9S [513, 772, 986, 1016, 1188, 1371, 1441, 1568, 1589]
+  phenol             DFT [799, 978, 1007, 1149, 1231, 1579, 1590]
+                     QM9S [520, 801, 982, 1009, 1152, 1236, 1590]
+  pyrrole            DFT [1131, 1365, 1440]
+                     QM9S [1131, 1367, 1447]
+  imidazole          DFT [1106, 1121, 1237, 1315, 1378, 1452]
+                     QM9S [1117, 1243, 1316, 1378, 1447]
+  4-methylimidazole  DFT [641, 1088, 1200, 1242, 1292, 1369, 1404, 1428, 1443, 1471, 1545]
+                     QM9S [642, 1090, 1204, 1241, 1294, 1373, 1400, 1429, 1444, 1467, 1545]
+  indole             DFT [745, 996, 1251, 1316, 1389, 1493, 1599]
+                     QM9S [748, 998, 1051, 1252, 1314, 1392, 1495, 1598]
+  ethanol            DFT [866, 997, 1057, 1219, 1256, 1397, 1432, 1450, 1475]
+                     QM9S [866, 995, 1061, 1222, 1257, 1403, 1432, 1450, 1477]
+  acetamide          DFT [812, 948, 1079, 1291, 1424, 1440, 1702]
+                     QM9S [506, 529, 810, 953, 1084, 1295, 1425, 1442, 1569, 1705]

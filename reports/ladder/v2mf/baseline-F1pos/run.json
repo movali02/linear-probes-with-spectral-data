@@ -1,0 +1,68 @@
+{
+ "args": {
+  "variant": "v2mf",
+  "config": "configs/string_v1.yaml",
+  "ladder_dir": null,
+  "acts_dir": null,
+  "acts_random": null,
+  "out_dir": null,
+  "baseline_only": true,
+  "baseline_feature": "F1pos",
+  "labels": null,
+  "min_pos": 30,
+  "Cs": "0.001,0.01,0.1",
+  "positions": "last,mean",
+  "n_boot": 1000,
+  "seed": 0
+ },
+ "schema": "v1.2-v2mf",
+ "labels": [
+  "fg_primary_amine",
+  "fg_secondary_amine",
+  "fg_amide",
+  "fg_guanidine",
+  "fg_hydroxyl_aliphatic",
+  "fg_phenol",
+  "fg_aromatic_ring",
+  "fg_benzene_ring",
+  "fg_pyrrole_ring",
+  "fg_imidazole_ring"
+ ],
+ "paired_analytes": [
+  "L-alanine",
+  "L-arginine",
+  "L-asparagine",
+  "L-aspartic acid",
+  "L-cysteine",
+  "L-glutamic acid",
+  "L-glutamine",
+  "L-glycine",
+  "L-histidine",
+  "L-isoleucine",
+  "L-leucine",
+  "L-lysine",
+  "L-methionine",
+  "L-phenylalanine",
+  "L-proline",
+  "L-serine",
+  "L-threonine",
+  "L-tryptophan",
+  "L-tyrosine",
+  "L-valine"
+ ],
+ "rungs": [
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "R6",
+  "R8",
+  "R9"
+ ],
+ "controls": {
+  "R1_agreement_baseline_lr": 0.8966666666666665,
+  "R1_n_molecules": 9
+ },
+ "activations": {},
+ "seconds": 17.1
+}

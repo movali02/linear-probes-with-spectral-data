@@ -1,0 +1,11 @@
+{
+ "4-methylimidazole": "Cc1c[nH]cn1",
+ "acetamide": "CC(N)=O",
+ "benzene": "c1ccccc1",
+ "ethanol": "CCO",
+ "imidazole": "c1c[nH]cn1",
+ "indole": "c1ccc2[nH]ccc2c1",
+ "phenol": "Oc1ccccc1",
+ "pyrrole": "c1cc[nH]c1",
+ "toluene": "Cc1ccccc1"
+}

@@ -1,0 +1,24 @@
+label,n_qm9,frac_qm9,n_qm9s_usable,n_analytes,analytes,status
+carboxylic_acid,0,0.0,0,21,"L-alanine, L-arginine, L-asparagine, L-aspartic acid, L-cysteine, L-glutamic acid, L-glutamine, L-glycine, L-histidine, L-isoleucine, L-leucine, L-lysine, L-methionine, L-phenylalanine, L-proline, L-serine, L-threonine, L-tryptophan, L-tyrosine, L-valine, indole-3-acetic acid",NO QM9 SUPPORT
+primary_amine,2482,0.0197,142,19,"L-alanine, L-arginine, L-asparagine, L-aspartic acid, L-cysteine, L-glutamic acid, L-glutamine, L-glycine, L-histidine, L-isoleucine, L-leucine, L-lysine, L-methionine, L-phenylalanine, L-serine, L-threonine, L-tryptophan, L-tyrosine, L-valine",ok
+secondary_amine,13346,0.1059,1022,1,L-proline,ok
+amide,8836,0.0701,620,3,"L-asparagine, L-glutamine, oxindole",ok
+guanidine,246,0.002,17,1,L-arginine,thin
+hydroxyl_aliphatic,37121,0.2946,2619,2,"L-serine, L-threonine",ok
+phenol,3132,0.0249,1376,1,L-tyrosine,ok
+thiol,0,0.0,0,1,L-cysteine,NO QM9 SUPPORT
+thioether,0,0.0,0,1,L-methionine,NO QM9 SUPPORT
+ketone,14606,0.1159,1046,0,,unused
+aldehyde,13156,0.1044,1278,0,,unused
+ester,4545,0.0361,348,0,,unused
+ether,51176,0.4062,4434,0,,unused
+nitrile,16161,0.1283,1356,0,,unused
+alkyne,16720,0.1327,1515,0,,unused
+alkene,16379,0.13,1288,0,,unused
+fluoro,337,0.0027,211,0,,unused
+aromatic_ring,18742,0.1488,8644,9,"L-histidine, L-phenylalanine, L-tryptophan, L-tyrosine, indole, indole-d6, oxindole, indole-3-acetic acid, hypoxanthine",ok
+benzene_ring,184,0.0015,89,7,"L-phenylalanine, L-tryptophan, L-tyrosine, indole, indole-d6, oxindole, indole-3-acetic acid",thin
+pyrrole_ring,2296,0.0182,997,4,"L-tryptophan, indole, indole-d6, indole-3-acetic acid",ok
+imidazole_ring,1332,0.0106,595,2,"L-histidine, hypoxanthine",ok
+indole,1,0.0,1,4,"L-tryptophan, indole, indole-d6, indole-3-acetic acid",thin
+lactam,5840,0.0464,364,1,oxindole,ok

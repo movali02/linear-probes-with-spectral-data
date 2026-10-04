@@ -1,0 +1,69 @@
+{
+ "task": "T3",
+ "variant": "native",
+ "schema": "v1.2",
+ "args": {
+  "task": [
+   "T3"
+  ],
+  "variant": "native",
+  "config": "configs/string_v1.yaml",
+  "data_dir": null,
+  "out_dir": null,
+  "features": "F1,F1pos,F2,F3",
+  "models": "majority,lr,hgb,knn",
+  "labels": null,
+  "n_boot": 1000,
+  "n_perm": null,
+  "perm_budget_min": 120.0,
+  "perm_for": "primary,best",
+  "n_jobs": 32,
+  "seed": 42,
+  "qm9s_frac": 0.2,
+  "min_pos": 50,
+  "lr_C": null,
+  "knn_k": null,
+  "old_manifest": null,
+  "old_predictions": null,
+  "meta_csv": null,
+  "quick": false,
+  "no_figures": false
+ },
+ "n_perm": 100,
+ "n_boot": 1000,
+ "qm9s_frac": 0.2,
+ "default_hp": {
+  "lr": {
+   "C": 0.1
+  },
+  "knn": {
+   "k": 5
+  },
+  "hgb": {},
+  "majority": {}
+ },
+ "inputs": {
+  "data/processed/sers_records.jsonl": {
+   "sha256": "ce1a25c8961bb775d72212d6c7217139b788c1b8f7f9cb80f02a6718c45ecfca",
+   "bytes": 1098630
+  },
+  "data/processed/qm9s_records.jsonl": {
+   "sha256": "bb5cd2e7e34e2469b55da53b8348a4ad861da5a4ee90a33fd304fd6b14c21e23",
+   "bytes": 133431280
+  },
+  "data/processed/sers_spectra.npz": {
+   "sha256": "e042b6c6769c3194094f5846b8114c2dfe23d26aa7b2bc0f0c24cd08e40a9cce",
+   "bytes": 7910571
+  },
+  "data/processed/qm9s_spectra.npz": {
+   "sha256": "5107b8681fdd55053c1b8aaec8cbeed3df5274688a3a2692a549f1ce0e8c74ff",
+   "bytes": 119203827
+  }
+ },
+ "n_rows": 1632,
+ "n_predictions": 356724,
+ "seconds": 3288.8,
+ "python": "3.10.14",
+ "sklearn": "1.5.2",
+ "numpy": "2.2.6"
+}

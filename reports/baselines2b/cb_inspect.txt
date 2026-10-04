@@ -1,0 +1,22 @@
+260 CB-only files: {'shifted': 62, 'ok': 198}
+
+group              n  verdicts                 top band (cm-1)   h829/top   r_good
+CB_536_ala         5  {'shifted': 5}                824         0.98     0.95
+CB_536_arg         2  {'shifted': 2}                824         1.00     0.97
+CB_536_asn         4  {'shifted': 4}                824         0.98     0.97
+CB_536_ctrl        5  {'shifted': 5}                824         0.98     0.96
+CB_536_gln         5  {'shifted': 5}                824         0.98     0.96
+CB_536_glu         4  {'shifted': 4}                824         0.99     0.97
+CB_536_gly         2  {'shifted': 2}                824         0.99     0.93
+CB_536_ser         1  {'shifted': 1}                824         1.00     0.94
+CB_536_thr         5  {'shifted': 5}                824         0.99     0.98
+CB_536_tyr         2  {'shifted': 2}                824         1.00     0.99
+CB_536_val         4  {'shifted': 4}                824         0.97     0.95
+CB_BW_ala         10  {'shifted': 10}               824         0.98     0.96
+CB_BW_ctrl         5  {'shifted': 5}                822         0.93     0.93
+CB_BW_gly          3  {'shifted': 3}                824         0.99     0.98
+CB_BW_ile          5  {'shifted': 5}                823         0.95     0.94
+
+shifted -> raise substrate.reference_norm.ref_tol; weak -> the CB signal is low in that well;
+absent  -> the file has no CB[5] signature: open it, it may not be a CB-only spectrum.
+-> reports/baselines2b/cb_inspect.csv, reports/baselines2b/cb_inspect.png

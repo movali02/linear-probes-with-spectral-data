@@ -1,0 +1,238 @@
+{
+  "Laser": {
+    "wavelength": 785,
+    "objective": 20,
+    "grating": 1200,
+    "laser_power": 2.2
+  },
+  "Substrate": {
+    "substrate": "mlagg",
+    "substrate_peaks": 829
+  },
+  "Spectrum": {
+    "source": "exp",
+    "range": "500-1750",
+    "background_corrected": "y",
+    "normalisation": "y",
+    "normalisation_method": "substrate",
+    "medium": "water",
+    "peak_count_total": 18,
+    "peak_count_500-750": 2,
+    "peak_count_750-1000": 6,
+    "peak_count_1000-1250": 4,
+    "peak_count_1250-1500": 5,
+    "peak_count_1500-1750": 1,
+    "peak_count_1750-2000": 0
+  },
+  "Molecule": {
+    "chemical_formula": "C9H11NO2",
+    "SMILES": "N[C@@H](Cc1ccccc1)C(=O)O",
+    "molecular_weight": 165.19,
+    "scaffold": "benzene",
+    "functional_groups": "primary_amine_carboxylic_acid_phenyl"
+  },
+  "Peaks": [
+    {
+      "peak_start": 600.0,
+      "peak_position": 618.0,
+      "peak_end": 634.0,
+      "intensity_number": 0.055,
+      "intensity_area": 0.454,
+      "intensity_bin": "vw",
+      "mode_assignment": "ring deformation (Wilson 6b)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 649.0,
+      "peak_position": 671.0,
+      "peak_end": 695.0,
+      "intensity_number": 0.069,
+      "intensity_area": 0.72,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 747.0,
+      "peak_position": 755.0,
+      "peak_end": 761.0,
+      "intensity_number": 0.153,
+      "intensity_area": 0.654,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 780.0,
+      "peak_position": 787.0,
+      "peak_end": 797.0,
+      "intensity_number": 0.039,
+      "intensity_area": 0.15,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 821.0,
+      "peak_position": 828.0,
+      "peak_end": 833.0,
+      "intensity_number": 0.752,
+      "intensity_area": 3.073,
+      "intensity_bin": "vs",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 875.0,
+      "peak_position": 884.0,
+      "peak_end": 890.0,
+      "intensity_number": 0.152,
+      "intensity_area": 0.653,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 957.0,
+      "peak_position": 962.0,
+      "peak_end": 1059.0,
+      "intensity_number": 0.045,
+      "intensity_area": 4.826,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 992.0,
+      "peak_position": 998.0,
+      "peak_end": 1004.0,
+      "intensity_number": 0.273,
+      "intensity_area": 0.952,
+      "intensity_bin": "m",
+      "mode_assignment": "ring breathing (Wilson 1)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1018.0,
+      "peak_position": 1028.0,
+      "peak_end": 1050.0,
+      "intensity_number": 0.077,
+      "intensity_area": 0.524,
+      "intensity_bin": "w",
+      "mode_assignment": "ring C-H in-plane bend (Wilson 18a)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1109.0,
+      "peak_position": 1121.0,
+      "peak_end": 1145.0,
+      "intensity_number": 0.047,
+      "intensity_area": 0.462,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1184.0,
+      "peak_position": 1191.0,
+      "peak_end": 1212.0,
+      "intensity_number": 0.113,
+      "intensity_area": 1.212,
+      "intensity_bin": "w",
+      "mode_assignment": "C-C6H5 stretch (ring-substituent)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1183.0,
+      "peak_position": 1208.0,
+      "peak_end": 1213.0,
+      "intensity_number": 0.102,
+      "intensity_area": 1.365,
+      "intensity_bin": "w",
+      "mode_assignment": "C-C6H5 stretch (ring-substituent)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1280.0,
+      "peak_position": 1286.0,
+      "peak_end": 1294.0,
+      "intensity_number": 0.062,
+      "intensity_area": 0.204,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1312.0,
+      "peak_position": 1327.0,
+      "peak_end": 1438.0,
+      "intensity_number": 0.062,
+      "intensity_area": 4.958,
+      "intensity_bin": "vw",
+      "mode_assignment": "CH deformation",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1366.0,
+      "peak_position": 1377.0,
+      "peak_end": 1393.0,
+      "intensity_number": 0.135,
+      "intensity_area": 0.934,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1364.0,
+      "peak_position": 1408.0,
+      "peak_end": 1433.0,
+      "intensity_number": 0.106,
+      "intensity_area": 2.59,
+      "intensity_bin": "w",
+      "mode_assignment": "COO- symmetric stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1469.0,
+      "peak_position": 1482.0,
+      "peak_end": 1488.0,
+      "intensity_number": 0.038,
+      "intensity_area": 0.184,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1569.0,
+      "peak_position": 1601.0,
+      "peak_end": 1614.0,
+      "intensity_number": 0.054,
+      "intensity_area": 0.435,
+      "intensity_bin": "vw",
+      "mode_assignment": "ring C-C stretch (Wilson 8a)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    }
+  ],
+  "_meta": {
+    "name": "L-phenylalanine",
+    "spectrum_file": "C:\\Users\\moval\\Documents\\PhD\\Raman\\Tokenisation\\finetune\\processed_aa\\check\\L-phenylalanine.txt"
+  }
+}

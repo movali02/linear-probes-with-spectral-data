@@ -1,0 +1,74 @@
+set,name,analyte,smiles,charge,formula,note
+neutral_gas,alanine,L-alanine,C[C@H](N)C(=O)O,0,C3H7NO2,
+neutral_water,alanine,L-alanine,C[C@H](N)C(=O)O,0,C3H7NO2,
+zwitterion_water,alanine,L-alanine,C[C@H]([NH3+])C(=O)[O-],0,C3H7NO2,pH 7 species
+neutral_gas,arginine,L-arginine,N=C(N)NCCC[C@H](N)C(=O)O,0,C6H14N4O2,
+neutral_water,arginine,L-arginine,N=C(N)NCCC[C@H](N)C(=O)O,0,C6H14N4O2,
+zwitterion_water,arginine,L-arginine,NC(=[NH2+])NCCC[C@H]([NH3+])C(=O)[O-],1,C6H15N4O2+,pH 7 species
+pI_water,arginine_pI,L-arginine,NC(=[NH2+])NCCC[C@H](N)C(=O)[O-],0,C6H14N4O2,net-neutral species near pI (standards in water)
+neutral_gas,asparagine,L-asparagine,NC(=O)C[C@H](N)C(=O)O,0,C4H8N2O3,
+neutral_water,asparagine,L-asparagine,NC(=O)C[C@H](N)C(=O)O,0,C4H8N2O3,
+zwitterion_water,asparagine,L-asparagine,NC(=O)C[C@H]([NH3+])C(=O)[O-],0,C4H8N2O3,pH 7 species
+neutral_gas,aspartic_acid,L-aspartic acid,N[C@@H](CC(=O)O)C(=O)O,0,C4H7NO4,
+neutral_water,aspartic_acid,L-aspartic acid,N[C@@H](CC(=O)O)C(=O)O,0,C4H7NO4,
+zwitterion_water,aspartic_acid,L-aspartic acid,[NH3+][C@@H](CC(=O)[O-])C(=O)[O-],-1,C4H6NO4-,pH 7 species
+pI_water,aspartic_acid_pI,L-aspartic acid,[NH3+][C@@H](CC(=O)O)C(=O)[O-],0,C4H7NO4,net-neutral species near pI (standards in water)
+neutral_gas,cysteine,L-cysteine,N[C@@H](CS)C(=O)O,0,C3H7NO2S,
+neutral_water,cysteine,L-cysteine,N[C@@H](CS)C(=O)O,0,C3H7NO2S,
+zwitterion_water,cysteine,L-cysteine,[NH3+][C@@H](CS)C(=O)[O-],0,C3H7NO2S,pH 7 species
+neutral_gas,glutamic_acid,L-glutamic acid,N[C@@H](CCC(=O)O)C(=O)O,0,C5H9NO4,
+neutral_water,glutamic_acid,L-glutamic acid,N[C@@H](CCC(=O)O)C(=O)O,0,C5H9NO4,
+zwitterion_water,glutamic_acid,L-glutamic acid,[NH3+][C@@H](CCC(=O)[O-])C(=O)[O-],-1,C5H8NO4-,pH 7 species
+pI_water,glutamic_acid_pI,L-glutamic acid,[NH3+][C@@H](CCC(=O)O)C(=O)[O-],0,C5H9NO4,net-neutral species near pI (standards in water)
+neutral_gas,glutamine,L-glutamine,NC(=O)CC[C@H](N)C(=O)O,0,C5H10N2O3,
+neutral_water,glutamine,L-glutamine,NC(=O)CC[C@H](N)C(=O)O,0,C5H10N2O3,
+zwitterion_water,glutamine,L-glutamine,NC(=O)CC[C@H]([NH3+])C(=O)[O-],0,C5H10N2O3,pH 7 species
+neutral_gas,glycine,L-glycine,NCC(=O)O,0,C2H5NO2,
+neutral_water,glycine,L-glycine,NCC(=O)O,0,C2H5NO2,
+zwitterion_water,glycine,L-glycine,[NH3+]CC(=O)[O-],0,C2H5NO2,pH 7 species
+neutral_gas,histidine,L-histidine,N[C@@H](Cc1c[nH]cn1)C(=O)O,0,C6H9N3O2,His: N-tau-H tautomer
+neutral_water,histidine,L-histidine,N[C@@H](Cc1c[nH]cn1)C(=O)O,0,C6H9N3O2,His: N-tau-H tautomer
+zwitterion_water,histidine,L-histidine,[NH3+][C@@H](Cc1c[nH]cn1)C(=O)[O-],0,C6H9N3O2,pH 7 species
+neutral_gas,isoleucine,L-isoleucine,CC[C@H](C)[C@H](N)C(=O)O,0,C6H13NO2,
+neutral_water,isoleucine,L-isoleucine,CC[C@H](C)[C@H](N)C(=O)O,0,C6H13NO2,
+zwitterion_water,isoleucine,L-isoleucine,CC[C@H](C)[C@H]([NH3+])C(=O)[O-],0,C6H13NO2,pH 7 species
+neutral_gas,leucine,L-leucine,CC(C)C[C@H](N)C(=O)O,0,C6H13NO2,
+neutral_water,leucine,L-leucine,CC(C)C[C@H](N)C(=O)O,0,C6H13NO2,
+zwitterion_water,leucine,L-leucine,CC(C)C[C@H]([NH3+])C(=O)[O-],0,C6H13NO2,pH 7 species
+neutral_gas,lysine,L-lysine,NCCCC[C@H](N)C(=O)O,0,C6H14N2O2,
+neutral_water,lysine,L-lysine,NCCCC[C@H](N)C(=O)O,0,C6H14N2O2,
+zwitterion_water,lysine,L-lysine,[NH3+]CCCC[C@H]([NH3+])C(=O)[O-],1,C6H15N2O2+,pH 7 species
+pI_water,lysine_pI,L-lysine,[NH3+]CCCC[C@H](N)C(=O)[O-],0,C6H14N2O2,net-neutral species near pI (standards in water)
+neutral_gas,methionine,L-methionine,CSCC[C@H](N)C(=O)O,0,C5H11NO2S,
+neutral_water,methionine,L-methionine,CSCC[C@H](N)C(=O)O,0,C5H11NO2S,
+zwitterion_water,methionine,L-methionine,CSCC[C@H]([NH3+])C(=O)[O-],0,C5H11NO2S,pH 7 species
+neutral_gas,phenylalanine,L-phenylalanine,N[C@@H](Cc1ccccc1)C(=O)O,0,C9H11NO2,
+neutral_water,phenylalanine,L-phenylalanine,N[C@@H](Cc1ccccc1)C(=O)O,0,C9H11NO2,
+zwitterion_water,phenylalanine,L-phenylalanine,[NH3+][C@@H](Cc1ccccc1)C(=O)[O-],0,C9H11NO2,pH 7 species
+neutral_gas,proline,L-proline,O=C(O)[C@@H]1CCCN1,0,C5H9NO2,
+neutral_water,proline,L-proline,O=C(O)[C@@H]1CCCN1,0,C5H9NO2,
+zwitterion_water,proline,L-proline,O=C([O-])[C@@H]1CCC[NH2+]1,0,C5H9NO2,pH 7 species
+neutral_gas,serine,L-serine,N[C@@H](CO)C(=O)O,0,C3H7NO3,
+neutral_water,serine,L-serine,N[C@@H](CO)C(=O)O,0,C3H7NO3,
+zwitterion_water,serine,L-serine,[NH3+][C@@H](CO)C(=O)[O-],0,C3H7NO3,pH 7 species
+neutral_gas,threonine,L-threonine,C[C@@H](O)[C@H](N)C(=O)O,0,C4H9NO3,
+neutral_water,threonine,L-threonine,C[C@@H](O)[C@H](N)C(=O)O,0,C4H9NO3,
+zwitterion_water,threonine,L-threonine,C[C@@H](O)[C@H]([NH3+])C(=O)[O-],0,C4H9NO3,pH 7 species
+neutral_gas,tryptophan,L-tryptophan,N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O,0,C11H12N2O2,
+neutral_water,tryptophan,L-tryptophan,N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O,0,C11H12N2O2,
+zwitterion_water,tryptophan,L-tryptophan,[NH3+][C@@H](Cc1c[nH]c2ccccc12)C(=O)[O-],0,C11H12N2O2,pH 7 species
+neutral_gas,tyrosine,L-tyrosine,N[C@@H](Cc1ccc(O)cc1)C(=O)O,0,C9H11NO3,
+neutral_water,tyrosine,L-tyrosine,N[C@@H](Cc1ccc(O)cc1)C(=O)O,0,C9H11NO3,
+zwitterion_water,tyrosine,L-tyrosine,[NH3+][C@@H](Cc1ccc(O)cc1)C(=O)[O-],0,C9H11NO3,pH 7 species
+neutral_gas,valine,L-valine,CC(C)[C@H](N)C(=O)O,0,C5H11NO2,
+neutral_water,valine,L-valine,CC(C)[C@H](N)C(=O)O,0,C5H11NO2,
+zwitterion_water,valine,L-valine,CC(C)[C@H]([NH3+])C(=O)[O-],0,C5H11NO2,pH 7 species
+calibration_gas,benzene,,c1ccccc1,0,C6H6,QM9S molecule: method/scale calibration
+calibration_gas,toluene,,Cc1ccccc1,0,C7H8,QM9S molecule: method/scale calibration
+calibration_gas,phenol,,Oc1ccccc1,0,C6H6O,QM9S molecule: method/scale calibration
+calibration_gas,pyrrole,,c1cc[nH]c1,0,C4H5N,QM9S molecule: method/scale calibration
+calibration_gas,imidazole,,c1c[nH]cn1,0,C3H4N2,QM9S molecule: method/scale calibration
+calibration_gas,4-methylimidazole,,Cc1c[nH]cn1,0,C4H6N2,QM9S molecule: method/scale calibration
+calibration_gas,indole,,c1ccc2[nH]ccc2c1,0,C8H7N,QM9S molecule: method/scale calibration
+calibration_gas,ethanol,,CCO,0,C2H6O,QM9S molecule: method/scale calibration
+calibration_gas,acetamide,,CC(N)=O,0,C2H5NO,QM9S molecule: method/scale calibration

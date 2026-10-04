@@ -1,0 +1,197 @@
+rung,target,analyte,cosine,rank,n
+R2,R8,L-alanine,0.4384,12,19
+R2,R8,L-arginine,0.4902,8,19
+R2,R8,L-asparagine,0.4458,14,19
+R2,R8,L-aspartic acid,0.4555,14,19
+R2,R8,L-cysteine,0.6359,4,19
+R2,R8,L-glutamic acid,0.4396,17,19
+R2,R8,L-glutamine,0.5213,17,19
+R2,R8,L-glycine,0.3832,18,19
+R2,R8,L-histidine,0.6169,3,19
+R2,R8,L-isoleucine,0.5506,5,19
+R2,R8,L-leucine,0.3984,16,19
+R2,R8,L-lysine,0.5991,4,19
+R2,R8,L-methionine,0.7384,1,19
+R2,R8,L-proline,0.5817,1,19
+R2,R8,L-serine,0.5212,15,19
+R2,R8,L-threonine,0.4709,18,19
+R2,R8,L-tryptophan,0.7219,2,19
+R2,R8,L-tyrosine,0.654,1,19
+R2,R8,L-valine,0.5558,12,19
+R2,R9,L-alanine,0.5918,9,19
+R2,R9,L-arginine,0.5187,12,19
+R2,R9,L-asparagine,0.5703,9,19
+R2,R9,L-aspartic acid,0.5301,19,19
+R2,R9,L-cysteine,0.6757,3,19
+R2,R9,L-glutamic acid,0.5261,16,19
+R2,R9,L-glutamine,0.6849,2,19
+R2,R9,L-glycine,0.6038,2,19
+R2,R9,L-histidine,0.6483,9,19
+R2,R9,L-isoleucine,0.6435,6,19
+R2,R9,L-leucine,0.6078,9,19
+R2,R9,L-lysine,0.5874,8,19
+R2,R9,L-methionine,0.7863,1,19
+R2,R9,L-proline,0.5725,15,19
+R2,R9,L-serine,0.6009,11,19
+R2,R9,L-threonine,0.6632,2,19
+R2,R9,L-tryptophan,0.6053,4,19
+R2,R9,L-tyrosine,0.43,16,19
+R2,R9,L-valine,0.6307,13,19
+R3,R8,L-alanine,0.509,6,19
+R3,R8,L-arginine,0.5497,6,19
+R3,R8,L-aspartic acid,0.3667,10,19
+R3,R8,L-cysteine,0.613,1,19
+R3,R8,L-glutamic acid,0.4349,10,19
+R3,R8,L-glutamine,0.5087,17,19
+R3,R8,L-glycine,0.3497,16,19
+R3,R8,L-histidine,0.5662,2,19
+R3,R8,L-isoleucine,0.6551,5,19
+R3,R8,L-leucine,0.4497,15,19
+R3,R8,L-lysine,0.6241,4,19
+R3,R8,L-methionine,0.6277,4,19
+R3,R8,L-phenylalanine,0.4755,6,19
+R3,R8,L-proline,0.4803,3,19
+R3,R8,L-serine,0.4474,15,19
+R3,R8,L-threonine,0.3566,19,19
+R3,R8,L-tryptophan,0.5734,2,19
+R3,R8,L-tyrosine,0.6504,1,19
+R3,R8,L-valine,0.5423,15,19
+R3,R9,L-alanine,0.5403,7,19
+R3,R9,L-arginine,0.5662,16,19
+R3,R9,L-aspartic acid,0.3767,18,19
+R3,R9,L-cysteine,0.6178,5,19
+R3,R9,L-glutamic acid,0.4563,14,19
+R3,R9,L-glutamine,0.6693,2,19
+R3,R9,L-glycine,0.4919,8,19
+R3,R9,L-histidine,0.5762,6,19
+R3,R9,L-isoleucine,0.5907,13,19
+R3,R9,L-leucine,0.6052,10,19
+R3,R9,L-lysine,0.5902,11,19
+R3,R9,L-methionine,0.6761,5,19
+R3,R9,L-phenylalanine,0.5276,9,19
+R3,R9,L-proline,0.5128,7,19
+R3,R9,L-serine,0.5135,13,19
+R3,R9,L-threonine,0.5927,2,19
+R3,R9,L-tryptophan,0.544,11,19
+R3,R9,L-tyrosine,0.3932,17,19
+R3,R9,L-valine,0.6703,9,19
+R4,R8,L-alanine,0.5427,8,20
+R4,R8,L-arginine,0.6533,7,20
+R4,R8,L-asparagine,0.5449,14,20
+R4,R8,L-aspartic acid,0.5407,6,20
+R4,R8,L-cysteine,0.6027,9,20
+R4,R8,L-glutamic acid,0.519,15,20
+R4,R8,L-glutamine,0.4297,20,20
+R4,R8,L-glycine,0.5563,5,20
+R4,R8,L-histidine,0.6031,4,20
+R4,R8,L-isoleucine,0.611,7,20
+R4,R8,L-leucine,0.4986,15,20
+R4,R8,L-lysine,0.5958,4,20
+R4,R8,L-methionine,0.5896,12,20
+R4,R8,L-phenylalanine,0.4873,5,20
+R4,R8,L-proline,0.5235,11,20
+R4,R8,L-serine,0.5478,4,20
+R4,R8,L-threonine,0.4391,17,20
+R4,R8,L-tryptophan,0.5095,2,20
+R4,R8,L-tyrosine,0.6768,1,20
+R4,R8,L-valine,0.4568,17,20
+R4,R9,L-alanine,0.5482,12,20
+R4,R9,L-arginine,0.6221,17,20
+R4,R9,L-asparagine,0.6214,12,20
+R4,R9,L-aspartic acid,0.4815,20,20
+R4,R9,L-cysteine,0.6697,10,20
+R4,R9,L-glutamic acid,0.6188,19,20
+R4,R9,L-glutamine,0.6852,6,20
+R4,R9,L-glycine,0.5848,9,20
+R4,R9,L-histidine,0.6185,11,20
+R4,R9,L-isoleucine,0.5987,14,20
+R4,R9,L-leucine,0.6549,11,20
+R4,R9,L-lysine,0.5973,11,20
+R4,R9,L-methionine,0.7224,2,20
+R4,R9,L-phenylalanine,0.4951,12,20
+R4,R9,L-proline,0.6545,4,20
+R4,R9,L-serine,0.498,14,20
+R4,R9,L-threonine,0.6641,4,20
+R4,R9,L-tryptophan,0.5253,7,20
+R4,R9,L-tyrosine,0.4656,14,20
+R4,R9,L-valine,0.6683,9,20
+R5,R8,L-alanine,0.4901,4,20
+R5,R8,L-arginine,0.5532,8,20
+R5,R8,L-asparagine,0.4986,13,20
+R5,R8,L-aspartic acid,0.438,8,20
+R5,R8,L-cysteine,0.4655,15,20
+R5,R8,L-glutamic acid,0.4646,15,20
+R5,R8,L-glutamine,0.3998,20,20
+R5,R8,L-glycine,0.4725,7,20
+R5,R8,L-histidine,0.6122,2,20
+R5,R8,L-isoleucine,0.5797,7,20
+R5,R8,L-leucine,0.4929,16,20
+R5,R8,L-lysine,0.5245,5,20
+R5,R8,L-methionine,0.5709,10,20
+R5,R8,L-phenylalanine,0.5137,2,20
+R5,R8,L-proline,0.5252,2,20
+R5,R8,L-serine,0.4566,3,20
+R5,R8,L-threonine,0.3962,18,20
+R5,R8,L-tryptophan,0.5247,5,20
+R5,R8,L-tyrosine,0.6141,1,20
+R5,R8,L-valine,0.4848,16,20
+R5,R9,L-alanine,0.5066,9,20
+R5,R9,L-arginine,0.5656,15,20
+R5,R9,L-asparagine,0.5675,10,20
+R5,R9,L-aspartic acid,0.4456,17,20
+R5,R9,L-cysteine,0.5229,17,20
+R5,R9,L-glutamic acid,0.6534,10,20
+R5,R9,L-glutamine,0.6151,11,20
+R5,R9,L-glycine,0.5202,9,20
+R5,R9,L-histidine,0.6101,17,20
+R5,R9,L-isoleucine,0.6164,13,20
+R5,R9,L-leucine,0.6534,11,20
+R5,R9,L-lysine,0.5478,11,20
+R5,R9,L-methionine,0.6984,1,20
+R5,R9,L-phenylalanine,0.4889,11,20
+R5,R9,L-proline,0.5649,5,20
+R5,R9,L-serine,0.4711,13,20
+R5,R9,L-threonine,0.5877,7,20
+R5,R9,L-tryptophan,0.5629,11,20
+R5,R9,L-tyrosine,0.4745,18,20
+R5,R9,L-valine,0.6711,8,20
+R6,R8,L-alanine,0.4145,3,20
+R6,R8,L-arginine,0.5018,9,20
+R6,R8,L-asparagine,0.4194,14,20
+R6,R8,L-aspartic acid,0.3602,7,20
+R6,R8,L-cysteine,0.4109,15,20
+R6,R8,L-glutamic acid,0.4138,14,20
+R6,R8,L-glutamine,0.3689,19,20
+R6,R8,L-glycine,0.3996,7,20
+R6,R8,L-histidine,0.6066,2,20
+R6,R8,L-isoleucine,0.5397,6,20
+R6,R8,L-leucine,0.4774,16,20
+R6,R8,L-lysine,0.4558,5,20
+R6,R8,L-methionine,0.5172,12,20
+R6,R8,L-phenylalanine,0.4875,1,20
+R6,R8,L-proline,0.4859,2,20
+R6,R8,L-serine,0.403,3,20
+R6,R8,L-threonine,0.3666,18,20
+R6,R8,L-tryptophan,0.5229,2,20
+R6,R8,L-tyrosine,0.5183,1,20
+R6,R8,L-valine,0.4986,12,20
+R6,R9,L-alanine,0.4375,9,20
+R6,R9,L-arginine,0.5387,14,20
+R6,R9,L-asparagine,0.4838,10,20
+R6,R9,L-aspartic acid,0.3694,16,20
+R6,R9,L-cysteine,0.462,19,20
+R6,R9,L-glutamic acid,0.6064,8,20
+R6,R9,L-glutamine,0.5443,12,20
+R6,R9,L-glycine,0.4468,9,20
+R6,R9,L-histidine,0.5932,10,20
+R6,R9,L-isoleucine,0.5925,13,20
+R6,R9,L-leucine,0.6298,9,20
+R6,R9,L-lysine,0.4879,11,20
+R6,R9,L-methionine,0.6488,2,20
+R6,R9,L-phenylalanine,0.443,6,20
+R6,R9,L-proline,0.4874,5,20
+R6,R9,L-serine,0.424,13,20
+R6,R9,L-threonine,0.533,8,20
+R6,R9,L-tryptophan,0.5438,10,20
+R6,R9,L-tyrosine,0.3996,18,20
+R6,R9,L-valine,0.6626,7,20

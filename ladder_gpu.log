@@ -1,0 +1,38 @@
+nohup: ignoring input
+[acts] data/activations/matched/Qwen3-8B/ladder: already done (731 prompts), skipped
+[acts] data/activations/matched/Qwen3-8B/qm9s: already done (13777 prompts), skipped
+-> data/activations/matched/Qwen3-8B
+[acts] data/activations/matched/Qwen3-8B-random/ladder: already done (731 prompts), skipped
+[acts] data/activations/matched/Qwen3-8B-random/qm9s: already done (13777 prompts), skipped
+-> data/activations/matched/Qwen3-8B-random
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 14 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'imidazole_ring']
+[probes] baseline (binned string) done in 18 s
+[probes] probe / last: 37 layers done (1881 s)
+[probes] probe / mean: 37 layers done (2660 s)
+[probes] random / last: 37 layers done (2773 s)
+[probes] random / mean: 37 layers done (2873 s)
+# Shift ladder: Qwen3-8B (matched)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | probe: logistic regression |  | 0.88 | 0.93 [0.88, 1.00] | 0.78 [0.56, 0.92] | 0.66 [0.50, 0.83] | 0.50 [0.33, 0.72] | 0.39 [0.24, 0.73] | 0.58 [0.31, 0.84] | 0.62 [0.28, 0.89] |
+| MEAN |  | probe: mass-mean |  | 0.78 | 0.70 [0.43, 0.90] | 0.69 [0.48, 0.89] | 0.57 [0.28, 0.79] | 0.41 [0.21, 0.58] | 0.44 [0.11, 0.68] | 0.63 [0.42, 0.82] | 0.42 [0.20, 0.77] |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.86 [0.63, 1.00] | 0.74 [0.47, 0.97] | 0.81 [0.45, 0.95] | 0.78 [0.51, 0.94] | 0.79 [0.60, 0.93] | 0.52 [0.33, 0.66] | 0.71 [0.45, 0.86] |
+| MEAN |  | probe on the untrained model |  | 0.81 | 0.69 [0.45, 0.84] | 0.52 [0.22, 0.77] | 0.67 [0.42, 0.86] | 0.62 [0.41, 0.75] | 0.59 [0.34, 0.79] | 0.71 [0.52, 0.92] | 0.33 [0.17, 0.56] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | probe: logistic regression |  | 0.88 | 0.93 [0.88, 1.00] | 0.78 [0.56, 0.90] | 0.66 [0.50, 0.82] | 0.50 [0.32, 0.70] | 0.39 [0.24, 0.77] | 0.58 [0.31, 0.84] | 0.62 [0.28, 0.88] |
+| MEAN |  | probe: mass-mean |  | 0.78 | 0.70 [0.38, 0.90] | 0.69 [0.46, 0.88] | 0.57 [0.28, 0.78] | 0.41 [0.21, 0.58] | 0.44 [0.12, 0.67] | 0.63 [0.42, 0.83] | 0.42 [0.19, 0.74] |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.86 [0.64, 1.00] | 0.74 [0.46, 0.97] | 0.81 [0.50, 0.94] | 0.78 [0.52, 0.94] | 0.79 [0.60, 0.94] | 0.52 [0.33, 0.67] | 0.70 [0.43, 0.87] |
+| MEAN |  | probe on the untrained model |  | 0.81 | 0.69 [0.43, 0.84] | 0.52 [0.24, 0.77] | 0.67 [0.43, 0.87] | 0.62 [0.40, 0.75] | 0.59 [0.36, 0.81] | 0.71 [0.53, 0.92] | 0.33 [0.18, 0.56] |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  shuffled_labels_val_auroc: 0.465
+control  shuffled_at: mean / layer 9
+control  R1_agreement_probe_lr: 0.76
+control  R1_n_molecules: 9
+control  R1_agreement_baseline_lr: 0.842
+
+-> reports/ladder/matched/Qwen3-8B/degradation.png, degradation.csv, ladder.md (2907 s)
+figure: reports/ladder/matched/Qwen3-8B/degradation.png

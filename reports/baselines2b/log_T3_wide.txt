@@ -1,0 +1,71 @@
+
+=== T3 (wide) -> reports/baselines2b/wide
+[data] data/processed_wide/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[T3] random: 20846 train / 5141 test molecules, 5141 test groups
+[T3] scaffold: 20789 train / 5198 test molecules, 4222 test groups
+[T3] 952 fits (34 label/scheme combinations) on 32 job(s)
+Matplotlib created a temporary cache directory at /tmp/matplotlib-_kcoog90 because the default path (/home/mv487/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[T3] fits + bootstrap done in 1285 s
+[T3] permutation tests: 68 combination(s), up to 100 shuffles each
+[T3] permutations done in 2112 s
+# T3 baselines (wide)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| random | all | primary_amine | 0.804 [0.77, 0.84], p=0.0099 | 0.972 [0.95, 0.99] (F1/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3/hgb) | 0.991 [0.98, 1.00], p=0.0099 (F3/hgb) |
+| random | all | secondary_amine | 0.726 [0.70, 0.75], p=0.0099 | 0.740 [0.72, 0.76] (F1/hgb) | 0.796 [0.78, 0.81], p=0.0099 (F3/hgb) | 0.796 [0.78, 0.81], p=0.0099 (F3/hgb) |
+| random | all | amide | 0.782 [0.76, 0.80], p=0.0099 | 0.867 [0.85, 0.88] (F1/hgb) | 0.924 [0.91, 0.93], p=0.0099 (F3/hgb) | 0.924 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| random | all | hydroxyl_aliphatic | 0.694 [0.68, 0.71], p=0.0099 | 0.747 [0.73, 0.76] (F1/hgb) | 0.800 [0.79, 0.81], p=0.0099 (F3/hgb) | 0.800 [0.79, 0.81], p=0.0099 (F3/hgb) |
+| random | all | phenol | 0.914 [0.90, 0.93], p=0.0099 | 0.923 [0.91, 0.94] (F1.sqrt/lr) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) |
+| random | all | ketone | 0.838 [0.82, 0.85], p=0.0099 | 0.872 [0.86, 0.89] (F1/hgb) | 0.944 [0.94, 0.95], p=0.0099 (F3/hgb) | 0.944 [0.94, 0.95], p=0.0099 (F3/hgb) |
+| random | all | aldehyde | 0.935 [0.93, 0.94], p=0.0099 | 0.955 [0.95, 0.96] (F1/hgb) | 0.973 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.973 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | ester | 0.755 [0.72, 0.79], p=0.0099 | 0.802 [0.77, 0.84] (F1/hgb) | 0.941 [0.93, 0.95], p=0.0099 (F3/hgb) | 0.941 [0.93, 0.95], p=0.0099 (F3/hgb) |
+| random | all | ether | 0.704 [0.69, 0.72], p=0.0099 | 0.756 [0.74, 0.77] (F1/hgb) | 0.803 [0.79, 0.81], p=0.0099 (F3/hgb) | 0.803 [0.79, 0.81], p=0.0099 (F3/hgb) |
+| random | all | nitrile | 0.718 [0.70, 0.74], p=0.0099 | 0.756 [0.74, 0.77] (F1/hgb) | 0.895 [0.88, 0.91], p=0.0099 (F3/hgb) | 0.895 [0.88, 0.91], p=0.0099 (F3/hgb) |
+| random | all | alkyne | 0.897 [0.89, 0.91], p=0.0099 | 0.914 [0.90, 0.92] (F1/hgb) | 0.984 [0.98, 0.99], p=0.0099 (F3/hgb) | 0.984 [0.98, 0.99], p=0.0099 (F3/hgb) |
+| random | all | alkene | 0.923 [0.91, 0.93], p=0.0099 | 0.952 [0.94, 0.96] (F1/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fluoro | 0.872 [0.83, 0.91], p=0.0099 | 0.916 [0.89, 0.94] (F1.sqrt/lr) | 0.962 [0.94, 0.98], p=0.0099 (F3.lt1700/hgb) | 0.962 [0.94, 0.98], p=0.0099 (F3.lt1700/hgb) |
+| random | all | aromatic_ring | 0.973 [0.97, 0.98], p=0.0099 | 0.980 [0.98, 0.98] (F1/hgb) | 0.993 [0.99, 0.99], p=0.0099 (F3/hgb) | 0.993 [0.99, 0.99], p=0.0099 (F3/hgb) |
+| random | all | pyrrole_ring | 0.952 [0.93, 0.97], p=0.0099 | 0.963 [0.95, 0.97] (F1/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) |
+| random | all | imidazole_ring | 0.956 [0.94, 0.97], p=0.0099 | 0.957 [0.94, 0.97] (F1/hgb) | 0.974 [0.96, 0.98], p=0.0099 (F3/hgb) | 0.974 [0.96, 0.98], p=0.0099 (F3/hgb) |
+| random | all | lactam | 0.831 [0.81, 0.85], p=0.0099 | 0.869 [0.85, 0.89] (F1/hgb) | 0.930 [0.92, 0.94], p=0.0099 (F3/hgb) | 0.930 [0.92, 0.94], p=0.0099 (F3/hgb) |
+| scaffold | all | primary_amine | 0.774 [0.67, 0.86], p=0.0099 | 0.963 [0.93, 0.99] (F1/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3/hgb) | 0.975 [0.95, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | secondary_amine | 0.659 [0.64, 0.68], p=0.0099 | 0.659 [0.64, 0.68], p=0.0099 (F1/lr) | 0.724 [0.70, 0.75], p=0.0099 (F3.lt1700/hgb) | 0.724 [0.70, 0.75], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | amide | 0.745 [0.71, 0.77], p=0.0099 | 0.813 [0.79, 0.83] (F1/hgb) | 0.848 [0.83, 0.86], p=0.0099 (F3/hgb) | 0.848 [0.83, 0.86], p=0.0099 (F3/hgb) |
+| scaffold | all | hydroxyl_aliphatic | 0.650 [0.63, 0.67], p=0.0099 | 0.697 [0.67, 0.72] (F1/hgb) | 0.746 [0.72, 0.77], p=0.0099 (F3/hgb) | 0.746 [0.72, 0.77], p=0.0099 (F3/hgb) |
+| scaffold | all | phenol | 0.905 [0.88, 0.93], p=0.0099 | 0.920 [0.90, 0.94] (F1.sqrt/lr) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) |
+| scaffold | all | ketone | 0.807 [0.79, 0.82], p=0.0099 | 0.823 [0.81, 0.84] (F1/hgb) | 0.914 [0.91, 0.92], p=0.0099 (F3/hgb) | 0.914 [0.91, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | aldehyde | 0.906 [0.87, 0.94], p=0.0099 | 0.922 [0.89, 0.95] (F1/hgb) | 0.943 [0.92, 0.97], p=0.0099 (F3.lt1700/hgb) | 0.943 [0.92, 0.97], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | ester | 0.729 [0.70, 0.76], p=0.0099 | 0.734 [0.70, 0.76] (F1.sqrt/lr) | 0.919 [0.91, 0.93], p=0.0099 (F3/hgb) | 0.919 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | ether | 0.683 [0.67, 0.70], p=0.0099 | 0.726 [0.71, 0.74] (F1.sqrt/hgb) | 0.751 [0.74, 0.77], p=0.0099 (F3/hgb) | 0.751 [0.74, 0.77], p=0.0099 (F3/hgb) |
+| scaffold | all | nitrile | 0.795 [0.73, 0.85], p=0.0099 | 0.795 [0.73, 0.85], p=0.0099 (F1/lr) | 0.930 [0.89, 0.96], p=0.0099 (F3/hgb) | 0.930 [0.89, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | alkyne | 0.886 [0.84, 0.92], p=0.0099 | 0.886 [0.84, 0.92], p=0.0099 (F1/lr) | 0.949 [0.92, 0.97], p=0.0099 (F3/hgb) | 0.949 [0.92, 0.97], p=0.0099 (F3/hgb) |
+| scaffold | all | alkene | 0.919 [0.91, 0.93], p=0.0099 | 0.936 [0.93, 0.95] (F1/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | fluoro | 0.753 [0.66, 0.84], p=0.0099 | 0.924 [0.89, 0.96] (F1/hgb) | 0.976 [0.96, 0.99], p=0.0099 (F3.lt1700/hgb) | 0.976 [0.96, 0.99], p=0.0099 (F3.lt1700/hgb) |
+| scaffold | all | aromatic_ring | 0.951 [0.94, 0.96], p=0.0099 | 0.961 [0.95, 0.97] (F1.sqrt/lr) | 0.981 [0.98, 0.98], p=0.0099 (F3/hgb) | 0.981 [0.98, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | pyrrole_ring | 0.942 [0.92, 0.96], p=0.0099 | 0.947 [0.93, 0.96] (F1/hgb) | 0.966 [0.96, 0.98], p=0.0099 (F3/hgb) | 0.966 [0.96, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | imidazole_ring | 0.949 [0.94, 0.96], p=0.0099 | 0.949 [0.94, 0.96], p=0.0099 (F1/lr) | 0.965 [0.95, 0.98], p=0.0099 (F3/hgb) | 0.965 [0.95, 0.98], p=0.0099 (F3/hgb) |
+| scaffold | all | lactam | 0.772 [0.75, 0.79], p=0.0099 | 0.794 [0.77, 0.82] (F1/hgb) | 0.863 [0.85, 0.88], p=0.0099 (F3/hgb) | 0.863 [0.85, 0.88], p=0.0099 (F3/hgb) |
+
+
+## Labels not tested
+
+- random: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- random: fg_guanidine: needs >= 50 train / 10 test positives
+- random: fg_thiol: needs >= 50 train / 10 test positives
+- random: fg_thioether: needs >= 50 train / 10 test positives
+- random: fg_benzene_ring: needs >= 50 train / 10 test positives
+- random: fg_indole: needs >= 50 train / 10 test positives
+- scaffold: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- scaffold: fg_guanidine: needs >= 50 train / 10 test positives
+- scaffold: fg_thiol: needs >= 50 train / 10 test positives
+- scaffold: fg_thioether: needs >= 50 train / 10 test positives
+- scaffold: fg_benzene_ring: needs >= 50 train / 10 test positives
+- scaffold: fg_indole: needs >= 50 train / 10 test positives
+
+Arguments: `--task T3 --variant wide --out_dir reports/baselines2b/wide --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T3] done in 3415 s -> reports/baselines2b/wide/T3.csv

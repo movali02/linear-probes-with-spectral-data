@@ -1,0 +1,24 @@
+label,n_qm9,frac_qm9,n_qm9s_usable,n_analytes,analytes,status
+carboxylic_acid,0,0.0,0,21,"L-alanine, L-arginine, L-asparagine, L-aspartic acid, L-cysteine, L-glutamic acid, L-glutamine, L-glycine, L-histidine, L-isoleucine, L-leucine, L-lysine, L-methionine, L-phenylalanine, L-proline, L-serine, L-threonine, L-tryptophan, L-tyrosine, L-valine, indole-3-acetic acid",NO QM9 SUPPORT
+primary_amine,2538,0.0196,2537,19,"L-alanine, L-arginine, L-asparagine, L-aspartic acid, L-cysteine, L-glutamic acid, L-glutamine, L-glycine, L-histidine, L-isoleucine, L-leucine, L-lysine, L-methionine, L-phenylalanine, L-serine, L-threonine, L-tryptophan, L-tyrosine, L-valine",ok
+secondary_amine,13423,0.1034,13423,1,L-proline,ok
+amide,8862,0.0683,8861,4,"L-asparagine, L-glutamine, oxindole, isatin",ok
+guanidine,246,0.0019,246,1,L-arginine,ok
+hydroxyl_aliphatic,37722,0.2906,37721,3,"L-serine, L-threonine, tryptophol",ok
+phenol,3762,0.029,3760,2,"L-tyrosine, 8-hydroxyquinoline",ok
+thiol,0,0.0,0,1,L-cysteine,NO QM9 SUPPORT
+thioether,0,0.0,0,1,L-methionine,NO QM9 SUPPORT
+ketone,14706,0.1133,14701,1,isatin,ok
+aldehyde,13488,0.1039,13479,0,,unused
+ester,4561,0.0351,4561,0,,unused
+ether,51428,0.3962,51424,0,,unused
+nitrile,16372,0.1261,16356,0,,unused
+alkyne,16985,0.1308,16962,0,,unused
+alkene,16461,0.1268,16455,0,,unused
+fluoro,2080,0.016,2080,0,,unused
+aromatic_ring,22186,0.1709,22167,12,"L-histidine, L-phenylalanine, L-tryptophan, L-tyrosine, indole, indole-d6, oxindole, indole-3-acetic acid, hypoxanthine, 8-hydroxyquinoline, isatin, tryptophol",ok
+benzene_ring,273,0.0021,273,10,"L-phenylalanine, L-tryptophan, L-tyrosine, indole, indole-d6, oxindole, indole-3-acetic acid, 8-hydroxyquinoline, isatin, tryptophol",ok
+pyrrole_ring,2343,0.018,2343,5,"L-tryptophan, indole, indole-d6, indole-3-acetic acid, tryptophol",ok
+imidazole_ring,1378,0.0106,1378,2,"L-histidine, hypoxanthine",ok
+indole,1,0.0,1,5,"L-tryptophan, indole, indole-d6, indole-3-acetic acid, tryptophol",thin
+lactam,5860,0.0451,5860,2,"oxindole, isatin",ok

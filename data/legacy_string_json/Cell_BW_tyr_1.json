@@ -1,0 +1,260 @@
+{
+  "Laser": {
+    "wavelength": 785,
+    "objective": 20,
+    "grating": 1200,
+    "laser_power": 2.2
+  },
+  "Substrate": {
+    "substrate": "mlagg",
+    "substrate_peaks": 829
+  },
+  "Spectrum": {
+    "source": "exp",
+    "range": "500-1750",
+    "background_corrected": "y",
+    "normalisation": "y",
+    "normalisation_method": "substrate",
+    "medium": "M9_tyrosine",
+    "peak_count_total": 20,
+    "peak_count_500-750": 4,
+    "peak_count_750-1000": 5,
+    "peak_count_1000-1250": 5,
+    "peak_count_1250-1500": 3,
+    "peak_count_1500-1750": 3,
+    "peak_count_1750-2000": 0
+  },
+  "Molecule": {
+    "chemical_formula": null,
+    "SMILES": null,
+    "molecular_weight": null,
+    "scaffold": null,
+    "functional_groups": null
+  },
+  "Peaks": [
+    {
+      "peak_start": 501.0,
+      "peak_position": 546.0,
+      "peak_end": 700.0,
+      "intensity_number": 0.107,
+      "intensity_area": 6.659,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 561.0,
+      "peak_position": 573.0,
+      "peak_end": 588.0,
+      "intensity_number": 0.132,
+      "intensity_area": 0.907,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 601.0,
+      "peak_position": 606.0,
+      "peak_end": 624.0,
+      "intensity_number": 0.211,
+      "intensity_area": 0.882,
+      "intensity_bin": "m",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 646.0,
+      "peak_position": 658.0,
+      "peak_end": 671.0,
+      "intensity_number": 0.22,
+      "intensity_area": 1.45,
+      "intensity_bin": "m",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 750.0,
+      "peak_position": 756.0,
+      "peak_end": 761.0,
+      "intensity_number": 0.278,
+      "intensity_area": 0.873,
+      "intensity_bin": "s",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 607.0,
+      "peak_position": 783.0,
+      "peak_end": 857.0,
+      "intensity_number": 0.046,
+      "intensity_area": 9.611,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 822.0,
+      "peak_position": 828.0,
+      "peak_end": 833.0,
+      "intensity_number": 0.693,
+      "intensity_area": 2.116,
+      "intensity_bin": "vs",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 874.0,
+      "peak_position": 885.0,
+      "peak_end": 890.0,
+      "intensity_number": 0.149,
+      "intensity_area": 0.72,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 955.0,
+      "peak_position": 961.0,
+      "peak_end": 971.0,
+      "intensity_number": 0.108,
+      "intensity_area": 0.557,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 991.0,
+      "peak_position": 1000.0,
+      "peak_end": 1009.0,
+      "intensity_number": 0.097,
+      "intensity_area": 0.558,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1047.0,
+      "peak_position": 1057.0,
+      "peak_end": 1064.0,
+      "intensity_number": 0.05,
+      "intensity_area": 0.216,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1107.0,
+      "peak_position": 1113.0,
+      "peak_end": 1131.0,
+      "intensity_number": 0.145,
+      "intensity_area": 0.712,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1193.0,
+      "peak_position": 1205.0,
+      "peak_end": 1211.0,
+      "intensity_number": 0.131,
+      "intensity_area": 0.597,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1232.0,
+      "peak_position": 1240.0,
+      "peak_end": 1250.0,
+      "intensity_number": 0.153,
+      "intensity_area": 0.771,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1311.0,
+      "peak_position": 1342.0,
+      "peak_end": 1351.0,
+      "intensity_number": 0.159,
+      "intensity_area": 1.397,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1397.0,
+      "peak_position": 1410.0,
+      "peak_end": 1428.0,
+      "intensity_number": 0.226,
+      "intensity_area": 1.608,
+      "intensity_bin": "m",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1461.0,
+      "peak_position": 1478.0,
+      "peak_end": 1488.0,
+      "intensity_number": 0.286,
+      "intensity_area": 1.973,
+      "intensity_bin": "s",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1557.0,
+      "peak_position": 1564.0,
+      "peak_end": 1579.0,
+      "intensity_number": 0.085,
+      "intensity_area": 0.368,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1582.0,
+      "peak_position": 1602.0,
+      "peak_end": 1615.0,
+      "intensity_number": 0.098,
+      "intensity_area": 0.807,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1678.0,
+      "peak_position": 1699.0,
+      "peak_end": 1714.0,
+      "intensity_number": 0.087,
+      "intensity_area": 0.66,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    }
+  ],
+  "meta": {
+    "name": "Cell_BW_tyr_1",
+    "spectrum_file": "all_clean_spectra.npz"
+  }
+}

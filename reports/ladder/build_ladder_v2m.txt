@@ -1,0 +1,46 @@
+[ladder] variant v2m (schema v1.2-v2m); DFT frequency scale 0.967 from calibration; stick convention for R1-R4: activity
+[ladder] R1: 9 molecules from calibration_gas/activity
+[ladder] R2: 20 molecules from neutral_gas/activity
+[ladder] R3: 20 molecules from neutral_water/activity
+[ladder] R4: 20 molecules from zwitterion_water/activity
+[ladder] R5: 20 molecules from zwitterion_water/int785
+[ladder] R6: 20 molecules from zwitterion_water/gapiso785
+[ladder] QM9S probe set: 13777 molecules (11003 train, 2774 test = R0); topped up: {'primary_amine': 15, 'guanidine': 221, 'fluoro': 99, 'benzene_ring': 248, 'pyrrole_ring': 52, 'imidazole_ring': 151, 'indole': 0}
+[ladder]   R1       9 strings   calibration molecules, your DFT (gas)
+[ladder]   R1q      9 strings   QM9S spectra of the calibration molecules
+[ladder]   R2      20 strings   amino acids: neutral, gas
+[ladder]   R3      20 strings   + water (implicit)
+[ladder]   R4      20 strings   + pH 7 protonation
+[ladder]   R5      20 strings   + 785 nm intensities
+[ladder]   R6      20 strings   + gap field along z
+[ladder]   R8      29 strings   SERS standards
+[ladder]   R9     590 strings   SERS cells
+[ladder] prompt length (estimate, 1 token per digit): median 259, max 402
+
+[ladder] what the strings look like on each rung (no model):
+  rung           n  peaks median int  int<0.2 median fwhm peaks<900 strongest<900
+  R0 (QM9S)   3000     14       0.26      36%          18       28%            4%
+  R1             9      9       0.29      35%          19       24%            0%
+  R1q            9      8       0.35      26%          19       19%           11%
+  R2            20     18       0.28      30%          18       32%           10%
+  R3            20     16       0.26      37%          18       31%            5%
+  R4            20     17       0.31      27%          18       33%           15%
+  R5            20     17       0.34      23%          18       34%           60%
+  R6            20     16       0.26      35%          18       35%           75%
+  R8            29     11       0.43      22%          17       24%           41%
+  R9           590     15       0.51       8%          18       28%           66%
+
+[ladder] spectral similarity of each simulated rung to SERS (cosine of the re-drawn strings):
+  rung  vs  mean cos  own standard is the best match  in top 3
+  R2    R8     0.512                             10%       20%
+  R2    R9     0.580                             15%       20%
+  R3    R8     0.514                             10%       15%
+  R3    R9     0.557                              5%       10%
+  R4    R8     0.549                              5%       10%
+  R4    R9     0.601                              0%       10%
+  R5    R8     0.495                              5%       20%
+  R5    R9     0.565                              0%        5%
+  R6    R8     0.447                             10%       25%
+  R6    R9     0.515                              0%        5%
+
+-> data/ladder/v2m/qm9s_records.jsonl, data/ladder/v2m/ladder_records.jsonl, reports/ladder/v2m/similarity*.csv, reports/ladder/v2m/string_stats.csv

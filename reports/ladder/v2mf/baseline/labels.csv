@@ -1,0 +1,24 @@
+label,n_pos_qm9s_train,n_pos_analytes,n_analytes,pos_analytes,used
+fg_carboxylic_acid,0,20,20,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-proline; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine,False
+fg_primary_amine,205,19,20,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine,True
+fg_secondary_amine,938,1,20,L-proline,True
+fg_amide,690,2,20,L-asparagine; L-glutamine,True
+fg_guanidine,171,1,20,L-arginine,True
+fg_hydroxyl_aliphatic,2672,2,20,L-serine; L-threonine,True
+fg_phenol,343,1,20,L-tyrosine,True
+fg_thiol,0,1,20,L-cysteine,False
+fg_thioether,0,1,20,L-methionine,False
+fg_ketone,1020,0,20,,False
+fg_aldehyde,945,0,20,,False
+fg_ester,318,0,20,,False
+fg_ether,3578,0,20,,False
+fg_nitrile,1177,0,20,,False
+fg_alkyne,1203,0,20,,False
+fg_alkene,1118,0,20,,False
+fg_fluoro,262,0,20,,False
+fg_aromatic_ring,1814,4,20,L-histidine; L-phenylalanine; L-tryptophan; L-tyrosine,True
+fg_benzene_ring,190,3,20,L-phenylalanine; L-tryptophan; L-tyrosine,True
+fg_pyrrole_ring,188,1,20,L-tryptophan,True
+fg_imidazole_ring,204,1,20,L-histidine,True
+fg_indole,1,1,20,L-tryptophan,False
+fg_lactam,463,0,20,,False

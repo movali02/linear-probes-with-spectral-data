@@ -1,0 +1,10 @@
+[variant] v2mf: schema v1.2-v2mf -> data/processed_v2mf
+[sers] 899 processed spectra -> data/processed_v2mf/sers_spectra.npz
+[sers] files by folder: AAs/standard=20, Cell/cell=610, Cell/substrate_only=260, indoles/standard=9
+[sers] 899 records (30 without SMILES), substrate modes {'reference_norm+rescaled': 899}, catalogue [759.0, 829.0, 883.0] -> data/processed_v2mf/sers_records.jsonl
+[sers]   cell            own CB (condition mean)   610
+[sers]   standard        generic CB                29
+[sers]   substrate_only  own CB (condition mean)   260
+[sers] axis aligned to the CB[5] band: 899 spectra shifted by +0 to +7 cm-1 (median +1)
+[sers] generic CB: in-run, 259 CB files, expected heights = p90
+[sers] WARNING: no analyte matched for ['CB_536_ctrl_0', 'CB_536_ctrl_1', 'CB_536_ctrl_2', 'CB_536_ctrl_3', 'CB_536_ctrl_4', 'CB_BW_ctrl_0', 'CB_BW_ctrl_1', 'CB_BW_ctrl_2', 'CB_BW_ctrl_3', 'CB_BW_ctrl_4']

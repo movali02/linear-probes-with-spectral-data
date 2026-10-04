@@ -1,0 +1,33 @@
+[ladder] variant matched (schema v1.2-matched); DFT frequency scale 0.967 from calibration; stick convention for R1-R4: activity
+[ladder] R1: 9 molecules from calibration_gas/activity
+[ladder] R2: 19 molecules from neutral_gas/activity
+[ladder] R3: 19 molecules from neutral_water/activity
+[ladder] R4: 20 molecules from zwitterion_water/activity
+[ladder] R5: 20 molecules from zwitterion_water/int785
+[ladder] R6: 20 molecules from zwitterion_water/gapiso785
+[ladder] QM9S probe set: 13777 molecules (11003 train, 2774 test = R0); topped up: {'primary_amine': 15, 'guanidine': 221, 'fluoro': 99, 'benzene_ring': 248, 'pyrrole_ring': 52, 'imidazole_ring': 151, 'indole': 0}
+[ladder]   R1       9 strings   calibration molecules, your DFT (gas)
+[ladder]   R1q      9 strings   QM9S spectra of the calibration molecules
+[ladder]   R2      19 strings   amino acids: neutral, gas
+[ladder]   R3      19 strings   + water (implicit)
+[ladder]   R4      20 strings   + pH 7 protonation
+[ladder]   R5      20 strings   + 785 nm intensities
+[ladder]   R6      20 strings   + gap field along z
+[ladder]   R8      29 strings   SERS standards
+[ladder]   R9     590 strings   SERS cells
+[ladder] prompt length (estimate, 1 token per digit): median 268, max 394
+
+[ladder] spectral similarity of each simulated rung to SERS (cosine of the re-drawn strings):
+  rung  vs  mean cos  own standard is the best match  in top 3
+  R2    R8     0.538                             16%       26%
+  R2    R9     0.604                              5%       26%
+  R3    R8     0.515                             10%       26%
+  R3    R9     0.553                              0%       10%
+  R4    R8     0.546                              5%       10%
+  R4    R9     0.600                              0%        5%
+  R5    R8     0.504                              5%       25%
+  R5    R9     0.567                              5%        5%
+  R6    R8     0.458                             10%       35%
+  R6    R9     0.517                              0%        5%
+
+-> data/ladder/matched/qm9s_records.jsonl, data/ladder/matched/ladder_records.jsonl, reports/ladder/matched/similarity*.csv

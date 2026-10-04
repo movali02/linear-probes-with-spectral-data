@@ -1,0 +1,271 @@
+{
+  "Laser": {
+    "wavelength": 785,
+    "objective": 20,
+    "grating": 1200,
+    "laser_power": 2.2
+  },
+  "Substrate": {
+    "substrate": "mlagg",
+    "substrate_peaks": 829
+  },
+  "Spectrum": {
+    "source": "exp",
+    "range": "500-1750",
+    "background_corrected": "y",
+    "normalisation": "y",
+    "normalisation_method": "substrate",
+    "medium": "water",
+    "peak_count_total": 21,
+    "peak_count_500-750": 2,
+    "peak_count_750-1000": 6,
+    "peak_count_1000-1250": 5,
+    "peak_count_1250-1500": 6,
+    "peak_count_1500-1750": 2,
+    "peak_count_1750-2000": 0
+  },
+  "Molecule": {
+    "chemical_formula": "C4H9NO3",
+    "SMILES": "C[C@@H](O)[C@H](N)C(=O)O",
+    "molecular_weight": 119.12,
+    "scaffold": "aliphatic",
+    "functional_groups": "primary_amine_carboxylic_acid_secondary_hydroxyl"
+  },
+  "Peaks": [
+    {
+      "peak_start": 600.0,
+      "peak_position": 618.0,
+      "peak_end": 633.0,
+      "intensity_number": 0.056,
+      "intensity_area": 0.463,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 660.0,
+      "peak_position": 672.0,
+      "peak_end": 686.0,
+      "intensity_number": 0.088,
+      "intensity_area": 0.62,
+      "intensity_bin": "w",
+      "mode_assignment": "COO- wagging",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 748.0,
+      "peak_position": 755.0,
+      "peak_end": 761.0,
+      "intensity_number": 0.138,
+      "intensity_area": 0.453,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 780.0,
+      "peak_position": 785.0,
+      "peak_end": 846.0,
+      "intensity_number": 0.05,
+      "intensity_area": 10.12,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 821.0,
+      "peak_position": 828.0,
+      "peak_end": 833.0,
+      "intensity_number": 0.75,
+      "intensity_area": 3.176,
+      "intensity_bin": "vs",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 857.0,
+      "peak_position": 862.0,
+      "peak_end": 928.0,
+      "intensity_number": 0.017,
+      "intensity_area": 3.187,
+      "intensity_bin": "vw",
+      "mode_assignment": "C-C / C-O stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 875.0,
+      "peak_position": 884.0,
+      "peak_end": 891.0,
+      "intensity_number": 0.163,
+      "intensity_area": 0.806,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 955.0,
+      "peak_position": 963.0,
+      "peak_end": 979.0,
+      "intensity_number": 0.043,
+      "intensity_area": 0.206,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 988.0,
+      "peak_position": 1000.0,
+      "peak_end": 1013.0,
+      "intensity_number": 0.038,
+      "intensity_area": 0.249,
+      "intensity_bin": "vw",
+      "mode_assignment": "C-O stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1014.0,
+      "peak_position": 1024.0,
+      "peak_end": 1057.0,
+      "intensity_number": 0.03,
+      "intensity_area": 0.312,
+      "intensity_bin": "vw",
+      "mode_assignment": "C-O stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1108.0,
+      "peak_position": 1116.0,
+      "peak_end": 1131.0,
+      "intensity_number": 0.038,
+      "intensity_area": 0.166,
+      "intensity_bin": "vw",
+      "mode_assignment": "C-N / C-O stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1184.0,
+      "peak_position": 1191.0,
+      "peak_end": 1212.0,
+      "intensity_number": 0.095,
+      "intensity_area": 0.729,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1222.0,
+      "peak_position": 1233.0,
+      "peak_end": 1243.0,
+      "intensity_number": 0.028,
+      "intensity_area": 0.147,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1280.0,
+      "peak_position": 1286.0,
+      "peak_end": 1291.0,
+      "intensity_number": 0.044,
+      "intensity_area": 0.141,
+      "intensity_bin": "vw",
+      "mode_assignment": "CH deformation",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1313.0,
+      "peak_position": 1324.0,
+      "peak_end": 1353.0,
+      "intensity_number": 0.06,
+      "intensity_area": 0.492,
+      "intensity_bin": "vw",
+      "mode_assignment": "CH deformation",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1367.0,
+      "peak_position": 1374.0,
+      "peak_end": 1386.0,
+      "intensity_number": 0.145,
+      "intensity_area": 0.789,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1363.0,
+      "peak_position": 1407.0,
+      "peak_end": 1433.0,
+      "intensity_number": 0.095,
+      "intensity_area": 2.57,
+      "intensity_bin": "w",
+      "mode_assignment": "COO- symmetric stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1363.0,
+      "peak_position": 1426.0,
+      "peak_end": 1434.0,
+      "intensity_number": 0.091,
+      "intensity_area": 2.714,
+      "intensity_bin": "w",
+      "mode_assignment": "COO- symmetric stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1467.0,
+      "peak_position": 1474.0,
+      "peak_end": 1489.0,
+      "intensity_number": 0.031,
+      "intensity_area": 0.159,
+      "intensity_bin": "vw",
+      "mode_assignment": "CH3 deformation",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1580.0,
+      "peak_position": 1597.0,
+      "peak_end": 1630.0,
+      "intensity_number": 0.04,
+      "intensity_area": 0.561,
+      "intensity_bin": "vw",
+      "mode_assignment": "NH3+ / COO- asymmetric",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1685.0,
+      "peak_position": 1704.0,
+      "peak_end": 1709.0,
+      "intensity_number": 0.021,
+      "intensity_area": 0.089,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    }
+  ],
+  "_meta": {
+    "name": "L-threonine",
+    "spectrum_file": "C:\\Users\\moval\\Documents\\PhD\\Raman\\Tokenisation\\finetune\\processed_aa\\check\\L-threonine.txt"
+  }
+}

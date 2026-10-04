@@ -1,0 +1,101 @@
+
+=== T4 (native) -> reports/baselines2b/native
+[data] data/processed/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[data] data/processed/sers_records.jsonl: 899 SERS records, schema ['v1.2']
+[T4] train 20846 QM9S, test 5141 QM9S + 619 SERS; shared labels ['fg_primary_amine', 'fg_secondary_amine', 'fg_amide', 'fg_guanidine', 'fg_hydroxyl_aliphatic', 'fg_phenol', 'fg_ketone', 'fg_aromatic_ring', 'fg_benzene_ring', 'fg_pyrrole_ring', 'fg_imidazole_ring', 'fg_lactam']
+[T4] 336 fits (12 label/scheme combinations) on 32 job(s)
+Matplotlib created a temporary cache directory at /tmp/matplotlib-erdvm55h because the default path (/home/mv487/.config/matplotlib) is not a writable directory; it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+[T4] fits + bootstrap done in 400 s
+[T4] permutation tests: 24 combination(s), up to 100 shuffles each
+[T4] permutations done in 608 s
+# T4 baselines (native)
+
+Primary metric: AUROC. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| qm9s_to_sers | qm9s_test | primary_amine | 0.811 [0.78, 0.84] | 0.970 [0.95, 0.99] (F1/hgb) | 0.990 [0.98, 1.00] (F3/hgb) | 0.990 [0.98, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_all | primary_amine | 0.550 [0.00, 0.70], p=0.366 | 0.653 [0.08, 0.76] (F1.bg/hgb) | 0.700 [0.60, 1.00] (F3/hgb) | 0.734 [0.49, 0.81], p=0.0099 (F2/knn) |
+| qm9s_to_sers | sers_all@analyte | primary_amine | 0.135 [0.00, 0.40] | 0.699 [0.35, 0.98] (F1.sqrt/knn) | 0.925 [0.77, 1.00] (F3/hgb) | 0.925 [0.77, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_cells | primary_amine | 0.695 [0.58, 0.80] | 0.755 [0.67, 0.84] (F1.bg/hgb) | 0.703 [0.62, 0.79] (F3.bg/hgb) | 0.755 [0.67, 0.84] (F1.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | primary_amine | 0.789 [0.59, 0.95] | 0.947 [0.82, 1.00] (F1.bg/hgb) | 0.974 [0.92, 1.00] (F3.bg/knn) | 0.974 [0.92, 1.00] (F3.bg/knn) |
+| qm9s_to_sers | sers_standards | primary_amine | 0.074 [0.00, 0.30] | 0.516 [0.39, 0.65] (F1/knn) | 0.968 [0.87, 1.00] (F3/hgb) | 0.968 [0.87, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_standards@analyte | primary_amine | 0.098 [0.00, 0.34] | 0.549 [0.37, 0.68] (F1.sqrt/knn) | 0.955 [0.85, 1.00] (F3/hgb) | 0.955 [0.85, 1.00] (F3/hgb) |
+| qm9s_to_sers | qm9s_test | amide | 0.737 [0.71, 0.76] | 0.792 [0.76, 0.82] (F1.bg/hgb) | 0.917 [0.90, 0.93] (F3/hgb) | 0.917 [0.90, 0.93] (F3/hgb) |
+| qm9s_to_sers | sers_all | amide | 0.460 [0.24, 0.74], p=0.762 | 0.498 [0.26, 0.55] (F1.bg/knn) | 0.480 [0.07, 0.79] (F3.bg/hgb) | 0.596 [0.50, 0.98], p=0.0891 (F2/knn) |
+| qm9s_to_sers | sers_all@analyte | amide | 0.477 [0.19, 0.75] | 0.580 [0.27, 0.88] (F1/hgb) | 0.545 [0.13, 0.96] (F3.bg/knn) | 0.830 [0.39, 1.00] (F1pos/hgb) |
+| qm9s_to_sers | sers_cells | amide | 0.448 [0.20, 0.70] | 0.502 [0.43, 0.57] (F1.bg/knn) | 0.493 [0.16, 0.82] (F3.bg/hgb) | 0.597 [0.51, 0.68] (F2/knn) |
+| qm9s_to_sers | sers_cells@analyte | amide | 0.361 [0.06, 0.66] | 0.500 [0.24, 0.78] (F1.bg/knn) | 0.528 [0.26, 0.75] (F3/hgb) | 0.778 [0.50, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_standards | amide | 0.720 [0.48, 0.93] | 0.720 [0.48, 0.93] (F1/lr) | 0.720 [0.48, 0.93] (F3/lr) | 0.730 [0.50, 0.95] (F2/lr) |
+| qm9s_to_sers | sers_standards@analyte | amide | 0.784 [0.58, 0.96] | 0.784 [0.58, 0.96] (F1/lr) | 0.773 [0.57, 0.95] (F3/lr) | 0.784 [0.58, 0.96] (F1/lr) |
+| qm9s_to_sers | qm9s_test | hydroxyl_aliphatic | 0.691 [0.68, 0.71] | 0.745 [0.73, 0.76] (F1/hgb) | 0.797 [0.78, 0.81] (F3/hgb) | 0.797 [0.78, 0.81] (F3/hgb) |
+| qm9s_to_sers | sers_all | hydroxyl_aliphatic | 0.620 [0.49, 0.95], p=0.119 | 0.620 [0.49, 0.95], p=0.119 (F1/lr) | 0.648 [0.01, 0.72], p=0.0198 (F3/hgb) | 0.648 [0.01, 0.72], p=0.0198 (F3/hgb) |
+| qm9s_to_sers | sers_all@analyte | hydroxyl_aliphatic | 0.754 [0.52, 0.95] | 0.826 [0.54, 1.00] (F1.sqrt/lr) | 0.710 [0.45, 0.96] (F3.bg/hgb) | 0.826 [0.54, 1.00] (F1.sqrt/lr) |
+| qm9s_to_sers | sers_cells | hydroxyl_aliphatic | 0.632 [0.49, 0.81] | 0.632 [0.47, 0.75] (F1/knn) | 0.652 [0.55, 0.72] (F3/hgb) | 0.652 [0.55, 0.72] (F3/hgb) |
+| qm9s_to_sers | sers_cells@analyte | hydroxyl_aliphatic | 0.750 [0.47, 1.00] | 0.778 [0.53, 1.00] (F1.bg/lr) | 0.778 [0.53, 0.95] (F3/hgb) | 0.778 [0.53, 0.95] (F3/hgb) |
+| qm9s_to_sers | sers_standards | hydroxyl_aliphatic | 0.526 [0.04, 0.89] | 0.590 [0.04, 0.94] (F1.bg/hgb) | 0.808 [0.58, 0.96] (F3/knn) | 0.808 [0.58, 0.96] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | hydroxyl_aliphatic | 0.522 [0.00, 0.92] | 0.609 [0.04, 0.96] (F1.bg/hgb) | 0.826 [0.58, 1.00] (F3/knn) | 0.826 [0.58, 1.00] (F3/knn) |
+| qm9s_to_sers | qm9s_test | phenol | 0.915 [0.90, 0.93] | 0.924 [0.91, 0.94] (F1.sqrt/lr) | 0.953 [0.94, 0.96] (F3/hgb) | 0.953 [0.94, 0.96] (F3/hgb) |
+| qm9s_to_sers | sers_all | phenol | 0.745 [0.38, 0.85], p=0.148 | 0.811 [0.77, 0.99], p=0.0099 (F1/knn) | 0.733 [0.01, 0.84] (F3.bg/lr) | 0.811 [0.77, 0.99], p=0.0099 (F1/knn) |
+| qm9s_to_sers | sers_all@analyte | phenol | 0.688 [0.38, 0.96] | 0.938 [0.81, 1.00] (F1/knn) | 0.792 [0.61, 0.96] (F3.bg/knn) | 0.938 [0.81, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_cells | phenol | 0.766 [0.63, 0.89] | 0.820 [0.72, 0.90] (F1.bg/hgb) | 0.760 [0.64, 0.88] (F3/lr) | 0.820 [0.72, 0.90] (F1.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | phenol | 0.842 [0.67, 1.00] | 1.000 [1.00, 1.00] (F1/knn) | 0.842 [0.63, 1.00] (F3.bg/knn) | 1.000 [1.00, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_standards | phenol | 0.444 [0.17, 0.72] | 0.889 [0.75, 1.00] (F1/knn) | 0.907 [0.73, 1.00] (F3/knn) | 0.907 [0.73, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | phenol | 0.438 [0.12, 0.72] | 0.938 [0.81, 1.00] (F1/knn) | 0.896 [0.72, 1.00] (F3/knn) | 0.938 [0.81, 1.00] (F1/knn) |
+| qm9s_to_sers | qm9s_test | aromatic_ring | 0.972 [0.97, 0.98] | 0.980 [0.98, 0.98] (F1.bg/hgb) | 0.992 [0.99, 0.99] (F3/hgb) | 0.992 [0.99, 0.99] (F3/hgb) |
+| qm9s_to_sers | sers_all | aromatic_ring | 0.545 [0.23, 0.88], p=0.277 | 0.561 [0.32, 0.87] (F1/knn) | 0.652 [0.43, 0.82], p=0.0099 (F3.bg/hgb) | 0.652 [0.43, 0.82], p=0.0099 (F3.bg/hgb) |
+| qm9s_to_sers | sers_all@analyte | aromatic_ring | 0.512 [0.20, 0.78] | 0.669 [0.40, 0.91] (F1.sqrt/knn) | 0.644 [0.39, 0.88] (F3.bg/hgb) | 0.881 [0.64, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_cells | aromatic_ring | 0.555 [0.17, 1.00] | 0.559 [0.17, 1.00] (F1.bg/lr) | 0.645 [0.38, 0.83] (F3.bg/hgb) | 0.645 [0.38, 0.83] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | aromatic_ring | 0.562 [0.00, 1.00] | 0.594 [0.09, 1.00] (F1.bg/knn) | 0.719 [0.37, 0.99] (F3.bg/hgb) | 0.734 [0.00, 1.00] (F2/knn) |
+| qm9s_to_sers | sers_standards | aromatic_ring | 0.404 [0.19, 0.67] | 0.798 [0.57, 0.96] (F1.bg/hgb) | 0.745 [0.44, 0.94] (F3.bg/hgb) | 0.798 [0.57, 0.96] (F1.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | aromatic_ring | 0.425 [0.15, 0.67] | 0.781 [0.53, 0.97] (F1.bg/hgb) | 0.738 [0.47, 0.96] (F3/lr) | 0.781 [0.53, 0.97] (F1.bg/hgb) |
+| qm9s_to_sers | qm9s_test | benzene_ring | 0.977 [0.94, 1.00] | 0.986 [0.97, 1.00] (F1/hgb) | 0.999 [1.00, 1.00] (F3.bg/hgb) | 0.999 [1.00, 1.00] (F3.bg/hgb) |
+| qm9s_to_sers | sers_all | benzene_ring | 0.272 [0.11, 0.52], p=1 | 0.652 [0.35, 0.97] (F1.bg/hgb) | 0.740 [0.57, 0.97], p=0.0099 (F3.bg/hgb) | 0.740 [0.57, 0.97], p=0.0099 (F3.bg/hgb) |
+| qm9s_to_sers | sers_all@analyte | benzene_ring | 0.516 [0.22, 0.83] | 0.784 [0.59, 0.98] (F1.bg/knn) | 0.804 [0.60, 1.00] (F3.bg/knn) | 0.804 [0.60, 1.00] (F3.bg/knn) |
+| qm9s_to_sers | sers_cells | benzene_ring | 0.229 [0.03, 0.42] | 0.629 [0.24, 0.99] (F1.bg/hgb) | 0.725 [0.51, 0.98] (F3.bg/hgb) | 0.725 [0.51, 0.98] (F3.bg/hgb) |
+| qm9s_to_sers | sers_cells@analyte | benzene_ring | 0.196 [0.00, 0.63] | 0.745 [0.39, 1.00] (F1.bg/knn) | 0.784 [0.53, 1.00] (F3/hgb) | 0.784 [0.39, 1.00] (F1pos/knn) |
+| qm9s_to_sers | sers_standards | benzene_ring | 0.529 [0.29, 0.86] | 0.926 [0.80, 0.99] (F1/hgb) | 0.971 [0.88, 1.00] (F3/hgb) | 0.971 [0.88, 1.00] (F3/hgb) |
+| qm9s_to_sers | sers_standards@analyte | benzene_ring | 0.608 [0.33, 0.87] | 0.902 [0.76, 0.99] (F1/hgb) | 0.961 [0.87, 1.00] (F3/hgb) | 0.961 [0.87, 1.00] (F3/hgb) |
+| qm9s_to_sers | qm9s_test | pyrrole_ring | 0.952 [0.93, 0.97] | 0.964 [0.95, 0.97] (F1/hgb) | 0.979 [0.97, 0.99] (F3/hgb) | 0.979 [0.97, 0.99] (F3/hgb) |
+| qm9s_to_sers | sers_all | pyrrole_ring | 0.236 [0.01, 0.42], p=0.594 | 0.788 [0.45, 0.83] (F1/knn) | 0.600 [0.01, 0.71] (F3.bg/hgb) | 0.811 [0.39, 0.87], p=0.0594 (F1pos/hgb) |
+| qm9s_to_sers | sers_all@analyte | pyrrole_ring | 0.273 [0.00, 0.63] | 0.693 [0.28, 1.00] (F1.sqrt/lr) | 0.625 [0.50, 1.00] (F3/knn) | 0.716 [0.46, 0.96] (F1pos/lr) |
+| qm9s_to_sers | sers_cells | pyrrole_ring | 0.255 [0.17, 0.36] | 0.858 [0.82, 0.90] (F1.sqrt/lr) | 0.592 [0.51, 0.68] (F3.bg/hgb) | 0.866 [0.82, 0.90] (F1pos/lr) |
+| qm9s_to_sers | sers_cells@analyte | pyrrole_ring | 0.158 [0.00, 0.33] | 1.000 [1.00, 1.00] (F1/knn) | 0.632 [0.42, 0.84] (F3.bg/hgb) | 1.000 [1.00, 1.00] (F1/knn) |
+| qm9s_to_sers | sers_standards | pyrrole_ring | 0.091 [0.01, 0.28] | 0.610 [0.40, 0.72] (F1/knn) | 0.714 [0.00, 0.96] (F3.bg/hgb) | 0.714 [0.00, 0.96] (F3.bg/hgb) |
+| qm9s_to_sers | sers_standards@analyte | pyrrole_ring | 0.125 [0.00, 0.29] | 0.705 [0.48, 0.91] (F1.bg/hgb) | 0.693 [0.00, 1.00] (F3.bg/hgb) | 0.795 [0.47, 1.00] (F1pos/knn) |
+| qm9s_to_sers | qm9s_test | lactam | 0.763 [0.73, 0.79] | 0.771 [0.74, 0.79] (F1.sqrt/lr) | 0.923 [0.91, 0.93] (F3/hgb) | 0.923 [0.91, 0.93] (F3/hgb) |
+| qm9s_to_sers | sers_all | lactam | 0.312 [0.00, 0.72], p=0.673 | 0.443 [0.00, 0.94] (F1.bg/lr) | 0.819 [0.68, 0.93], p=0.129 (F3/knn) | 0.819 [0.68, 0.93], p=0.129 (F3/knn) |
+| qm9s_to_sers | sers_all@analyte | lactam | 0.312 [0.00, 0.75] | 0.417 [0.00, 0.92] (F1.bg/lr) | 0.750 [0.57, 0.91] (F3/knn) | 0.750 [0.57, 0.91] (F3/knn) |
+| qm9s_to_sers | sers_cells | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_cells@analyte | lactam | n/a | n/a | n/a | n/a |
+| qm9s_to_sers | sers_standards | lactam | 0.481 [0.00, 0.96] | 0.518 [0.04, 1.00] (F1.sqrt/lr) | 0.852 [0.65, 1.00] (F3/knn) | 0.852 [0.65, 1.00] (F3/knn) |
+| qm9s_to_sers | sers_standards@analyte | lactam | 0.500 [0.04, 1.00] | 0.500 [0.04, 1.00] (F1/lr) | 0.875 [0.71, 1.00] (F3/knn) | 0.875 [0.71, 1.00] (F3/knn) |
+
+
+## Labels with a single SERS analyte on one side
+
+AUROC here only ranks one molecule, so these are reported as that analyte's rank among all analytes (`T4_per_analyte.csv`, columns rank / n_analytes), not in the table above:
+
+- fg_secondary_amine
+- fg_guanidine
+- fg_ketone
+- fg_imidazole_ring
+
+## Labels not tested
+
+- fg_carboxylic_acid: 0 QM9S training positives (< 30)
+- fg_thiol: 0 QM9S training positives (< 30)
+- fg_thioether: 0 QM9S training positives (< 30)
+- fg_aldehyde: SERS side has only one class
+- fg_ester: SERS side has only one class
+- fg_ether: SERS side has only one class
+- fg_nitrile: SERS side has only one class
+- fg_alkyne: SERS side has only one class
+- fg_alkene: SERS side has only one class
+- fg_fluoro: SERS side has only one class
+- fg_indole: 0 QM9S training positives (< 30)
+
+Arguments: `--task T4 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T4] done in 1025 s -> reports/baselines2b/native/T4.csv

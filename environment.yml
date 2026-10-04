@@ -1,0 +1,35 @@
+name: mv_env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - jupyter
+  - ca-certificates
+  - openssl
+  - tqdm
+  - certifi
+  - torchvision
+  - openslide-python
+  - matplotlib
+  - scipy
+  - pandas
+  - imreg_dft
+  - opencv
+  - scikit-image
+  - optuna
+  - cmake
+  - torchaudio
+  - pytorch-cuda=12.4
+  - wandb
+  - ipdb
+  - shap
+  - omegaconf
+  - fvcore
+  - iopath
+  - xformers
+  - submitit
+  - transformers
+  - accelerate
+  - nodejs
+  - catboost
+prefix: /local/scratch/mv487/miniforge3/envs/mv_env

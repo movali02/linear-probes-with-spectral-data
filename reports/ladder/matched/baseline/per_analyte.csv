@@ -1,0 +1,1261 @@
+label,method,rung,analyte,true,score,rank,n
+fg_primary_amine,baseline_lr,R2,L-alanine,1,0.7866,1,18
+fg_primary_amine,baseline_lr,R2,L-arginine,1,-0.7526,13,18
+fg_primary_amine,baseline_lr,R2,L-aspartic acid,1,-0.3581,9,18
+fg_primary_amine,baseline_lr,R2,L-cysteine,1,0.6784,2,18
+fg_primary_amine,baseline_lr,R2,L-glutamic acid,1,-0.7338,12,18
+fg_primary_amine,baseline_lr,R2,L-glutamine,1,0.135,4,18
+fg_primary_amine,baseline_lr,R2,L-glycine,1,0.1902,3,18
+fg_primary_amine,baseline_lr,R2,L-histidine,1,-0.9727,15,18
+fg_primary_amine,baseline_lr,R2,L-isoleucine,1,0.1056,5,18
+fg_primary_amine,baseline_lr,R2,L-leucine,1,-0.5375,10,18
+fg_primary_amine,baseline_lr,R2,L-lysine,1,-1.7504,18,18
+fg_primary_amine,baseline_lr,R2,L-methionine,1,-0.0209,7,18
+fg_primary_amine,baseline_lr,R2,L-proline,0,-0.9827,16,18
+fg_primary_amine,baseline_lr,R2,L-serine,1,0.0813,6,18
+fg_primary_amine,baseline_lr,R2,L-threonine,1,-0.1636,8,18
+fg_primary_amine,baseline_lr,R2,L-tryptophan,1,-1.1062,17,18
+fg_primary_amine,baseline_lr,R2,L-tyrosine,1,-0.9686,14,18
+fg_primary_amine,baseline_lr,R2,L-valine,1,-0.5882,11,18
+fg_primary_amine,baseline_lr,R3,L-alanine,1,-1.3922,18,18
+fg_primary_amine,baseline_lr,R3,L-arginine,1,0.5669,2,18
+fg_primary_amine,baseline_lr,R3,L-aspartic acid,1,-0.7223,13,18
+fg_primary_amine,baseline_lr,R3,L-cysteine,1,0.3492,4,18
+fg_primary_amine,baseline_lr,R3,L-glutamic acid,1,-0.7207,12,18
+fg_primary_amine,baseline_lr,R3,L-glutamine,1,0.7841,1,18
+fg_primary_amine,baseline_lr,R3,L-glycine,1,-0.2374,6,18
+fg_primary_amine,baseline_lr,R3,L-histidine,1,-0.7469,15,18
+fg_primary_amine,baseline_lr,R3,L-isoleucine,1,-1.0524,17,18
+fg_primary_amine,baseline_lr,R3,L-leucine,1,-0.7434,14,18
+fg_primary_amine,baseline_lr,R3,L-lysine,1,-0.4714,10,18
+fg_primary_amine,baseline_lr,R3,L-methionine,1,0.3768,3,18
+fg_primary_amine,baseline_lr,R3,L-proline,0,-0.1507,5,18
+fg_primary_amine,baseline_lr,R3,L-serine,1,-0.2408,7,18
+fg_primary_amine,baseline_lr,R3,L-threonine,1,-0.5194,11,18
+fg_primary_amine,baseline_lr,R3,L-tryptophan,1,-1.0111,16,18
+fg_primary_amine,baseline_lr,R3,L-tyrosine,1,-0.3024,9,18
+fg_primary_amine,baseline_lr,R3,L-valine,1,-0.2408,8,18
+fg_primary_amine,baseline_lr,R4,L-alanine,1,-0.7181,14,18
+fg_primary_amine,baseline_lr,R4,L-arginine,1,1.2641,1,18
+fg_primary_amine,baseline_lr,R4,L-aspartic acid,1,0.6034,4,18
+fg_primary_amine,baseline_lr,R4,L-cysteine,1,-0.8155,15,18
+fg_primary_amine,baseline_lr,R4,L-glutamic acid,1,-0.2753,9,18
+fg_primary_amine,baseline_lr,R4,L-glutamine,1,1.006,2,18
+fg_primary_amine,baseline_lr,R4,L-glycine,1,-0.5438,12,18
+fg_primary_amine,baseline_lr,R4,L-histidine,1,-0.5943,13,18
+fg_primary_amine,baseline_lr,R4,L-isoleucine,1,-1.1655,18,18
+fg_primary_amine,baseline_lr,R4,L-leucine,1,-0.5065,10,18
+fg_primary_amine,baseline_lr,R4,L-lysine,1,0.5508,5,18
+fg_primary_amine,baseline_lr,R4,L-methionine,1,0.7611,3,18
+fg_primary_amine,baseline_lr,R4,L-proline,0,-1.1218,16,18
+fg_primary_amine,baseline_lr,R4,L-serine,1,0.4398,6,18
+fg_primary_amine,baseline_lr,R4,L-threonine,1,-0.2066,7,18
+fg_primary_amine,baseline_lr,R4,L-tryptophan,1,-0.5077,11,18
+fg_primary_amine,baseline_lr,R4,L-tyrosine,1,-1.1601,17,18
+fg_primary_amine,baseline_lr,R4,L-valine,1,-0.2569,8,18
+fg_primary_amine,baseline_lr,R5,L-alanine,1,-1.0214,15,18
+fg_primary_amine,baseline_lr,R5,L-arginine,1,1.3879,1,18
+fg_primary_amine,baseline_lr,R5,L-aspartic acid,1,0.0758,7,18
+fg_primary_amine,baseline_lr,R5,L-cysteine,1,-0.5324,12,18
+fg_primary_amine,baseline_lr,R5,L-glutamic acid,1,-0.8045,13,18
+fg_primary_amine,baseline_lr,R5,L-glutamine,1,0.2725,5,18
+fg_primary_amine,baseline_lr,R5,L-glycine,1,-0.2858,9,18
+fg_primary_amine,baseline_lr,R5,L-histidine,1,-0.5315,11,18
+fg_primary_amine,baseline_lr,R5,L-isoleucine,1,-0.8227,14,18
+fg_primary_amine,baseline_lr,R5,L-leucine,1,-1.0542,16,18
+fg_primary_amine,baseline_lr,R5,L-lysine,1,0.6589,4,18
+fg_primary_amine,baseline_lr,R5,L-methionine,1,0.7967,2,18
+fg_primary_amine,baseline_lr,R5,L-proline,0,-1.0834,17,18
+fg_primary_amine,baseline_lr,R5,L-serine,1,0.7317,3,18
+fg_primary_amine,baseline_lr,R5,L-threonine,1,-0.0631,8,18
+fg_primary_amine,baseline_lr,R5,L-tryptophan,1,-0.4083,10,18
+fg_primary_amine,baseline_lr,R5,L-tyrosine,1,-2.0774,18,18
+fg_primary_amine,baseline_lr,R5,L-valine,1,0.1107,6,18
+fg_primary_amine,baseline_lr,R6,L-alanine,1,-1.0002,14,18
+fg_primary_amine,baseline_lr,R6,L-arginine,1,0.9161,1,18
+fg_primary_amine,baseline_lr,R6,L-aspartic acid,1,-0.1641,6,18
+fg_primary_amine,baseline_lr,R6,L-cysteine,1,-0.4141,10,18
+fg_primary_amine,baseline_lr,R6,L-glutamic acid,1,-1.2992,17,18
+fg_primary_amine,baseline_lr,R6,L-glutamine,1,0.001,5,18
+fg_primary_amine,baseline_lr,R6,L-glycine,1,-0.3969,9,18
+fg_primary_amine,baseline_lr,R6,L-histidine,1,-0.7246,12,18
+fg_primary_amine,baseline_lr,R6,L-isoleucine,1,-0.7248,13,18
+fg_primary_amine,baseline_lr,R6,L-leucine,1,-1.0445,15,18
+fg_primary_amine,baseline_lr,R6,L-lysine,1,0.3085,3,18
+fg_primary_amine,baseline_lr,R6,L-methionine,1,0.5299,2,18
+fg_primary_amine,baseline_lr,R6,L-proline,0,-1.1128,16,18
+fg_primary_amine,baseline_lr,R6,L-serine,1,0.1238,4,18
+fg_primary_amine,baseline_lr,R6,L-threonine,1,-0.2413,8,18
+fg_primary_amine,baseline_lr,R6,L-tryptophan,1,-0.5543,11,18
+fg_primary_amine,baseline_lr,R6,L-tyrosine,1,-2.3067,18,18
+fg_primary_amine,baseline_lr,R6,L-valine,1,-0.1967,7,18
+fg_primary_amine,baseline_lr,R8,L-alanine,1,-0.7741,13,18
+fg_primary_amine,baseline_lr,R8,L-arginine,1,1.172,2,18
+fg_primary_amine,baseline_lr,R8,L-aspartic acid,1,-0.5168,12,18
+fg_primary_amine,baseline_lr,R8,L-cysteine,1,1.2531,1,18
+fg_primary_amine,baseline_lr,R8,L-glutamic acid,1,0.6442,4,18
+fg_primary_amine,baseline_lr,R8,L-glutamine,1,0.4691,6,18
+fg_primary_amine,baseline_lr,R8,L-glycine,1,-0.9883,16,18
+fg_primary_amine,baseline_lr,R8,L-histidine,1,-1.6082,18,18
+fg_primary_amine,baseline_lr,R8,L-isoleucine,1,0.5061,5,18
+fg_primary_amine,baseline_lr,R8,L-leucine,1,-0.3256,9,18
+fg_primary_amine,baseline_lr,R8,L-lysine,1,0.7248,3,18
+fg_primary_amine,baseline_lr,R8,L-methionine,1,-0.4595,10,18
+fg_primary_amine,baseline_lr,R8,L-proline,0,-0.0191,8,18
+fg_primary_amine,baseline_lr,R8,L-serine,1,-1.1479,17,18
+fg_primary_amine,baseline_lr,R8,L-threonine,1,0.2358,7,18
+fg_primary_amine,baseline_lr,R8,L-tryptophan,1,-0.4715,11,18
+fg_primary_amine,baseline_lr,R8,L-tyrosine,1,-0.8282,14,18
+fg_primary_amine,baseline_lr,R8,L-valine,1,-0.9857,15,18
+fg_primary_amine,baseline_lr,R9,L-alanine,1,1.2624,4,18
+fg_primary_amine,baseline_lr,R9,L-arginine,1,1.2414,6,18
+fg_primary_amine,baseline_lr,R9,L-aspartic acid,1,1.1911,7,18
+fg_primary_amine,baseline_lr,R9,L-cysteine,1,0.8846,9,18
+fg_primary_amine,baseline_lr,R9,L-glutamic acid,1,1.9077,1,18
+fg_primary_amine,baseline_lr,R9,L-glutamine,1,0.3355,14,18
+fg_primary_amine,baseline_lr,R9,L-glycine,1,0.7365,12,18
+fg_primary_amine,baseline_lr,R9,L-histidine,1,-0.2587,17,18
+fg_primary_amine,baseline_lr,R9,L-isoleucine,1,1.4967,3,18
+fg_primary_amine,baseline_lr,R9,L-leucine,1,0.7888,10,18
+fg_primary_amine,baseline_lr,R9,L-lysine,1,-0.2612,18,18
+fg_primary_amine,baseline_lr,R9,L-methionine,1,-0.1618,16,18
+fg_primary_amine,baseline_lr,R9,L-proline,0,0.3082,15,18
+fg_primary_amine,baseline_lr,R9,L-serine,1,1.2487,5,18
+fg_primary_amine,baseline_lr,R9,L-threonine,1,1.1195,8,18
+fg_primary_amine,baseline_lr,R9,L-tryptophan,1,0.7565,11,18
+fg_primary_amine,baseline_lr,R9,L-tyrosine,1,1.6876,2,18
+fg_primary_amine,baseline_lr,R9,L-valine,1,0.4288,13,18
+fg_secondary_amine,baseline_lr,R2,L-alanine,0,0.0983,8,18
+fg_secondary_amine,baseline_lr,R2,L-arginine,0,-0.7881,17,18
+fg_secondary_amine,baseline_lr,R2,L-aspartic acid,0,-0.0385,12,18
+fg_secondary_amine,baseline_lr,R2,L-cysteine,0,0.3483,4,18
+fg_secondary_amine,baseline_lr,R2,L-glutamic acid,0,0.2123,7,18
+fg_secondary_amine,baseline_lr,R2,L-glutamine,0,0.0602,10,18
+fg_secondary_amine,baseline_lr,R2,L-glycine,0,0.9933,1,18
+fg_secondary_amine,baseline_lr,R2,L-histidine,0,0.7881,3,18
+fg_secondary_amine,baseline_lr,R2,L-isoleucine,0,-0.4056,15,18
+fg_secondary_amine,baseline_lr,R2,L-leucine,0,-0.2031,14,18
+fg_secondary_amine,baseline_lr,R2,L-lysine,0,-0.5529,16,18
+fg_secondary_amine,baseline_lr,R2,L-methionine,0,0.3237,5,18
+fg_secondary_amine,baseline_lr,R2,L-proline,1,-0.0746,13,18
+fg_secondary_amine,baseline_lr,R2,L-serine,0,0.0661,9,18
+fg_secondary_amine,baseline_lr,R2,L-threonine,0,0.8966,2,18
+fg_secondary_amine,baseline_lr,R2,L-tryptophan,0,-0.8695,18,18
+fg_secondary_amine,baseline_lr,R2,L-tyrosine,0,0.0412,11,18
+fg_secondary_amine,baseline_lr,R2,L-valine,0,0.3219,6,18
+fg_secondary_amine,baseline_lr,R3,L-alanine,0,-0.2487,10,18
+fg_secondary_amine,baseline_lr,R3,L-arginine,0,-1.523,18,18
+fg_secondary_amine,baseline_lr,R3,L-aspartic acid,0,-0.6292,15,18
+fg_secondary_amine,baseline_lr,R3,L-cysteine,0,0.663,1,18
+fg_secondary_amine,baseline_lr,R3,L-glutamic acid,0,0.0415,5,18
+fg_secondary_amine,baseline_lr,R3,L-glutamine,0,0.3421,3,18
+fg_secondary_amine,baseline_lr,R3,L-glycine,0,0.4128,2,18
+fg_secondary_amine,baseline_lr,R3,L-histidine,0,-0.4011,12,18
+fg_secondary_amine,baseline_lr,R3,L-isoleucine,0,-0.5594,14,18
+fg_secondary_amine,baseline_lr,R3,L-leucine,0,-0.2088,9,18
+fg_secondary_amine,baseline_lr,R3,L-lysine,0,-0.5586,13,18
+fg_secondary_amine,baseline_lr,R3,L-methionine,0,-0.0672,7,18
+fg_secondary_amine,baseline_lr,R3,L-proline,1,0.1302,4,18
+fg_secondary_amine,baseline_lr,R3,L-serine,0,-0.8336,16,18
+fg_secondary_amine,baseline_lr,R3,L-threonine,0,-0.0554,6,18
+fg_secondary_amine,baseline_lr,R3,L-tryptophan,0,-0.9595,17,18
+fg_secondary_amine,baseline_lr,R3,L-tyrosine,0,-0.0818,8,18
+fg_secondary_amine,baseline_lr,R3,L-valine,0,-0.3846,11,18
+fg_secondary_amine,baseline_lr,R4,L-alanine,0,-0.4331,11,18
+fg_secondary_amine,baseline_lr,R4,L-arginine,0,-0.2562,8,18
+fg_secondary_amine,baseline_lr,R4,L-aspartic acid,0,-0.4183,10,18
+fg_secondary_amine,baseline_lr,R4,L-cysteine,0,0.1264,5,18
+fg_secondary_amine,baseline_lr,R4,L-glutamic acid,0,0.3919,2,18
+fg_secondary_amine,baseline_lr,R4,L-glutamine,0,-0.3419,9,18
+fg_secondary_amine,baseline_lr,R4,L-glycine,0,0.1423,4,18
+fg_secondary_amine,baseline_lr,R4,L-histidine,0,0.3237,3,18
+fg_secondary_amine,baseline_lr,R4,L-isoleucine,0,-1.0642,18,18
+fg_secondary_amine,baseline_lr,R4,L-leucine,0,-0.4485,12,18
+fg_secondary_amine,baseline_lr,R4,L-lysine,0,-0.4519,13,18
+fg_secondary_amine,baseline_lr,R4,L-methionine,0,0.1133,6,18
+fg_secondary_amine,baseline_lr,R4,L-proline,1,0.7063,1,18
+fg_secondary_amine,baseline_lr,R4,L-serine,0,-0.5038,14,18
+fg_secondary_amine,baseline_lr,R4,L-threonine,0,-0.7311,16,18
+fg_secondary_amine,baseline_lr,R4,L-tryptophan,0,-0.928,17,18
+fg_secondary_amine,baseline_lr,R4,L-tyrosine,0,-0.2035,7,18
+fg_secondary_amine,baseline_lr,R4,L-valine,0,-0.7036,15,18
+fg_secondary_amine,baseline_lr,R5,L-alanine,0,0.0369,10,18
+fg_secondary_amine,baseline_lr,R5,L-arginine,0,0.8025,4,18
+fg_secondary_amine,baseline_lr,R5,L-aspartic acid,0,0.1073,8,18
+fg_secondary_amine,baseline_lr,R5,L-cysteine,0,-0.0231,12,18
+fg_secondary_amine,baseline_lr,R5,L-glutamic acid,0,1.0885,2,18
+fg_secondary_amine,baseline_lr,R5,L-glutamine,0,-0.3262,16,18
+fg_secondary_amine,baseline_lr,R5,L-glycine,0,0.5082,5,18
+fg_secondary_amine,baseline_lr,R5,L-histidine,0,1.2574,1,18
+fg_secondary_amine,baseline_lr,R5,L-isoleucine,0,-0.632,17,18
+fg_secondary_amine,baseline_lr,R5,L-leucine,0,-0.1457,14,18
+fg_secondary_amine,baseline_lr,R5,L-lysine,0,0.0009,11,18
+fg_secondary_amine,baseline_lr,R5,L-methionine,0,0.0846,9,18
+fg_secondary_amine,baseline_lr,R5,L-proline,1,0.8688,3,18
+fg_secondary_amine,baseline_lr,R5,L-serine,0,0.1704,7,18
+fg_secondary_amine,baseline_lr,R5,L-threonine,0,-0.3176,15,18
+fg_secondary_amine,baseline_lr,R5,L-tryptophan,0,-0.7465,18,18
+fg_secondary_amine,baseline_lr,R5,L-tyrosine,0,0.4448,6,18
+fg_secondary_amine,baseline_lr,R5,L-valine,0,-0.089,13,18
+fg_secondary_amine,baseline_lr,R6,L-alanine,0,-0.0733,13,18
+fg_secondary_amine,baseline_lr,R6,L-arginine,0,0.7427,2,18
+fg_secondary_amine,baseline_lr,R6,L-aspartic acid,0,-0.017,10,18
+fg_secondary_amine,baseline_lr,R6,L-cysteine,0,-0.0554,12,18
+fg_secondary_amine,baseline_lr,R6,L-glutamic acid,0,0.9441,1,18
+fg_secondary_amine,baseline_lr,R6,L-glutamine,0,-0.524,16,18
+fg_secondary_amine,baseline_lr,R6,L-glycine,0,0.3658,5,18
+fg_secondary_amine,baseline_lr,R6,L-histidine,0,0.4819,4,18
+fg_secondary_amine,baseline_lr,R6,L-isoleucine,0,-0.6437,17,18
+fg_secondary_amine,baseline_lr,R6,L-leucine,0,0.1473,8,18
+fg_secondary_amine,baseline_lr,R6,L-lysine,0,-0.0296,11,18
+fg_secondary_amine,baseline_lr,R6,L-methionine,0,0.0168,9,18
+fg_secondary_amine,baseline_lr,R6,L-proline,1,0.2874,6,18
+fg_secondary_amine,baseline_lr,R6,L-serine,0,0.1845,7,18
+fg_secondary_amine,baseline_lr,R6,L-threonine,0,-0.4426,15,18
+fg_secondary_amine,baseline_lr,R6,L-tryptophan,0,-0.98,18,18
+fg_secondary_amine,baseline_lr,R6,L-tyrosine,0,0.5504,3,18
+fg_secondary_amine,baseline_lr,R6,L-valine,0,-0.2551,14,18
+fg_secondary_amine,baseline_lr,R8,L-alanine,0,0.4099,1,18
+fg_secondary_amine,baseline_lr,R8,L-arginine,0,-0.5959,14,18
+fg_secondary_amine,baseline_lr,R8,L-aspartic acid,0,-0.4304,11,18
+fg_secondary_amine,baseline_lr,R8,L-cysteine,0,-0.4703,12,18
+fg_secondary_amine,baseline_lr,R8,L-glutamic acid,0,-0.2712,7,18
+fg_secondary_amine,baseline_lr,R8,L-glutamine,0,-0.5228,13,18
+fg_secondary_amine,baseline_lr,R8,L-glycine,0,-0.718,16,18
+fg_secondary_amine,baseline_lr,R8,L-histidine,0,-0.7814,17,18
+fg_secondary_amine,baseline_lr,R8,L-isoleucine,0,-0.0595,3,18
+fg_secondary_amine,baseline_lr,R8,L-leucine,0,-0.3781,10,18
+fg_secondary_amine,baseline_lr,R8,L-lysine,0,-0.0419,2,18
+fg_secondary_amine,baseline_lr,R8,L-methionine,0,-0.3736,9,18
+fg_secondary_amine,baseline_lr,R8,L-proline,1,-0.1387,4,18
+fg_secondary_amine,baseline_lr,R8,L-serine,0,-0.2812,8,18
+fg_secondary_amine,baseline_lr,R8,L-threonine,0,-0.1898,6,18
+fg_secondary_amine,baseline_lr,R8,L-tryptophan,0,-0.8409,18,18
+fg_secondary_amine,baseline_lr,R8,L-tyrosine,0,-0.14,5,18
+fg_secondary_amine,baseline_lr,R8,L-valine,0,-0.62,15,18
+fg_secondary_amine,baseline_lr,R9,L-alanine,0,0.8175,4,18
+fg_secondary_amine,baseline_lr,R9,L-arginine,0,0.8391,3,18
+fg_secondary_amine,baseline_lr,R9,L-aspartic acid,0,-0.0943,17,18
+fg_secondary_amine,baseline_lr,R9,L-cysteine,0,0.1204,15,18
+fg_secondary_amine,baseline_lr,R9,L-glutamic acid,0,0.6145,8,18
+fg_secondary_amine,baseline_lr,R9,L-glutamine,0,0.6461,6,18
+fg_secondary_amine,baseline_lr,R9,L-glycine,0,0.6238,7,18
+fg_secondary_amine,baseline_lr,R9,L-histidine,0,0.1265,14,18
+fg_secondary_amine,baseline_lr,R9,L-isoleucine,0,0.8542,2,18
+fg_secondary_amine,baseline_lr,R9,L-leucine,0,0.3921,10,18
+fg_secondary_amine,baseline_lr,R9,L-lysine,0,-0.0228,16,18
+fg_secondary_amine,baseline_lr,R9,L-methionine,0,-0.8267,18,18
+fg_secondary_amine,baseline_lr,R9,L-proline,1,0.3569,11,18
+fg_secondary_amine,baseline_lr,R9,L-serine,0,0.7378,5,18
+fg_secondary_amine,baseline_lr,R9,L-threonine,0,0.4435,9,18
+fg_secondary_amine,baseline_lr,R9,L-tryptophan,0,0.1732,13,18
+fg_secondary_amine,baseline_lr,R9,L-tyrosine,0,0.8897,1,18
+fg_secondary_amine,baseline_lr,R9,L-valine,0,0.2678,12,18
+fg_amide,baseline_lr,R2,L-alanine,0,-0.5207,14,18
+fg_amide,baseline_lr,R2,L-arginine,0,-0.2496,11,18
+fg_amide,baseline_lr,R2,L-aspartic acid,0,-0.4986,13,18
+fg_amide,baseline_lr,R2,L-cysteine,0,0.6959,4,18
+fg_amide,baseline_lr,R2,L-glutamic acid,0,-0.0243,9,18
+fg_amide,baseline_lr,R2,L-glutamine,1,1.0677,1,18
+fg_amide,baseline_lr,R2,L-glycine,0,0.9546,2,18
+fg_amide,baseline_lr,R2,L-histidine,0,-0.3608,12,18
+fg_amide,baseline_lr,R2,L-isoleucine,0,-0.1153,10,18
+fg_amide,baseline_lr,R2,L-leucine,0,0.0979,8,18
+fg_amide,baseline_lr,R2,L-lysine,0,-1.0532,17,18
+fg_amide,baseline_lr,R2,L-methionine,0,0.541,5,18
+fg_amide,baseline_lr,R2,L-proline,0,0.4447,6,18
+fg_amide,baseline_lr,R2,L-serine,0,-0.8818,16,18
+fg_amide,baseline_lr,R2,L-threonine,0,0.2607,7,18
+fg_amide,baseline_lr,R2,L-tryptophan,0,-1.2842,18,18
+fg_amide,baseline_lr,R2,L-tyrosine,0,-0.6802,15,18
+fg_amide,baseline_lr,R2,L-valine,0,0.8769,3,18
+fg_amide,baseline_lr,R3,L-alanine,0,0.5408,11,18
+fg_amide,baseline_lr,R3,L-arginine,0,0.8318,7,18
+fg_amide,baseline_lr,R3,L-aspartic acid,0,0.9851,6,18
+fg_amide,baseline_lr,R3,L-cysteine,0,1.2252,3,18
+fg_amide,baseline_lr,R3,L-glutamic acid,0,1.0747,4,18
+fg_amide,baseline_lr,R3,L-glutamine,1,0.4568,13,18
+fg_amide,baseline_lr,R3,L-glycine,0,1.507,1,18
+fg_amide,baseline_lr,R3,L-histidine,0,-0.3424,16,18
+fg_amide,baseline_lr,R3,L-isoleucine,0,0.1779,14,18
+fg_amide,baseline_lr,R3,L-leucine,0,-0.2401,15,18
+fg_amide,baseline_lr,R3,L-lysine,0,0.6127,10,18
+fg_amide,baseline_lr,R3,L-methionine,0,0.6807,8,18
+fg_amide,baseline_lr,R3,L-proline,0,0.6407,9,18
+fg_amide,baseline_lr,R3,L-serine,0,1.0077,5,18
+fg_amide,baseline_lr,R3,L-threonine,0,1.361,2,18
+fg_amide,baseline_lr,R3,L-tryptophan,0,-1.1923,18,18
+fg_amide,baseline_lr,R3,L-tyrosine,0,-0.7389,17,18
+fg_amide,baseline_lr,R3,L-valine,0,0.508,12,18
+fg_amide,baseline_lr,R4,L-alanine,0,-0.8631,10,18
+fg_amide,baseline_lr,R4,L-arginine,0,-1.0829,14,18
+fg_amide,baseline_lr,R4,L-aspartic acid,0,-0.2534,5,18
+fg_amide,baseline_lr,R4,L-cysteine,0,-0.9056,12,18
+fg_amide,baseline_lr,R4,L-glutamic acid,0,-0.5504,8,18
+fg_amide,baseline_lr,R4,L-glutamine,1,0.5032,1,18
+fg_amide,baseline_lr,R4,L-glycine,0,-1.4472,18,18
+fg_amide,baseline_lr,R4,L-histidine,0,-0.2391,4,18
+fg_amide,baseline_lr,R4,L-isoleucine,0,-0.739,9,18
+fg_amide,baseline_lr,R4,L-leucine,0,-0.4278,6,18
+fg_amide,baseline_lr,R4,L-lysine,0,-0.4533,7,18
+fg_amide,baseline_lr,R4,L-methionine,0,-0.2023,3,18
+fg_amide,baseline_lr,R4,L-proline,0,-1.2578,15,18
+fg_amide,baseline_lr,R4,L-serine,0,-1.418,17,18
+fg_amide,baseline_lr,R4,L-threonine,0,-1.0267,13,18
+fg_amide,baseline_lr,R4,L-tryptophan,0,-1.3581,16,18
+fg_amide,baseline_lr,R4,L-tyrosine,0,-0.8657,11,18
+fg_amide,baseline_lr,R4,L-valine,0,-0.0467,2,18
+fg_amide,baseline_lr,R5,L-alanine,0,-0.7491,10,18
+fg_amide,baseline_lr,R5,L-arginine,0,-1.0597,14,18
+fg_amide,baseline_lr,R5,L-aspartic acid,0,-0.4634,6,18
+fg_amide,baseline_lr,R5,L-cysteine,0,-0.3044,4,18
+fg_amide,baseline_lr,R5,L-glutamic acid,0,-0.8828,12,18
+fg_amide,baseline_lr,R5,L-glutamine,1,0.0896,2,18
+fg_amide,baseline_lr,R5,L-glycine,0,-1.2198,16,18
+fg_amide,baseline_lr,R5,L-histidine,0,-0.3639,5,18
+fg_amide,baseline_lr,R5,L-isoleucine,0,-0.7402,9,18
+fg_amide,baseline_lr,R5,L-leucine,0,-0.4831,7,18
+fg_amide,baseline_lr,R5,L-lysine,0,-0.6181,8,18
+fg_amide,baseline_lr,R5,L-methionine,0,-0.1251,3,18
+fg_amide,baseline_lr,R5,L-proline,0,-1.0974,15,18
+fg_amide,baseline_lr,R5,L-serine,0,-1.709,18,18
+fg_amide,baseline_lr,R5,L-threonine,0,-1.0379,13,18
+fg_amide,baseline_lr,R5,L-tryptophan,0,-1.6064,17,18
+fg_amide,baseline_lr,R5,L-tyrosine,0,-0.7985,11,18
+fg_amide,baseline_lr,R5,L-valine,0,0.5223,1,18
+fg_amide,baseline_lr,R6,L-alanine,0,-0.7492,11,18
+fg_amide,baseline_lr,R6,L-arginine,0,-0.9183,14,18
+fg_amide,baseline_lr,R6,L-aspartic acid,0,-0.5177,6,18
+fg_amide,baseline_lr,R6,L-cysteine,0,-0.2521,3,18
+fg_amide,baseline_lr,R6,L-glutamic acid,0,-0.7448,10,18
+fg_amide,baseline_lr,R6,L-glutamine,1,0.0125,2,18
+fg_amide,baseline_lr,R6,L-glycine,0,-1.0514,16,18
+fg_amide,baseline_lr,R6,L-histidine,0,-0.8884,13,18
+fg_amide,baseline_lr,R6,L-isoleucine,0,-0.4767,5,18
+fg_amide,baseline_lr,R6,L-leucine,0,-0.5855,7,18
+fg_amide,baseline_lr,R6,L-lysine,0,-0.6178,8,18
+fg_amide,baseline_lr,R6,L-methionine,0,-0.2582,4,18
+fg_amide,baseline_lr,R6,L-proline,0,-0.7785,12,18
+fg_amide,baseline_lr,R6,L-serine,0,-1.4633,17,18
+fg_amide,baseline_lr,R6,L-threonine,0,-0.9244,15,18
+fg_amide,baseline_lr,R6,L-tryptophan,0,-1.6906,18,18
+fg_amide,baseline_lr,R6,L-tyrosine,0,-0.6889,9,18
+fg_amide,baseline_lr,R6,L-valine,0,0.5322,1,18
+fg_amide,baseline_lr,R8,L-alanine,0,0.1622,9,18
+fg_amide,baseline_lr,R8,L-arginine,0,0.3925,2,18
+fg_amide,baseline_lr,R8,L-aspartic acid,0,0.3191,4,18
+fg_amide,baseline_lr,R8,L-cysteine,0,-0.4826,13,18
+fg_amide,baseline_lr,R8,L-glutamic acid,0,0.4986,1,18
+fg_amide,baseline_lr,R8,L-glutamine,1,0.2946,5,18
+fg_amide,baseline_lr,R8,L-glycine,0,-0.3516,12,18
+fg_amide,baseline_lr,R8,L-histidine,0,-1.0068,18,18
+fg_amide,baseline_lr,R8,L-isoleucine,0,-0.5566,14,18
+fg_amide,baseline_lr,R8,L-leucine,0,0.1602,10,18
+fg_amide,baseline_lr,R8,L-lysine,0,0.3662,3,18
+fg_amide,baseline_lr,R8,L-methionine,0,0.2804,6,18
+fg_amide,baseline_lr,R8,L-proline,0,0.2181,7,18
+fg_amide,baseline_lr,R8,L-serine,0,-0.0831,11,18
+fg_amide,baseline_lr,R8,L-threonine,0,0.1755,8,18
+fg_amide,baseline_lr,R8,L-tryptophan,0,-0.971,17,18
+fg_amide,baseline_lr,R8,L-tyrosine,0,-0.9403,16,18
+fg_amide,baseline_lr,R8,L-valine,0,-0.8182,15,18
+fg_amide,baseline_lr,R9,L-alanine,0,0.9174,5,18
+fg_amide,baseline_lr,R9,L-arginine,0,0.9822,4,18
+fg_amide,baseline_lr,R9,L-aspartic acid,0,0.8745,7,18
+fg_amide,baseline_lr,R9,L-cysteine,0,0.0124,16,18
+fg_amide,baseline_lr,R9,L-glutamic acid,0,1.4184,1,18
+fg_amide,baseline_lr,R9,L-glutamine,1,0.4955,10,18
+fg_amide,baseline_lr,R9,L-glycine,0,0.8768,6,18
+fg_amide,baseline_lr,R9,L-histidine,0,-0.2399,17,18
+fg_amide,baseline_lr,R9,L-isoleucine,0,1.394,2,18
+fg_amide,baseline_lr,R9,L-leucine,0,0.7013,8,18
+fg_amide,baseline_lr,R9,L-lysine,0,-0.3816,18,18
+fg_amide,baseline_lr,R9,L-methionine,0,0.3478,12,18
+fg_amide,baseline_lr,R9,L-proline,0,0.1281,14,18
+fg_amide,baseline_lr,R9,L-serine,0,0.6583,9,18
+fg_amide,baseline_lr,R9,L-threonine,0,0.3376,13,18
+fg_amide,baseline_lr,R9,L-tryptophan,0,0.1012,15,18
+fg_amide,baseline_lr,R9,L-tyrosine,0,1.2487,3,18
+fg_amide,baseline_lr,R9,L-valine,0,0.4936,11,18
+fg_guanidine,baseline_lr,R2,L-alanine,0,-2.8264,16,18
+fg_guanidine,baseline_lr,R2,L-arginine,1,-0.0766,1,18
+fg_guanidine,baseline_lr,R2,L-aspartic acid,0,-1.4974,4,18
+fg_guanidine,baseline_lr,R2,L-cysteine,0,-1.1071,3,18
+fg_guanidine,baseline_lr,R2,L-glutamic acid,0,-1.8021,8,18
+fg_guanidine,baseline_lr,R2,L-glutamine,0,-1.8389,9,18
+fg_guanidine,baseline_lr,R2,L-glycine,0,-0.8609,2,18
+fg_guanidine,baseline_lr,R2,L-histidine,0,-2.1128,11,18
+fg_guanidine,baseline_lr,R2,L-isoleucine,0,-2.096,10,18
+fg_guanidine,baseline_lr,R2,L-leucine,0,-2.4918,12,18
+fg_guanidine,baseline_lr,R2,L-lysine,0,-2.7542,14,18
+fg_guanidine,baseline_lr,R2,L-methionine,0,-1.6365,5,18
+fg_guanidine,baseline_lr,R2,L-proline,0,-2.8087,15,18
+fg_guanidine,baseline_lr,R2,L-serine,0,-2.5207,13,18
+fg_guanidine,baseline_lr,R2,L-threonine,0,-2.8756,17,18
+fg_guanidine,baseline_lr,R2,L-tryptophan,0,-1.7314,6,18
+fg_guanidine,baseline_lr,R2,L-tyrosine,0,-1.7564,7,18
+fg_guanidine,baseline_lr,R2,L-valine,0,-3.1896,18,18
+fg_guanidine,baseline_lr,R3,L-alanine,0,-0.1369,8,18
+fg_guanidine,baseline_lr,R3,L-arginine,1,-0.5478,13,18
+fg_guanidine,baseline_lr,R3,L-aspartic acid,0,0.3105,3,18
+fg_guanidine,baseline_lr,R3,L-cysteine,0,0.6488,2,18
+fg_guanidine,baseline_lr,R3,L-glutamic acid,0,-0.2957,10,18
+fg_guanidine,baseline_lr,R3,L-glutamine,0,-0.8551,16,18
+fg_guanidine,baseline_lr,R3,L-glycine,0,0.7565,1,18
+fg_guanidine,baseline_lr,R3,L-histidine,0,-0.6308,14,18
+fg_guanidine,baseline_lr,R3,L-isoleucine,0,-1.386,17,18
+fg_guanidine,baseline_lr,R3,L-leucine,0,-0.3847,12,18
+fg_guanidine,baseline_lr,R3,L-lysine,0,-0.2375,9,18
+fg_guanidine,baseline_lr,R3,L-methionine,0,0.0276,5,18
+fg_guanidine,baseline_lr,R3,L-proline,0,-0.0972,7,18
+fg_guanidine,baseline_lr,R3,L-serine,0,-0.0437,6,18
+fg_guanidine,baseline_lr,R3,L-threonine,0,0.0783,4,18
+fg_guanidine,baseline_lr,R3,L-tryptophan,0,-2.0225,18,18
+fg_guanidine,baseline_lr,R3,L-tyrosine,0,-0.8416,15,18
+fg_guanidine,baseline_lr,R3,L-valine,0,-0.3847,11,18
+fg_guanidine,baseline_lr,R4,L-alanine,0,-2.1282,5,18
+fg_guanidine,baseline_lr,R4,L-arginine,1,-3.5012,17,18
+fg_guanidine,baseline_lr,R4,L-aspartic acid,0,-2.7788,13,18
+fg_guanidine,baseline_lr,R4,L-cysteine,0,-2.5427,10,18
+fg_guanidine,baseline_lr,R4,L-glutamic acid,0,-2.4666,9,18
+fg_guanidine,baseline_lr,R4,L-glutamine,0,-1.0478,2,18
+fg_guanidine,baseline_lr,R4,L-glycine,0,-2.1656,6,18
+fg_guanidine,baseline_lr,R4,L-histidine,0,-2.8611,14,18
+fg_guanidine,baseline_lr,R4,L-isoleucine,0,-3.183,15,18
+fg_guanidine,baseline_lr,R4,L-leucine,0,-2.5872,11,18
+fg_guanidine,baseline_lr,R4,L-lysine,0,-2.2121,7,18
+fg_guanidine,baseline_lr,R4,L-methionine,0,-0.9741,1,18
+fg_guanidine,baseline_lr,R4,L-proline,0,-4.287,18,18
+fg_guanidine,baseline_lr,R4,L-serine,0,-2.3847,8,18
+fg_guanidine,baseline_lr,R4,L-threonine,0,-3.4004,16,18
+fg_guanidine,baseline_lr,R4,L-tryptophan,0,-1.763,4,18
+fg_guanidine,baseline_lr,R4,L-tyrosine,0,-1.6862,3,18
+fg_guanidine,baseline_lr,R4,L-valine,0,-2.7206,12,18
+fg_guanidine,baseline_lr,R5,L-alanine,0,-2.1147,4,18
+fg_guanidine,baseline_lr,R5,L-arginine,1,-3.7416,14,18
+fg_guanidine,baseline_lr,R5,L-aspartic acid,0,-2.7689,7,18
+fg_guanidine,baseline_lr,R5,L-cysteine,0,-1.7516,3,18
+fg_guanidine,baseline_lr,R5,L-glutamic acid,0,-3.2439,11,18
+fg_guanidine,baseline_lr,R5,L-glutamine,0,-1.0702,2,18
+fg_guanidine,baseline_lr,R5,L-glycine,0,-2.2999,5,18
+fg_guanidine,baseline_lr,R5,L-histidine,0,-3.6219,13,18
+fg_guanidine,baseline_lr,R5,L-isoleucine,0,-4.2437,18,18
+fg_guanidine,baseline_lr,R5,L-leucine,0,-4.151,17,18
+fg_guanidine,baseline_lr,R5,L-lysine,0,-2.8713,8,18
+fg_guanidine,baseline_lr,R5,L-methionine,0,-0.9194,1,18
+fg_guanidine,baseline_lr,R5,L-proline,0,-4.0939,16,18
+fg_guanidine,baseline_lr,R5,L-serine,0,-3.1017,10,18
+fg_guanidine,baseline_lr,R5,L-threonine,0,-4.0822,15,18
+fg_guanidine,baseline_lr,R5,L-tryptophan,0,-2.5551,6,18
+fg_guanidine,baseline_lr,R5,L-tyrosine,0,-2.9673,9,18
+fg_guanidine,baseline_lr,R5,L-valine,0,-3.5278,12,18
+fg_guanidine,baseline_lr,R6,L-alanine,0,-1.8381,4,18
+fg_guanidine,baseline_lr,R6,L-arginine,1,-2.6466,8,18
+fg_guanidine,baseline_lr,R6,L-aspartic acid,0,-2.2939,6,18
+fg_guanidine,baseline_lr,R6,L-cysteine,0,-1.6969,3,18
+fg_guanidine,baseline_lr,R6,L-glutamic acid,0,-2.7525,11,18
+fg_guanidine,baseline_lr,R6,L-glutamine,0,-0.9455,2,18
+fg_guanidine,baseline_lr,R6,L-glycine,0,-2.0389,5,18
+fg_guanidine,baseline_lr,R6,L-histidine,0,-2.9759,16,18
+fg_guanidine,baseline_lr,R6,L-isoleucine,0,-2.971,15,18
+fg_guanidine,baseline_lr,R6,L-leucine,0,-4.6464,18,18
+fg_guanidine,baseline_lr,R6,L-lysine,0,-2.4759,7,18
+fg_guanidine,baseline_lr,R6,L-methionine,0,-0.7663,1,18
+fg_guanidine,baseline_lr,R6,L-proline,0,-2.8618,13,18
+fg_guanidine,baseline_lr,R6,L-serine,0,-2.9329,14,18
+fg_guanidine,baseline_lr,R6,L-threonine,0,-3.2651,17,18
+fg_guanidine,baseline_lr,R6,L-tryptophan,0,-2.6575,9,18
+fg_guanidine,baseline_lr,R6,L-tyrosine,0,-2.6578,10,18
+fg_guanidine,baseline_lr,R6,L-valine,0,-2.7845,12,18
+fg_guanidine,baseline_lr,R8,L-alanine,0,-0.95,3,18
+fg_guanidine,baseline_lr,R8,L-arginine,1,-1.5686,10,18
+fg_guanidine,baseline_lr,R8,L-aspartic acid,0,-1.3378,7,18
+fg_guanidine,baseline_lr,R8,L-cysteine,0,-1.9494,12,18
+fg_guanidine,baseline_lr,R8,L-glutamic acid,0,-1.3763,8,18
+fg_guanidine,baseline_lr,R8,L-glutamine,0,-1.2555,6,18
+fg_guanidine,baseline_lr,R8,L-glycine,0,-2.5184,16,18
+fg_guanidine,baseline_lr,R8,L-histidine,0,-2.2401,14,18
+fg_guanidine,baseline_lr,R8,L-isoleucine,0,-1.8859,11,18
+fg_guanidine,baseline_lr,R8,L-leucine,0,-1.0918,5,18
+fg_guanidine,baseline_lr,R8,L-lysine,0,-3.3645,18,18
+fg_guanidine,baseline_lr,R8,L-methionine,0,-0.4685,1,18
+fg_guanidine,baseline_lr,R8,L-proline,0,-1.0623,4,18
+fg_guanidine,baseline_lr,R8,L-serine,0,-1.5064,9,18
+fg_guanidine,baseline_lr,R8,L-threonine,0,-0.797,2,18
+fg_guanidine,baseline_lr,R8,L-tryptophan,0,-1.9983,13,18
+fg_guanidine,baseline_lr,R8,L-tyrosine,0,-2.7924,17,18
+fg_guanidine,baseline_lr,R8,L-valine,0,-2.3613,15,18
+fg_guanidine,baseline_lr,R9,L-alanine,0,-0.5077,4,18
+fg_guanidine,baseline_lr,R9,L-arginine,1,-0.8434,6,18
+fg_guanidine,baseline_lr,R9,L-aspartic acid,0,-0.4008,3,18
+fg_guanidine,baseline_lr,R9,L-cysteine,0,-1.3309,10,18
+fg_guanidine,baseline_lr,R9,L-glutamic acid,0,0.0037,2,18
+fg_guanidine,baseline_lr,R9,L-glutamine,0,-2.061,16,18
+fg_guanidine,baseline_lr,R9,L-glycine,0,-1.1353,9,18
+fg_guanidine,baseline_lr,R9,L-histidine,0,-2.3444,17,18
+fg_guanidine,baseline_lr,R9,L-isoleucine,0,0.1511,1,18
+fg_guanidine,baseline_lr,R9,L-leucine,0,-1.6584,12,18
+fg_guanidine,baseline_lr,R9,L-lysine,0,-1.5539,11,18
+fg_guanidine,baseline_lr,R9,L-methionine,0,-0.934,7,18
+fg_guanidine,baseline_lr,R9,L-proline,0,-1.9493,15,18
+fg_guanidine,baseline_lr,R9,L-serine,0,-1.0485,8,18
+fg_guanidine,baseline_lr,R9,L-threonine,0,-2.7768,18,18
+fg_guanidine,baseline_lr,R9,L-tryptophan,0,-1.821,14,18
+fg_guanidine,baseline_lr,R9,L-tyrosine,0,-0.613,5,18
+fg_guanidine,baseline_lr,R9,L-valine,0,-1.6664,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-alanine,0,0.4248,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-arginine,0,-0.4832,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-aspartic acid,0,-0.02,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-cysteine,0,-0.149,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-glutamic acid,0,-0.3495,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-glutamine,0,-0.0504,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-glycine,0,0.2064,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-histidine,0,-0.5284,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-isoleucine,0,-0.3226,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-leucine,0,-0.3579,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-lysine,0,-0.0362,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-methionine,0,-0.3081,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-proline,0,0.1198,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-serine,1,0.2128,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-threonine,1,-0.0451,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-tryptophan,0,-0.729,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-tyrosine,0,-0.6591,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R2,L-valine,0,-0.1123,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-alanine,0,-0.6333,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-arginine,0,-0.9551,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-aspartic acid,0,-0.3414,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-cysteine,0,-0.3683,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-glutamic acid,0,-0.0756,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-glutamine,0,0.5573,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-glycine,0,-0.3169,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-histidine,0,-0.8093,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-isoleucine,0,-0.3952,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-leucine,0,-0.4649,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-lysine,0,0.1107,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-methionine,0,-0.1605,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-proline,0,-0.1612,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-serine,1,-0.1899,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-threonine,1,-0.2352,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-tryptophan,0,-0.8276,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-tyrosine,0,-0.7261,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R3,L-valine,0,-0.2239,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-alanine,0,-0.437,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-arginine,0,-0.053,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-aspartic acid,0,-0.5453,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-cysteine,0,-0.3286,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-glutamic acid,0,-0.4905,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-glutamine,0,-0.7387,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-glycine,0,-0.4665,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-histidine,0,-0.6211,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-isoleucine,0,-0.3989,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-leucine,0,-0.3995,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-lysine,0,-0.1226,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-methionine,0,-0.1662,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-proline,0,-0.3001,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-serine,1,-0.2927,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-threonine,1,-0.2213,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-tryptophan,0,-0.7714,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-tyrosine,0,-0.3299,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R4,L-valine,0,-0.003,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-alanine,0,-0.1694,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-arginine,0,0.4243,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-aspartic acid,0,-0.0898,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-cysteine,0,-0.3373,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-glutamic acid,0,-0.2047,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-glutamine,0,-0.4372,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-glycine,0,-0.3066,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-histidine,0,0.0508,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-isoleucine,0,-0.0656,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-leucine,0,0.0113,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-lysine,0,0.3142,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-methionine,0,-0.2012,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-proline,0,-0.0567,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-serine,1,0.1698,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-threonine,1,0.2715,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-tryptophan,0,-0.4609,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-tyrosine,0,0.2977,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R5,L-valine,0,0.5263,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-alanine,0,-0.3271,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-arginine,0,0.3649,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-aspartic acid,0,-0.1718,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-cysteine,0,-0.3314,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-glutamic acid,0,-0.2437,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-glutamine,0,-0.4905,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-glycine,0,-0.3386,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-histidine,0,-0.3973,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-isoleucine,0,-0.1421,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-leucine,0,0.1845,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-lysine,0,0.1766,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-methionine,0,-0.2932,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-proline,0,-0.1846,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-serine,1,0.0211,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-threonine,1,0.1586,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-tryptophan,0,-0.5218,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-tyrosine,0,0.3101,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R6,L-valine,0,0.3102,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-alanine,0,0.4091,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-arginine,0,0.5878,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-aspartic acid,0,0.1964,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-cysteine,0,0.4201,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-glutamic acid,0,0.4431,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-glutamine,0,0.2663,11,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-glycine,0,0.0927,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-histidine,0,-0.2013,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-isoleucine,0,0.3053,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-leucine,0,0.4546,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-lysine,0,0.7405,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-methionine,0,0.2917,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-proline,0,0.3539,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-serine,1,-0.7855,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-threonine,1,0.3547,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-tryptophan,0,-1.1578,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-tyrosine,0,-0.2853,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R8,L-valine,0,0.2187,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-alanine,0,0.0265,9,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-arginine,0,-0.0413,13,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-aspartic acid,0,0.0974,7,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-cysteine,0,0.3938,4,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-glutamic acid,0,-0.0972,15,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-glutamine,0,0.465,1,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-glycine,0,0.2009,6,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-histidine,0,0.3608,5,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-isoleucine,0,0.0469,8,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-leucine,0,-0.0344,12,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-lysine,0,0.0009,10,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-methionine,0,-0.1687,17,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-proline,0,0.4186,3,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-serine,1,-0.0418,14,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-threonine,1,0.4315,2,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-tryptophan,0,-0.1961,18,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-tyrosine,0,-0.1259,16,18
+fg_hydroxyl_aliphatic,baseline_lr,R9,L-valine,0,-0.0007,11,18
+fg_phenol,baseline_lr,R2,L-alanine,0,-1.5366,8,18
+fg_phenol,baseline_lr,R2,L-arginine,0,-0.5224,5,18
+fg_phenol,baseline_lr,R2,L-aspartic acid,0,-0.5511,6,18
+fg_phenol,baseline_lr,R2,L-cysteine,0,-1.5638,9,18
+fg_phenol,baseline_lr,R2,L-glutamic acid,0,-1.4429,7,18
+fg_phenol,baseline_lr,R2,L-glutamine,0,-1.8773,14,18
+fg_phenol,baseline_lr,R2,L-glycine,0,-1.7206,13,18
+fg_phenol,baseline_lr,R2,L-histidine,0,-0.327,3,18
+fg_phenol,baseline_lr,R2,L-isoleucine,0,-1.5681,10,18
+fg_phenol,baseline_lr,R2,L-leucine,0,-2.8033,17,18
+fg_phenol,baseline_lr,R2,L-lysine,0,-1.7027,12,18
+fg_phenol,baseline_lr,R2,L-methionine,0,-1.5965,11,18
+fg_phenol,baseline_lr,R2,L-proline,0,-3.1968,18,18
+fg_phenol,baseline_lr,R2,L-serine,0,-0.3702,4,18
+fg_phenol,baseline_lr,R2,L-threonine,0,-2.5446,16,18
+fg_phenol,baseline_lr,R2,L-tryptophan,0,1.5884,1,18
+fg_phenol,baseline_lr,R2,L-tyrosine,1,0.6818,2,18
+fg_phenol,baseline_lr,R2,L-valine,0,-2.3066,15,18
+fg_phenol,baseline_lr,R3,L-alanine,0,-0.6815,6,18
+fg_phenol,baseline_lr,R3,L-arginine,0,0.675,2,18
+fg_phenol,baseline_lr,R3,L-aspartic acid,0,-1.3911,13,18
+fg_phenol,baseline_lr,R3,L-cysteine,0,-1.4175,15,18
+fg_phenol,baseline_lr,R3,L-glutamic acid,0,-1.0516,7,18
+fg_phenol,baseline_lr,R3,L-glutamine,0,-1.4311,16,18
+fg_phenol,baseline_lr,R3,L-glycine,0,-1.1819,10,18
+fg_phenol,baseline_lr,R3,L-histidine,0,0.1815,4,18
+fg_phenol,baseline_lr,R3,L-isoleucine,0,-1.0553,8,18
+fg_phenol,baseline_lr,R3,L-leucine,0,-1.2715,12,18
+fg_phenol,baseline_lr,R3,L-lysine,0,-1.3949,14,18
+fg_phenol,baseline_lr,R3,L-methionine,0,-0.1358,5,18
+fg_phenol,baseline_lr,R3,L-proline,0,-2.0149,18,18
+fg_phenol,baseline_lr,R3,L-serine,0,-1.5702,17,18
+fg_phenol,baseline_lr,R3,L-threonine,0,-1.1004,9,18
+fg_phenol,baseline_lr,R3,L-tryptophan,0,1.697,1,18
+fg_phenol,baseline_lr,R3,L-tyrosine,1,0.4789,3,18
+fg_phenol,baseline_lr,R3,L-valine,0,-1.221,11,18
+fg_phenol,baseline_lr,R4,L-alanine,0,0.0197,10,18
+fg_phenol,baseline_lr,R4,L-arginine,0,-0.9083,16,18
+fg_phenol,baseline_lr,R4,L-aspartic acid,0,0.4805,6,18
+fg_phenol,baseline_lr,R4,L-cysteine,0,0.6702,5,18
+fg_phenol,baseline_lr,R4,L-glutamic acid,0,0.9191,3,18
+fg_phenol,baseline_lr,R4,L-glutamine,0,1.3848,2,18
+fg_phenol,baseline_lr,R4,L-glycine,0,-0.09,11,18
+fg_phenol,baseline_lr,R4,L-histidine,0,0.4022,7,18
+fg_phenol,baseline_lr,R4,L-isoleucine,0,-0.6167,14,18
+fg_phenol,baseline_lr,R4,L-leucine,0,-0.895,15,18
+fg_phenol,baseline_lr,R4,L-lysine,0,-0.5412,13,18
+fg_phenol,baseline_lr,R4,L-methionine,0,0.1033,9,18
+fg_phenol,baseline_lr,R4,L-proline,0,-1.9433,18,18
+fg_phenol,baseline_lr,R4,L-serine,0,0.2054,8,18
+fg_phenol,baseline_lr,R4,L-threonine,0,-0.3182,12,18
+fg_phenol,baseline_lr,R4,L-tryptophan,0,1.9608,1,18
+fg_phenol,baseline_lr,R4,L-tyrosine,1,0.7515,4,18
+fg_phenol,baseline_lr,R4,L-valine,0,-1.5864,17,18
+fg_phenol,baseline_lr,R5,L-alanine,0,-0.8398,9,18
+fg_phenol,baseline_lr,R5,L-arginine,0,-1.8951,14,18
+fg_phenol,baseline_lr,R5,L-aspartic acid,0,-1.302,11,18
+fg_phenol,baseline_lr,R5,L-cysteine,0,-0.081,4,18
+fg_phenol,baseline_lr,R5,L-glutamic acid,0,0.4221,3,18
+fg_phenol,baseline_lr,R5,L-glutamine,0,0.9191,2,18
+fg_phenol,baseline_lr,R5,L-glycine,0,-0.9431,10,18
+fg_phenol,baseline_lr,R5,L-histidine,0,-0.533,8,18
+fg_phenol,baseline_lr,R5,L-isoleucine,0,-2.1262,15,18
+fg_phenol,baseline_lr,R5,L-leucine,0,-2.3443,16,18
+fg_phenol,baseline_lr,R5,L-lysine,0,-1.8313,13,18
+fg_phenol,baseline_lr,R5,L-methionine,0,-0.3382,6,18
+fg_phenol,baseline_lr,R5,L-proline,0,-2.7122,18,18
+fg_phenol,baseline_lr,R5,L-serine,0,-0.2892,5,18
+fg_phenol,baseline_lr,R5,L-threonine,0,-1.4645,12,18
+fg_phenol,baseline_lr,R5,L-tryptophan,0,1.6004,1,18
+fg_phenol,baseline_lr,R5,L-tyrosine,1,-0.4785,7,18
+fg_phenol,baseline_lr,R5,L-valine,0,-2.6418,17,18
+fg_phenol,baseline_lr,R6,L-alanine,0,-0.6074,8,18
+fg_phenol,baseline_lr,R6,L-arginine,0,-1.3784,13,18
+fg_phenol,baseline_lr,R6,L-aspartic acid,0,-1.2383,12,18
+fg_phenol,baseline_lr,R6,L-cysteine,0,-0.045,4,18
+fg_phenol,baseline_lr,R6,L-glutamic acid,0,-0.1351,5,18
+fg_phenol,baseline_lr,R6,L-glutamine,0,0.9812,2,18
+fg_phenol,baseline_lr,R6,L-glycine,0,-0.9857,10,18
+fg_phenol,baseline_lr,R6,L-histidine,0,0.2373,3,18
+fg_phenol,baseline_lr,R6,L-isoleucine,0,-1.5124,14,18
+fg_phenol,baseline_lr,R6,L-leucine,0,-3.0037,18,18
+fg_phenol,baseline_lr,R6,L-lysine,0,-1.7466,15,18
+fg_phenol,baseline_lr,R6,L-methionine,0,-0.3317,7,18
+fg_phenol,baseline_lr,R6,L-proline,0,-1.915,17,18
+fg_phenol,baseline_lr,R6,L-serine,0,-0.3196,6,18
+fg_phenol,baseline_lr,R6,L-threonine,0,-1.1453,11,18
+fg_phenol,baseline_lr,R6,L-tryptophan,0,1.3899,1,18
+fg_phenol,baseline_lr,R6,L-tyrosine,1,-0.7957,9,18
+fg_phenol,baseline_lr,R6,L-valine,0,-1.8425,16,18
+fg_phenol,baseline_lr,R8,L-alanine,0,1.1846,5,18
+fg_phenol,baseline_lr,R8,L-arginine,0,0.6834,9,18
+fg_phenol,baseline_lr,R8,L-aspartic acid,0,0.8533,6,18
+fg_phenol,baseline_lr,R8,L-cysteine,0,0.3404,12,18
+fg_phenol,baseline_lr,R8,L-glutamic acid,0,0.658,11,18
+fg_phenol,baseline_lr,R8,L-glutamine,0,0.7528,8,18
+fg_phenol,baseline_lr,R8,L-glycine,0,0.8021,7,18
+fg_phenol,baseline_lr,R8,L-histidine,0,-0.9445,16,18
+fg_phenol,baseline_lr,R8,L-isoleucine,0,2.576,1,18
+fg_phenol,baseline_lr,R8,L-leucine,0,0.6778,10,18
+fg_phenol,baseline_lr,R8,L-lysine,0,0.1554,13,18
+fg_phenol,baseline_lr,R8,L-methionine,0,-1.0468,18,18
+fg_phenol,baseline_lr,R8,L-proline,0,-1.0354,17,18
+fg_phenol,baseline_lr,R8,L-serine,0,2.0567,2,18
+fg_phenol,baseline_lr,R8,L-threonine,0,1.2204,4,18
+fg_phenol,baseline_lr,R8,L-tryptophan,0,1.5806,3,18
+fg_phenol,baseline_lr,R8,L-tyrosine,1,-0.0569,14,18
+fg_phenol,baseline_lr,R8,L-valine,0,-0.2318,15,18
+fg_phenol,baseline_lr,R9,L-alanine,0,1.6152,4,18
+fg_phenol,baseline_lr,R9,L-arginine,0,1.2988,6,18
+fg_phenol,baseline_lr,R9,L-aspartic acid,0,0.7036,9,18
+fg_phenol,baseline_lr,R9,L-cysteine,0,0.2862,11,18
+fg_phenol,baseline_lr,R9,L-glutamic acid,0,1.9566,2,18
+fg_phenol,baseline_lr,R9,L-glutamine,0,-0.6396,17,18
+fg_phenol,baseline_lr,R9,L-glycine,0,0.7327,8,18
+fg_phenol,baseline_lr,R9,L-histidine,0,-0.4795,16,18
+fg_phenol,baseline_lr,R9,L-isoleucine,0,2.4469,1,18
+fg_phenol,baseline_lr,R9,L-leucine,0,0.3261,10,18
+fg_phenol,baseline_lr,R9,L-lysine,0,-0.2866,15,18
+fg_phenol,baseline_lr,R9,L-methionine,0,-0.1702,13,18
+fg_phenol,baseline_lr,R9,L-proline,0,-0.8577,18,18
+fg_phenol,baseline_lr,R9,L-serine,0,1.2483,7,18
+fg_phenol,baseline_lr,R9,L-threonine,0,-0.2448,14,18
+fg_phenol,baseline_lr,R9,L-tryptophan,0,1.5642,5,18
+fg_phenol,baseline_lr,R9,L-tyrosine,1,1.6457,3,18
+fg_phenol,baseline_lr,R9,L-valine,0,0.1927,12,18
+fg_aromatic_ring,baseline_lr,R2,L-alanine,0,-2.0638,12,18
+fg_aromatic_ring,baseline_lr,R2,L-arginine,0,0.2524,4,18
+fg_aromatic_ring,baseline_lr,R2,L-aspartic acid,0,-0.4682,6,18
+fg_aromatic_ring,baseline_lr,R2,L-cysteine,0,-2.1792,13,18
+fg_aromatic_ring,baseline_lr,R2,L-glutamic acid,0,-1.485,9,18
+fg_aromatic_ring,baseline_lr,R2,L-glutamine,0,-2.4599,15,18
+fg_aromatic_ring,baseline_lr,R2,L-glycine,0,-1.2188,7,18
+fg_aromatic_ring,baseline_lr,R2,L-histidine,1,1.7062,2,18
+fg_aromatic_ring,baseline_lr,R2,L-isoleucine,0,-1.5172,11,18
+fg_aromatic_ring,baseline_lr,R2,L-leucine,0,-2.6737,16,18
+fg_aromatic_ring,baseline_lr,R2,L-lysine,0,-1.5041,10,18
+fg_aromatic_ring,baseline_lr,R2,L-methionine,0,-1.3859,8,18
+fg_aromatic_ring,baseline_lr,R2,L-proline,0,-3.1408,18,18
+fg_aromatic_ring,baseline_lr,R2,L-serine,0,-0.3426,5,18
+fg_aromatic_ring,baseline_lr,R2,L-threonine,0,-2.2937,14,18
+fg_aromatic_ring,baseline_lr,R2,L-tryptophan,1,3.0921,1,18
+fg_aromatic_ring,baseline_lr,R2,L-tyrosine,1,0.3263,3,18
+fg_aromatic_ring,baseline_lr,R2,L-valine,0,-2.7641,17,18
+fg_aromatic_ring,baseline_lr,R3,L-alanine,0,-0.5902,8,18
+fg_aromatic_ring,baseline_lr,R3,L-arginine,0,1.9186,2,18
+fg_aromatic_ring,baseline_lr,R3,L-aspartic acid,0,-0.563,6,18
+fg_aromatic_ring,baseline_lr,R3,L-cysteine,0,-1.8856,17,18
+fg_aromatic_ring,baseline_lr,R3,L-glutamic acid,0,-0.8387,11,18
+fg_aromatic_ring,baseline_lr,R3,L-glutamine,0,-2.1455,18,18
+fg_aromatic_ring,baseline_lr,R3,L-glycine,0,-0.491,5,18
+fg_aromatic_ring,baseline_lr,R3,L-histidine,1,1.8975,3,18
+fg_aromatic_ring,baseline_lr,R3,L-isoleucine,0,-0.5643,7,18
+fg_aromatic_ring,baseline_lr,R3,L-leucine,0,-0.9103,13,18
+fg_aromatic_ring,baseline_lr,R3,L-lysine,0,-0.6924,10,18
+fg_aromatic_ring,baseline_lr,R3,L-methionine,0,-0.6788,9,18
+fg_aromatic_ring,baseline_lr,R3,L-proline,0,-1.567,16,18
+fg_aromatic_ring,baseline_lr,R3,L-serine,0,-0.8953,12,18
+fg_aromatic_ring,baseline_lr,R3,L-threonine,0,-1.1027,15,18
+fg_aromatic_ring,baseline_lr,R3,L-tryptophan,1,3.245,1,18
+fg_aromatic_ring,baseline_lr,R3,L-tyrosine,1,1.1966,4,18
+fg_aromatic_ring,baseline_lr,R3,L-valine,0,-0.9127,14,18
+fg_aromatic_ring,baseline_lr,R4,L-alanine,0,0.9647,9,18
+fg_aromatic_ring,baseline_lr,R4,L-arginine,0,-0.3415,16,18
+fg_aromatic_ring,baseline_lr,R4,L-aspartic acid,0,1.7909,3,18
+fg_aromatic_ring,baseline_lr,R4,L-cysteine,0,1.3803,4,18
+fg_aromatic_ring,baseline_lr,R4,L-glutamic acid,0,0.8865,10,18
+fg_aromatic_ring,baseline_lr,R4,L-glutamine,0,0.9831,7,18
+fg_aromatic_ring,baseline_lr,R4,L-glycine,0,1.1107,5,18
+fg_aromatic_ring,baseline_lr,R4,L-histidine,1,1.934,2,18
+fg_aromatic_ring,baseline_lr,R4,L-isoleucine,0,0.409,12,18
+fg_aromatic_ring,baseline_lr,R4,L-leucine,0,0.4224,11,18
+fg_aromatic_ring,baseline_lr,R4,L-lysine,0,0.2149,14,18
+fg_aromatic_ring,baseline_lr,R4,L-methionine,0,0.1427,15,18
+fg_aromatic_ring,baseline_lr,R4,L-proline,0,-1.728,18,18
+fg_aromatic_ring,baseline_lr,R4,L-serine,0,0.9929,6,18
+fg_aromatic_ring,baseline_lr,R4,L-threonine,0,0.3805,13,18
+fg_aromatic_ring,baseline_lr,R4,L-tryptophan,1,3.2034,1,18
+fg_aromatic_ring,baseline_lr,R4,L-tyrosine,1,0.9771,8,18
+fg_aromatic_ring,baseline_lr,R4,L-valine,0,-0.7267,17,18
+fg_aromatic_ring,baseline_lr,R5,L-alanine,0,-0.6479,6,18
+fg_aromatic_ring,baseline_lr,R5,L-arginine,0,-2.7134,16,18
+fg_aromatic_ring,baseline_lr,R5,L-aspartic acid,0,-0.8861,7,18
+fg_aromatic_ring,baseline_lr,R5,L-cysteine,0,-0.1588,2,18
+fg_aromatic_ring,baseline_lr,R5,L-glutamic acid,0,-0.8934,8,18
+fg_aromatic_ring,baseline_lr,R5,L-glutamine,0,-0.3097,3,18
+fg_aromatic_ring,baseline_lr,R5,L-glycine,0,-0.3566,4,18
+fg_aromatic_ring,baseline_lr,R5,L-histidine,1,-0.3579,5,18
+fg_aromatic_ring,baseline_lr,R5,L-isoleucine,0,-1.9667,15,18
+fg_aromatic_ring,baseline_lr,R5,L-leucine,0,-1.5804,14,18
+fg_aromatic_ring,baseline_lr,R5,L-lysine,0,-1.3265,12,18
+fg_aromatic_ring,baseline_lr,R5,L-methionine,0,-0.9182,9,18
+fg_aromatic_ring,baseline_lr,R5,L-proline,0,-2.7292,17,18
+fg_aromatic_ring,baseline_lr,R5,L-serine,0,-0.9401,10,18
+fg_aromatic_ring,baseline_lr,R5,L-threonine,0,-1.5489,13,18
+fg_aromatic_ring,baseline_lr,R5,L-tryptophan,1,2.2154,1,18
+fg_aromatic_ring,baseline_lr,R5,L-tyrosine,1,-1.1059,11,18
+fg_aromatic_ring,baseline_lr,R5,L-valine,0,-2.9409,18,18
+fg_aromatic_ring,baseline_lr,R6,L-alanine,0,-0.3825,5,18
+fg_aromatic_ring,baseline_lr,R6,L-arginine,0,-2.0519,16,18
+fg_aromatic_ring,baseline_lr,R6,L-aspartic acid,0,-0.8456,7,18
+fg_aromatic_ring,baseline_lr,R6,L-cysteine,0,-0.276,4,18
+fg_aromatic_ring,baseline_lr,R6,L-glutamic acid,0,-1.0197,9,18
+fg_aromatic_ring,baseline_lr,R6,L-glutamine,0,-0.1437,3,18
+fg_aromatic_ring,baseline_lr,R6,L-glycine,0,-0.491,6,18
+fg_aromatic_ring,baseline_lr,R6,L-histidine,1,0.3772,2,18
+fg_aromatic_ring,baseline_lr,R6,L-isoleucine,0,-1.5716,14,18
+fg_aromatic_ring,baseline_lr,R6,L-leucine,0,-2.4644,18,18
+fg_aromatic_ring,baseline_lr,R6,L-lysine,0,-1.2742,12,18
+fg_aromatic_ring,baseline_lr,R6,L-methionine,0,-0.8538,8,18
+fg_aromatic_ring,baseline_lr,R6,L-proline,0,-1.84,15,18
+fg_aromatic_ring,baseline_lr,R6,L-serine,0,-1.2274,10,18
+fg_aromatic_ring,baseline_lr,R6,L-threonine,0,-1.2423,11,18
+fg_aromatic_ring,baseline_lr,R6,L-tryptophan,1,2.1025,1,18
+fg_aromatic_ring,baseline_lr,R6,L-tyrosine,1,-1.5177,13,18
+fg_aromatic_ring,baseline_lr,R6,L-valine,0,-2.2082,17,18
+fg_aromatic_ring,baseline_lr,R8,L-alanine,0,0.1833,13,18
+fg_aromatic_ring,baseline_lr,R8,L-arginine,0,0.3359,11,18
+fg_aromatic_ring,baseline_lr,R8,L-aspartic acid,0,0.5724,6,18
+fg_aromatic_ring,baseline_lr,R8,L-cysteine,0,0.1557,14,18
+fg_aromatic_ring,baseline_lr,R8,L-glutamic acid,0,0.2734,12,18
+fg_aromatic_ring,baseline_lr,R8,L-glutamine,0,0.4297,9,18
+fg_aromatic_ring,baseline_lr,R8,L-glycine,0,1.0237,3,18
+fg_aromatic_ring,baseline_lr,R8,L-histidine,1,0.4531,8,18
+fg_aromatic_ring,baseline_lr,R8,L-isoleucine,0,0.382,10,18
+fg_aromatic_ring,baseline_lr,R8,L-leucine,0,0.5854,5,18
+fg_aromatic_ring,baseline_lr,R8,L-lysine,0,-0.3004,16,18
+fg_aromatic_ring,baseline_lr,R8,L-methionine,0,-0.9847,17,18
+fg_aromatic_ring,baseline_lr,R8,L-proline,0,-1.1881,18,18
+fg_aromatic_ring,baseline_lr,R8,L-serine,0,2.3749,2,18
+fg_aromatic_ring,baseline_lr,R8,L-threonine,0,0.6201,4,18
+fg_aromatic_ring,baseline_lr,R8,L-tryptophan,1,2.9051,1,18
+fg_aromatic_ring,baseline_lr,R8,L-tyrosine,1,0.5288,7,18
+fg_aromatic_ring,baseline_lr,R8,L-valine,0,0.1203,15,18
+fg_aromatic_ring,baseline_lr,R9,L-alanine,0,-0.3738,7,18
+fg_aromatic_ring,baseline_lr,R9,L-arginine,0,-0.304,5,18
+fg_aromatic_ring,baseline_lr,R9,L-aspartic acid,0,-0.9179,16,18
+fg_aromatic_ring,baseline_lr,R9,L-cysteine,0,0.0206,3,18
+fg_aromatic_ring,baseline_lr,R9,L-glutamic acid,0,-0.4855,12,18
+fg_aromatic_ring,baseline_lr,R9,L-glutamine,0,-1.0187,17,18
+fg_aromatic_ring,baseline_lr,R9,L-glycine,0,-0.5162,13,18
+fg_aromatic_ring,baseline_lr,R9,L-histidine,1,-0.854,15,18
+fg_aromatic_ring,baseline_lr,R9,L-isoleucine,0,-0.3928,8,18
+fg_aromatic_ring,baseline_lr,R9,L-leucine,0,-0.304,6,18
+fg_aromatic_ring,baseline_lr,R9,L-lysine,0,-0.5643,14,18
+fg_aromatic_ring,baseline_lr,R9,L-methionine,0,-0.4825,10,18
+fg_aromatic_ring,baseline_lr,R9,L-proline,0,-1.0785,18,18
+fg_aromatic_ring,baseline_lr,R9,L-serine,0,-0.4126,9,18
+fg_aromatic_ring,baseline_lr,R9,L-threonine,0,-0.4835,11,18
+fg_aromatic_ring,baseline_lr,R9,L-tryptophan,1,1.0533,1,18
+fg_aromatic_ring,baseline_lr,R9,L-tyrosine,1,0.1655,2,18
+fg_aromatic_ring,baseline_lr,R9,L-valine,0,-0.1341,4,18
+fg_benzene_ring,baseline_lr,R2,L-alanine,0,-1.2242,5,18
+fg_benzene_ring,baseline_lr,R2,L-arginine,0,-0.9557,3,18
+fg_benzene_ring,baseline_lr,R2,L-aspartic acid,0,-1.6135,6,18
+fg_benzene_ring,baseline_lr,R2,L-cysteine,0,-3.3789,14,18
+fg_benzene_ring,baseline_lr,R2,L-glutamic acid,0,-2.3927,11,18
+fg_benzene_ring,baseline_lr,R2,L-glutamine,0,-2.0053,9,18
+fg_benzene_ring,baseline_lr,R2,L-glycine,0,-3.8231,16,18
+fg_benzene_ring,baseline_lr,R2,L-histidine,0,-4.0235,18,18
+fg_benzene_ring,baseline_lr,R2,L-isoleucine,0,-2.0882,10,18
+fg_benzene_ring,baseline_lr,R2,L-leucine,0,-2.7289,12,18
+fg_benzene_ring,baseline_lr,R2,L-lysine,0,-1.6839,7,18
+fg_benzene_ring,baseline_lr,R2,L-methionine,0,-3.1569,13,18
+fg_benzene_ring,baseline_lr,R2,L-proline,0,-3.6463,15,18
+fg_benzene_ring,baseline_lr,R2,L-serine,0,-1.149,4,18
+fg_benzene_ring,baseline_lr,R2,L-threonine,0,-1.6862,8,18
+fg_benzene_ring,baseline_lr,R2,L-tryptophan,1,-0.3628,2,18
+fg_benzene_ring,baseline_lr,R2,L-tyrosine,1,1.9024,1,18
+fg_benzene_ring,baseline_lr,R2,L-valine,0,-3.8387,17,18
+fg_benzene_ring,baseline_lr,R3,L-alanine,0,-2.9281,12,18
+fg_benzene_ring,baseline_lr,R3,L-arginine,0,0.8404,2,18
+fg_benzene_ring,baseline_lr,R3,L-aspartic acid,0,-2.1254,7,18
+fg_benzene_ring,baseline_lr,R3,L-cysteine,0,-1.7207,6,18
+fg_benzene_ring,baseline_lr,R3,L-glutamic acid,0,-2.939,13,18
+fg_benzene_ring,baseline_lr,R3,L-glutamine,0,-1.4871,4,18
+fg_benzene_ring,baseline_lr,R3,L-glycine,0,-2.6046,9,18
+fg_benzene_ring,baseline_lr,R3,L-histidine,0,-2.7225,11,18
+fg_benzene_ring,baseline_lr,R3,L-isoleucine,0,-2.3903,8,18
+fg_benzene_ring,baseline_lr,R3,L-leucine,0,-3.1213,16,18
+fg_benzene_ring,baseline_lr,R3,L-lysine,0,-3.3941,17,18
+fg_benzene_ring,baseline_lr,R3,L-methionine,0,-2.6821,10,18
+fg_benzene_ring,baseline_lr,R3,L-proline,0,-3.4201,18,18
+fg_benzene_ring,baseline_lr,R3,L-serine,0,-1.4972,5,18
+fg_benzene_ring,baseline_lr,R3,L-threonine,0,-2.9514,15,18
+fg_benzene_ring,baseline_lr,R3,L-tryptophan,1,-1.1707,3,18
+fg_benzene_ring,baseline_lr,R3,L-tyrosine,1,1.5008,1,18
+fg_benzene_ring,baseline_lr,R3,L-valine,0,-2.9399,14,18
+fg_benzene_ring,baseline_lr,R4,L-alanine,0,-1.189,10,18
+fg_benzene_ring,baseline_lr,R4,L-arginine,0,-0.7511,6,18
+fg_benzene_ring,baseline_lr,R4,L-aspartic acid,0,-2.5069,17,18
+fg_benzene_ring,baseline_lr,R4,L-cysteine,0,-0.0601,5,18
+fg_benzene_ring,baseline_lr,R4,L-glutamic acid,0,0.1608,4,18
+fg_benzene_ring,baseline_lr,R4,L-glutamine,0,0.8028,3,18
+fg_benzene_ring,baseline_lr,R4,L-glycine,0,0.8933,2,18
+fg_benzene_ring,baseline_lr,R4,L-histidine,0,-3.1334,18,18
+fg_benzene_ring,baseline_lr,R4,L-isoleucine,0,-1.852,14,18
+fg_benzene_ring,baseline_lr,R4,L-leucine,0,-1.9872,15,18
+fg_benzene_ring,baseline_lr,R4,L-lysine,0,-1.3242,12,18
+fg_benzene_ring,baseline_lr,R4,L-methionine,0,-0.9192,9,18
+fg_benzene_ring,baseline_lr,R4,L-proline,0,-2.3184,16,18
+fg_benzene_ring,baseline_lr,R4,L-serine,0,-0.7962,7,18
+fg_benzene_ring,baseline_lr,R4,L-threonine,0,-1.6471,13,18
+fg_benzene_ring,baseline_lr,R4,L-tryptophan,1,-0.904,8,18
+fg_benzene_ring,baseline_lr,R4,L-tyrosine,1,1.9584,1,18
+fg_benzene_ring,baseline_lr,R4,L-valine,0,-1.2663,11,18
+fg_benzene_ring,baseline_lr,R5,L-alanine,0,-1.7078,12,18
+fg_benzene_ring,baseline_lr,R5,L-arginine,0,-0.9296,8,18
+fg_benzene_ring,baseline_lr,R5,L-aspartic acid,0,-2.3711,15,18
+fg_benzene_ring,baseline_lr,R5,L-cysteine,0,-0.4518,5,18
+fg_benzene_ring,baseline_lr,R5,L-glutamic acid,0,0.3491,3,18
+fg_benzene_ring,baseline_lr,R5,L-glutamine,0,0.9263,2,18
+fg_benzene_ring,baseline_lr,R5,L-glycine,0,-0.175,4,18
+fg_benzene_ring,baseline_lr,R5,L-histidine,0,-3.4972,18,18
+fg_benzene_ring,baseline_lr,R5,L-isoleucine,0,-1.5677,11,18
+fg_benzene_ring,baseline_lr,R5,L-leucine,0,-2.9004,17,18
+fg_benzene_ring,baseline_lr,R5,L-lysine,0,-2.102,14,18
+fg_benzene_ring,baseline_lr,R5,L-methionine,0,-1.1142,9,18
+fg_benzene_ring,baseline_lr,R5,L-proline,0,-2.5259,16,18
+fg_benzene_ring,baseline_lr,R5,L-serine,0,-0.675,6,18
+fg_benzene_ring,baseline_lr,R5,L-threonine,0,-1.8396,13,18
+fg_benzene_ring,baseline_lr,R5,L-tryptophan,1,-0.7686,7,18
+fg_benzene_ring,baseline_lr,R5,L-tyrosine,1,1.6316,1,18
+fg_benzene_ring,baseline_lr,R5,L-valine,0,-1.5109,10,18
+fg_benzene_ring,baseline_lr,R6,L-alanine,0,-1.6407,13,18
+fg_benzene_ring,baseline_lr,R6,L-arginine,0,-0.7532,6,18
+fg_benzene_ring,baseline_lr,R6,L-aspartic acid,0,-2.0579,14,18
+fg_benzene_ring,baseline_lr,R6,L-cysteine,0,-0.3866,4,18
+fg_benzene_ring,baseline_lr,R6,L-glutamic acid,0,0.2807,2,18
+fg_benzene_ring,baseline_lr,R6,L-glutamine,0,0.2495,3,18
+fg_benzene_ring,baseline_lr,R6,L-glycine,0,-0.5031,5,18
+fg_benzene_ring,baseline_lr,R6,L-histidine,0,-3.2332,18,18
+fg_benzene_ring,baseline_lr,R6,L-isoleucine,0,-1.1475,10,18
+fg_benzene_ring,baseline_lr,R6,L-leucine,0,-3.1858,17,18
+fg_benzene_ring,baseline_lr,R6,L-lysine,0,-2.0882,15,18
+fg_benzene_ring,baseline_lr,R6,L-methionine,0,-1.1136,9,18
+fg_benzene_ring,baseline_lr,R6,L-proline,0,-2.1838,16,18
+fg_benzene_ring,baseline_lr,R6,L-serine,0,-0.8713,7,18
+fg_benzene_ring,baseline_lr,R6,L-threonine,0,-1.5698,12,18
+fg_benzene_ring,baseline_lr,R6,L-tryptophan,1,-0.8995,8,18
+fg_benzene_ring,baseline_lr,R6,L-tyrosine,1,0.8919,1,18
+fg_benzene_ring,baseline_lr,R6,L-valine,0,-1.265,11,18
+fg_benzene_ring,baseline_lr,R8,L-alanine,0,-1.7733,14,18
+fg_benzene_ring,baseline_lr,R8,L-arginine,0,0.4259,6,18
+fg_benzene_ring,baseline_lr,R8,L-aspartic acid,0,0.5488,5,18
+fg_benzene_ring,baseline_lr,R8,L-cysteine,0,1.0997,3,18
+fg_benzene_ring,baseline_lr,R8,L-glutamic acid,0,0.2863,8,18
+fg_benzene_ring,baseline_lr,R8,L-glutamine,0,0.2704,9,18
+fg_benzene_ring,baseline_lr,R8,L-glycine,0,0.8948,4,18
+fg_benzene_ring,baseline_lr,R8,L-histidine,0,-1.7941,15,18
+fg_benzene_ring,baseline_lr,R8,L-isoleucine,0,1.3434,2,18
+fg_benzene_ring,baseline_lr,R8,L-leucine,0,-0.9586,12,18
+fg_benzene_ring,baseline_lr,R8,L-lysine,0,-0.6366,11,18
+fg_benzene_ring,baseline_lr,R8,L-methionine,0,-3.0148,18,18
+fg_benzene_ring,baseline_lr,R8,L-proline,0,-2.405,17,18
+fg_benzene_ring,baseline_lr,R8,L-serine,0,0.2457,10,18
+fg_benzene_ring,baseline_lr,R8,L-threonine,0,0.3814,7,18
+fg_benzene_ring,baseline_lr,R8,L-tryptophan,1,-1.9739,16,18
+fg_benzene_ring,baseline_lr,R8,L-tyrosine,1,1.5723,1,18
+fg_benzene_ring,baseline_lr,R8,L-valine,0,-1.0084,13,18
+fg_benzene_ring,baseline_lr,R9,L-alanine,0,0.1057,5,18
+fg_benzene_ring,baseline_lr,R9,L-arginine,0,-0.2052,7,18
+fg_benzene_ring,baseline_lr,R9,L-aspartic acid,0,-0.7055,14,18
+fg_benzene_ring,baseline_lr,R9,L-cysteine,0,-0.0693,6,18
+fg_benzene_ring,baseline_lr,R9,L-glutamic acid,0,0.4338,3,18
+fg_benzene_ring,baseline_lr,R9,L-glutamine,0,-1.33,17,18
+fg_benzene_ring,baseline_lr,R9,L-glycine,0,-0.502,9,18
+fg_benzene_ring,baseline_lr,R9,L-histidine,0,-0.6915,13,18
+fg_benzene_ring,baseline_lr,R9,L-isoleucine,0,0.663,1,18
+fg_benzene_ring,baseline_lr,R9,L-leucine,0,-0.5077,10,18
+fg_benzene_ring,baseline_lr,R9,L-lysine,0,-0.4938,8,18
+fg_benzene_ring,baseline_lr,R9,L-methionine,0,-0.9418,15,18
+fg_benzene_ring,baseline_lr,R9,L-proline,0,-1.3335,18,18
+fg_benzene_ring,baseline_lr,R9,L-serine,0,0.6044,2,18
+fg_benzene_ring,baseline_lr,R9,L-threonine,0,-0.9833,16,18
+fg_benzene_ring,baseline_lr,R9,L-tryptophan,1,-0.6239,12,18
+fg_benzene_ring,baseline_lr,R9,L-tyrosine,1,0.1609,4,18
+fg_benzene_ring,baseline_lr,R9,L-valine,0,-0.5337,11,18
+fg_pyrrole_ring,baseline_lr,R2,L-alanine,0,-2.1117,10,18
+fg_pyrrole_ring,baseline_lr,R2,L-arginine,0,-2.0842,8,18
+fg_pyrrole_ring,baseline_lr,R2,L-aspartic acid,0,-1.1817,4,18
+fg_pyrrole_ring,baseline_lr,R2,L-cysteine,0,-3.2961,14,18
+fg_pyrrole_ring,baseline_lr,R2,L-glutamic acid,0,-1.8517,7,18
+fg_pyrrole_ring,baseline_lr,R2,L-glutamine,0,-3.7802,17,18
+fg_pyrrole_ring,baseline_lr,R2,L-glycine,0,-1.6062,6,18
+fg_pyrrole_ring,baseline_lr,R2,L-histidine,0,0.5603,2,18
+fg_pyrrole_ring,baseline_lr,R2,L-isoleucine,0,-2.0864,9,18
+fg_pyrrole_ring,baseline_lr,R2,L-leucine,0,-2.295,12,18
+fg_pyrrole_ring,baseline_lr,R2,L-lysine,0,-1.3704,5,18
+fg_pyrrole_ring,baseline_lr,R2,L-methionine,0,-2.5587,13,18
+fg_pyrrole_ring,baseline_lr,R2,L-proline,0,-3.9437,18,18
+fg_pyrrole_ring,baseline_lr,R2,L-serine,0,-0.9541,3,18
+fg_pyrrole_ring,baseline_lr,R2,L-threonine,0,-3.4662,16,18
+fg_pyrrole_ring,baseline_lr,R2,L-tryptophan,1,1.611,1,18
+fg_pyrrole_ring,baseline_lr,R2,L-tyrosine,0,-2.198,11,18
+fg_pyrrole_ring,baseline_lr,R2,L-valine,0,-3.366,15,18
+fg_pyrrole_ring,baseline_lr,R3,L-alanine,0,-1.2961,8,18
+fg_pyrrole_ring,baseline_lr,R3,L-arginine,0,-1.3212,10,18
+fg_pyrrole_ring,baseline_lr,R3,L-aspartic acid,0,-1.7671,13,18
+fg_pyrrole_ring,baseline_lr,R3,L-cysteine,0,-2.6595,17,18
+fg_pyrrole_ring,baseline_lr,R3,L-glutamic acid,0,-1.122,7,18
+fg_pyrrole_ring,baseline_lr,R3,L-glutamine,0,-3.0629,18,18
+fg_pyrrole_ring,baseline_lr,R3,L-glycine,0,-1.0125,6,18
+fg_pyrrole_ring,baseline_lr,R3,L-histidine,0,0.7356,2,18
+fg_pyrrole_ring,baseline_lr,R3,L-isoleucine,0,-1.3135,9,18
+fg_pyrrole_ring,baseline_lr,R3,L-leucine,0,-0.7508,4,18
+fg_pyrrole_ring,baseline_lr,R3,L-lysine,0,-0.7023,3,18
+fg_pyrrole_ring,baseline_lr,R3,L-methionine,0,-0.8015,5,18
+fg_pyrrole_ring,baseline_lr,R3,L-proline,0,-1.7754,14,18
+fg_pyrrole_ring,baseline_lr,R3,L-serine,0,-2.2516,16,18
+fg_pyrrole_ring,baseline_lr,R3,L-threonine,0,-1.3491,11,18
+fg_pyrrole_ring,baseline_lr,R3,L-tryptophan,1,1.776,1,18
+fg_pyrrole_ring,baseline_lr,R3,L-tyrosine,0,-1.4531,12,18
+fg_pyrrole_ring,baseline_lr,R3,L-valine,0,-1.8582,15,18
+fg_pyrrole_ring,baseline_lr,R4,L-alanine,0,-0.6929,5,18
+fg_pyrrole_ring,baseline_lr,R4,L-arginine,0,-2.758,17,18
+fg_pyrrole_ring,baseline_lr,R4,L-aspartic acid,0,-0.1127,3,18
+fg_pyrrole_ring,baseline_lr,R4,L-cysteine,0,-1.2318,10,18
+fg_pyrrole_ring,baseline_lr,R4,L-glutamic acid,0,-0.8588,6,18
+fg_pyrrole_ring,baseline_lr,R4,L-glutamine,0,-1.6409,15,18
+fg_pyrrole_ring,baseline_lr,R4,L-glycine,0,-1.5126,13,18
+fg_pyrrole_ring,baseline_lr,R4,L-histidine,0,0.082,2,18
+fg_pyrrole_ring,baseline_lr,R4,L-isoleucine,0,-1.1192,9,18
+fg_pyrrole_ring,baseline_lr,R4,L-leucine,0,-0.5135,4,18
+fg_pyrrole_ring,baseline_lr,R4,L-lysine,0,-1.5654,14,18
+fg_pyrrole_ring,baseline_lr,R4,L-methionine,0,-1.0355,8,18
+fg_pyrrole_ring,baseline_lr,R4,L-proline,0,-3.8629,18,18
+fg_pyrrole_ring,baseline_lr,R4,L-serine,0,-0.9623,7,18
+fg_pyrrole_ring,baseline_lr,R4,L-threonine,0,-1.3524,11,18
+fg_pyrrole_ring,baseline_lr,R4,L-tryptophan,1,1.6548,1,18
+fg_pyrrole_ring,baseline_lr,R4,L-tyrosine,0,-2.0635,16,18
+fg_pyrrole_ring,baseline_lr,R4,L-valine,0,-1.4203,12,18
+fg_pyrrole_ring,baseline_lr,R5,L-alanine,0,-1.3261,2,18
+fg_pyrrole_ring,baseline_lr,R5,L-arginine,0,-5.5277,18,18
+fg_pyrrole_ring,baseline_lr,R5,L-aspartic acid,0,-1.343,3,18
+fg_pyrrole_ring,baseline_lr,R5,L-cysteine,0,-1.608,5,18
+fg_pyrrole_ring,baseline_lr,R5,L-glutamic acid,0,-2.5741,10,18
+fg_pyrrole_ring,baseline_lr,R5,L-glutamine,0,-1.9591,6,18
+fg_pyrrole_ring,baseline_lr,R5,L-glycine,0,-2.3212,9,18
+fg_pyrrole_ring,baseline_lr,R5,L-histidine,0,-1.3951,4,18
+fg_pyrrole_ring,baseline_lr,R5,L-isoleucine,0,-3.6306,15,18
+fg_pyrrole_ring,baseline_lr,R5,L-leucine,0,-2.3118,8,18
+fg_pyrrole_ring,baseline_lr,R5,L-lysine,0,-2.966,12,18
+fg_pyrrole_ring,baseline_lr,R5,L-methionine,0,-2.0903,7,18
+fg_pyrrole_ring,baseline_lr,R5,L-proline,0,-4.2321,16,18
+fg_pyrrole_ring,baseline_lr,R5,L-serine,0,-2.7461,11,18
+fg_pyrrole_ring,baseline_lr,R5,L-threonine,0,-2.9935,13,18
+fg_pyrrole_ring,baseline_lr,R5,L-tryptophan,1,0.3536,1,18
+fg_pyrrole_ring,baseline_lr,R5,L-tyrosine,0,-4.3998,17,18
+fg_pyrrole_ring,baseline_lr,R5,L-valine,0,-3.4938,14,18
+fg_pyrrole_ring,baseline_lr,R6,L-alanine,0,-1.0069,3,18
+fg_pyrrole_ring,baseline_lr,R6,L-arginine,0,-4.235,18,18
+fg_pyrrole_ring,baseline_lr,R6,L-aspartic acid,0,-1.149,4,18
+fg_pyrrole_ring,baseline_lr,R6,L-cysteine,0,-1.6432,6,18
+fg_pyrrole_ring,baseline_lr,R6,L-glutamic acid,0,-2.5001,12,18
+fg_pyrrole_ring,baseline_lr,R6,L-glutamine,0,-1.3693,5,18
+fg_pyrrole_ring,baseline_lr,R6,L-glycine,0,-1.8997,8,18
+fg_pyrrole_ring,baseline_lr,R6,L-histidine,0,-0.4351,2,18
+fg_pyrrole_ring,baseline_lr,R6,L-isoleucine,0,-3.0592,16,18
+fg_pyrrole_ring,baseline_lr,R6,L-leucine,0,-2.9585,14,18
+fg_pyrrole_ring,baseline_lr,R6,L-lysine,0,-2.4451,11,18
+fg_pyrrole_ring,baseline_lr,R6,L-methionine,0,-1.8702,7,18
+fg_pyrrole_ring,baseline_lr,R6,L-proline,0,-2.9921,15,18
+fg_pyrrole_ring,baseline_lr,R6,L-serine,0,-2.4007,10,18
+fg_pyrrole_ring,baseline_lr,R6,L-threonine,0,-2.3879,9,18
+fg_pyrrole_ring,baseline_lr,R6,L-tryptophan,1,0.2601,1,18
+fg_pyrrole_ring,baseline_lr,R6,L-tyrosine,0,-4.1499,17,18
+fg_pyrrole_ring,baseline_lr,R6,L-valine,0,-2.8586,13,18
+fg_pyrrole_ring,baseline_lr,R8,L-alanine,0,-0.6439,6,18
+fg_pyrrole_ring,baseline_lr,R8,L-arginine,0,-1.0189,11,18
+fg_pyrrole_ring,baseline_lr,R8,L-aspartic acid,0,-1.3724,14,18
+fg_pyrrole_ring,baseline_lr,R8,L-cysteine,0,-0.9786,10,18
+fg_pyrrole_ring,baseline_lr,R8,L-glutamic acid,0,-1.1001,13,18
+fg_pyrrole_ring,baseline_lr,R8,L-glutamine,0,-0.6969,7,18
+fg_pyrrole_ring,baseline_lr,R8,L-glycine,0,-0.9302,9,18
+fg_pyrrole_ring,baseline_lr,R8,L-histidine,0,-1.6809,16,18
+fg_pyrrole_ring,baseline_lr,R8,L-isoleucine,0,-1.0508,12,18
+fg_pyrrole_ring,baseline_lr,R8,L-leucine,0,0.1828,2,18
+fg_pyrrole_ring,baseline_lr,R8,L-lysine,0,-1.5968,15,18
+fg_pyrrole_ring,baseline_lr,R8,L-methionine,0,-2.7815,18,18
+fg_pyrrole_ring,baseline_lr,R8,L-proline,0,-0.5666,5,18
+fg_pyrrole_ring,baseline_lr,R8,L-serine,0,-0.8875,8,18
+fg_pyrrole_ring,baseline_lr,R8,L-threonine,0,-0.4745,4,18
+fg_pyrrole_ring,baseline_lr,R8,L-tryptophan,1,0.231,1,18
+fg_pyrrole_ring,baseline_lr,R8,L-tyrosine,0,-2.7117,17,18
+fg_pyrrole_ring,baseline_lr,R8,L-valine,0,-0.1074,3,18
+fg_pyrrole_ring,baseline_lr,R9,L-alanine,0,-3.0368,12,18
+fg_pyrrole_ring,baseline_lr,R9,L-arginine,0,-2.766,10,18
+fg_pyrrole_ring,baseline_lr,R9,L-aspartic acid,0,-2.2054,3,18
+fg_pyrrole_ring,baseline_lr,R9,L-cysteine,0,-1.3803,1,18
+fg_pyrrole_ring,baseline_lr,R9,L-glutamic acid,0,-3.5161,17,18
+fg_pyrrole_ring,baseline_lr,R9,L-glutamine,0,-2.6518,7,18
+fg_pyrrole_ring,baseline_lr,R9,L-glycine,0,-3.2438,16,18
+fg_pyrrole_ring,baseline_lr,R9,L-histidine,0,-3.1334,13,18
+fg_pyrrole_ring,baseline_lr,R9,L-isoleucine,0,-3.6009,18,18
+fg_pyrrole_ring,baseline_lr,R9,L-leucine,0,-2.7536,9,18
+fg_pyrrole_ring,baseline_lr,R9,L-lysine,0,-2.7112,8,18
+fg_pyrrole_ring,baseline_lr,R9,L-methionine,0,-2.2641,5,18
+fg_pyrrole_ring,baseline_lr,R9,L-proline,0,-3.2072,15,18
+fg_pyrrole_ring,baseline_lr,R9,L-serine,0,-3.1885,14,18
+fg_pyrrole_ring,baseline_lr,R9,L-threonine,0,-2.3896,6,18
+fg_pyrrole_ring,baseline_lr,R9,L-tryptophan,1,-1.4302,2,18
+fg_pyrrole_ring,baseline_lr,R9,L-tyrosine,0,-2.8067,11,18
+fg_pyrrole_ring,baseline_lr,R9,L-valine,0,-2.238,4,18
+fg_imidazole_ring,baseline_lr,R2,L-alanine,0,-2.4923,13,18
+fg_imidazole_ring,baseline_lr,R2,L-arginine,0,-1.8063,8,18
+fg_imidazole_ring,baseline_lr,R2,L-aspartic acid,0,-1.1924,5,18
+fg_imidazole_ring,baseline_lr,R2,L-cysteine,0,-2.6977,14,18
+fg_imidazole_ring,baseline_lr,R2,L-glutamic acid,0,-2.8534,15,18
+fg_imidazole_ring,baseline_lr,R2,L-glutamine,0,-3.7106,18,18
+fg_imidazole_ring,baseline_lr,R2,L-glycine,0,0.6762,3,18
+fg_imidazole_ring,baseline_lr,R2,L-histidine,1,2.2999,1,18
+fg_imidazole_ring,baseline_lr,R2,L-isoleucine,0,-1.8513,9,18
+fg_imidazole_ring,baseline_lr,R2,L-leucine,0,-1.9859,10,18
+fg_imidazole_ring,baseline_lr,R2,L-lysine,0,-2.2611,11,18
+fg_imidazole_ring,baseline_lr,R2,L-methionine,0,-1.3433,6,18
+fg_imidazole_ring,baseline_lr,R2,L-proline,0,-3.5433,17,18
+fg_imidazole_ring,baseline_lr,R2,L-serine,0,-1.7711,7,18
+fg_imidazole_ring,baseline_lr,R2,L-threonine,0,-2.2733,12,18
+fg_imidazole_ring,baseline_lr,R2,L-tryptophan,0,1.5106,2,18
+fg_imidazole_ring,baseline_lr,R2,L-tyrosine,0,-0.4511,4,18
+fg_imidazole_ring,baseline_lr,R2,L-valine,0,-2.9529,16,18
+fg_imidazole_ring,baseline_lr,R3,L-alanine,0,-1.8837,15,18
+fg_imidazole_ring,baseline_lr,R3,L-arginine,0,0.2653,3,18
+fg_imidazole_ring,baseline_lr,R3,L-aspartic acid,0,-0.6906,7,18
+fg_imidazole_ring,baseline_lr,R3,L-cysteine,0,-3.3865,17,18
+fg_imidazole_ring,baseline_lr,R3,L-glutamic acid,0,-1.2094,11,18
+fg_imidazole_ring,baseline_lr,R3,L-glutamine,0,-3.6294,18,18
+fg_imidazole_ring,baseline_lr,R3,L-glycine,0,0.1437,4,18
+fg_imidazole_ring,baseline_lr,R3,L-histidine,1,1.1884,2,18
+fg_imidazole_ring,baseline_lr,R3,L-isoleucine,0,-1.0685,10,18
+fg_imidazole_ring,baseline_lr,R3,L-leucine,0,-0.3555,5,18
+fg_imidazole_ring,baseline_lr,R3,L-lysine,0,-1.0344,9,18
+fg_imidazole_ring,baseline_lr,R3,L-methionine,0,-1.6039,13,18
+fg_imidazole_ring,baseline_lr,R3,L-proline,0,-1.9825,16,18
+fg_imidazole_ring,baseline_lr,R3,L-serine,0,-1.6408,14,18
+fg_imidazole_ring,baseline_lr,R3,L-threonine,0,-0.7387,8,18
+fg_imidazole_ring,baseline_lr,R3,L-tryptophan,0,1.6982,1,18
+fg_imidazole_ring,baseline_lr,R3,L-tyrosine,0,-0.6099,6,18
+fg_imidazole_ring,baseline_lr,R3,L-valine,0,-1.5776,12,18
+fg_imidazole_ring,baseline_lr,R4,L-alanine,0,-0.0345,7,18
+fg_imidazole_ring,baseline_lr,R4,L-arginine,0,-2.0814,18,18
+fg_imidazole_ring,baseline_lr,R4,L-aspartic acid,0,1.7771,2,18
+fg_imidazole_ring,baseline_lr,R4,L-cysteine,0,-0.1743,9,18
+fg_imidazole_ring,baseline_lr,R4,L-glutamic acid,0,0.0966,6,18
+fg_imidazole_ring,baseline_lr,R4,L-glutamine,0,-0.2571,10,18
+fg_imidazole_ring,baseline_lr,R4,L-glycine,0,0.2009,5,18
+fg_imidazole_ring,baseline_lr,R4,L-histidine,1,2.3745,1,18
+fg_imidazole_ring,baseline_lr,R4,L-isoleucine,0,-0.9401,14,18
+fg_imidazole_ring,baseline_lr,R4,L-leucine,0,0.2952,4,18
+fg_imidazole_ring,baseline_lr,R4,L-lysine,0,-0.0559,8,18
+fg_imidazole_ring,baseline_lr,R4,L-methionine,0,-0.6145,12,18
+fg_imidazole_ring,baseline_lr,R4,L-proline,0,-1.6305,16,18
+fg_imidazole_ring,baseline_lr,R4,L-serine,0,-1.3631,15,18
+fg_imidazole_ring,baseline_lr,R4,L-threonine,0,-0.9357,13,18
+fg_imidazole_ring,baseline_lr,R4,L-tryptophan,0,1.5415,3,18
+fg_imidazole_ring,baseline_lr,R4,L-tyrosine,0,-0.5908,11,18
+fg_imidazole_ring,baseline_lr,R4,L-valine,0,-1.7426,17,18
+fg_imidazole_ring,baseline_lr,R5,L-alanine,0,-0.9488,3,18
+fg_imidazole_ring,baseline_lr,R5,L-arginine,0,-5.1414,18,18
+fg_imidazole_ring,baseline_lr,R5,L-aspartic acid,0,-1.2179,4,18
+fg_imidazole_ring,baseline_lr,R5,L-cysteine,0,-1.5713,7,18
+fg_imidazole_ring,baseline_lr,R5,L-glutamic acid,0,-1.5503,6,18
+fg_imidazole_ring,baseline_lr,R5,L-glutamine,0,-2.2013,11,18
+fg_imidazole_ring,baseline_lr,R5,L-glycine,0,-1.2338,5,18
+fg_imidazole_ring,baseline_lr,R5,L-histidine,1,0.1927,1,18
+fg_imidazole_ring,baseline_lr,R5,L-isoleucine,0,-3.6124,15,18
+fg_imidazole_ring,baseline_lr,R5,L-leucine,0,-1.6405,8,18
+fg_imidazole_ring,baseline_lr,R5,L-lysine,0,-1.7987,9,18
+fg_imidazole_ring,baseline_lr,R5,L-methionine,0,-1.8562,10,18
+fg_imidazole_ring,baseline_lr,R5,L-proline,0,-2.9218,13,18
+fg_imidazole_ring,baseline_lr,R5,L-serine,0,-4.1795,16,18
+fg_imidazole_ring,baseline_lr,R5,L-threonine,0,-3.1,14,18
+fg_imidazole_ring,baseline_lr,R5,L-tryptophan,0,-0.0671,2,18
+fg_imidazole_ring,baseline_lr,R5,L-tyrosine,0,-2.8803,12,18
+fg_imidazole_ring,baseline_lr,R5,L-valine,0,-4.3466,17,18
+fg_imidazole_ring,baseline_lr,R6,L-alanine,0,-0.7501,3,18
+fg_imidazole_ring,baseline_lr,R6,L-arginine,0,-4.5327,18,18
+fg_imidazole_ring,baseline_lr,R6,L-aspartic acid,0,-1.222,5,18
+fg_imidazole_ring,baseline_lr,R6,L-cysteine,0,-1.7742,7,18
+fg_imidazole_ring,baseline_lr,R6,L-glutamic acid,0,-1.9296,10,18
+fg_imidazole_ring,baseline_lr,R6,L-glutamine,0,-1.8036,8,18
+fg_imidazole_ring,baseline_lr,R6,L-glycine,0,-1.1671,4,18
+fg_imidazole_ring,baseline_lr,R6,L-histidine,1,0.115,1,18
+fg_imidazole_ring,baseline_lr,R6,L-isoleucine,0,-2.8588,14,18
+fg_imidazole_ring,baseline_lr,R6,L-leucine,0,-2.4694,12,18
+fg_imidazole_ring,baseline_lr,R6,L-lysine,0,-1.7501,6,18
+fg_imidazole_ring,baseline_lr,R6,L-methionine,0,-1.8082,9,18
+fg_imidazole_ring,baseline_lr,R6,L-proline,0,-2.4435,11,18
+fg_imidazole_ring,baseline_lr,R6,L-serine,0,-3.5773,17,18
+fg_imidazole_ring,baseline_lr,R6,L-threonine,0,-2.6141,13,18
+fg_imidazole_ring,baseline_lr,R6,L-tryptophan,0,-0.1052,2,18
+fg_imidazole_ring,baseline_lr,R6,L-tyrosine,0,-2.9744,15,18
+fg_imidazole_ring,baseline_lr,R6,L-valine,0,-3.5209,16,18
+fg_imidazole_ring,baseline_lr,R8,L-alanine,0,-0.569,11,18
+fg_imidazole_ring,baseline_lr,R8,L-arginine,0,0.2532,5,18
+fg_imidazole_ring,baseline_lr,R8,L-aspartic acid,0,0.6828,2,18
+fg_imidazole_ring,baseline_lr,R8,L-cysteine,0,-2.4731,18,18
+fg_imidazole_ring,baseline_lr,R8,L-glutamic acid,0,0.623,3,18
+fg_imidazole_ring,baseline_lr,R8,L-glutamine,0,-0.1189,9,18
+fg_imidazole_ring,baseline_lr,R8,L-glycine,0,0.1779,6,18
+fg_imidazole_ring,baseline_lr,R8,L-histidine,1,-0.2229,10,18
+fg_imidazole_ring,baseline_lr,R8,L-isoleucine,0,-1.8503,16,18
+fg_imidazole_ring,baseline_lr,R8,L-leucine,0,0.1238,7,18
+fg_imidazole_ring,baseline_lr,R8,L-lysine,0,-2.1607,17,18
+fg_imidazole_ring,baseline_lr,R8,L-methionine,0,-0.7514,13,18
+fg_imidazole_ring,baseline_lr,R8,L-proline,0,-1.1549,15,18
+fg_imidazole_ring,baseline_lr,R8,L-serine,0,-0.0826,8,18
+fg_imidazole_ring,baseline_lr,R8,L-threonine,0,0.2671,4,18
+fg_imidazole_ring,baseline_lr,R8,L-tryptophan,0,0.8532,1,18
+fg_imidazole_ring,baseline_lr,R8,L-tyrosine,0,-0.575,12,18
+fg_imidazole_ring,baseline_lr,R8,L-valine,0,-1.0005,14,18
+fg_imidazole_ring,baseline_lr,R9,L-alanine,0,-1.9042,14,18
+fg_imidazole_ring,baseline_lr,R9,L-arginine,0,-2.3672,17,18
+fg_imidazole_ring,baseline_lr,R9,L-aspartic acid,0,-1.5602,13,18
+fg_imidazole_ring,baseline_lr,R9,L-cysteine,0,-1.1723,6,18
+fg_imidazole_ring,baseline_lr,R9,L-glutamic acid,0,-2.474,18,18
+fg_imidazole_ring,baseline_lr,R9,L-glutamine,0,-0.8327,4,18
+fg_imidazole_ring,baseline_lr,R9,L-glycine,0,-1.2994,10,18
+fg_imidazole_ring,baseline_lr,R9,L-histidine,1,-0.6651,3,18
+fg_imidazole_ring,baseline_lr,R9,L-isoleucine,0,-2.2487,16,18
+fg_imidazole_ring,baseline_lr,R9,L-leucine,0,-1.492,11,18
+fg_imidazole_ring,baseline_lr,R9,L-lysine,0,-0.6477,2,18
+fg_imidazole_ring,baseline_lr,R9,L-methionine,0,-1.2253,8,18
+fg_imidazole_ring,baseline_lr,R9,L-proline,0,-0.5027,1,18
+fg_imidazole_ring,baseline_lr,R9,L-serine,0,-2.0472,15,18
+fg_imidazole_ring,baseline_lr,R9,L-threonine,0,-1.1926,7,18
+fg_imidazole_ring,baseline_lr,R9,L-tryptophan,0,-1.1119,5,18
+fg_imidazole_ring,baseline_lr,R9,L-tyrosine,0,-1.5204,12,18
+fg_imidazole_ring,baseline_lr,R9,L-valine,0,-1.2703,9,18

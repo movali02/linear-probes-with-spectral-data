@@ -1,0 +1,78 @@
+{
+ "task": "T4",
+ "variant": "matched",
+ "schema": "v1.2-matched",
+ "args": {
+  "task": [
+   "T4"
+  ],
+  "variant": "matched",
+  "config": "configs/string_v1.yaml",
+  "data_dir": null,
+  "out_dir": "reports/baselines2b/matched",
+  "features": "F1,F1pos,F2,F3",
+  "models": null,
+  "no_preps": false,
+  "control_regex": null,
+  "labels": null,
+  "n_boot": 1000,
+  "n_perm": null,
+  "perm_budget_min": 120.0,
+  "perm_for": "primary,best",
+  "n_jobs": 32,
+  "seed": 42,
+  "qm9s_frac": 0.2,
+  "min_pos": null,
+  "lr_C": null,
+  "knn_k": null,
+  "old_manifest": null,
+  "old_predictions": null,
+  "meta_csv": null,
+  "quick": false,
+  "no_figures": false
+ },
+ "n_perm": 100,
+ "n_boot": 1000,
+ "qm9s_frac": 0.2,
+ "default_hp": {
+  "lr": {
+   "C": 0.1
+  },
+  "pca_lr": {
+   "C": 0.1
+  },
+  "plsda": {
+   "n": 10
+  },
+  "knn": {
+   "k": 5
+  },
+  "hgb": {},
+  "majority": {},
+  "ncm": {}
+ },
+ "inputs": {
+  "data/processed_matched/sers_records.jsonl": {
+   "sha256": "2e07ccbcadd6e2358603d80112c905f1be5fa920edde05dd3654cf644dae5bce",
+   "bytes": 1133829
+  },
+  "data/processed_matched/qm9s_records.jsonl": {
+   "sha256": "c3e8e88433bd93aa853dd65979b4371354da895fdcbdde65853cbb8073e0f470",
+   "bytes": 128182350
+  },
+  "data/processed_matched/sers_spectra.npz": {
+   "sha256": "8de764e7186f9fd9a83d096b06180deb68f22a6d1962f0cab8ad552ad6ca3fce",
+   "bytes": 8186649
+  },
+  "data/processed_matched/qm9s_spectra.npz": {
+   "sha256": "7681e7c8c468f283f1d421f755b56f58f0f5acd6c8fe2f09f3d723174f2a0a38",
+   "bytes": 119113200
+  }
+ },
+ "n_rows": 8400,
+ "n_predictions": 184320,
+ "seconds": 731.9,
+ "python": "3.10.14",
+ "sklearn": "1.5.2",
+ "numpy": "2.2.6"
+}

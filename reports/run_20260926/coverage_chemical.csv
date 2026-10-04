@@ -1,0 +1,26 @@
+analyte,n_heavy,elements,in_qm9_domain,exact_in_qm9,nn_tanimoto,nn_smiles,n_qm9_tanimoto_ge_0.5,why_out
+L-alanine,6,CNO,1,0,0.474,COC(=O)C(C)N,0,
+L-arginine,12,CNO,0,0,0.353,NC(=N)C(=O)NCCO,0,12 heavy atoms > 9
+L-asparagine,9,CNO,1,0,0.65,NC(CC(N)=O)C(N)=O,1,
+L-aspartic acid,9,CNO,1,0,0.391,NC(CC(N)=O)C(N)=O,0,
+L-cysteine,7,CNOS,0,0,0.333,NC(CC(N)=O)C(N)=O,0,contains S
+L-glutamic acid,10,CNO,0,0,0.31,NC(=O)CCC(O)C#C,0,10 heavy atoms > 9
+L-glutamine,10,CNO,0,0,0.5,CC(C)CCC(N)=O,3,10 heavy atoms > 9
+L-glycine,5,CNO,1,0,0.438,NCC(=O)NC(=O)CN,0,
+L-histidine,11,CNO,0,0,0.529,NC(=O)CC1=CNC=N1,3,11 heavy atoms > 9
+L-isoleucine,9,CNO,1,0,0.48,CCC(C)C(C)C(N)=O,0,
+L-leucine,9,CNO,1,0,0.458,CC(C)CC(C)C(N)=O,0,
+L-lysine,10,CNO,0,0,0.286,NC(CC(N)=O)C(N)=O,0,10 heavy atoms > 9
+L-methionine,9,CNOS,0,0,0.312,CCCC(N)C(=O)OC,0,contains S
+L-phenylalanine,12,CNO,0,0,0.385,OCC1=CC=CC=C1,0,12 heavy atoms > 9
+L-proline,8,CNO,1,0,0.556,O=C(C#N)C1CCCN1,1,
+L-serine,7,CNO,1,0,0.478,COC(=O)C(N)CO,0,
+L-threonine,8,CNO,1,0,0.522,COC(=O)C(N)C(C)O,1,
+L-tryptophan,15,CNO,0,0,0.263,NC(=O)C1=CC=CC=C1,0,15 heavy atoms > 9
+L-tyrosine,13,CNO,0,0,0.393,OCC1=CC=C(O)C=C1,0,13 heavy atoms > 9
+L-valine,8,CNO,1,0,0.381,CC(C)C(C)C(N)=O,0,
+indole,9,CN,1,1,1.0,N1C=CC2=C1C=CC=C2,1,
+indole-d6,9,CN,0,1,1.0,N1C=CC2=C1C=CC=C2,1,isotopically labelled
+oxindole,10,CNO,0,0,0.433,O=C1CC2=C(N1)C=CN2,0,10 heavy atoms > 9
+indole-3-acetic acid,13,CNO,0,0,0.294,OCC1=CC=CC=C1O,0,13 heavy atoms > 9
+hypoxanthine,10,CNO,0,0,0.462,NC1=C(N)C(=O)NC=N1,0,10 heavy atoms > 9

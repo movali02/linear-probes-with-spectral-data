@@ -1,0 +1,35 @@
+{
+ "mode": "reference_norm",
+ "catalogue": [
+  759.0,
+  829.0,
+  883.0
+ ],
+ "n_refs": 260,
+ "generic_cb": {
+  "source": "in-run",
+  "n": 259,
+  "height": "p90",
+  "bands": [
+   [
+    759.0,
+    0.166
+   ],
+   [
+    829.0,
+    1.0
+   ],
+   [
+    883.0,
+    0.372
+   ]
+  ]
+ },
+ "n_cells_on_generic": 0,
+ "axis_shift_cm": {
+  "n": 899,
+  "median": 1.0,
+  "min": 0.0,
+  "max": 7.0
+ }
+}

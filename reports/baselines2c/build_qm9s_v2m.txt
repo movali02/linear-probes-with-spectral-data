@@ -1,0 +1,2 @@
+[variant] v2m: schema v1.2-v2m -> data/processed_v2m
+[qm9s] {'rows': 129817, 'no_smiles': 0, 'empty': 0} -> 129817 records -> data/processed_v2m/qm9s_records.jsonl

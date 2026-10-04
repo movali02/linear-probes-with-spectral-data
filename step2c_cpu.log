@@ -1,0 +1,208 @@
+
+===== 1. ORCA outputs -> sticks (one imaginary mode weaker than 50 cm-1 is accepted and flagged) =====
+9 molecules -> data/dft_sticks/calibration_gas/{activity,int785,gapiso785}/  (+ modes/, smiles_map.json)
+accept phenylalanine: one soft imaginary mode (-7.9 cm-1), flagged
+20 molecules -> data/dft_sticks/neutral_gas/{activity,int785,gapiso785}/  (+ modes/, smiles_map.json)
+skip _old: unknown molecule
+accept asparagine: one soft imaginary mode (-13.5 cm-1), flagged
+20 molecules -> data/dft_sticks/neutral_water/{activity,int785,gapiso785}/  (+ modes/, smiles_map.json)
+20 molecules -> data/dft_sticks/zwitterion_water/{activity,int785,gapiso785}/  (+ modes/, smiles_map.json)
+frequency scale (your DFT -> QM9S): 0.967  median |error| 2.0 cm-1 over 58 matched strong bands
+intensity convention activity : Spearman rho with QM9S = 0.956 over 88 bands
+intensity convention int785   : Spearman rho with QM9S = 0.760 over 90 bands
+
+Per molecule at the chosen scale (DFT activity peaks vs QM9S peaks):
+  benzene            DFT [976, 1577]
+                     QM9S [979, 1578]
+  toluene            DFT [771, 982, 1015, 1186, 1366, 1441, 1568, 1587]
+                     QM9S [513, 772, 986, 1016, 1188, 1371, 1441, 1568, 1589]
+  phenol             DFT [799, 978, 1007, 1149, 1231, 1579, 1590]
+                     QM9S [520, 801, 982, 1009, 1152, 1236, 1590]
+  pyrrole            DFT [1131, 1365, 1440]
+                     QM9S [1131, 1367, 1447]
+  imidazole          DFT [1106, 1121, 1237, 1315, 1378, 1452]
+                     QM9S [1117, 1243, 1316, 1378, 1447]
+  4-methylimidazole  DFT [641, 1088, 1200, 1242, 1292, 1369, 1404, 1428, 1443, 1471, 1545]
+                     QM9S [642, 1090, 1204, 1241, 1294, 1373, 1400, 1429, 1444, 1467, 1545]
+  indole             DFT [745, 996, 1251, 1316, 1389, 1493, 1599]
+                     QM9S [748, 998, 1051, 1252, 1314, 1392, 1495, 1598]
+  ethanol            DFT [866, 997, 1057, 1219, 1256, 1397, 1432, 1450, 1475]
+                     QM9S [866, 995, 1061, 1222, 1257, 1403, 1432, 1450, 1477]
+  acetamide          DFT [812, 948, 1079, 1291, 1424, 1440, 1702]
+                     QM9S [506, 529, 810, 953, 1084, 1295, 1425, 1442, 1569, 1705]
+
+===== 2. strings (SERS + QM9S) for the new variants; a finished one is skipped (REBUILD=1 forces) =====
+
+===== 3. ladders and classical curves =====
+[ladder] variant v2m (schema v1.2-v2m); DFT frequency scale 0.967 from calibration; stick convention for R1-R4: activity
+[ladder] R1: 9 molecules from calibration_gas/activity
+[ladder] R2: 20 molecules from neutral_gas/activity
+[ladder] R3: 20 molecules from neutral_water/activity
+[ladder] R4: 20 molecules from zwitterion_water/activity
+[ladder] R5: 20 molecules from zwitterion_water/int785
+[ladder] R6: 20 molecules from zwitterion_water/gapiso785
+[ladder] QM9S probe set: 13777 molecules (11003 train, 2774 test = R0); topped up: {'primary_amine': 15, 'guanidine': 221, 'fluoro': 99, 'benzene_ring': 248, 'pyrrole_ring': 52, 'imidazole_ring': 151, 'indole': 0}
+[ladder]   R1       9 strings   calibration molecules, your DFT (gas)
+[ladder]   R1q      9 strings   QM9S spectra of the calibration molecules
+[ladder]   R2      20 strings   amino acids: neutral, gas
+[ladder]   R3      20 strings   + water (implicit)
+[ladder]   R4      20 strings   + pH 7 protonation
+[ladder]   R5      20 strings   + 785 nm intensities
+[ladder]   R6      20 strings   + gap field along z
+[ladder]   R8      29 strings   SERS standards
+[ladder]   R9     590 strings   SERS cells
+[ladder] prompt length (estimate, 1 token per digit): median 259, max 402
+
+[ladder] what the strings look like on each rung (no model):
+  rung           n  peaks median int  int<0.2 median fwhm peaks<900 strongest<900
+  R0 (QM9S)   3000     14       0.26      36%          18       28%            4%
+  R1             9      9       0.29      35%          19       24%            0%
+  R1q            9      8       0.35      26%          19       19%           11%
+  R2            20     18       0.28      30%          18       32%           10%
+  R3            20     16       0.26      37%          18       31%            5%
+  R4            20     17       0.31      27%          18       33%           15%
+  R5            20     17       0.34      23%          18       34%           60%
+  R6            20     16       0.26      35%          18       35%           75%
+  R8            29     11       0.43      22%          17       24%           41%
+  R9           590     15       0.51       8%          18       28%           66%
+
+[ladder] spectral similarity of each simulated rung to SERS (cosine of the re-drawn strings):
+  rung  vs  mean cos  own standard is the best match  in top 3
+  R2    R8     0.512                             10%       20%
+  R2    R9     0.580                             15%       20%
+  R3    R8     0.514                             10%       15%
+  R3    R9     0.557                              5%       10%
+  R4    R8     0.549                              5%       10%
+  R4    R9     0.601                              0%       10%
+  R5    R8     0.495                              5%       20%
+  R5    R9     0.565                              0%        5%
+  R6    R8     0.447                             10%       25%
+  R6    R9     0.515                              0%        5%
+
+-> data/ladder/v2m/qm9s_records.jsonl, data/ladder/v2m/ladder_records.jsonl, reports/ladder/v2m/similarity*.csv, reports/ladder/v2m/string_stats.csv
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 20 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string, F1) done in 7 s
+# Shift ladder: baseline (v2m)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.81, 0.99] | 0.74 [0.61, 0.90] | 0.80 [0.65, 0.94] | 0.79 [0.66, 0.93] | 0.78 [0.66, 0.93] | 0.59 [0.47, 0.69] | 0.67 [0.45, 0.77] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.81, 0.99] | 0.74 [0.63, 0.89] | 0.80 [0.63, 0.93] | 0.79 [0.67, 0.93] | 0.78 [0.67, 0.92] | 0.59 [0.46, 0.68] | 0.67 [0.42, 0.77] |
+## Labels with one positive analyte, as that analyte's rank
+| label | analyte | method | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  R1_agreement_baseline_lr: 0.865
+control  R1_n_molecules: 9
+
+-> reports/ladder/v2m/baseline/degradation.png, degradation.csv, ladder.md (19 s)
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 20 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string, F1pos) done in 6 s
+# Shift ladder: baseline-F1pos (v2m)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1pos) |  | 0.88 | 0.89 [0.83, 0.99] | 0.80 [0.67, 0.88] | 0.60 [0.47, 0.73] | 0.54 [0.37, 0.71] | 0.56 [0.42, 0.67] | 0.49 [0.31, 0.64] | 0.65 [0.49, 0.74] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1pos) |  | 0.88 | 0.89 [0.82, 0.99] | 0.80 [0.66, 0.89] | 0.60 [0.47, 0.72] | 0.54 [0.36, 0.73] | 0.56 [0.42, 0.67] | 0.49 [0.30, 0.64] | 0.64 [0.48, 0.73] |
+## Labels with one positive analyte, as that analyte's rank
+| label | analyte | method | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  R1_agreement_baseline_lr: 0.89
+control  R1_n_molecules: 9
+
+-> reports/ladder/v2m/baseline-F1pos/degradation.png, degradation.csv, ladder.md (18 s)
+[ladder] variant v2mf (schema v1.2-v2mf); DFT frequency scale 0.967 from calibration; stick convention for R1-R4: activity
+[ladder] simulated frequencies x 1.0134 (QM9S and DFT); DFT total factor 0.9800
+[ladder] R1: 9 molecules from calibration_gas/activity
+[ladder] R2: 20 molecules from neutral_gas/activity
+[ladder] R3: 20 molecules from neutral_water/activity
+[ladder] R4: 20 molecules from zwitterion_water/activity
+[ladder] R5: 20 molecules from zwitterion_water/int785
+[ladder] R6: 20 molecules from zwitterion_water/gapiso785
+[ladder] QM9S probe set: 13777 molecules (11003 train, 2774 test = R0); topped up: {'primary_amine': 15, 'guanidine': 221, 'fluoro': 99, 'benzene_ring': 248, 'pyrrole_ring': 52, 'imidazole_ring': 151, 'indole': 0}
+[ladder]   R1       9 strings   calibration molecules, your DFT (gas)
+[ladder]   R1q      9 strings   QM9S spectra of the calibration molecules
+[ladder]   R2      20 strings   amino acids: neutral, gas
+[ladder]   R3      20 strings   + water (implicit)
+[ladder]   R4      20 strings   + pH 7 protonation
+[ladder]   R5      20 strings   + 785 nm intensities
+[ladder]   R6      20 strings   + gap field along z
+[ladder]   R8      29 strings   SERS standards
+[ladder]   R9     590 strings   SERS cells
+[ladder] prompt length (estimate, 1 token per digit): median 269, max 402
+
+[ladder] what the strings look like on each rung (no model):
+  rung           n  peaks median int  int<0.2 median fwhm peaks<900 strongest<900
+  R0 (QM9S)   3000     14       0.26      37%          19       27%            4%
+  R1             9      9       0.29      34%          19       22%            0%
+  R1q            9      8       0.35      25%          19       20%           11%
+  R2            20     18       0.27      31%          18       30%           10%
+  R3            20     16       0.25      37%          18       30%            5%
+  R4            20     17       0.30      27%          18       32%           15%
+  R5            20     17       0.34      23%          18       33%           60%
+  R6            20     16       0.26      35%          18       34%           75%
+  R8            29     11       0.43      22%          17       24%           41%
+  R9           590     15       0.51       8%          18       28%           66%
+
+[ladder] spectral similarity of each simulated rung to SERS (cosine of the re-drawn strings):
+  rung  vs  mean cos  own standard is the best match  in top 3
+  R2    R8     0.490                             15%       35%
+  R2    R9     0.573                             10%       10%
+  R3    R8     0.527                             20%       40%
+  R3    R9     0.566                             15%       35%
+  R4    R8     0.577                             15%       30%
+  R4    R9     0.633                             10%       20%
+  R5    R8     0.522                             10%       20%
+  R5    R9     0.594                             10%       15%
+  R6    R8     0.476                             10%       20%
+  R6    R9     0.542                             10%       15%
+
+-> data/ladder/v2mf/qm9s_records.jsonl, data/ladder/v2mf/ladder_records.jsonl, reports/ladder/v2mf/similarity*.csv, reports/ladder/v2mf/string_stats.csv
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 20 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string, F1) done in 6 s
+# Shift ladder: baseline (v2mf)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.82, 0.98] | 0.81 [0.69, 0.93] | 0.79 [0.64, 0.92] | 0.75 [0.62, 0.88] | 0.73 [0.60, 0.88] | 0.68 [0.55, 0.83] | 0.65 [0.36, 0.85] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.82, 0.98] | 0.81 [0.71, 0.93] | 0.79 [0.62, 0.92] | 0.75 [0.63, 0.89] | 0.73 [0.61, 0.88] | 0.68 [0.55, 0.83] | 0.65 [0.37, 0.86] |
+## Labels with one positive analyte, as that analyte's rank
+| label | analyte | method | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  R1_agreement_baseline_lr: 0.927
+control  R1_n_molecules: 9
+
+-> reports/ladder/v2mf/baseline/degradation.png, degradation.csv, ladder.md (18 s)
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 20 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string, F1pos) done in 7 s
+# Shift ladder: baseline-F1pos (v2mf)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1pos) |  | 0.88 | 0.85 [0.78, 0.96] | 0.82 [0.72, 0.87] | 0.54 [0.44, 0.67] | 0.49 [0.35, 0.64] | 0.45 [0.32, 0.60] | 0.61 [0.38, 0.79] | 0.60 [0.38, 0.81] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1pos) |  | 0.88 | 0.85 [0.78, 0.96] | 0.82 [0.72, 0.87] | 0.54 [0.43, 0.67] | 0.49 [0.33, 0.66] | 0.45 [0.32, 0.59] | 0.61 [0.41, 0.79] | 0.61 [0.37, 0.81] |
+## Labels with one positive analyte, as that analyte's rank
+| label | analyte | method | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  R1_agreement_baseline_lr: 0.897
+control  R1_n_molecules: 9
+
+-> reports/ladder/v2mf/baseline-F1pos/degradation.png, degradation.csv, ladder.md (19 s)
+
+To send back:
+  zip -r step2c_results.zip reports/ladder reports/baselines2c $(find data/activations -name meta.json) -x '*.npy'

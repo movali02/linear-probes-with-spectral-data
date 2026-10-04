@@ -1,0 +1,113 @@
+nohup: ignoring input
+[16:01:58] asparagine: validated | formula=C4H8N2O3 charge=+0 electrons=70 rings=0 atoms=17 ff=MMFF94(eps=4r) conformers=40
+[16:01:58] asparagine: launching ORCA on 20 cores (17 atoms) ...
+[16:13:43] asparagine: TERMINATED NORMALLY after 11.7 min
+[16:13:43] asparagine: check FAIL | 1 imaginary mode(s)
+[16:13:43] ================= SUMMARY =================
+[16:13:43]   asparagine             FAIL       1 imaginary mode(s)
+[16:13:43] summary -> /local/scratch/mv487/dft/neutral_water/summary.csv
+[16:13:43] Frequencies are left UNSCALED here; dft_to_sticks.py writes unscaled sticks and the string pipeline applies one scale factor (set it from the calibration set).
+[16:13:43] asparagine          -21.1 cm-1   moving: O7, O8, H(O8), H(N0)
+[16:13:43] asparagine: level 1 (TightOpt NumFreq), displaced 0.1 A along -21.1 cm-1; previous run -> attempt1_imag/
+[16:28:25] asparagine: level 1 FAIL after 15 min | 1 imaginary mode(s)
+[16:28:25] asparagine: level 2 (TightOpt NumFreq DefGrid3), displaced 0.1 A along -17.8 cm-1; previous run -> attempt2_imag/
+[16:53:50] asparagine: level 2 FAIL after 25 min | 1 imaginary mode(s)
+[16:53:50] ================= FIX SUMMARY =================
+[16:53:50]   asparagine       FAIL           level 2  1 imaginary mode(s)
+[16:53:50] -> /local/scratch/mv487/dft/neutral_water/fix_summary.csv
+[16:53:50] Then: python dft/dft_check.py --root /local/scratch/mv487/dft/neutral_water
+skip _old: no smiles.txt and not in set neutral_water
+PASS alanine                33 Raman modes, water, charge +0
+PASS arginine               72 Raman modes, water, charge +0
+FAIL asparagine             1 imaginary mode(s)
+PASS aspartic_acid          42 Raman modes, water, charge +0
+PASS cysteine               36 Raman modes, water, charge +0
+PASS glutamic_acid          51 Raman modes, water, charge +0
+PASS glutamine              54 Raman modes, water, charge +0
+PASS glycine                24 Raman modes, water, charge +0
+PASS histidine              54 Raman modes, water, charge +0
+PASS isoleucine             60 Raman modes, water, charge +0
+PASS leucine                59 Raman modes, water, charge +0
+PASS lysine                 66 Raman modes, water, charge +0
+PASS methionine             54 Raman modes, water, charge +0
+PASS phenylalanine          63 Raman modes, water, charge +0
+PASS proline                45 Raman modes, water, charge +0
+PASS serine                 36 Raman modes, water, charge +0
+PASS threonine              45 Raman modes, water, charge +0
+PASS tryptophan             75 Raman modes, water, charge +0
+PASS tyrosine               66 Raman modes, water, charge +0
+PASS valine                 51 Raman modes, water, charge +0
+
+19/20 PASS -> /local/scratch/mv487/dft/neutral_water/check.csv
+[16:53:51] glutamic_acid: validated | formula=C5H9NO4 charge=+0 electrons=78 rings=0 atoms=19 ff=MMFF94 conformers=50
+[16:53:51] glutamine: validated | formula=C5H10N2O3 charge=+0 electrons=78 rings=0 atoms=20 ff=MMFF94 conformers=50
+[16:53:52] leucine: validated | formula=C6H13NO2 charge=+0 electrons=72 rings=0 atoms=22 ff=MMFF94 conformers=40
+[16:53:52] phenylalanine: validated | formula=C9H11NO2 charge=+0 electrons=88 rings=1 atoms=23 ff=MMFF94 conformers=40
+[16:53:52] tryptophan: validated | formula=C11H12N2O2 charge=+0 electrons=108 rings=2 atoms=27 ff=MMFF94 conformers=40
+[16:53:52] glutamic_acid: already finished, skipping ORCA
+[16:53:52] glutamic_acid: check FAIL | 1 imaginary mode(s)
+[16:53:52] glutamine: already finished, skipping ORCA
+[16:53:52] glutamine: check FAIL | 1 imaginary mode(s)
+[16:53:52] leucine: already finished, skipping ORCA
+[16:53:52] leucine: check FAIL | 1 imaginary mode(s)
+[16:53:52] phenylalanine: already finished, skipping ORCA
+[16:53:52] phenylalanine: check FAIL | 1 imaginary mode(s)
+[16:53:52] tryptophan: already finished, skipping ORCA
+[16:53:52] tryptophan: check FAIL | 1 imaginary mode(s)
+[16:53:52] ================= SUMMARY =================
+[16:53:52]   glutamic_acid          FAIL       1 imaginary mode(s)
+[16:53:52]   glutamine              FAIL       1 imaginary mode(s)
+[16:53:52]   leucine                FAIL       1 imaginary mode(s)
+[16:53:52]   phenylalanine          FAIL       1 imaginary mode(s)
+[16:53:52]   tryptophan             FAIL       1 imaginary mode(s)
+[16:53:52] summary -> /local/scratch/mv487/dft/neutral_gas/summary.csv
+[16:53:52] Frequencies are left UNSCALED here; dft_to_sticks.py writes unscaled sticks and the string pipeline applies one scale factor (set it from the calibration set).
+[16:53:53] glutamic_acid       -18.8 cm-1   moving: H(N0) x2, H(O9), O8
+[16:53:53] glutamine           -33.4 cm-1   moving: O9, H(O9), O2, O8
+[16:53:53] leucine             -18.2 cm-1   moving: O7, O8, H(O8), H(C0)
+[16:53:53] phenylalanine       -32.3 cm-1   moving: H(O11), O11, O10, H(N0)
+[16:53:53] tryptophan           -9.2 cm-1   moving: H(O14), O14, H(N0), O13
+[16:53:53] glutamic_acid: level 1 (TightOpt NumFreq), displaced 0.1 A along -18.8 cm-1; previous run -> attempt1_imag/
+[17:11:56] glutamic_acid: level 1 PASS after 18 min | 51 Raman modes, gas, charge +0
+[17:11:56] glutamine: level 1 (TightOpt NumFreq), displaced 0.1 A along -33.4 cm-1; previous run -> attempt1_imag/
+[17:31:05] glutamine: level 1 PASS after 19 min | 54 Raman modes, gas, charge +0
+[17:31:05] leucine: level 1 (TightOpt NumFreq), displaced 0.1 A along -18.2 cm-1; previous run -> attempt1_imag/
+[17:51:57] leucine: level 1 FAIL after 21 min | 1 imaginary mode(s)
+[17:51:57] leucine: level 2 (TightOpt NumFreq DefGrid3), displaced 0.1 A along -12.3 cm-1; previous run -> attempt2_imag/
+[18:30:26] leucine: level 2 PASS after 38 min | 60 Raman modes, gas, charge +0
+[18:30:26] phenylalanine: level 1 (TightOpt NumFreq), displaced 0.1 A along -32.3 cm-1; previous run -> attempt1_imag/
+[19:04:01] phenylalanine: level 1 FAIL after 34 min | 1 imaginary mode(s)
+[19:04:01] phenylalanine: level 2 (TightOpt NumFreq DefGrid3), displaced 0.1 A along -32.6 cm-1; previous run -> attempt2_imag/
+[20:06:24] phenylalanine: level 2 FAIL after 62 min | 1 imaginary mode(s)
+[20:06:25] tryptophan: level 1 (TightOpt NumFreq), displaced 0.1 A along -9.2 cm-1; previous run -> attempt1_imag/
+[21:07:43] tryptophan: level 1 PASS after 61 min | 75 Raman modes, gas, charge +0
+[21:07:43] ================= FIX SUMMARY =================
+[21:07:43]   glutamic_acid    PASS           level 1  51 Raman modes, gas, charge +0
+[21:07:43]   glutamine        PASS           level 1  54 Raman modes, gas, charge +0
+[21:07:43]   leucine          PASS           level 2  60 Raman modes, gas, charge +0
+[21:07:43]   phenylalanine    FAIL           level 2  1 imaginary mode(s)
+[21:07:43]   tryptophan       PASS           level 1  75 Raman modes, gas, charge +0
+[21:07:43] -> /local/scratch/mv487/dft/neutral_gas/fix_summary.csv
+[21:07:43] Then: python dft/dft_check.py --root /local/scratch/mv487/dft/neutral_gas
+PASS alanine                33 Raman modes, gas, charge +0
+PASS arginine               72 Raman modes, gas, charge +0
+PASS asparagine             45 Raman modes, gas, charge +0
+PASS aspartic_acid          42 Raman modes, gas, charge +0
+PASS cysteine               36 Raman modes, gas, charge +0
+PASS glutamic_acid          51 Raman modes, gas, charge +0
+PASS glutamine              54 Raman modes, gas, charge +0
+PASS glycine                24 Raman modes, gas, charge +0
+PASS histidine              54 Raman modes, gas, charge +0
+PASS isoleucine             60 Raman modes, gas, charge +0
+PASS leucine                60 Raman modes, gas, charge +0
+PASS lysine                 66 Raman modes, gas, charge +0
+PASS methionine             54 Raman modes, gas, charge +0
+FAIL phenylalanine          1 imaginary mode(s)
+PASS proline                45 Raman modes, gas, charge +0
+PASS serine                 36 Raman modes, gas, charge +0
+PASS threonine              45 Raman modes, gas, charge +0
+PASS tryptophan             75 Raman modes, gas, charge +0
+PASS tyrosine               66 Raman modes, gas, charge +0
+PASS valine                 51 Raman modes, gas, charge +0
+
+19/20 PASS -> /local/scratch/mv487/dft/neutral_gas/check.csv

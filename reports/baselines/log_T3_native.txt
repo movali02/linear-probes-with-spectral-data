@@ -1,0 +1,70 @@
+
+=== T3 (native) -> reports/baselines/native
+[data] data/processed/qm9s_records.jsonl: 25987 QM9S molecules in the 20% subsample
+[T3] random: 20846 train / 5141 test molecules, 5141 test groups
+[T3] scaffold: 20789 train / 5198 test molecules, 4222 test groups
+[T3] 544 fits (34 label/scheme combinations) on 32 job(s)
+[T3] fits + bootstrap done in 738 s
+[T3] permutation tests: 68 combination(s), up to 100 shuffles each
+[T3] permutations done in 2533 s
+# T3 baselines (native)
+
+Primary metric: AUROC. Values: point [95% grouped-bootstrap CI], p = group-permutation p-value.
+Best = best non-majority model; it is chosen on the test result, so read it as optimistic.
+
+| scheme | test set | label | chance | majority | LR on F1 (string) | best on F1 | best on F3 (spectrum) | best overall |
+|---|---|---|---|---|---|---|---|---|
+| random | all | fg_primary_amine | 0.5 | 0.500 [0.50, 0.50] | 0.811 [0.78, 0.84], p=0.0099 | 0.970 [0.95, 0.99] (hgb) | 0.990 [0.98, 1.00], p=0.0099 (hgb) | 0.990 [0.98, 1.00], p=0.0099 (F3/hgb) |
+| random | all | fg_secondary_amine | 0.5 | 0.500 [0.50, 0.50] | 0.725 [0.70, 0.75], p=0.0099 | 0.735 [0.71, 0.76] (hgb) | 0.799 [0.78, 0.82], p=0.0099 (hgb) | 0.799 [0.78, 0.82], p=0.0099 (F3/hgb) |
+| random | all | fg_amide | 0.5 | 0.500 [0.50, 0.50] | 0.737 [0.71, 0.76], p=0.0099 | 0.792 [0.76, 0.82] (hgb) | 0.917 [0.90, 0.93], p=0.0099 (hgb) | 0.917 [0.90, 0.93], p=0.0099 (F3/hgb) |
+| random | all | fg_hydroxyl_aliphatic | 0.5 | 0.500 [0.50, 0.50] | 0.691 [0.68, 0.71], p=0.0099 | 0.745 [0.73, 0.76] (hgb) | 0.797 [0.78, 0.81], p=0.0099 (hgb) | 0.797 [0.78, 0.81], p=0.0099 (F3/hgb) |
+| random | all | fg_phenol | 0.5 | 0.500 [0.50, 0.50] | 0.915 [0.90, 0.93], p=0.0099 | 0.915 [0.90, 0.93], p=0.0099 (lr) | 0.953 [0.94, 0.96], p=0.0099 (hgb) | 0.953 [0.94, 0.96], p=0.0099 (F3/hgb) |
+| random | all | fg_ketone | 0.5 | 0.500 [0.50, 0.50] | 0.801 [0.78, 0.82], p=0.0099 | 0.833 [0.82, 0.85] (hgb) | 0.940 [0.93, 0.95], p=0.0099 (hgb) | 0.940 [0.93, 0.95], p=0.0099 (F3/hgb) |
+| random | all | fg_aldehyde | 0.5 | 0.500 [0.50, 0.50] | 0.902 [0.89, 0.92], p=0.0099 | 0.919 [0.91, 0.93] (hgb) | 0.972 [0.97, 0.98], p=0.0099 (hgb) | 0.972 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fg_ester | 0.5 | 0.500 [0.50, 0.50] | 0.708 [0.67, 0.75], p=0.0099 | 0.739 [0.70, 0.77] (hgb) | 0.912 [0.90, 0.93], p=0.0099 (hgb) | 0.912 [0.90, 0.93], p=0.0099 (F3/hgb) |
+| random | all | fg_ether | 0.5 | 0.500 [0.50, 0.50] | 0.700 [0.69, 0.71], p=0.0099 | 0.750 [0.74, 0.76] (hgb) | 0.804 [0.79, 0.82], p=0.0099 (hgb) | 0.804 [0.79, 0.82], p=0.0099 (F3/hgb) |
+| random | all | fg_nitrile | 0.5 | 0.500 [0.50, 0.50] | 0.710 [0.69, 0.73], p=0.0099 | 0.754 [0.73, 0.77] (hgb) | 0.865 [0.85, 0.88], p=0.0099 (hgb) | 0.865 [0.85, 0.88], p=0.0099 (F3/hgb) |
+| random | all | fg_alkyne | 0.5 | 0.500 [0.50, 0.50] | 0.890 [0.88, 0.90], p=0.0099 | 0.912 [0.90, 0.92] (hgb) | 0.975 [0.97, 0.98], p=0.0099 (hgb) | 0.975 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fg_alkene | 0.5 | 0.500 [0.50, 0.50] | 0.921 [0.91, 0.93], p=0.0099 | 0.952 [0.94, 0.96] (hgb) | 0.977 [0.97, 0.98], p=0.0099 (hgb) | 0.977 [0.97, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fg_fluoro | 0.5 | 0.500 [0.50, 0.50] | 0.875 [0.84, 0.91], p=0.0099 | 0.909 [0.87, 0.94] (hgb) | 0.966 [0.95, 0.98], p=0.0099 (hgb) | 0.966 [0.95, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fg_aromatic_ring | 0.5 | 0.500 [0.50, 0.50] | 0.972 [0.97, 0.98], p=0.0099 | 0.980 [0.98, 0.98] (hgb) | 0.992 [0.99, 0.99], p=0.0099 (hgb) | 0.992 [0.99, 0.99], p=0.0099 (F3/hgb) |
+| random | all | fg_pyrrole_ring | 0.5 | 0.500 [0.50, 0.50] | 0.952 [0.93, 0.97], p=0.0099 | 0.964 [0.95, 0.97] (hgb) | 0.979 [0.97, 0.99], p=0.0099 (hgb) | 0.979 [0.97, 0.99], p=0.0099 (F3/hgb) |
+| random | all | fg_imidazole_ring | 0.5 | 0.500 [0.50, 0.50] | 0.955 [0.94, 0.97], p=0.0099 | 0.958 [0.95, 0.97] (hgb) | 0.971 [0.95, 0.98], p=0.0099 (hgb) | 0.971 [0.95, 0.98], p=0.0099 (F3/hgb) |
+| random | all | fg_lactam | 0.5 | 0.500 [0.50, 0.50] | 0.763 [0.73, 0.79], p=0.0099 | 0.766 [0.73, 0.80] (hgb) | 0.923 [0.91, 0.93], p=0.0099 (hgb) | 0.923 [0.91, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_primary_amine | 0.5 | 0.500 [0.50, 0.50] | 0.779 [0.68, 0.86], p=0.0099 | 0.966 [0.93, 0.99] (hgb) | 0.974 [0.95, 0.99], p=0.0099 (hgb) | 0.974 [0.95, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_secondary_amine | 0.5 | 0.500 [0.50, 0.50] | 0.662 [0.64, 0.69], p=0.0099 | 0.662 [0.64, 0.69], p=0.0099 (lr) | 0.713 [0.69, 0.74], p=0.0099 (hgb) | 0.713 [0.69, 0.74], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_amide | 0.5 | 0.500 [0.50, 0.50] | 0.684 [0.65, 0.72], p=0.0099 | 0.733 [0.70, 0.76] (hgb) | 0.851 [0.83, 0.87], p=0.0099 (hgb) | 0.851 [0.83, 0.87], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_hydroxyl_aliphatic | 0.5 | 0.500 [0.50, 0.50] | 0.649 [0.62, 0.67], p=0.0099 | 0.694 [0.67, 0.72] (hgb) | 0.747 [0.73, 0.77], p=0.0099 (hgb) | 0.747 [0.73, 0.77], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_phenol | 0.5 | 0.500 [0.50, 0.50] | 0.903 [0.88, 0.93], p=0.0099 | 0.903 [0.88, 0.93], p=0.0099 (lr) | 0.933 [0.92, 0.95], p=0.0099 (hgb) | 0.933 [0.92, 0.95], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_ketone | 0.5 | 0.500 [0.50, 0.50] | 0.734 [0.72, 0.75], p=0.0099 | 0.740 [0.72, 0.76] (hgb) | 0.906 [0.90, 0.92], p=0.0099 (hgb) | 0.906 [0.90, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_aldehyde | 0.5 | 0.500 [0.50, 0.50] | 0.886 [0.84, 0.93], p=0.0099 | 0.897 [0.85, 0.94] (hgb) | 0.931 [0.89, 0.96], p=0.0099 (hgb) | 0.931 [0.89, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_ester | 0.5 | 0.500 [0.50, 0.50] | 0.665 [0.63, 0.69], p=0.0099 | 0.665 [0.63, 0.69], p=0.0099 (lr) | 0.869 [0.85, 0.88], p=0.0099 (hgb) | 0.869 [0.85, 0.88], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_ether | 0.5 | 0.500 [0.50, 0.50] | 0.669 [0.65, 0.68], p=0.0099 | 0.712 [0.70, 0.73] (hgb) | 0.749 [0.73, 0.76], p=0.0099 (hgb) | 0.749 [0.73, 0.76], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_nitrile | 0.5 | 0.500 [0.50, 0.50] | 0.784 [0.72, 0.84], p=0.0099 | 0.784 [0.72, 0.84], p=0.0099 (lr) | 0.893 [0.85, 0.93], p=0.0099 (hgb) | 0.893 [0.85, 0.93], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_alkyne | 0.5 | 0.500 [0.50, 0.50] | 0.867 [0.82, 0.91], p=0.0099 | 0.867 [0.82, 0.91], p=0.0099 (lr) | 0.883 [0.84, 0.92], p=0.0099 (hgb) | 0.883 [0.84, 0.92], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_alkene | 0.5 | 0.500 [0.50, 0.50] | 0.914 [0.90, 0.92], p=0.0099 | 0.935 [0.93, 0.94] (hgb) | 0.955 [0.95, 0.96], p=0.0099 (hgb) | 0.955 [0.95, 0.96], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_fluoro | 0.5 | 0.500 [0.50, 0.50] | 0.748 [0.65, 0.84], p=0.0099 | 0.919 [0.87, 0.96] (hgb) | 0.965 [0.93, 0.99], p=0.0099 (hgb) | 0.965 [0.93, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_aromatic_ring | 0.5 | 0.500 [0.50, 0.50] | 0.949 [0.94, 0.96], p=0.0099 | 0.959 [0.95, 0.96] (hgb) | 0.981 [0.98, 0.99], p=0.0099 (hgb) | 0.981 [0.98, 0.99], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_pyrrole_ring | 0.5 | 0.500 [0.50, 0.50] | 0.942 [0.92, 0.96], p=0.0099 | 0.942 [0.92, 0.96], p=0.0099 (lr) | 0.964 [0.95, 0.97], p=0.0099 (hgb) | 0.964 [0.95, 0.97], p=0.0099 (F3/hgb) |
+| scaffold | all | fg_imidazole_ring | 0.5 | 0.500 [0.50, 0.50] | 0.949 [0.94, 0.96], p=0.0099 | 0.949 [0.94, 0.96], p=0.0099 (lr) | 0.958 [0.93, 0.98] (hgb) | 0.961 [0.95, 0.97], p=0.0099 (F2/hgb) |
+| scaffold | all | fg_lactam | 0.5 | 0.500 [0.50, 0.50] | 0.723 [0.70, 0.75], p=0.0099 | 0.725 [0.70, 0.75] (hgb) | 0.868 [0.85, 0.88], p=0.0099 (hgb) | 0.868 [0.85, 0.88], p=0.0099 (F3/hgb) |
+
+
+## Labels not tested
+
+- random: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- random: fg_guanidine: needs >= 50 train / 10 test positives
+- random: fg_thiol: needs >= 50 train / 10 test positives
+- random: fg_thioether: needs >= 50 train / 10 test positives
+- random: fg_benzene_ring: needs >= 50 train / 10 test positives
+- random: fg_indole: needs >= 50 train / 10 test positives
+- scaffold: fg_carboxylic_acid: needs >= 50 train / 10 test positives
+- scaffold: fg_guanidine: needs >= 50 train / 10 test positives
+- scaffold: fg_thiol: needs >= 50 train / 10 test positives
+- scaffold: fg_thioether: needs >= 50 train / 10 test positives
+- scaffold: fg_benzene_ring: needs >= 50 train / 10 test positives
+- scaffold: fg_indole: needs >= 50 train / 10 test positives
+
+Arguments: `--task T3 --variant native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120`
+
+[T3] done in 3289 s -> reports/baselines/native/T3.csv

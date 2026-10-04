@@ -1,0 +1,29 @@
+name,code,smiles,formula,source
+L-alanine,ala,C[C@H](N)C(=O)O,C3H7NO2,user_excel
+L-arginine,arg,N=C(N)NCCC[C@H](N)C(=O)O,C6H14N4O2,user_excel
+L-asparagine,asn,NC(=O)C[C@H](N)C(=O)O,C4H8N2O3,user_excel
+L-aspartic acid,asp,N[C@@H](CC(=O)O)C(=O)O,C4H7NO4,user_excel
+L-cysteine,cys,N[C@@H](CS)C(=O)O,C3H7NO2S,user_excel
+L-glutamic acid,glu,N[C@@H](CCC(=O)O)C(=O)O,C5H9NO4,user_excel
+L-glutamine,gln,NC(=O)CC[C@H](N)C(=O)O,C5H10N2O3,user_excel
+L-glycine,gly,NCC(=O)O,C2H5NO2,user_excel
+L-histidine,his,N[C@@H](Cc1c[nH]cn1)C(=O)O,C6H9N3O2,user_excel
+L-isoleucine,ile,CC[C@H](C)[C@H](N)C(=O)O,C6H13NO2,user_excel
+L-leucine,leu,CC(C)C[C@H](N)C(=O)O,C6H13NO2,user_excel
+L-lysine,lys,NCCCC[C@H](N)C(=O)O,C6H14N2O2,user_excel
+L-methionine,met,CSCC[C@H](N)C(=O)O,C5H11NO2S,user_excel
+L-phenylalanine,phe,N[C@@H](Cc1ccccc1)C(=O)O,C9H11NO2,user_excel
+L-proline,pro,O=C(O)[C@@H]1CCCN1,C5H9NO2,user_excel
+L-serine,ser,N[C@@H](CO)C(=O)O,C3H7NO3,user_excel
+L-threonine,thr,C[C@@H](O)[C@H](N)C(=O)O,C4H9NO3,user_excel
+L-tryptophan,trp,N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O,C11H12N2O2,user_excel
+L-tyrosine,tyr,N[C@@H](Cc1ccc(O)cc1)C(=O)O,C9H11NO3,user_excel
+L-valine,val,CC(C)[C@H](N)C(=O)O,C5H11NO2,user_excel
+indole,indole,c1ccc2[nH]ccc2c1,C8H7N,added_verify
+indole-d6,indole-d6,[2H]c1c([2H])c([2H])c2c(c1[2H])c([2H])c([2H])[nH]2,C8HD6N,added_verify
+oxindole,oxindole,O=C1Cc2ccccc2N1,C8H7NO,added_verify
+indole-3-acetic acid,iaa,OC(=O)Cc1c[nH]c2ccccc12,C10H9NO2,added_verify
+hypoxanthine,hypoxanthine,O=c1[nH]cnc2nc[nH]c12,C5H4N4O,added_verify
+8-hydroxyquinoline,8hq,Oc1cccc2cccnc12,C9H7NO,added_verify
+isatin,isatin,O=C1Nc2ccccc2C1=O,C8H5NO2,added_verify
+tryptophol,tryptophol,OCCc1c[nH]c2ccccc12,C10H11NO,added_verify

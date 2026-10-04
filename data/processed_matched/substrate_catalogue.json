@@ -1,0 +1,29 @@
+{
+ "mode": "reference_norm",
+ "catalogue": [
+  756.0,
+  826.0,
+  879.0
+ ],
+ "n_refs": 198,
+ "generic_cb": {
+  "source": "file:generic_cb.txt",
+  "n": 198,
+  "height": "p90",
+  "bands": [
+   [
+    756.0,
+    0.171
+   ],
+   [
+    826.0,
+    1.0
+   ],
+   [
+    879.0,
+    0.339
+   ]
+  ]
+ },
+ "n_cells_on_generic": 70
+}

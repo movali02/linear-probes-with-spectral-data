@@ -1,0 +1,98 @@
+
+=== T1 (native) -> reports/baselines/native
+[data] data/processed/sers_records.jsonl: 869 SERS records, schema ['v1.2']
+[T1] 590 cell spectra, 40 cultures, 20 analytes, strains {'536': 200, 'BW': 390}; 20 standards; 250 CB-only
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1] 48 fits (3 label/scheme combinations) on 32 job(s)
+[T1] fits + bootstrap done in 43 s
+[T1] cells_to_standards/analyte F3/lr: 42.5 s per shuffle -> 902 shuffles to stay within --perm_budget_min 120
+[T1] permutation tests: 6 combination(s), up to 1000 shuffles each
+[T1] permutations done in 76 s
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1 metadata-only] 18 fits (2 label/scheme combinations) on 32 job(s)
+[T1 metadata-only] fits + bootstrap done in 2 s
+[T1 metadata-only] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 metadata-only] permutations done in 1 s
+[T1 substrate-only] 12 fits (2 label/scheme combinations) on 32 job(s)
+[T1 substrate-only] fits + bootstrap done in 1 s
+[T1 substrate-only] permutation tests: 3 combination(s), up to 1000 shuffles each
+[T1 substrate-only] permutations done in 3 s
+[T1 old split] 450 train / 140 test cell spectra (250 CB rows in the manifest ignored)
+[T1 old split] 6 fits (1 label/scheme combinations) on 32 job(s)
+[T1 old split] fits + bootstrap done in 1 s
+[T1 old split] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 old split] permutations done in 2 s
+# T1 baselines (native)
+
+Primary metric: balanced accuracy. Values: point [95% grouped-bootstrap CI], p = group-permutation p-value.
+Best = best non-majority model; it is chosen on the test result, so read it as optimistic.
+
+| scheme | test set | label | chance | majority | LR on F1 (string) | best on F1 | best on F3 (spectrum) | best overall |
+|---|---|---|---|---|---|---|---|---|
+| loso | all | analyte | 0.05 | 0.043 [0.00, 0.12] | 0.120 [0.05, 0.19], p=0.032 | 0.120 [0.05, 0.19], p=0.032 (lr) | 0.200 [0.12, 0.26], p=0.001 (knn) | 0.200 [0.12, 0.26], p=0.001 (F3/knn) |
+| loso | test=536 | analyte | 0.05 | 0.050 [0.00, 0.10] | 0.120 [0.00, 0.20] | 0.120 [0.00, 0.20] (lr) | 0.185 [0.06, 0.31] (lr) | 0.185 [0.06, 0.31] (F3/lr) |
+| loso | test=BW | analyte | 0.05 | 0.050 [0.00, 0.10] | 0.122 [0.03, 0.20] | 0.122 [0.03, 0.20] (lr) | 0.225 [0.08, 0.36] (knn) | 0.225 [0.08, 0.36] (F3/knn) |
+| step1_split | all | analyte | 0.05 | 0.000 [0.00, 0.00] | 0.023 [0.00, 0.04], p=0.535 | 0.054 [0.00, 0.10] (knn) | 0.177 [0.00, 0.33], p=0.014 (knn) | 0.177 [0.00, 0.33], p=0.014 (F3/knn) |
+| cells_to_standards | all | analyte | 0.05 | 0.050 [0.00, 0.10] | 0.200 [0.08, 0.33], p=0.01 | 0.250 [0.08, 0.38] (hgb) | 0.350 [0.18, 0.50], p=0.0011 (lr) | 0.350 [0.18, 0.50], p=0.0011 (F3/lr) |
+
+## Gate (roadmap 2.6)
+
+- F3 (processed spectrum), leave-one-strain-out: 0.200 [0.12, 0.26], p=0.001 (knn), chance 0.050 -> CI above chance.
+- F1 (string), leave-one-strain-out: 0.120 [0.05, 0.19], p=0.032 (lr), chance 0.050 -> CI above chance.
+- F3 - F1 = +0.080: how much the string format loses.
+
+## Confound checks
+
+| check | scheme | test set | feature | model | metric | value | chance | n |
+|---|---|---|---|---|---|---|---|---|
+| metadata_only | loso | all | META_design | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | lr | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | hgb | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | lr | bal_acc | 0.069 [0.02, 0.14], p=0.248 | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | lr | bal_acc | 0.069 [0.02, 0.14] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | step1_split | all | META_design | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | lr | bal_acc | 0.083 [0.00, 0.15], p=0.253 | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | hgb | bal_acc | 0.010 [0.00, 0.02] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| substrate_only | loso:cells->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | lr | bal_acc | 0.030 [0.00, 0.07], p=0.901 | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | knn | bal_acc | 0.050 [0.01, 0.10], p=0.508 | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3 | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3 | lr | bal_acc | 0.050 [0.00, 0.11] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3 | knn | bal_acc | 0.017 [0.00, 0.06] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | lr | bal_acc | 0.035 [0.01, 0.07], p=0.761 | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | knn | bal_acc | 0.032 [0.01, 0.05] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3 | lr | bal_acc | 0.020 [0.00, 0.04] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3 | knn | bal_acc | 0.030 [0.00, 0.05] | 0.05 | 250 |
+| old_split | old_split(no CB) | all | F1 | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | bal_acc | 0.331 [0.18, 0.49], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | accuracy | 0.336 [0.16, 0.52] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | knn | bal_acc | 0.377 [0.22, 0.54] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | knn | accuracy | 0.393 [0.19, 0.61] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3 | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3 | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3 | lr | bal_acc | 0.519 [0.34, 0.70] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3 | lr | accuracy | 0.536 [0.30, 0.76] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3 | knn | bal_acc | 0.546 [0.37, 0.75], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3 | knn | accuracy | 0.564 [0.33, 0.80] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all rows | old string | old_llm | accuracy | 0.333 |  | 174 | 58/174 correct in test_predictions_sanitized.csv (Result column)
+| old_split | old_split(no CB) | non-CB rows | old string | old_llm | accuracy | 0.370 |  | 119 | 44/119 correct in test_predictions_sanitized.csv (Result column)
+| old_split | old_split(no CB) | non-CB rows in the old test split | old string | old_llm | accuracy | 0.200 |  | 20 | 4/20 correct in test_predictions_sanitized.csv (Result column)
+
+Metadata-only and substrate-only rows must sit at chance: a CI entirely above chance means analyte is confounded with how the spectrum was taken.
+
+Arguments: `--task T1 --variant native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120 --old_manifest data/split_manifest.csv --old_predictions data/test_predictions_sanitized.csv`
+
+[T1] done in 130 s -> reports/baselines/native/T1.csv

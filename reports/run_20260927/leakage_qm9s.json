@@ -1,0 +1,71 @@
+[
+ {
+  "check": "grammar_whitelist",
+  "status": "PASS",
+  "detail": "all 129817 inputs are pure peak lists and round-trip"
+ },
+ {
+  "check": "forbidden_terms",
+  "status": "PASS",
+  "detail": "no analyte names, codes, SMILES, formulas or ids in inputs"
+ },
+ {
+  "check": "prompt_template",
+  "status": "PASS",
+  "detail": "fixed instruction, no label terms"
+ },
+ {
+  "check": "split_disjoint",
+  "status": "PASS",
+  "detail": "129817 groups, none spans train and test"
+ },
+ {
+  "check": "duplicates",
+  "status": "WARN",
+  "detail": "exact cross-split duplicates: 0 same-label, 26 different-label; near-duplicate pairs (cos>=0.98): 0 same-label, 33 different-label (near-dup scan on a random 3000 test items)",
+  "examples": [
+   [
+    "qm9s_894",
+    "qm9s_897"
+   ],
+   [
+    "qm9s_4050",
+    "qm9s_4054"
+   ],
+   [
+    "qm9s_4386",
+    "qm9s_4391"
+   ],
+   [
+    "qm9s_2777",
+    "qm9s_47761",
+    0.983
+   ],
+   [
+    "qm9s_28067",
+    "qm9s_14090",
+    0.982
+   ]
+  ]
+ },
+ {
+  "check": "token_budget",
+  "status": "PASS",
+  "detail": "prompt tokens estimated (1 token per digit): median 324, max 496, limit 2016",
+  "max_tokens": 496
+ },
+ {
+  "check": "shuffled_label_control",
+  "status": "PASS",
+  "detail": "[labels.fg_aromatic_ring, n=4000] LR baseline acc 0.928 (majority class 0.827); shuffled-label acc 0.826 +/- 0.000; permutation p = 0.032",
+  "lr_accuracy": 0.928,
+  "majority_rate": 0.82675,
+  "shuffled_mean": 0.8261333333333334,
+  "p_value": 0.03225806451612903
+ },
+ {
+  "check": "substrate_only_control",
+  "status": "SKIP",
+  "detail": "0 substrate-only spectra with a trained label (need >=5)"
+ }
+]

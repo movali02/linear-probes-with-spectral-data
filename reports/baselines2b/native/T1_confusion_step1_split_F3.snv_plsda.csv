@@ -1,0 +1,21 @@
+true\pred,L-alanine,L-arginine,L-asparagine,L-aspartic acid,L-cysteine,L-glutamic acid,L-glutamine,L-glycine,L-histidine,L-isoleucine,L-leucine,L-lysine,L-methionine,L-phenylalanine,L-proline,L-serine,L-threonine,L-tryptophan,L-tyrosine,L-valine
+L-alanine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-arginine,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0,0
+L-asparagine,17,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,1,0
+L-aspartic acid,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-cysteine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-glutamic acid,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-glutamine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-glycine,4,0,0,0,0,0,20,0,0,0,15,0,0,0,0,0,0,0,0,1
+L-histidine,0,0,0,1,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-isoleucine,3,1,0,0,0,14,0,0,0,0,0,0,0,0,0,0,0,0,2,0
+L-leucine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-lysine,0,0,0,0,0,0,0,0,0,0,0,10,0,0,0,0,0,0,0,0
+L-methionine,0,0,0,0,2,5,0,0,0,0,0,0,7,6,0,0,0,0,0,0
+L-phenylalanine,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-proline,0,0,0,0,0,0,20,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-serine,1,0,0,6,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+L-threonine,0,0,2,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,1
+L-tryptophan,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0,0
+L-tyrosine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L-valine,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

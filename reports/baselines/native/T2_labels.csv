@@ -1,0 +1,24 @@
+label,n_pos_analytes,n_neg_analytes,pos_analytes,n_pos_spectra,n_spectra,testable,reason
+fg_carboxylic_acid,21,5,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-proline; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine; indole-3-acetic acid,611,619,True,
+fg_primary_amine,19,7,L-alanine; L-arginine; L-asparagine; L-aspartic acid; L-cysteine; L-glutamic acid; L-glutamine; L-glycine; L-histidine; L-isoleucine; L-leucine; L-lysine; L-methionine; L-phenylalanine; L-serine; L-threonine; L-tryptophan; L-tyrosine; L-valine,579,619,True,
+fg_secondary_amine,1,25,L-proline,31,619,False,only 1 analyte(s) with the label
+fg_amide,4,22,L-asparagine; L-glutamine; isatin; oxindole,64,619,True,
+fg_guanidine,1,25,L-arginine,31,619,False,only 1 analyte(s) with the label
+fg_hydroxyl_aliphatic,3,23,L-serine; L-threonine; tryptophol,53,619,True,
+fg_phenol,2,24,8-hydroxyquinoline; L-tyrosine,32,619,True,
+fg_thiol,1,25,L-cysteine,31,619,False,only 1 analyte(s) with the label
+fg_thioether,1,25,L-methionine,31,619,False,only 1 analyte(s) with the label
+fg_ketone,1,25,isatin,1,619,False,only 1 analyte(s) with the label
+fg_aldehyde,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_ester,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_ether,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_nitrile,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_alkyne,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_alkene,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_fluoro,0,26,,0,619,False,only 0 analyte(s) with the label
+fg_aromatic_ring,10,16,8-hydroxyquinoline; L-histidine; L-phenylalanine; L-tryptophan; L-tyrosine; indole+indole-d6; indole-3-acetic acid; isatin; oxindole; tryptophol,123,619,True,
+fg_benzene_ring,9,17,8-hydroxyquinoline; L-phenylalanine; L-tryptophan; L-tyrosine; indole+indole-d6; indole-3-acetic acid; isatin; oxindole; tryptophol,92,619,True,
+fg_pyrrole_ring,4,22,L-tryptophan; indole+indole-d6; indole-3-acetic acid; tryptophol,27,619,True,
+fg_imidazole_ring,1,25,L-histidine,31,619,False,only 1 analyte(s) with the label
+fg_indole,4,22,L-tryptophan; indole+indole-d6; indole-3-acetic acid; tryptophol,27,619,True,
+fg_lactam,2,24,isatin; oxindole,2,619,True,

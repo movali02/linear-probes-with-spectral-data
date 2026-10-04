@@ -1,0 +1,57 @@
+
+acetaldehyde (qm9s_10)
+  QM9S peaks : 753(0.36)  854(0.32)  1092(0.17)  1335(0.26)  1383(0.35)  1414(1.00)
+  experiment : 509  1114  1352  1395  1436  1743
+     1114 <-   1092   experiment / QM9S = 1.0201
+     1352 <-   1335   experiment / QM9S = 1.0127
+     1395 <-   1383   experiment / QM9S = 1.0087
+     1436 <-   1414   experiment / QM9S = 1.0156
+
+pyrrole (qm9s_47)
+  QM9S peaks : 853(0.08)  1032(0.06)  1055(0.06)  1131(1.00)  1367(0.91)  1395(0.11)  1447(0.36)
+  experiment : 1144  1384  1470
+     1144 <-   1131   experiment / QM9S = 1.0115
+     1384 <-   1395   experiment / QM9S = 0.9921
+     1470 <-   1447   experiment / QM9S = 1.0159
+
+methyl acetate (qm9s_72)
+  QM9S peaks : 587(0.08)  623(0.31)  823(0.43)  951(0.06)  1032(0.22)  1134(0.22)  1169(0.19)  1355(0.08)  1428(1.00)  1736(0.21)
+  experiment : 640  844  1048  1438  1740
+      640 <-    623   experiment / QM9S = 1.0273
+      844 <-    823   experiment / QM9S = 1.0255
+     1048 <-   1032   experiment / QM9S = 1.0155
+     1438 <-   1428   experiment / QM9S = 1.0070
+     1740 <-   1736   experiment / QM9S = 1.0023
+
+benzene (qm9s_205)
+  QM9S peaks : 604(0.14)  979(1.00)  1161(0.16)  1578(0.31)
+  experiment : 606  992  1178  1585  1606
+      606 <-    604   experiment / QM9S = 1.0033
+      992 <-    979   experiment / QM9S = 1.0133
+     1178 <-   1161   experiment / QM9S = 1.0146
+     1585 <-   1578   experiment / QM9S = 1.0044
+     1606 <-   1578   experiment / QM9S = 1.0177
+
+pyridine (qm9s_206)
+  QM9S peaks : 597(0.15)  649(0.19)  977(0.98)  1013(1.00)  1135(0.06)  1202(0.28)  1234(0.10)  1464(0.07)  1565(0.54)
+  experiment : 605  652  991  1030  1218  1483  1581
+      605 <-    597   experiment / QM9S = 1.0134
+      652 <-    649   experiment / QM9S = 1.0046
+      991 <-    977   experiment / QM9S = 1.0143
+     1030 <-   1013   experiment / QM9S = 1.0168
+     1218 <-   1202   experiment / QM9S = 1.0133
+     1483 <-   1464   experiment / QM9S = 1.0130
+     1581 <-   1565   experiment / QM9S = 1.0102
+
+toluene (qm9s_891)
+  QM9S peaks : 513(0.21)  618(0.18)  772(0.51)  986(1.00)  1016(0.43)  1146(0.12)  1166(0.16)  1188(0.37)  1371(0.53)  1423(0.19)  1441(0.41)  1568(0.28)  1589(0.67)
+  experiment : 521  786  1004  1030  1210  1605
+      521 <-    513   experiment / QM9S = 1.0156
+      786 <-    772   experiment / QM9S = 1.0181
+     1004 <-   1016   experiment / QM9S = 0.9882
+     1030 <-   1016   experiment / QM9S = 1.0138
+     1210 <-   1188   experiment / QM9S = 1.0185
+     1605 <-   1589   experiment / QM9S = 1.0101
+
+median experiment / QM9S = 1.0134 over 30 bands (already scaled (~1.00))
+not found in the records: ['acetone']

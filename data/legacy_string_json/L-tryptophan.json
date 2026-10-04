@@ -1,0 +1,227 @@
+{
+  "Laser": {
+    "wavelength": 785,
+    "objective": 20,
+    "grating": 1200,
+    "laser_power": 2.2
+  },
+  "Substrate": {
+    "substrate": "mlagg",
+    "substrate_peaks": 829
+  },
+  "Spectrum": {
+    "source": "exp",
+    "range": "500-1750",
+    "background_corrected": "y",
+    "normalisation": "y",
+    "normalisation_method": "substrate",
+    "medium": "water",
+    "peak_count_total": 17,
+    "peak_count_500-750": 2,
+    "peak_count_750-1000": 4,
+    "peak_count_1000-1250": 3,
+    "peak_count_1250-1500": 4,
+    "peak_count_1500-1750": 4,
+    "peak_count_1750-2000": 0
+  },
+  "Molecule": {
+    "chemical_formula": "C11H12N2O2",
+    "SMILES": "N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O",
+    "molecular_weight": 204.23,
+    "scaffold": "indole",
+    "functional_groups": "primary_amine_carboxylic_acid_indole"
+  },
+  "Peaks": [
+    {
+      "peak_start": 560.0,
+      "peak_position": 567.0,
+      "peak_end": 583.0,
+      "intensity_number": 0.069,
+      "intensity_area": 0.382,
+      "intensity_bin": "vw",
+      "mode_assignment": "indole ring deformation (W18b)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 652.0,
+      "peak_position": 660.0,
+      "peak_end": 678.0,
+      "intensity_number": 0.077,
+      "intensity_area": 0.69,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 747.0,
+      "peak_position": 757.0,
+      "peak_end": 771.0,
+      "intensity_number": 0.347,
+      "intensity_area": 2.257,
+      "intensity_bin": "s",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 818.0,
+      "peak_position": 827.0,
+      "peak_end": 833.0,
+      "intensity_number": 0.555,
+      "intensity_area": 2.291,
+      "intensity_bin": "vs",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 864.0,
+      "peak_position": 877.0,
+      "peak_end": 886.0,
+      "intensity_number": 0.203,
+      "intensity_area": 1.168,
+      "intensity_bin": "m",
+      "mode_assignment": "indole N-H / ring (W17)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 957.0,
+      "peak_position": 964.0,
+      "peak_end": 976.0,
+      "intensity_number": 0.085,
+      "intensity_area": 0.432,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 992.0,
+      "peak_position": 1000.0,
+      "peak_end": 1008.0,
+      "intensity_number": 0.32,
+      "intensity_area": 1.622,
+      "intensity_bin": "s",
+      "mode_assignment": "indole ring breathing (W16)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1107.0,
+      "peak_position": 1116.0,
+      "peak_end": 1126.0,
+      "intensity_number": 0.425,
+      "intensity_area": 2.2,
+      "intensity_bin": "s",
+      "mode_assignment": "indole C-H in-plane",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1214.0,
+      "peak_position": 1229.0,
+      "peak_end": 1245.0,
+      "intensity_number": 0.304,
+      "intensity_area": 2.472,
+      "intensity_bin": "s",
+      "mode_assignment": "indole ring (W7 region)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1344.0,
+      "peak_position": 1359.0,
+      "peak_end": 1370.0,
+      "intensity_number": 0.51,
+      "intensity_area": 3.384,
+      "intensity_bin": "vs",
+      "mode_assignment": "indole Fermi doublet (W7, hydrophobicity marker)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1412.0,
+      "peak_position": 1424.0,
+      "peak_end": 1432.0,
+      "intensity_number": 0.157,
+      "intensity_area": 0.943,
+      "intensity_bin": "w",
+      "mode_assignment": "COO- symmetric stretch",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1447.0,
+      "peak_position": 1453.0,
+      "peak_end": 1459.0,
+      "intensity_number": 0.087,
+      "intensity_area": 0.252,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1469.0,
+      "peak_position": 1480.0,
+      "peak_end": 1487.0,
+      "intensity_number": 0.143,
+      "intensity_area": 0.697,
+      "intensity_bin": "w",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    },
+    {
+      "peak_start": 1519.0,
+      "peak_position": 1532.0,
+      "peak_end": 1543.0,
+      "intensity_number": 0.747,
+      "intensity_area": 5.584,
+      "intensity_bin": "vs",
+      "mode_assignment": "indole ring stretch (W3)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1512.0,
+      "peak_position": 1561.0,
+      "peak_end": 1567.0,
+      "intensity_number": 0.266,
+      "intensity_area": 15.266,
+      "intensity_bin": "m",
+      "mode_assignment": "indole ring stretch (W3)",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1588.0,
+      "peak_position": 1603.0,
+      "peak_end": 1614.0,
+      "intensity_number": 0.127,
+      "intensity_area": 0.806,
+      "intensity_bin": "w",
+      "mode_assignment": "ring / NH3+ deformation",
+      "mode_assignment_source": "literature",
+      "mode_assignment_references": "lit"
+    },
+    {
+      "peak_start": 1693.0,
+      "peak_position": 1702.0,
+      "peak_end": 1708.0,
+      "intensity_number": 0.059,
+      "intensity_area": 0.223,
+      "intensity_bin": "vw",
+      "mode_assignment": null,
+      "mode_assignment_source": null,
+      "mode_assignment_references": null
+    }
+  ],
+  "_meta": {
+    "name": "L-tryptophan",
+    "spectrum_file": "C:\\Users\\moval\\Documents\\PhD\\Raman\\Tokenisation\\finetune\\processed_aa\\check\\L-tryptophan.txt"
+  }
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "check": "grammar_whitelist",
+  "status": "PASS",
+  "detail": "all 7 inputs are pure peak lists and round-trip"
+ },
+ {
+  "check": "forbidden_terms",
+  "status": "PASS",
+  "detail": "no analyte names, codes, SMILES, formulas or ids in inputs"
+ },
+ {
+  "check": "prompt_template",
+  "status": "PASS",
+  "detail": "fixed instruction, no label terms"
+ },
+ {
+  "check": "split_disjoint",
+  "status": "PASS",
+  "detail": "7 groups, none spans train and test"
+ },
+ {
+  "check": "duplicates",
+  "status": "PASS",
+  "detail": "exact cross-split duplicates: 0 same-label, 0 different-label; near-duplicate pairs (cos>=0.98): 0 same-label, 0 different-label",
+  "examples": []
+ },
+ {
+  "check": "token_budget",
+  "status": "PASS",
+  "detail": "prompt tokens exact (/auto/homes/mv487/tokenisation/qwen_lora): median 162, max 243, limit 2016",
+  "max_tokens": 243
+ },
+ {
+  "check": "shuffled_label_control",
+  "status": "SKIP",
+  "detail": "need >=2 samples in every class and >=2 classes"
+ },
+ {
+  "check": "substrate_only_control",
+  "status": "SKIP",
+  "detail": "1 substrate-only spectra with a trained label (need >=5)"
+ }
+]

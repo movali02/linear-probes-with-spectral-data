@@ -1,0 +1,17 @@
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 18 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string) done in 7 s
+# Shift ladder: baseline (matched)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.89 [0.78, 1.00] | 0.71 [0.44, 0.91] | 0.82 [0.67, 0.95] | 0.80 [0.66, 0.92] | 0.79 [0.65, 0.92] | 0.59 [0.43, 0.71] | 0.70 [0.50, 0.83] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.89 [0.78, 1.00] | 0.71 [0.52, 0.91] | 0.82 [0.67, 0.95] | 0.80 [0.64, 0.93] | 0.79 [0.65, 0.92] | 0.59 [0.45, 0.70] | 0.70 [0.51, 0.83] |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  R1_agreement_baseline_lr: 0.815
+control  R1_n_molecules: 9
+
+-> reports/ladder/matched/baseline/degradation.png, degradation.csv, ladder.md (18 s)

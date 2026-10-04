@@ -1,0 +1,47 @@
+scheme,label,n_pos_train,n_pos_test,prevalence,testable,reason
+random,fg_carboxylic_acid,0,0,0.0,False,needs >= 50 train / 10 test positives
+random,fg_primary_amine,397,113,0.0196,True,
+random,fg_secondary_amine,2176,527,0.104,True,
+random,fg_amide,1431,335,0.068,True,
+random,fg_guanidine,40,10,0.0019,False,needs >= 50 train / 10 test positives
+random,fg_hydroxyl_aliphatic,6018,1490,0.2889,True,
+random,fg_phenol,616,136,0.0289,True,
+random,fg_thiol,0,0,0.0,False,needs >= 50 train / 10 test positives
+random,fg_thioether,0,0,0.0,False,needs >= 50 train / 10 test positives
+random,fg_ketone,2431,600,0.1166,True,
+random,fg_aldehyde,2193,537,0.1051,True,
+random,fg_ester,763,180,0.0363,True,
+random,fg_ether,8241,2046,0.3959,True,
+random,fg_nitrile,2567,683,0.1251,True,
+random,fg_alkyne,2806,679,0.1341,True,
+random,fg_alkene,2651,605,0.1253,True,
+random,fg_fluoro,314,91,0.0156,True,
+random,fg_aromatic_ring,3533,916,0.1712,True,
+random,fg_benzene_ring,43,9,0.002,False,needs >= 50 train / 10 test positives
+random,fg_pyrrole_ring,393,96,0.0188,True,
+random,fg_imidazole_ring,238,57,0.0114,True,
+random,fg_indole,0,0,0.0,False,needs >= 50 train / 10 test positives
+random,fg_lactam,923,237,0.0446,True,
+scaffold,fg_carboxylic_acid,0,0,0.0,False,needs >= 50 train / 10 test positives
+scaffold,fg_primary_amine,481,29,0.0196,True,
+scaffold,fg_secondary_amine,1954,749,0.104,True,
+scaffold,fg_amide,1391,375,0.068,True,
+scaffold,fg_guanidine,43,7,0.0019,False,needs >= 50 train / 10 test positives
+scaffold,fg_hydroxyl_aliphatic,6889,619,0.2889,True,
+scaffold,fg_phenol,694,58,0.0289,True,
+scaffold,fg_thiol,0,0,0.0,False,needs >= 50 train / 10 test positives
+scaffold,fg_thioether,0,0,0.0,False,needs >= 50 train / 10 test positives
+scaffold,fg_ketone,2215,816,0.1166,True,
+scaffold,fg_aldehyde,2704,26,0.1051,True,
+scaffold,fg_ester,645,298,0.0363,True,
+scaffold,fg_ether,7645,2642,0.3959,True,
+scaffold,fg_nitrile,3186,64,0.1251,True,
+scaffold,fg_alkyne,3460,25,0.1341,True,
+scaffold,fg_alkene,2107,1149,0.1253,True,
+scaffold,fg_fluoro,393,12,0.0156,True,
+scaffold,fg_aromatic_ring,3513,936,0.1712,True,
+scaffold,fg_benzene_ring,48,4,0.002,False,needs >= 50 train / 10 test positives
+scaffold,fg_pyrrole_ring,408,81,0.0188,True,
+scaffold,fg_imidazole_ring,238,57,0.0114,True,
+scaffold,fg_indole,0,0,0.0,False,needs >= 50 train / 10 test positives
+scaffold,fg_lactam,715,445,0.0446,True,

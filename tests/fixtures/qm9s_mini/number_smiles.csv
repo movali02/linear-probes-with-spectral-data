@@ -1,0 +1,14 @@
+number,smiles
+1,C
+2,CO
+3,CC(=O)O
+4,NCC(=O)O
+5,CC(N)C(=O)O
+6,NC(CO)C(=O)O
+7,CC(O)C(N)C(=O)O
+8,c1ccccc1
+9,Oc1ccccc1
+10,c1c[nH]cn1
+11,c1ccc2[nH]ccc2c1
+12,CC(C)C(N)C(=O)O
+13,O=C(O)C1CCCN1

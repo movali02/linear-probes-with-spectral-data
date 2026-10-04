@@ -1,0 +1,162 @@
+
+=== T1 (native) -> reports/baselines2b/native
+[data] data/processed/sers_records.jsonl: 899 SERS records, schema ['v1.2']
+[T1] 590 cell spectra, 40 cultures, 20 analytes, strains {'536': 200, 'BW': 390}; 20 standards; 250 CB-only
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1] 238 fits (3 label/scheme combinations) on 32 job(s)
+[T1] fits + bootstrap done in 65 s
+[T1] permutation tests: 6 combination(s), up to 1000 shuffles each
+[T1] permutations done in 58 s
+[T1] NOTE: the step-1 split tests cells of only 13/20 analytes (for the others the held-out group is the standard, so both cultures are in training). LOSO is the primary result.
+[T1 metadata-only] 18 fits (2 label/scheme combinations) on 32 job(s)
+[T1 metadata-only] fits + bootstrap done in 2 s
+[T1 metadata-only] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 metadata-only] permutations done in 1 s
+[T1 substrate-only] 12 fits (2 label/scheme combinations) on 32 job(s)
+[T1 substrate-only] fits + bootstrap done in 1 s
+[T1 substrate-only] permutation tests: 4 combination(s), up to 1000 shuffles each
+[T1 substrate-only] permutations done in 8 s
+[T1 old split] 450 train / 140 test cell spectra (250 CB rows in the manifest ignored)
+[T1 old split] 6 fits (1 label/scheme combinations) on 32 job(s)
+[T1 old split] fits + bootstrap done in 1 s
+[T1 old split] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 old split] permutations done in 131 s
+[T1 old predictions] rows of the predictions file by manifest split: {'train': 141, 'test': 29, 'not in manifest': 4}
+[T1 old predictions] 475 train / 115 test cell spectra
+[T1 old predictions] 12 fits (1 label/scheme combinations) on 32 job(s)
+[T1 old predictions] fits + bootstrap done in 1 s
+[T1 old predictions] permutation tests: 2 combination(s), up to 1000 shuffles each
+[T1 old predictions] permutations done in 1 s
+[T1] 20 no-analyte control spectra: ['Cell_536_ctrl', 'Cell_BW_ctrl']
+# T1 baselines (native)
+
+Primary metric: balanced accuracy. Values: point [95% bootstrap CI over cultures / analytes / molecules], p = group-permutation p-value.
+"Best" columns pick the best non-majority model over a feature family (F3 = F3, F3.bg, F3.d1 ...). They are chosen on the test result, so read them as optimistic; LR on F1 is the pre-specified number.
+
+| scheme | test set | label | LR on F1 (string) | best F1 family | best F3 family | best overall |
+|---|---|---|---|---|---|---|
+| loso | all | analyte | 0.120 [0.05, 0.19], p=0.032 | 0.120 [0.05, 0.19], p=0.032 (F1/lr) | 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda) | 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda) |
+| loso | all@culture | analyte | 0.125 [0.04, 0.21] | 0.150 [0.06, 0.22] (F1.bg/lr) | 0.225 [0.12, 0.32] (F3.snv/plsda) | 0.225 [0.12, 0.32] (F3.snv/plsda) |
+| loso | test=536 | analyte | 0.120 [0.00, 0.20] | 0.150 [0.03, 0.25] (F1.bg/plsda) | 0.235 [0.08, 0.36] (F3.snv/plsda) | 0.235 [0.08, 0.36] (F3.snv/plsda) |
+| loso | test=BW | analyte | 0.122 [0.03, 0.20] | 0.122 [0.03, 0.20] (F1/lr) | 0.225 [0.08, 0.36] (F3/knn) | 0.225 [0.08, 0.36] (F3/knn) |
+| step1_split | all | analyte | 0.023 [0.00, 0.04], p=0.535 | 0.073 [0.00, 0.14] (F1/plsda) | 0.181 [0.00, 0.34], p=0.007 (F3.snv/plsda) | 0.181 [0.00, 0.34], p=0.007 (F3.snv/plsda) |
+| cells_to_standards | all | analyte | 0.200 [0.08, 0.33], p=0.01 | 0.300 [0.15, 0.46] (F1.bg/lr) | 0.350 [0.18, 0.50], p=0.001 (F3/lr) | 0.350 [0.18, 0.50], p=0.001 (F3/lr) |
+
+## Gate (roadmap 2.6)
+
+- F3 as in the first run (no preprocessing), leave-one-strain-out: 0.200 [0.12, 0.26] (F3/knn), chance 0.050 -> CI above chance.
+- F3.bg with nearest centroid (pre-specified for 2b), leave-one-strain-out: 0.192 [0.11, 0.26] (F3.bg/ncm), chance 0.050 -> CI above chance.
+- F3.ctrl with nearest centroid (pre-specified for 2b; control culture subtracted), leave-one-strain-out: 0.082 [0.02, 0.15] (F3.ctrl/ncm), chance 0.050 -> **CI includes chance.**
+- best F3 family, leave-one-strain-out: 0.217 [0.13, 0.29], p=0.001 (F3.snv/plsda), chance 0.050 -> CI above chance.
+- LR on F1 (string, pre-specified), leave-one-strain-out: 0.120 [0.05, 0.19], p=0.032 (F1/lr), chance 0.050 -> CI above chance.
+- LR on F1.bg (pre-specified for 2b), leave-one-strain-out: 0.103 [0.04, 0.16] (F1.bg/lr), chance 0.050 -> **CI includes chance.**
+- best F1 family, leave-one-strain-out: 0.120 [0.05, 0.19], p=0.032 (F1/lr), chance 0.050 -> CI above chance.
+- per culture (majority vote over a culture's scans, n = 40): 0.225 [0.12, 0.32] (F3.snv/plsda)
+- best F3 family - best F1 family = +0.097: how much the string format loses.
+
+## Detectability (no classifier involved)
+
+An analyte's signature = its culture mean minus the strain mean. r_cross = correlation of the signature between the two strains; rank = where the matching analyte ranks in the other strain (1 = best match); r_std = correlation with the pure standard; snr = signature size / scan noise.
+
+| analyte | r_cross | rank_536_in_BW | rank_BW_in_536 | r_std_536 | r_std_BW | snr_536 | snr_BW | r_cross_ctrl | loso_recall_best | top_bands_cm |
+|---|---|---|---|---|---|---|---|---|---|---|
+| L-lysine | 0.875 | 1 | 1 | -0.22 | -0.368 | 7.43 | 8.68 | -0.358 | 0.53 | 723 1369 960 |
+| L-cysteine | 0.862 | 1 | 1 | 0.555 | 0.429 | 3.96 | 4.37 | 0.742 | 1.0 | 907 1384 979 |
+| L-tryptophan | 0.837 | 1 | 1 | 0.629 | 0.246 | 10.18 | 12.42 | 0.85 | 0.35 | 758 1481 1342 |
+| L-histidine | 0.824 | 6 | 1 | 0.302 | 0.28 | 6.17 | 8.4 | -0.43 | 1.0 | 1291 712 886 |
+| L-phenylalanine | 0.629 | 6 | 10 | -0.025 | -0.072 | 5.85 | 12.47 | -0.304 | 0.0 | 735 1308 1324 |
+| L-proline | 0.626 | 6 | 8 | 0.091 | -0.05 | 5.75 | 9.27 | 0.094 | 0.0 | 723 1372 886 |
+| L-threonine | 0.6 | 9 | 7 | 0.22 | 0.074 | 5.22 | 6.59 | 0.157 | 0.0 | 723 1180 1216 |
+| L-glutamine | 0.583 | 7 | 9 | -0.039 | 0.094 | 5.16 | 7.81 | 0.005 | 0.0 | 886 719 1375 |
+| L-methionine | 0.471 | 2 | 12 | 0.522 | 0.172 | 3.22 | 4.43 | 0.124 | 0.7 | 734 1029 1071 |
+| L-glutamic acid | 0.383 | 6 | 2 | 0.131 | 0.039 | 15.29 | 3.29 | 0.413 | 0.0 | 576 660 1447 |
+| L-tyrosine | 0.318 | 6 | 4 | 0.111 | -0.109 | 3.98 | 3.81 | 0.57 | 0.53 | 1477 605 1407 |
+| L-aspartic acid | -0.019 | 13 | 15 | 0.227 | 0.307 | 7.59 | 7.89 | -0.021 | 0.0 | 576 661 619 |
+| L-serine | -0.025 | 9 | 6 | 0.452 | -0.234 | 9.61 | 4.63 | 0.491 | 0.0 | 755 1473 605 |
+| L-isoleucine | -0.23 | 16 | 8 | 0.56 | 0.186 | 4.05 | 3.63 | 0.333 | 0.0 | 576 658 1447 |
+| L-asparagine | -0.239 | 14 | 10 | 0.208 | 0.186 | 4.28 | 2.15 | 0.318 | 0.0 | 725 958 1695 |
+| L-valine | -0.352 | 18 | 15 | 0.368 | -0.161 | 5.14 | 7.29 | 0.009 | 0.0 | 1241 721 753 |
+| L-alanine | -0.39 | 15 | 13 | 0.395 | 0.039 | 3.37 | 2.48 | 0.21 | 0.0 | 657 574 1430 |
+| L-arginine | -0.585 | 16 | 20 | -0.194 | 0.108 | 5.35 | 1.84 | 0.327 | 0.0 | 1481 606 545 |
+| L-glycine | -0.629 | 12 | 18 | 0.044 | 0.141 | 5.4 | 2.1 | 0.739 | 0.22 | 735 1444 1472 |
+| L-leucine | -0.764 | 20 | 20 | 0.297 | -0.24 | 5.21 | 7.53 | -0.09 | 0.0 | 1477 605 756 |
+
+## Confound checks and the old result
+
+| check | scheme | test set | feature | model | metric | value | chance | n |
+|---|---|---|---|---|---|---|---|---|
+| metadata_only | loso | all | META_design | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | lr | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_design | hgb | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | lr | bal_acc | 0.069 [0.02, 0.14], p=0.248 | 0.05 | 590 |
+| metadata_only | loso | all | META_acq | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | majority | bal_acc | 0.043 [0.00, 0.12] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | lr | bal_acc | 0.069 [0.02, 0.14] | 0.05 | 590 |
+| metadata_only | loso | all | META_all | hgb | bal_acc | 0.065 [0.02, 0.11] | 0.05 | 590 |
+| metadata_only | step1_split | all | META_design | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_design | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | lr | bal_acc | 0.083 [0.00, 0.15], p=0.253 | 0.05 | 210 |
+| metadata_only | step1_split | all | META_acq | hgb | bal_acc | 0.010 [0.00, 0.02] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | lr | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| metadata_only | step1_split | all | META_all | hgb | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 210 |
+| substrate_only | loso:cells->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | lr | bal_acc | 0.030 [0.00, 0.07], p=0.901 | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F1 | plsda | bal_acc | 0.053 [0.01, 0.10] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.12] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | lr | bal_acc | 0.040 [0.00, 0.09] | 0.05 | 250 |
+| substrate_only | loso:cells->CB | all | F3.snv | plsda | bal_acc | 0.078 [0.01, 0.15], p=0.0629 | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | lr | bal_acc | 0.035 [0.01, 0.07], p=0.761 | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F1 | plsda | bal_acc | 0.045 [0.02, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | lr | bal_acc | 0.032 [0.01, 0.07] | 0.05 | 250 |
+| substrate_only | loso:CB->CB | all | F3.snv | plsda | bal_acc | 0.082 [0.03, 0.17], p=0.114 | 0.05 | 250 |
+| old_split | old_split(no CB) | all | F1 | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | bal_acc | 0.331 [0.18, 0.49], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | lr | accuracy | 0.336 [0.16, 0.52] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F1 | plsda | bal_acc | 0.162 [0.01, 0.29] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F1 | plsda | accuracy | 0.150 [0.01, 0.34] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | majority | bal_acc | 0.000 [0.00, 0.00] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | majority | accuracy | 0.000 [0.00, 0.00] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | lr | bal_acc | 0.527 [0.34, 0.71], p=0.001 | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | lr | accuracy | 0.543 [0.31, 0.76] | 0.1429 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | plsda | bal_acc | 0.231 [0.00, 0.38] | 0.05 | 140 |
+| old_split | old_split(no CB) | all | F3.snv | plsda | accuracy | 0.214 [0.00, 0.43] | 0.1429 | 140 |
+| old_predictions | old_prediction_rows | all | F1 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | lr | bal_acc | 0.636 [0.53, 0.76], p=0.873 | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | lr | accuracy | 0.678 [0.56, 0.79] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | knn | bal_acc | 0.760 [0.65, 0.87] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | knn | accuracy | 0.765 [0.63, 0.89] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | plsda | bal_acc | 0.408 [0.30, 0.53] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F1 | plsda | accuracy | 0.417 [0.27, 0.57] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | lr | bal_acc | 0.967 [0.91, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | lr | accuracy | 0.965 [0.90, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | knn | bal_acc | 0.975 [0.97, 1.00], p=0.998 | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | knn | accuracy | 0.991 [0.97, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | plsda | bal_acc | 0.571 [0.47, 0.70] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3.snv | plsda | accuracy | 0.600 [0.42, 0.76] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | majority | bal_acc | 0.050 [0.00, 0.07] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | majority | accuracy | 0.070 [0.00, 0.20] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | lr | bal_acc | 0.954 [0.90, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | lr | accuracy | 0.948 [0.88, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | knn | bal_acc | 0.975 [0.97, 1.00] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | knn | accuracy | 0.991 [0.97, 1.00] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | plsda | bal_acc | 0.518 [0.40, 0.63] | 0.05 | 115 |
+| old_predictions | old_prediction_rows | all | F3 | plsda | accuracy | 0.556 [0.38, 0.73] | 0.087 | 115 |
+| old_predictions | old_prediction_rows | all rows | old string | old_llm | accuracy | 0.333 |  | 174 | 58/174 correct in test_predictions_sanitized.csv (Result column)
+| old_predictions | old_prediction_rows | non-CB rows | old string | old_llm | accuracy | 0.370 |  | 119 | 44/119 correct in test_predictions_sanitized.csv (Result column)
+| old_predictions | old_prediction_rows | non-CB rows matched to a cell spectrum | old string | old_llm | accuracy | 0.383 |  | 115 | 44/115 correct in test_predictions_sanitized.csv (Result column)
+
+Metadata-only and substrate-only rows must sit at chance: a CI entirely above chance means analyte is confounded with how the spectrum was taken.
+
+Arguments: `--task T1 --variant native --out_dir reports/baselines2b/native --n_jobs 32 --qm9s_frac 0.2 --perm_budget_min 120 --old_manifest data/split_manifest.csv --old_predictions data/test_predictions_sanitized.csv`
+
+[T1] done in 271 s -> reports/baselines2b/native/T1.csv

@@ -1,0 +1,33 @@
+[probes] QM9S 9365 train / 1638 validation / 2774 test; rungs ['R2', 'R3', 'R4', 'R5', 'R6', 'R8', 'R9']; 20 analytes present on every rung
+[probes] labels: ['primary_amine', 'secondary_amine', 'amide', 'guanidine', 'hydroxyl_aliphatic', 'phenol', 'aromatic_ring', 'benzene_ring', 'pyrrole_ring', 'imidazole_ring']
+[probes] baseline (binned string, F1) done in 6 s
+[probes] probe / last: 13 layers done (152 s)
+[probes] probe / mean: 13 layers done (255 s)
+[probes] random / last: 13 layers done (331 s)
+[probes] random / mean: 13 layers done (428 s)
+# Shift ladder: Qwen3-8B (v2mf)
+## As trained
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | probe: logistic regression |  | 0.88 | 0.92 [0.86, 0.99] | 0.75 [0.64, 0.83] | 0.74 [0.60, 0.85] | 0.62 [0.49, 0.72] | 0.57 [0.45, 0.73] | 0.68 [0.51, 0.82] | 0.63 [0.41, 0.83] |
+| MEAN |  | probe: mass-mean |  | 0.77 | 0.77 [0.66, 0.90] | 0.66 [0.54, 0.77] | 0.56 [0.36, 0.72] | 0.39 [0.28, 0.53] | 0.47 [0.32, 0.64] | 0.48 [0.33, 0.65] | 0.49 [0.30, 0.74] |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.82, 0.98] | 0.81 [0.69, 0.93] | 0.79 [0.64, 0.91] | 0.75 [0.62, 0.89] | 0.73 [0.59, 0.88] | 0.68 [0.54, 0.83] | 0.65 [0.40, 0.85] |
+| MEAN |  | probe on the untrained model |  | 0.81 | 0.70 [0.55, 0.82] | 0.62 [0.47, 0.74] | 0.62 [0.45, 0.77] | 0.50 [0.37, 0.63] | 0.54 [0.41, 0.64] | 0.57 [0.37, 0.73] | 0.53 [0.32, 0.76] |
+## Each rung centred on its own mean (label-free recalibration)
+| label | n pos | method | layer | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+| MEAN |  | probe: logistic regression |  | 0.88 | 0.92 [0.86, 0.99] | 0.75 [0.64, 0.84] | 0.74 [0.60, 0.85] | 0.62 [0.48, 0.73] | 0.57 [0.45, 0.73] | 0.68 [0.54, 0.82] | 0.63 [0.41, 0.83] |
+| MEAN |  | probe: mass-mean |  | 0.77 | 0.77 [0.66, 0.89] | 0.66 [0.53, 0.76] | 0.56 [0.37, 0.74] | 0.39 [0.26, 0.53] | 0.47 [0.34, 0.63] | 0.48 [0.30, 0.66] | 0.49 [0.32, 0.75] |
+| MEAN |  | classifier on the string (F1) |  | 0.85 | 0.88 [0.81, 0.98] | 0.81 [0.68, 0.93] | 0.79 [0.63, 0.92] | 0.75 [0.62, 0.88] | 0.73 [0.60, 0.88] | 0.68 [0.54, 0.83] | 0.65 [0.40, 0.85] |
+| MEAN |  | probe on the untrained model |  | 0.81 | 0.70 [0.55, 0.83] | 0.62 [0.47, 0.74] | 0.62 [0.46, 0.78] | 0.50 [0.37, 0.63] | 0.54 [0.41, 0.64] | 0.57 [0.39, 0.72] | 0.54 [0.33, 0.76] |
+## Paired differences in the mean (same analytes resampled for both methods)
+## Labels with one positive analyte, as that analyte's rank
+| label | analyte | method | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+## Rungs
+## Controls
+## Spectral similarity to SERS (no model)
+control  shuffled_labels_val_auroc: 0.476
+control  shuffled_at: mean / layer 9
+control  R1_agreement_probe_lr: 0.792
+control  R1_n_molecules: 9
+control  R1_agreement_baseline_lr: 0.927
+
+-> reports/ladder/v2mf/Qwen3-8B/degradation.png, degradation.csv, ladder.md (483 s)
