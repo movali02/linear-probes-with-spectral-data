@@ -1,175 +1,135 @@
-# probe2circuit: step 1, harmonised strings, labels, coverage, leakage
+# Probes to Circuits With a Ground Truth for Spectroscopy 
 
-This step turns SERS spectra, QM9S spectra and ORCA DFT sticks into **one string
-format produced by one code path**. It attaches structural labels from RDKit
-that exist on both sides, measures how much of the SERS analyte set QM9S can
-cover, and runs a suite of leakage tests before any number goes into a
-write-up.
+**Investigating whether a linear probe on an LLM's activations stops working under distribution shift in the context of experimental vs synthetic (DFT) spectroscopy data, and whether looking inside the model can predict the failure before it happens**
 
-## What the model sees
+Monitors like probes are usually trained on synthetic data and then used on real data, and how well they survive that change is an open problem in AI safety. This repository measures it where the ground truth is known: molecular spectra written as text, with probes trained on simulated (DFT) spectra and tested on experimental / measured (SERS) ones. Physics says exactly how the two distributions differ and which peaks a correct probe should rely on. This shift ladder is anchored in physics where we have a ground truth for what it should look like.
 
-```
-574 0.26 19 | 605 0.61 8 | 657 0.75 18 | 962 0.42 16 | 997 0.33 16 | ...
-```
+## Summary
 
-Each peak is written as `position (cm-1)`, `relative intensity`, `FWHM (cm-1)`,
-in ascending position order, separated by ` | `. Nothing else goes into the
-string. The Laser, Substrate, Spectrum and Molecule blocks, the mode
-assignments, medium, filenames and SMILES all live in record metadata and never
-reach the prompt. Because the string is pure numbers, the strongest leakage
-test is a **whitelist**: every input must parse under the grammar and
-re-serialise byte-for-byte to itself.
+- **Setup.** Qwen3-8B reads a spectrum written as a peak-list string. A linear probe is trained on its residual-stream activations to detect a chemical concept (for example "contains a primary amine"). Probes are trained on simulated spectra and tested along a **shift ladder** that adds one physical difference at a time until the input is a real SERS measurement.
+- **Why it is a good testbed.** The simulated→real shift is decomposed into named, physical steps (frequency scaling, line broadening, protonation, surface selection rules, substrate peaks), and chemistry says which peaks carry the signal. So a failure can be traced to a specific cause, and "did the probe use the right feature?" has a checkable answer.
+- **What it tests.** (1) whether the concept is linearly decodable and where in the model; (2) how far the probe degrades along the ladder and at which rung it breaks; (3) whether attribution to the probe's direction predicts those failures; and (4) whether the same picture holds for a safety concept (a harmful-request probe).
+- **Relevance to safety.** Anthropic lists the robustness of activation monitors to distribution shift — especially the shift from synthetic to real data — as an open problem. This is a controlled measurement of exactly that, with a physical ground truth standing in for the usually-missing one.
 
-## Shared processing (`configs/string_v1.yaml`)
+| Spectroscopy testbed | Activation monitoring |
+|---|---|
+| DFT-simulated spectra | Synthetic / off-policy training data |
+| Measured SERS spectra | Deployment data |
+| Frequency scaling, broadening | Paraphrase, change of style |
+| Surface selection rules, substrate peaks | Jailbreak wrappers, format shifts |
+| Deuteration (label unchanged) | Translation (label unchanged) |
+| Gene knockout (label flips, little else) | Minimal pairs |
+| Known peak assignments | Ground truth for what a monitor should rely on |
 
-| step | SERS | QM9S | DFT sticks |
-|---|---|---|---|
-| window | 500–1750 cm-1 | same | same |
-| grid | 1 cm-1 | same | same |
-| baseline | ALS | none (simulated) | none |
-| substrate | `reference_norm`: discard peaks explained by the paired CB-only spectrum in the CB[5] regions 745–765, 812–845, 870–895 (see below). `paired` subtraction still selectable | n/a | n/a |
-| smoothing | Savitzky–Golay, 9 cm-1 | same | same |
-| normalisation | CB[5] ~829 band = 1.0 (analyte peaks can exceed 1.0) | max **inside the window** (the old code normalised over 400–4000, so C–H stretches set the max) | same as QM9S |
-| peaks | prominence ≥ max(0.03, 4σ_noise), height ≥ 0.05, FWHM ≥ 5 cm-1, top 40 | same | same |
-| width | FWHM (rel_height 0.5) | same (old QM9S code used 0.7) | same |
+## Results so far
 
-Changing any value means bumping `schema`, because strings made under
-different settings are no longer comparable.
+**Key result.** A probe on the model's internals is no more robust to the sim→real shift than logistic regression on the raw peaks, and on the mid-ladder rungs it is worse.
 
-### SERS substrate: `reference_norm` (schema v1.1)
+**Status:** baselines and in-domain probes complete (through step 2c); shift-ladder degradation complete; attribution and the safety twin not yet run.
 
-1. **Normalise.** Each SERS spectrum is divided by its CB[5] reference band: the
-   tallest real peak within 829 ± 4 cm-1 (the band sits at 826–827 in the cell
-   session and 828–830 in the standards). That band is 1.0, and every other
-   intensity is its ratio to it. Nothing is subtracted, so there are no negative
-   intensities, and a spectrum recorded 5× brighter gives the same string.
-2. **Discard substrate peaks.** The paired CB-only spectrum (mean of the CB
-   repeats for the same strain+medium) is put on the same 829 = 1.0 scale. Its
-   bands inside `cb_regions` give the expected substrate height at each
-   position. A peak within 5 cm-1 of such a band is dropped **unless** it is
-   clearly taller: ≥ 0.10 above it **and** ≥ 1.5× it. That rule, not the
-   position, is what keeps Trp/indole 758 on top of CB ~755 and Trp 877 on top
-   of CB ~880. The two are 3–4 cm-1 apart with ~19 cm-1 lines, so the detector
-   sees one merged peak. A kept peak is reported at its full observed height.
-3. **Reference band.** The ~829 band itself is always dropped (it is 1.0 by
-   construction).
+### 1. The concepts are linearly decodable, but the probe barely beats a classifier on the raw peaks
 
-Per-record audit trail in `substrate`: `ref_height`, `ref_pos_cm`, `cb_ref`,
-`cb_bands`, `discarded` ([position, intensity, CB expected]).
+![Probe AUROC by layer, in-domain, with the raw-peak baseline](assets/layer_sweep.png)
 
-Fallbacks are flagged, never silent:
-- `cb_ref: "global_mean"`: no CB-only file for that condition, so the mean over all
-  sessions is used. The band positions can be 2–3 cm-1 off.
-- `mode_used: "max_in_window(ref_missing)"`: no real peak at ~829 (prominence
-  < 2% of the spectrum max), so the spectrum is max-normalised and nothing is
-  discarded.
+*Figure 1. Probe AUROC at each layer of Qwen3-8B on QM9S validation spectra (train and test both simulated), one line per concept. The dashed line is the raw-peak baseline.*
 
-Caveats:
-- **Tyrosine.** Tyr 830 sits on the reference band. It inflates the divisor, so a
-  tyrosine spectrum's other peaks come out smaller. Its ~830 signal is always
-  discarded with the reference; Tyr 850 is kept.
-- **617 and 676 CB bands are not in `cb_regions`,** so they reach every string,
-  including CB-only ones. Add `[600, 635], [665, 690]` to `cb_regions` to drop
-  them; the same taller-than-substrate rule protects analyte peaks there.
-- **Intensity scale differs from QM9S/DFT** (829-relative vs strongest-peak).
-  For QM9S→SERS transfer, set `rescale_to_max_after_discard: true`: 829 still
-  sets the detection thresholds, then the strongest analyte peak becomes 1.0.
-- `min_height` / `min_prominence` are now in 829 units for SERS. If the
-  analyte dwarfs the CB band, weak analyte peaks sit well above threshold. If
-  the CB band dwarfs the analyte, they can fall below it.
+AUROC on the simulated test set (R0, n = 2,774), with each probe at its selected layer:
 
-## Labels (`labels.py`)
+| Concept | Layer | Probe (Qwen3-8B) | Raw-peak baseline | Random-init model |
+|---|---|---|---|---|
+| primary amine | 9 | 0.919 | 0.662 | 0.742 |
+| secondary amine | 8 | 0.691 | 0.714 | 0.650 |
+| amide | 8 | 0.770 | 0.725 | 0.699 |
+| guanidine | 9 | 0.928 | 0.946 | 0.896 |
+| hydroxyl (aliphatic) | 9 | 0.720 | 0.686 | 0.672 |
+| phenol | 13 | 0.907 | 0.905 | 0.835 |
+| aromatic ring | 15 | 0.972 | 0.968 | 0.930 |
+| benzene ring | 19 | 0.984 | 0.982 | 0.867 |
+| pyrrole ring | 8 | 0.931 | 0.946 | 0.845 |
+| imidazole ring | 24 | 0.937 | 0.934 | 0.900 |
+| **Mean of 10** | | **0.876** | **0.847** | **0.804** |
 
-The labels are 23 SMARTS functional groups plus `n_heavy`, `elements`, ring
-counts, `has_S`, `has_isotope` and `in_qm9_domain`. Matching ignores stereo and
-isotopes, so indole-d6 matches indole as a structure but is still out of domain
-spectrally. Analyte SMILES come from your Excel. The five non-amino-acids at the
-bottom of `data/analytes.csv` (`added_verify`) were added by me, so check them.
+Raw-peak baseline: logistic regression on the peak list, with no language model. Random-init: the same probe on an untrained Qwen3-8B.
 
-## Running it
+**Summary.** In simulation the probe reads all ten functional groups (mean AUROC 0.88), but it is only 0.03 above logistic regression on the raw peaks and 0.07 above an untrained network. It is ahead by more than 0.05 only for primary amine; for seven of the ten groups the raw-peak baseline is within 0.005 of the probe or higher. A probe trained on shuffled labels scores 0.48, so the probe is reading the concept and not memorising the set.
+
+### 2. Probes trained on simulation degrade along the shift ladder, and no less than the raw-peak baseline
+
+![Probe AUROC across the shift ladder, with raw-peak and random-init baselines](assets/degradation.png)
+
+*Figure 2. AUROC at each rung, from the simulated test set (R0) towards measured SERS (R9). Bold lines are means over the ten concepts: probe (black), raw-peak baseline (orange, dashed) and random-init model (grey, dotted). Faint lines are the individual concepts.*
+
+Probe AUROC by rung. **Bold** cells are below chance (0.5).
+
+| Concept | R0 | R2 | R3 | R4 | R5 | R6 | R8 | R9 |
+|---|---|---|---|---|---|---|---|---|
+| primary amine | 0.92 | 0.88 | **0.35** | **0.47** | **0.47** | 0.71 | 0.65 | 0.88 |
+| secondary amine | 0.69 | 0.76 | 0.88 | 0.94 | 0.82 | 0.53 | 0.82 | **0.47** |
+| amide | 0.77 | 0.94 | **0.12** | 1.00 | 0.65 | 0.94 | **0.29** | **0.24** |
+| guanidine | 0.93 | 0.88 | 0.65 | 0.53 | **0.29** | **0.29** | 0.53 | 0.71 |
+| hydroxyl (aliphatic) | 0.72 | 1.00 | **0.44** | 0.78 | 0.56 | 0.72 | 0.56 | 0.53 |
+| phenol | 0.91 | 1.00 | 0.94 | **0.41** | **0.47** | **0.35** | **0.35** | 0.88 |
+| aromatic ring | 0.97 | 0.98 | 0.96 | 0.69 | 0.51 | **0.47** | 0.62 | 0.62 |
+| benzene ring | 0.98 | 0.78 | 0.66 | 0.78 | **0.47** | **0.16** | 0.62 | 0.81 |
+| pyrrole ring | 0.93 | 0.94 | 0.94 | 0.88 | 0.94 | 0.94 | 1.00 | 1.00 |
+| imidazole ring | 0.94 | 1.00 | 0.94 | 0.65 | **0.29** | **0.18** | 0.94 | **0.12** |
+| **Mean probe** | 0.88 | 0.92 | 0.69 | 0.71 | 0.55 | 0.53 | 0.64 | 0.63 |
+| **Mean raw-peak baseline** | 0.85 | 0.89 | 0.71 | 0.82 | 0.80 | 0.79 | 0.59 | 0.70 |
+| **Mean random-init** | 0.80 | 0.70 | 0.57 | 0.72 | 0.63 | 0.64 | 0.59 | 0.48 |
+
+**Summary.** The mean probe AUROC falls from 0.88 on simulated spectra to 0.53–0.71 on rungs R3–R9, and at R5 and R6 half of the ten concepts are below chance. On R4–R6 the raw-peak baseline holds up better than the probe (0.82, 0.80, 0.79 against 0.71, 0.55, 0.53), so the model's internal representation gives no extra robustness to this shift.
+
+**How far to trust this.** R0 has 2,774 molecules. Rungs R2–R9 have 18 (the paired amino acids), and most concepts have only one to three positives or negatives among them, so single cells in the table are noisy. The comparison between the mean curves is the result; individual cells are not.
+
+> **TODO (Mo):** say what each rung R2–R9 changes physically.
+
+### 3. How well each concept transfers, at a glance
+
+![In-domain vs most-shifted-rung AUROC per concept](assets/transfer_scatter.png)
+
+*Figure 3. Each point is a concept at its selected layer: in-domain AUROC on QM9S validation (x) against AUROC at the most-shifted rung, R9 (y). The diagonal is perfect transfer; distance below it is the sim→real gap.*
+
+- Closest to the line: pyrrole ring (0.94 → 1.00), primary amine (0.90 → 0.88), phenol (0.94 → 0.88).
+- Furthest below: imidazole ring (0.97 → 0.12), amide (0.79 → 0.24).
+- Each point at R9 rests on 18 molecules, so read the overall pattern, not the position of one concept.
+
+## Setup
+
+- **Model.** Qwen3-8B (36 layers, 4,096-dim residual stream), with public transcoders from [circuit-tracer](https://github.com/decoderesearch/circuit-tracer) for the attribution stage.
+- **Source domain.** QM9S: DFT Raman spectra for ~130,000 small molecules. Labels are ten functional groups computed from SMILES via RDKit.
+- **Target domain.** Measured SERS spectra. The results above use the `matched` set: 18 amino acids with both a measured and a simulated spectrum.
+- **Input.** Every spectrum, simulated or measured, goes through the same peak picker and string template; fields that leak the answer or the domain are stripped.
+- **Probes.** L2 logistic regression and difference-of-means, per layer.
+- **Baselines.** Majority class; logistic regression on raw peak vectors; the same probe on a randomly-initialised model; control tasks with shuffled labels.
+- **Metrics.** AUROC (primary), TPR at 1% FPR, calibration error, and the in-domain→shifted drop. Intervals by bootstrap over molecules.
+
+> **TODO (Mo):** correct anything above that differs from what you ran, and name the primary metric used in the figures.
+
+## Still to come
+
+- Attribution from the probe score to transcoder features, with ablations, to explain *why* a probe uses the peaks it does.
+- Failure predictions written before testing, then checked on edited spectra, against input-gradient saliency and nearest-neighbour baselines.
+- The safety twin: a harmful-request probe under paraphrase, translation and jailbreak wrappers.
+
+## Reproduce
 
 ```bash
-conda env create -f environment.yml && conda activate probe2circuit
-pytest                                    # 52 tests, CPU, ~2 s
-
-# preferred: QM9S from the broadened spectra (window-first normalisation).
-# Symlink the real files over the placeholders in data/qm9s/ first; see RUN_ON_AURA.md
-bash scripts/run_step1.sh
-# fallback: QM9S from make_views.py peak lists (what the 25 Sep run used)
-SERS_DIR=... QM9S_JSONL=.../qm9s_raman.jsonl bash scripts/run_step1.sh
-# exact token counts on Aura: add TOKENIZER=Qwen/Qwen2.5-7B-Instruct
+conda env create -f environment.yml && conda activate linear-probes-to-circuit-for-spectroscopy
+python extract/run.py --model Qwen/Qwen3-8B --layers all
+python probes/train.py --concept carboxylic_acid --train sim --test ladder
+python plot_summary.py          # writes the three figures into assets/
 ```
 
-Outputs:
-- `data/processed/{sers,qm9s}_records.jsonl`
-- `reports/coverage.md` (+ CSVs)
-- `reports/leakage_sers.md`
+## References
 
-`run_leakage_checks.py` exits 1 if any check fails, so it can gate the
-fine-tuning script.
+- Anthropic, [Recommendations for technical AI safety research directions](https://alignment.anthropic.com/2025/recommended-directions/)
+- Anthropic, [Simple probes can catch sleeper agents](https://www.anthropic.com/research/probes-catch-sleeper-agents)
+- Anthropic, [Fine-tuned lie detectors failed to generalize](https://alignment.anthropic.com/2026/lie-detectors/)
+- Ameisen et al., [Circuit tracing](https://transformer-circuits.pub/2025/attribution-graphs/methods.html)
+- Marks & Tegmark, [The geometry of truth](https://arxiv.org/abs/2310.06824)
+- Hewitt & Liang, [Designing and interpreting probes with control tasks](https://arxiv.org/abs/1909.03368)
+- Zou et al., [QM9S](https://www.nature.com/articles/s43588-023-00550-y)
 
-## Leakage checks (`leakage.py`)
+## Licence
 
-| check | fails when |
-|---|---|
-| `grammar_whitelist` | any input is not a pure peak list that round-trips |
-| `forbidden_terms` | an analyte name, 3-letter code, SMILES, formula, file id, or "M9"/"medium" appears in an input |
-| `prompt_template` | the fixed instruction contains a label term |
-| `split_disjoint` | an id is duplicated, or a group sits in both train and test |
-| `duplicates` | the same sample (`--identity_key`: analyte for SERS, SMILES for QM9S) appears with an identical string in both splits. Identical strings for *different* samples, and near-duplicates at cosine ≥ 0.98, are warnings |
-| `token_budget` | prompt + answer reserve > `max_seq_length` (exact with `--tokenizer`, estimated otherwise) |
-| `shuffled_label_control` | LR on shuffled labels beats chance; also reports the **real LR baseline** and a permutation p-value |
-| `substrate_only_control` | a classifier trained on analyte spectra predicts the "label" of CB-only spectra above chance, meaning it is reading session, day or substrate, not the analyte |
-
-Each check has a test that injects the leak and confirms it fails.
-
-## What the 25 Sep run shows (`reports/run_20260925/`)
-
-Inputs: your 7 SERS files, and `qm9s_raman.jsonl` (125,996 molecules) used both
-as the QM9 reference and as the QM9S spectra.
-
-### QM9S → SERS: simpler explanations than symmetry
-
-1. **Most QM9S fingerprint information is missing from the file you trained on.**
-   - The peak lists were normalised to the strongest peak over 400–4000 cm-1 (usually a C–H, N–H or O–H stretch) and then cut at 0.1.
-   - Only 59,010 of the 125,996 molecules (47%) keep any peak in 500–1750.
-   - Among those, the median is **1 peak**; 29,733 have exactly one.
-   - Inside the window, a peak survives only if it's above 0.62 of the strongest fingerprint peak (median).
-   - Only 15,473 molecules have ≥ 3 peaks in the window. SERS strings have 8–15.
-   - A model trained on these strings mostly learned the high-wavenumber stretches, and SERS has none of them in its window.
-2. **Many window strings can't tell molecules apart.** 27,665 of the 59,010 window strings (47%) are identical to another molecule's string. The most common is `1664 1.00 10`, shared by 130 molecules.
-3. **The chemistry doesn't overlap.**
-   - **This QM9S file has no carboxylic acids at all**, and no zwitterions. Every amino acid is a zwitterion in water, and the COO- bands (~1410 cm-1) have nothing to match on the QM9S side. It's worth checking whether any acids were dropped when the file was built: it has 126k molecules, and QM9 has about 134k.
-   - None of your 25 analytes is in QM9S except indole and indole-d6.
-   - Thiol and thioether have zero support. The indole group appears in exactly 1 molecule (indole itself), and the benzene ring in 89 usable molecules.
-4. **The QM9S broadening is 10 cm-1 FWHM (inferred).** Isolated peaks in the file measure 15.3 cm-1 at rel_height 0.7, which is a 10.0 cm-1 Lorentzian. SERS FWHM is about 19 cm-1 median.
-5. **Aromaticity is barely decodable from the QM9S window strings.** A logistic regression reaches 0.80 against a 0.72 majority baseline.
-
-Before invoking SO(3) vs C∞, rebuild QM9S from `raman_boraden.csv` with the
-window-first normalisation (`--qm9s_csv`; the code is ready). Then compare only
-the labels with real support.
-
-### SERS
-6. **Old strings vs new strings, per spectrum** (table in `leakage_sers.md`):
-   - The old strings carry the label (medium, Molecule block, name-derived mode assignments).
-   - They included 3–5 CB[5] substrate peaks each.
-   - They were about 1,000–1,300 tokens; the new ones are 110–220.
-7. **The standards are dominated by a shared background.**
-   - Bands near 671 and 1601 cm-1 appear in all 5 standards; 1286 and 1377 in 4.
-   - 671 and 1286 are also in the CB-only spectrum.
-   - The CB band sits at 826–827 cm-1 in the cell session and at 828–830 in the standards.
-   - Subtracting a reference across sessions is unsafe, so `paired` never does it.
-8. **Masking destroys real bands** (Trp 759 overlaps CB 755, Tyr 830 overlaps CB 827). It's a fallback only.
-   `reference_norm` (Sep 26) replaces fixed-tolerance masking with the taller-than-substrate rule above for this reason.
-
-### Decisions
-- **Substrate pairing** defaults to the mean of all CB repeats for the same strain and medium (`CB_536_trp_*` for `Cell_536_trp_*`). `pair_by: same_index` uses the matching repeat instead.
-- **Your detect_peaks v2 is not the shared detector.** Its second-derivative pass adds shoulder peaks. QM9S was peak-picked without that pass, so SERS strings would get systematically more peaks than QM9S strings of the same chemistry. The noise-based prominence threshold is kept.
-- The old `Cell_CB_*` test rows are substrate-only spectra. They belong in `substrate_only_control`, never in train or test.
-
-## Known limitations / open items
-
-- QM9S strings from `qm9s_raman.jsonl` are a stopgap (see `effective_floor` per record). Rebuild them from `raman_boraden.csv`.
-- Set `sim_extra_fwhm` to about 13 cm-1 (Gaussian), which turns the 10 cm-1 QM9S Lorentzian into a ~19 cm-1 Voigt like SERS, but only once QM9S is rebuilt from spectra. It can't be applied to peak lists.
-- Splits are grouped by `id` for now, as agreed. `duplicates` warns if replicate scans end up on both sides.
-- The CB-only spectra for the standards aren't in the repo yet. Their filenames need to match `pair_by`.
+MIT. See `LICENSE`.
