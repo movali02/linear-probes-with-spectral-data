@@ -1,6 +1,7 @@
 # Probes to Circuits With a Ground Truth for Spectroscopy 
 
 **Investigating whether a linear probe on an LLM's activations stops working under distribution shift in the context of experimental vs synthetic (DFT) spectroscopy data, and whether looking inside the model can predict the failure before it happens**
+(Experiment 1 of several...)
 
 Monitors like probes are usually trained on synthetic data and then used on real data, and how well they survive that change is an open problem in AI safety. This repository measures it where the ground truth is known: molecular spectra written as text, with probes trained on simulated (DFT) spectra and tested on experimental / measured (SERS) ones. Physics says exactly how the two distributions differ and which peaks a correct probe should rely on. This shift ladder is anchored in physics where we have a ground truth for what it should look like.
 
